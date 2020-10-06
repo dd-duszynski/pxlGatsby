@@ -1,0 +1,101 @@
+@import "../../../scss/variables.scss";
+.TopBarMobile_list {
+   display: none;
+}
+.TopBarMobile_li {
+   display: none;
+}
+@media screen and (max-width: 1150px) {
+   .TopBarMobile_list {
+      display: block;
+      margin-top: 20px !important;
+   }
+   .TopBarMobile_li {
+      display: block;
+   }
+   .TopBarMobile_list_line {
+      border-bottom: 1px solid white;
+   }
+   .Navigation__phone {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      a {
+         cursor: pointer;
+         margin: 0;
+      }
+      span {
+         background-size: 40px 40px;
+         height: 40px;
+         width: 40px;
+         background-repeat: no-repeat;
+         display: block;
+      }
+      .phone {
+         background-image: url(../../../assets/icons/phone_accent.svg);
+         &:hover {
+            background-image: url(../../../assets/icons/phone_accent2.svg);
+         }
+      }
+      .mail {
+         background-image: url(../../../assets/icons/mail_accent.svg);
+         &:hover {
+            background-image: url(../../../assets/icons/mail_accent2.svg);
+         }
+      }
+   }
+
+   .Navigation__languages {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      .flagPL,
+      .flagDE,
+      .flagEN,
+      .flagFR {
+         padding: 0;
+         width: 47px;
+         height: 47px;
+         border-radius: 25px;
+         cursor: pointer;
+         margin-right: 35px;
+         opacity: 0.5;
+         background-repeat: no-repeat;
+         background-size: cover;
+         background-position: center;
+         &:hover {
+            opacity: 1;
+         }
+      }
+      .flagFR {
+         background-image: url("../../../assets/icons/FR.svg");
+         margin-right: 0;
+      }
+      .flagDE {
+         background-image: url("../../../assets/icons/DE.svg");
+      }
+      .flagPL {
+         background-image: url("../../../assets/icons/PL.svg");
+      }
+      .flagEN {
+         background-image: url("../../../assets/icons/EN.svg");
+      }
+      .flagPL_Active {
+         @extend .flagPL;
+         opacity: 0.8;
+      }
+      .flagEN_Active {
+         @extend .flagEN;
+         opacity: 0.8;
+      }
+      .flagDE_Active {
+         @extend .flagDE;
+         opacity: 0.8;
+      }
+      .flagFR_Active {
+         @extend .flagFR;
+         opacity: 0.8;
+      }
+   }
+}

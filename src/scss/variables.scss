@@ -1,0 +1,75 @@
+// variables__colors
+$color-main: #10549b;
+$color-main2: #1078bf;
+$color-main3: rgb(3, 70, 153);
+$color-accent: #99cc33;
+$color-accent2: #c0ee63;
+$color-font: rgb(45, 45, 45);
+
+// variables__font-size
+$font-size-1: 42px;
+$font-size-2: 26px;
+$font-size-3: 19px;
+$font-size-4: 16px;
+$font-size-5: 13px;
+
+// variables__line-height
+$line-height-1: 47px;
+$line-height-2: 31px;
+$line-height-3: 25px;
+$line-height-4: 23px;
+$line-height-5: 17px;
+
+// variables__font-family
+@mixin Roboto400i {
+   font-family: "Roboto", sans-serif;
+   font-weight: 400;
+   font-style: italic;
+}
+@mixin Roboto400 {
+   font-family: "Roboto", sans-serif;
+   font-weight: 400;
+   font-style: normal;
+}
+@mixin Roboto900i {
+   font-family: "Roboto", sans-serif;
+   font-weight: 900;
+   font-style: italic;
+}
+@mixin Roboto900 {
+   font-family: "Roboto", sans-serif;
+   font-weight: 900;
+   font-style: normal;
+}
+@mixin gridContainer {
+   display: grid;
+   grid-template-columns: 7% 86% 7%;
+}
+
+@mixin navButton {
+   @include Roboto400;
+   margin-right: 5px;
+   margin-bottom: 15px;
+   clip-path: polygon(0 0, 88% 0, 100% 100%, 12% 100%);
+   border-top: 1px solid $color-main;
+   border-bottom: 1px solid $color-main;
+   color: $color-main;
+   font-size: $font-size-3;
+   padding: 5px 24px;
+   text-align: center;
+   min-width: 130px;
+
+   &:last-child {
+      margin-right: 0;
+   }
+
+   &:hover {
+      cursor: pointer;
+      background: -webkit-linear-gradient(to right, $color-main, $color-main2);
+      background: linear-gradient(to right, $color-main, $color-main2);
+      color: white;
+      transition: 0.2s linear;
+      border-top: 1px solid $color-main;
+      border-bottom: 1px solid $color-main;
+   }
+}

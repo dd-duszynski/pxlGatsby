@@ -1,0 +1,98 @@
+@import "../../../scss/variables.scss";
+
+.GroupItem,
+.TemplateItem,
+.TemplateLink {
+   position: relative;
+   justify-self: center;
+   display: block;
+   height: 60px;
+   min-width: 300px;
+   width: 90%;
+   margin: 10px 0;
+   border-radius: 10px;
+   box-shadow: 1px 2px 3px lightgray;
+   list-style-type: none;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   color: $color-font;
+   &:hover {
+      cursor: pointer;
+      box-shadow: 2px 3px 4px lightgray;
+      img {
+         opacity: 1;
+      }
+   }
+}
+
+.GroupItem{
+   svg{
+      color: white;
+      width: 50px;
+      height: 30px;
+   }
+   &:hover{
+      svg{
+         color: $color-main;
+      }
+   }
+}
+
+.imgContainer {
+   height: 90%;
+   border-radius: 4px;
+   width: 70px;
+   margin-right: 10px;
+   display: flex;
+   justify-content: center;
+   background-color: white;
+   img {
+      border-radius: 8px;
+      display: block;
+      height: 100%;
+      opacity: 0.65;
+      max-width: 70px;
+   }
+}
+
+.text {
+   margin-left: 12px;
+}
+
+.TemplateLink {
+   justify-content: flex-start;
+   .linkText {
+      margin-left: 0;
+   }
+   svg {
+		height: 25px;
+		width: 25px;
+		color: $color-main;
+		opacity: 1;
+		margin: 0 12px;
+   }
+   &:visited {
+      color: $color-font;
+   }
+   &:hover {
+      color: $color-main2;
+      svg {
+         color: $color-main2;
+      }
+   }
+}
+
+.choosen {
+   background-color: $color-main;
+   color: white;
+   img {
+      opacity: 1;
+   }
+}
+
+.GroupItem.choosen:hover{
+   svg{
+      color: $color-accent;
+   }
+}

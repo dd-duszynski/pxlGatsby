@@ -1,0 +1,9 @@
+@import '../../scss/variables.scss';
+
+.Layout {
+   @include gridContainer;
+   color: rgb(45, 45, 45);
+   font-family: "Roboto", sans-serif;
+   position: relative;
+}
+

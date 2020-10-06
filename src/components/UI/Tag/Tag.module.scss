@@ -1,0 +1,33 @@
+@import "../../../scss/variables.scss";
+
+.Tag{
+   font-size: 14px;
+   padding: 2px 6px;
+   color: white;
+}
+
+.groupTag {
+   background-color: $color-main;
+}
+.indoorOutdoorTag {
+   background-color: #89BB1E;
+}
+.printingTag {
+   background-color: #2D2D2D;
+}
+.bestsellerTag{
+   background-color: red;
+   border-top-left-radius: 14px;
+}
+.printing{
+   background-color: black;
+}
+.products{
+   background-color: $color-main;
+}
+.dtp{
+   background-color: orangered;
+}
+.technology{
+   background-color: #89BB1E;
+}

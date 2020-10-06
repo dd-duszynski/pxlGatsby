@@ -1,0 +1,46 @@
+@import "../../../scss/variables.scss";
+
+.leftBar {
+   position: absolute;
+   top: 0;
+   left: 0;
+   max-height: 90px;
+}
+
+.heading {
+   @include Roboto900;
+   position: absolute;
+   top: 25px;
+   left: 7%;
+   font-size: $font-size-2;
+   color: white;
+}
+
+@media screen and (max-width: 1150px) {
+   .heading {
+      font-size: 23px;
+      top: 16px;
+   }
+   .leftBar {
+      max-height: 70px;
+   }
+}
+
+@media screen and (max-width: 600px) {
+   .heading {
+      font-size: $font-size-3;
+      top: 14px;
+   }
+   .leftBar {
+      max-height: 58px;
+   }
+}
+
+@media screen and (max-width: 450px) {
+   .heading {
+      top: 11px;
+   }
+   .leftBar {
+      max-height: 52px;
+   }
+}

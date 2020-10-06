@@ -1,0 +1,16 @@
+@import '../../scss/variables.scss';
+
+.Products{
+   grid-column: 1/4;
+   position: relative;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   height: auto;
+}
+.container{
+   padding-top: 100px;
+   padding-bottom: 20px;
+   width: 90%;
+
+}

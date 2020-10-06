@@ -1,0 +1,12 @@
+@import "../../../scss/variables.scss";
+
+@import '../../../scss/variables.scss';
+
+.H1{
+   @include Roboto900;
+   font-size: 26px;
+}
+.H1_Italic{
+   @include Roboto900i;
+   font-size: 26px;
+}

@@ -1,0 +1,52 @@
+@import "../../../scss/variables.scss";
+
+.Card {
+   width: 380px;
+   max-height: 100%;
+   position: relative;
+}
+
+.image {
+   height: 100%;
+   width: 100%;
+   border: 1px solid $color-main;
+   border-top-left-radius: 10px;
+   border-top-right-radius: 10px;
+   img {
+      background-size: contain;
+   }
+}
+
+.tags {
+   position: absolute;
+   bottom: 0;
+   right: 0;
+   display: flex;
+}
+
+.printing,
+.dtp,
+.products,
+.technology {
+   font-size: 14px;
+   padding: 2px 6px;
+   color: white;
+   text-align: center;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   // line-height: 100%;
+}
+
+.printing {
+   background-color: black;
+}
+.dtp {
+   background-color: orangered;
+}
+.products {
+   background-color: $color-main;
+}
+.technology {
+   background-color: #89BB1E;
+}

@@ -1,0 +1,55 @@
+@import "../../../scss/variables.scss";
+
+.ContactInfo {
+   grid-column: 1/2;
+   span {
+      background-size: 35px 35px;
+      height: 35px;
+      width: 35px;
+      background-repeat: no-repeat;
+      margin-right: 20px;
+   }
+}
+
+.adres,
+.mail,
+.phone,
+.fb,
+.yt {
+   display: flex;
+   align-items: center;
+}
+
+.adres span {
+   background-image: url(../../../assets/icons/home.png);
+}
+
+.mail span {
+   background-image: url(../../../assets/icons/mail.png);
+}
+
+.phone span {
+   background-image: url(../../../assets/icons/phone.png);
+}
+
+.fb span {
+   background-image: url(../../../assets/icons/icon_fb.png);
+}
+
+.yt span {
+   background-image: url(../../../assets/icons/icon_yt.png);
+}
+
+.line {
+   border-bottom: 1px solid $color-main;
+   width: 100%;
+   margin: 10px 0;
+}
+
+//------------------------------------------------------
+
+@media only screen and (max-width: 600px) {
+   .phone {
+      line-height: 35px; //weird
+   }
+}

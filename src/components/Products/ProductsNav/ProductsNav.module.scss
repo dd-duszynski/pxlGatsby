@@ -1,0 +1,19 @@
+@import "../../../scss/variables.scss";
+
+.ProductsNav {
+   grid-column: 1/4;
+   width: 100%;
+   @include Roboto900i;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   padding-top: 20px;
+   a {
+      @include navButton;
+   }
+   .active {
+      background: -webkit-linear-gradient(to right, $color-main, $color-main2);
+      background: linear-gradient(to right, $color-main, $color-main2);
+      color: white;
+   }
+}

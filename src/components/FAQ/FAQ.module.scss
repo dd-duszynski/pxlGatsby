@@ -1,0 +1,60 @@
+@import "../../scss/variables.scss";
+
+.FAQ {
+	grid-column: 1/4;
+	height: auto;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	position: relative;
+	margin-bottom: 50px;
+	@include Roboto400;
+}
+
+.FAQ__list {
+	margin-top: 120px;
+	width: 80%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+	position: relative;
+}
+
+.FAQ__list__item {
+	margin-bottom: 20px;
+	border-top: 1px solid $color-main;
+	border-bottom: 1px solid $color-main;
+	width: 100%;
+	padding: 10px 20px;
+	&:nth-last-child(1) {
+		margin-bottom: 0;
+	}
+}
+
+@media screen and (max-width: 1100px) {
+	.FAQ__list {
+		margin-top: 100px;
+		width: 90%;
+	}
+}
+@media screen and (max-width: 700px) {
+	.FAQ__list__item {
+		margin-bottom: 15px;
+		border-top: 1px solid $color-main;
+		border-bottom: 1px solid $color-main;
+		padding: 10px 20px;
+        width: 120%;
+        margin-left: -10%;
+
+		&:nth-last-child(1) {
+			margin-bottom: 0;
+		}
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.FAQ__list {
+		margin-top: 90px;
+	}
+}

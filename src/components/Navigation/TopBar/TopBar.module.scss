@@ -1,0 +1,121 @@
+@import "../../../scss/variables.scss";
+
+.Navigation__topBar {
+	margin: 0 7%;
+	padding-top: 10px;
+	height: 25px;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	z-index: 6;
+	.Navigation__languages {
+		display: flex;
+		margin-left: 10px;
+		a {
+			margin-left: 10px;
+			width: 24px;
+			height: 24px;
+			border-radius: 20px;
+			padding: 3px;
+			color: white;
+			text-decoration: none;
+			font-size: $font-size-5;
+			&:hover {
+				cursor: pointer;
+				color: $color-accent;
+			}
+		}
+	}
+
+	.Navigation__phone,
+	.Navigation__mail {
+		display: flex;
+		align-items: center;
+		margin-left: 23px;
+		span {
+			background-size: 19px 19px;
+			height: 19px;
+			width: 19px;
+			background-repeat: no-repeat;
+		}
+		a {
+			margin-top: 4px;
+			color: $color-accent;
+			text-decoration: none;
+			font-size: 14px;
+		}
+		&:hover {
+			a {
+				color: $color-accent2;
+				cursor: pointer;
+			}
+		}
+	}
+	.Navigation__phone {
+		span {
+			background-image: url(../../../assets/icons/phone_accent.svg);
+			margin-right: 2px;
+		}
+		&:hover {
+			span {
+				background-image: url(../../../assets/icons/phone_accent2.svg);
+			}
+		}
+	}
+	.Navigation__mail {
+		span {
+			background-image: url(../../../assets/icons/mail_accent.svg);
+			margin-right: 7px;
+			margin-top: 2px;
+		}
+		&:hover {
+			span {
+				background-image: url(../../../assets/icons/mail_accent2.svg);
+			}
+		}
+	}
+}
+.flagPL,
+.flagDE,
+.flagEN,
+.flagFR {
+	margin-top: 2px;
+	opacity: 0.6;
+	&:hover {
+		opacity: 1;
+	}
+}
+.flagPL {
+	background-image: url("../../../assets/icons/PL.svg");
+}
+.flagEN {
+	background-image: url("../../../assets/icons/EN.svg");
+}
+.flagDE {
+	background-image: url("../../../assets/icons/DE.svg");
+}
+.flagFR {
+	background-image: url("../../../assets/icons/FR.svg");
+}
+.flagPL_Active {
+	@extend .flagPL;
+	opacity: 0.95;
+}
+.flagEN_Active {
+	@extend .flagEN;
+	opacity: 0.95;
+}
+.flagDE_Active {
+	@extend .flagDE;
+	opacity: 0.95;
+}
+.flagFR_Active {
+	@extend .flagFR;
+	opacity: 0.95;
+}
+
+@media screen and (max-width: 1150px) {
+	.Navigation__topBar {
+		display: none;
+	}
+}

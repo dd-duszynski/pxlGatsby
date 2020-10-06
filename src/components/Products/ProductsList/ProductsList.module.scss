@@ -1,0 +1,15 @@
+@import '../../../scss/variables.scss';
+
+.Products{
+   grid-column: 1/4;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   // margin-left: 5%;
+}
+@media(max-width: 1000px){
+   .Products{
+      width: 94%;
+      margin-left: 3%;
+   }
+}

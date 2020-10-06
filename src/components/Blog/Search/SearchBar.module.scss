@@ -1,0 +1,42 @@
+@import "../../../scss/variables.scss";
+
+.SearchBar {
+   position: absolute;
+   top: 135px;
+   right: 7%;
+   width: 200px;
+   height: auto;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+.container {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   div{
+      margin: 2px;
+   }
+}
+
+.title {
+   color: $color-main;
+   font-size: 16px;
+   margin-bottom: 8px;
+   &::after,
+   &::before {
+      content: "";
+      display: inline-block;
+      width: 30px;
+      height: 1px;
+      background-color: $color-main;
+      margin-bottom: 4px;
+   }
+   &::after {
+      margin-left: 3px;
+   }
+   &::before {
+      margin-right: 3px;
+   }
+}
