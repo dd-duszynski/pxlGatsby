@@ -45,20 +45,20 @@ const FAQ = () => {
          setExpandedTab(tabId)
       }
    }
+   
    return (
       <section className={styles.FAQ} id="FAQ">
          <LeftBar text="FAQ" />
          <RightBar />
          <ul className={styles.list}>
             {textFAQ.map(item => (
-               <li className={styles.item} key={item[0]}>
-                  <Answer
-                     expanded={expandedTab === item[0]}
-                     onToggle={onTabToggle}
-                     question={item[0]}
-                     answer={item[1]}
-                  />
-               </li>
+               <Answer
+                  expanded={expandedTab === item[0]}
+                  onToggle={onTabToggle}
+                  question={item[0]}
+                  answer={item[1]}
+                  key={item[0]}
+               />
             ))}
          </ul>
       </section>

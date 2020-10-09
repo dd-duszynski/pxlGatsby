@@ -1,17 +1,27 @@
 @import "../../../scss/variables.scss";
 
+.listItem {
+   margin-bottom: 20px;
+   width: 100%;
+   padding: 10px 20px;
+   border-radius: 8px;
+   box-shadow: 1px 2px 3px rgb(230,230,230);
+   &:nth-last-child(1) {
+      margin-bottom: 0;
+   }
+   &:hover {
+      background-color: $color-main-light;
+      cursor: pointer;
+   }
+}
+.listItemExpanded {
+   @extend .listItem;
+   background-color: $color-main-light;
+}
+
 .arrow {
-   display: inline-block;
-   background-size: 20px;
-   width: 20px;
-   height: 20px;
-   min-width: 20px;
-   min-height: 20px;
-   margin-top: 2px;
-   margin-left: 3px;
-   background-repeat: no-repeat;
-   background: url(../../../assets/icons/arrowDown.svg);
-   transform: rotate(0);
+   width: 25px;
+   height: 25px;
    transition: all 0.35s;
 }
 .arrowRotate {
@@ -25,40 +35,8 @@
    color: $color-main;
    display: flex;
    justify-content: space-between;
-   cursor: pointer;
 }
 .content {
-   margin-top: 6px;
-   line-height: $line-height-4;
-}
-
-@media screen and (max-width: 700px) {
-   .title {
-      font-size: $font-size-4;
-      line-height: $line-height-4;
-      color: $color-main;
-   }
-   .content {
-      margin-top: 5px;
-      font-size: $font-size-4;
-      line-height: $line-height-4;
-   }
-}
-
-@media screen and (max-width: 600px) {
-   .list {
-      margin-top: 90px;
-   }
-}
-
-@media screen and (max-width: 450px) {
-   .title {
-      line-height: $line-height-4;
-      color: $color-main;
-   }
-   .content {
-      margin-top: 8px;
-      font-size: $font-size-4;
-      line-height: $line-height-4;
-   }
+   margin-top: 2px;
+   @include paragraph;
 }

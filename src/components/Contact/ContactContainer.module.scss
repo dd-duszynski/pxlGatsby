@@ -13,10 +13,11 @@
    background-position: center;
    opacity: 0.9;
 }
+
 .container {
    position: relative;
    display: grid;
-   width: 90%;
+   width: 800px;
    grid-template-columns: 1fr 80px 1fr;
    padding: 80px 50px;
    border-radius: 8px;

@@ -84,8 +84,10 @@
 }
 
 .choosen {
-   background-color: $color-main;
-   color: white;
+   background-color: $color-main-light;
+   svg{
+      color: $color-font;
+   }
    img {
       opacity: 1;
    }
@@ -93,6 +95,6 @@
 
 .GroupItem.choosen:hover{
    svg{
-      color: $color-accent;
+      color: $color-main;
    }
 }

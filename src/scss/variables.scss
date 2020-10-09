@@ -45,9 +45,10 @@ $line-height-5: 17px;
 }
 @mixin paragraph {
    font-family: 'Montserrat', sans-serif;
-   font-weight: 400;
+   font-weight: 500;
    font-style: normal;
    font-size: 15px;
+   line-height: 24px;
 }
 @mixin gridContainer {
    display: grid;
