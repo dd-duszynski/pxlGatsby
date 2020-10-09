@@ -5,17 +5,16 @@
    bottom: 5px;
    right: 5px;
    margin-top: 8px;
-   width: 200px;
+   width: 170px;
 
    @include Roboto400;
    clip-path: polygon(0 0, 88% 0, 100% 100%, 12% 100%);
    border-top: 1px solid $color-main;
    border-bottom: 1px solid $color-main;
-   font-size: $font-size-3;
+   font-size: $font-size-4;
    padding: 5px 24px;
    text-align: center;
    min-width: 130px;
-   
    background: none;
    color: $color-main;
    &:hover {

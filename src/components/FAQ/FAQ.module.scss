@@ -8,10 +8,10 @@
 	align-items: flex-start;
 	position: relative;
 	margin-bottom: 50px;
-	@include Roboto400;
+	@include paragraph;
 }
 
-.FAQ__list {
+.list {
 	margin-top: 120px;
 	width: 80%;
 	display: flex;
@@ -21,7 +21,7 @@
 	position: relative;
 }
 
-.FAQ__list__item {
+.item {
 	margin-bottom: 20px;
 	border-top: 1px solid $color-main;
 	border-bottom: 1px solid $color-main;
@@ -33,13 +33,13 @@
 }
 
 @media screen and (max-width: 1100px) {
-	.FAQ__list {
+	.list {
 		margin-top: 100px;
 		width: 90%;
 	}
 }
 @media screen and (max-width: 700px) {
-	.FAQ__list__item {
+	.item {
 		margin-bottom: 15px;
 		border-top: 1px solid $color-main;
 		border-bottom: 1px solid $color-main;
@@ -54,7 +54,7 @@
 }
 
 @media screen and (max-width: 500px) {
-	.FAQ__list {
+	.list {
 		margin-top: 90px;
 	}
 }

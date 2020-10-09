@@ -5,11 +5,13 @@ $color-main3: rgb(3, 70, 153);
 $color-accent: #99cc33;
 $color-accent2: #c0ee63;
 $color-font: rgb(45, 45, 45);
+$color-main-light: #E8E8E8;
+// $color-main-light: rgb(226,245,255);
 
 // variables__font-size
 $font-size-1: 42px;
 $font-size-2: 26px;
-$font-size-3: 19px;
+$font-size-3: 18px;
 $font-size-4: 16px;
 $font-size-5: 13px;
 
@@ -40,6 +42,12 @@ $line-height-5: 17px;
    font-family: "Roboto", sans-serif;
    font-weight: 900;
    font-style: normal;
+}
+@mixin paragraph {
+   font-family: 'Montserrat', sans-serif;
+   font-weight: 400;
+   font-style: normal;
+   font-size: 15px;
 }
 @mixin gridContainer {
    display: grid;

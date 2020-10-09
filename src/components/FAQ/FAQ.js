@@ -49,9 +49,9 @@ const FAQ = () => {
       <section className={styles.FAQ} id="FAQ">
          <LeftBar text="FAQ" />
          <RightBar />
-         <ul className={styles.FAQ__list}>
+         <ul className={styles.list}>
             {textFAQ.map(item => (
-               <li className={styles.FAQ__list__item} key={item[0]}>
+               <li className={styles.item} key={item[0]}>
                   <Answer
                      expanded={expandedTab === item[0]}
                      onToggle={onTabToggle}

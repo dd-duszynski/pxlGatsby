@@ -31,7 +31,13 @@ const Tag = ({ type, children }) => {
       default:
          css = styles.groupTag
    }
-   return <div className={[styles.Tag, css].join(" ")}>{children}</div>
+   return (
+      <div 
+         className={[styles.Tag, css].join(" ")}
+      >
+         {children}
+      </div>
+   )
 }
 
 export default Tag

@@ -37,6 +37,8 @@
 .innerDescription {
    width: 50%;
    text-align: left;
+   @include paragraph;
+   font-size: 16px;
 }
 
 .magnifier {

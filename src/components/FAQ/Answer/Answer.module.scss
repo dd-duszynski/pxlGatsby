@@ -1,65 +1,64 @@
 @import "../../../scss/variables.scss";
 
 .arrow {
-	display: inline-block;
-	background-size: 20px;
-	width: 20px;
-	height: 20px;
-	min-width: 20px;
-	min-height: 20px;
-	margin-top: 2px;
-	margin-left: 3px;
-	background-repeat: no-repeat;
-	background: url(../../../assets/icons/arrowDown.svg);
-	transform: rotate(0);
-	transition: all 0.35s;
+   display: inline-block;
+   background-size: 20px;
+   width: 20px;
+   height: 20px;
+   min-width: 20px;
+   min-height: 20px;
+   margin-top: 2px;
+   margin-left: 3px;
+   background-repeat: no-repeat;
+   background: url(../../../assets/icons/arrowDown.svg);
+   transform: rotate(0);
+   transition: all 0.35s;
 }
 .arrowRotate {
-	@extend .arrow;
-	transform: rotate(180deg);
+   @extend .arrow;
+   transform: rotate(180deg);
 }
-.answer_title {
-	@include Roboto400;
-	font-size: $font-size-3;
-	line-height: $line-height-3;
-	color: $color-main;
-	display: flex;
-	justify-content: space-between;
-	cursor: pointer;
+.title {
+   @include Roboto400;
+   font-size: $font-size-3;
+   line-height: $line-height-3;
+   color: $color-main;
+   display: flex;
+   justify-content: space-between;
+   cursor: pointer;
 }
-.answer_content {
-	margin-top: 6px;
-	font-size: $font-size-4;
-	line-height: $line-height-4;
+.content {
+   margin-top: 6px;
+   line-height: $line-height-4;
 }
 
 @media screen and (max-width: 700px) {
-	.answer_title {
-		font-size: $font-size-4;
-		line-height: $line-height-4;
-		color: $color-main;
-	}
-	.answer_content {
-		margin-top: 5px;
-		font-size: $font-size-4;
-		line-height: $line-height-4;
-	}
+   .title {
+      font-size: $font-size-4;
+      line-height: $line-height-4;
+      color: $color-main;
+   }
+   .content {
+      margin-top: 5px;
+      font-size: $font-size-4;
+      line-height: $line-height-4;
+   }
 }
 
 @media screen and (max-width: 600px) {
-	.FAQ__list {
-		margin-top: 90px;
-	}
+   .list {
+      margin-top: 90px;
+   }
 }
 
 @media screen and (max-width: 450px) {
-	.answer_title {
-		line-height: $line-height-4;
-		color: $color-main;
-	}
-	.answer_content {
-		margin-top: 8px;
-		font-size: $font-size-4;
-		line-height: $line-height-4;
-	}
+   .title {
+      line-height: $line-height-4;
+      color: $color-main;
+   }
+   .content {
+      margin-top: 8px;
+      font-size: $font-size-4;
+      line-height: $line-height-4;
+   }
 }

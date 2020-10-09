@@ -4,6 +4,8 @@ import Tag from "../../UI/Tag/Tag"
 import arrowLeft from "../../../assets/icons/arrowLeft.svg"
 import arrowRight from "../../../assets/icons/arrowRight.svg"
 import RhombusBtn from "../../UI/RhombusBtn/RhombusBtn"
+import { RiArrowLeftSLine, RiArrowRightSLine } from "react-icons/ri"
+import H3 from "../../UI/Headers/H3"
 
 const ProductCard = ({ data }) => {
    const [imgIndex, setImgIndex] = useState(0)
@@ -30,10 +32,10 @@ const ProductCard = ({ data }) => {
    }
 
    return (
-      <article className={styles.productCard}>
+      <article className={styles.ProductCard}>
          <div className={styles.imageContainer}>
             <div className={styles.arrowLeft} onClick={imgPrev}>
-               <img src={arrowLeft} />
+               <RiArrowLeftSLine />
             </div>
             <img
                src={data.zdjecia[imgIndex].fluid.src}
@@ -41,7 +43,7 @@ const ProductCard = ({ data }) => {
                alt={data.nazwa}
             />
             <div className={styles.arrowRight} onClick={imgNext}>
-               <img src={arrowRight} />
+               <RiArrowRightSLine />
             </div>
             <div className={styles.tagsContainer}>
                <Tag type="group">Banery</Tag>
@@ -50,7 +52,7 @@ const ProductCard = ({ data }) => {
             </div>
          </div>
          <div className={styles.aboutContainer}>
-            <p className={styles.name}>{data.nazwa}</p>
+            <H3>{data.nazwa}</H3>
             <p className={styles.description}>{data.opisKrotki}</p>
             <RhombusBtn link={`/${data.url}`}>Zobacz produkt</RhombusBtn>
          </div>

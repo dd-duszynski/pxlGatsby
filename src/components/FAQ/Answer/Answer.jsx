@@ -2,7 +2,7 @@ import React, { Component } from "react"
 import styles from "./Answer.module.scss"
 
 const AnswerContent = ({ which }) => (
-   <>{which && <p className={styles.answer_content}>{which[1]}</p>}</>
+   <>{which && <p className={styles.content}>{which[1]}</p>}</>
 )
 
 class Answer extends Component {
@@ -25,7 +25,7 @@ class Answer extends Component {
          <>
             <h3
                onClick={() => this.toogleResults()}
-               className={styles.answer_title}
+               className={styles.title}
             >
                {this.props.question}
                <span className={arrowCSS} />
