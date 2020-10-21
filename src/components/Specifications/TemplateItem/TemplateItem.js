@@ -5,6 +5,7 @@ import { HiOutlineArrowNarrowRight } from "react-icons/hi"
 
 function TemplateItem({ text, type, clickFnc, id, url, images, choosen }) {
    const choosenCss = choosen ? styles.choosen : null
+
    const groupItem = (
       <li
          className={[styles.GroupItem, choosenCss].join(" ")}
@@ -17,7 +18,7 @@ function TemplateItem({ text, type, clickFnc, id, url, images, choosen }) {
 
    const productItem = (
       <li
-         className={[styles.TemplateItem, choosenCss].join(" ")}
+         className={[styles.ProductItem, choosenCss].join(" ")}
          onClick={() => clickFnc(id)}
       >
          <span className={styles.text}>{text}</span>
@@ -28,7 +29,12 @@ function TemplateItem({ text, type, clickFnc, id, url, images, choosen }) {
    )
 
    const templateItem = (
-      <a href={url} className={styles.TemplateLink} target="_blank" rel="noopener noreferrer">
+      <a 
+         href={url} 
+         className={styles.TemplateItem} 
+         target="_blank" 
+         rel="noopener noreferrer"
+      >
          <AiOutlineFilePdf />
          <span className={styles.linkText}>{text}</span>
       </a>

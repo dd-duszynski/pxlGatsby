@@ -1,6 +1,11 @@
 @import "../../scss/variables.scss";
 
-.technology {
-   grid-column: 1/4;
-	margin-bottom: 20px;
+.Technology {
+   grid-column: 2/3;
+   margin-bottom: 20px;
+   margin: 0 auto;
+}
+
+.container{
+   max-width: 100ch;
 }

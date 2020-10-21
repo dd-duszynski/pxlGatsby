@@ -2,26 +2,25 @@ import React from "react"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import Layout from "../components/Layout/Layout"
-// import Hero from "../components/Hero/Hero"
 import TechnologyNav from "../components/Technology/TechnologyNav/TechnologyNav"
-import SEO from '../components/SEO/SEO'
+import Technology from "../components/Technology/Technology"
+import SEO from "../components/SEO/SEO"
 
 const TechnologyTemplate = ({ data, pageContext }) => {
    const { nazwa, zdjecia, opis } = data.contentfulTechnologiePl
 
    // const [mainImage, ...otherImages] = zdjecia
-   const [...otherImages] = zdjecia
+   const [...images] = zdjecia
 
    return (
       <Layout language="PL">
-         <SEO title={`PrintXL - ${nazwa}`}/>
-         <TechnologyNav language="PL"/>
-         {/* <Hero img={mainImage.fluid}>Hello</Hero> */}
-         <h1>{nazwa}</h1>
-         <p>{opis.opis}</p>
-         {otherImages.map((item, index) => {
-            return <Img fluid={item.fluid} alt={nazwa} key={index} />
-         })}
+         <SEO title={`PrintXL - ${nazwa}`} />
+         <TechnologyNav language="PL" />
+         <Technology 
+            nazwa={nazwa} 
+            zdjecia={zdjecia} 
+            opis={opis}
+         />
       </Layout>
    )
 }

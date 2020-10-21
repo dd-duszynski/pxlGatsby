@@ -1,7 +1,8 @@
 import React from "react"
 import ReactImageMagnify from "react-image-magnify"
 import styles from "./SingleMaterial.module.scss"
-
+import H3 from '../../UI/Headers/H3'
+import Paragraph from '../../UI/Paragraph/Paragraph'
 import { GeneralPL } from "../../../content/GeneralPL"
 import { GeneralEN } from "../../../content/GeneralEN"
 import { GeneralDE } from "../../../content/GeneralDE"
@@ -84,17 +85,19 @@ class SingleMaterial extends React.Component {
             </div>
 
             <div className={styles.textContainer}>
-               <div>
-                  <h3>{data.nazwa}</h3>
-               </div>
-               <p>{data.opis.opis}</p>
-               <p>
+               {/* <div> */}
+                  <H3>{data.nazwa}</H3>
+               {/* </div> */}
+               <Paragraph>{data.opis.opis}</Paragraph>
+               <Paragraph>
                   <strong>{lang.MaterialSection[1]}:</strong> {data.zadruk}
-               </p>
-               <p>
-                  <strong>{lang.MaterialSection[2]}:</strong> {data.szerokosc}{" "}
-                  {` [cm]`}
-               </p>
+               </Paragraph>
+               <Paragraph>
+                  <strong>
+                     {lang.MaterialSection[2]}:{" "}
+                  </strong> 
+                  {data.szerokosc}
+               </Paragraph>
             </div>
             <div className={styles.Material_line}></div>
          </div>
@@ -119,8 +122,10 @@ class SingleMaterial extends React.Component {
                   <strong>{lang.MaterialSection[1]}:</strong> {data.zadruk}
                </p>
                <p>
-                  <strong>{lang.MaterialSection[2]}:</strong> {data.szerokosc}{" "}
-                  {` [cm]`}
+                  <strong>
+                     {lang.MaterialSection[2]}:
+                  </strong> 
+                  {data.szerokosc}
                </p>
             </div>
             <div className={styles.Material_line}></div>

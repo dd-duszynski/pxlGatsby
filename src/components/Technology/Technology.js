@@ -1,44 +1,23 @@
-import React, { Component } from "react"
+import React from "react"
+import Img from "gatsby-image"
 import styles from "./Technology.module.scss"
-import Machines from "./Machines/Machines"
-import { TechnologyPL } from "../../content/Technology"
-import { TechnologyEN } from "../../content/Technology"
-import { TechnologyFR } from "../../content/Technology"
-import { TechnologyDE } from "../../content/Technology"
-import TechnologyNav from "./TechnologyNav/TechnologyNav"
+import H1 from "../UI/Headers/H1"
+import Paragraph from "../UI/Paragraph/Paragraph"
+const Technology = ({ children, nazwa, zdjecia, opis }) => {
+   console.log(nazwa, opis)
+   const [...images] = zdjecia
+   return (
+      <section className={styles.Technology}>
+         <article className={styles.container}>
+            <H1>{nazwa}</H1>
+            <Paragraph>{opis.opis}</Paragraph>
 
-class Technology extends Component {
-   componentDidMount() {
-      window.scrollTo(0, 0)
-   }
-
-   renderTechnology(language) {
-      return language.map(item => (
-         <Machines
-            name={item.name}
-            description={item.description}
-            description2={item.description2}
-            img={item.img}
-            eco={item.eco}
-            key={item.name}
-         />
-      ))
-   }
-
-   render() {
-      const { language } = this.props
-      return (
-         <>
-            <TechnologyNav />
-            <div className={styles.technology}>
-               {language === "PL" && this.renderTechnology(TechnologyPL)}
-               {language === "EN" && this.renderTechnology(TechnologyEN)}
-               {language === "DE" && this.renderTechnology(TechnologyDE)}
-               {language === "FR" && this.renderTechnology(TechnologyFR)}
-            </div>
-         </>
-      )
-   }
+            {images.map((item, index) => {
+               return <Img fluid={item.fluid} alt={nazwa} key={index} />
+            })}
+         </article>
+      </section>
+   )
 }
 
 export default Technology

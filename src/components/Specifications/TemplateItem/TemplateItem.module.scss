@@ -1,8 +1,8 @@
 @import "../../../scss/variables.scss";
 
 .GroupItem,
-.TemplateItem,
-.TemplateLink {
+.ProductItem,
+.TemplateItem {
    position: relative;
    justify-self: center;
    display: block;
@@ -26,15 +26,15 @@
    }
 }
 
-.GroupItem{
-   svg{
+.GroupItem {
+   svg {
       color: white;
       width: 50px;
       height: 30px;
    }
-   &:hover{
-      svg{
-         color: $color-main;
+   &:hover {
+      svg {
+         color: $color-font;
       }
    }
 }
@@ -60,41 +60,35 @@
    margin-left: 12px;
 }
 
-.TemplateLink {
+.TemplateItem {
    justify-content: flex-start;
    .linkText {
       margin-left: 0;
    }
    svg {
-		height: 25px;
-		width: 25px;
-		color: $color-main;
-		opacity: 1;
-		margin: 0 12px;
+      height: 25px;
+      width: 25px;
+      color: $color-font;
+      opacity: 1;
+      margin: 0 12px;
    }
    &:visited {
       color: $color-font;
    }
    &:hover {
-      color: $color-main2;
+      color: $color-main;
       svg {
-         color: $color-main2;
+         color: $color-main;
       }
    }
 }
 
 .choosen {
    background-color: $color-main-light;
-   svg{
-      color: $color-font;
+   svg {
+      color: $color-main;
    }
    img {
       opacity: 1;
-   }
-}
-
-.GroupItem.choosen:hover{
-   svg{
-      color: $color-main;
    }
 }
