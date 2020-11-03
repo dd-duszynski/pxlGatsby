@@ -1,9 +1,11 @@
 import React, { useState } from "react"
 import styles from "./Answer.module.scss"
 import { RiArrowDownSLine } from "react-icons/ri"
+import H2 from "../../UI/Headers/H2"
+import Paragraph from "../../UI/Paragraph/Paragraph"
 
 const AnswerContent = ({ which }) =>
-   which && <p className={styles.content}>{which[1]}</p>
+   which && <Paragraph>{which[1]}</Paragraph>
 
 const Answer = ({ expanded, onToggle, question, answer }) => {
    const [results, setResults] = useState(null)
@@ -21,10 +23,10 @@ const Answer = ({ expanded, onToggle, question, answer }) => {
    const listItemCSS = expanded ? styles.listItemExpanded : styles.listItem
    return (
       <li className={listItemCSS} onClick={() => toogleResults()}>
-         <h3 className={styles.title}>
+         <H2 addClass={styles.titleContainer}>
             {question}
             <RiArrowDownSLine className={arrowCSS} />
-         </h3>
+         </H2>
          {expanded === true && renderResults()}
       </li>
    )

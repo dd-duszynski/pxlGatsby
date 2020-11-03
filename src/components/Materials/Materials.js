@@ -4,11 +4,11 @@ import SingleMaterial from "./SingleMaterial/SingleMaterial"
 
 const Materials = ({ data }) => {
    return (
-      <div className={styles.Materials}>
+      <section className={styles.Materials}>
          {data.nodes.map(item => {
-            return <SingleMaterial data={item} language="PL" />
+            return <SingleMaterial data={item} language="PL" key={item.nazwa}/>
          })}
-      </div>
+      </section>
    )
 }
 

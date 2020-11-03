@@ -1,10 +1,10 @@
 import React from "react"
-import styles from "./ProductsNav.module.scss"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
 import { GeneralPL } from "../../../content/GeneralPL"
 import { GeneralEN } from "../../../content/GeneralEN"
 import { GeneralDE } from "../../../content/GeneralDE"
 import { GeneralFR } from "../../../content/GeneralFR"
+import RhombusNavContainer from "../../UI/RhombusNavContainer/RhombusNavContainer"
+import RhombusNavBtn from "../../UI/RhombusNavBtn/RhombusNavBtn"
 
 class MaterialNav extends React.Component {
    componentDidMount() {
@@ -24,44 +24,32 @@ class MaterialNav extends React.Component {
       }
 
       return (
-         <div className={styles.ProductsNav}>
-            <AniLink activeClassName={styles.active} fade to={`/${lang.ProductNavigationLinks[9]}`}>
+         <RhombusNavContainer>
+            <RhombusNavBtn link={`/${lang.ProductNavigationLinks[9]}`}>
                {lang.ProductNavigation[9]}
-            </AniLink>
-            <AniLink
-               activeClassName={styles.active}
-               fade
-               to={`/${lang.ProductNavigationLinks[0]}`}
-            >
+            </RhombusNavBtn>
+            <RhombusNavBtn link={`/${lang.ProductNavigationLinks[0]}`}>
                {lang.ProductNavigation[0]}
-            </AniLink>
-            <AniLink activeClassName={styles.active} fade to={`/${lang.ProductNavigationLinks[1]}`}>
+            </RhombusNavBtn>
+            <RhombusNavBtn link={`/${lang.ProductNavigationLinks[1]}`}>
                {lang.ProductNavigation[1]}
-            </AniLink>
-            <AniLink
-               activeClassName={styles.active}
-               fade
-               to={`/${lang.ProductNavigationLinks[2]}`}
-            >
+            </RhombusNavBtn>
+            <RhombusNavBtn link={`/${lang.ProductNavigationLinks[2]}`}>
                {lang.ProductNavigation[2]}
-            </AniLink>
-            <AniLink activeClassName={styles.active} fade to={`/${lang.ProductNavigationLinks[3]}`}>
+            </RhombusNavBtn>
+            <RhombusNavBtn link={`/${lang.ProductNavigationLinks[3]}`}>
                {lang.ProductNavigation[3]}
-            </AniLink>
-            <AniLink activeClassName={styles.active} fade to={`/${lang.ProductNavigationLinks[4]}`}>
+            </RhombusNavBtn>
+            <RhombusNavBtn link={`/${lang.ProductNavigationLinks[4]}`}>
                {lang.ProductNavigation[4]}
-            </AniLink>
-            <AniLink
-               activeClassName={styles.active}
-               fade
-               to={`/${lang.ProductNavigationLinks[5]}`}
-            >
+            </RhombusNavBtn>
+            <RhombusNavBtn link={`/${lang.ProductNavigationLinks[5]}`}>
                {lang.ProductNavigation[5]}
-            </AniLink>
-            <AniLink activeClassName={styles.active} fade to={`/${lang.ProductNavigationLinks[6]}`}>
+            </RhombusNavBtn>
+            <RhombusNavBtn link={`/${lang.ProductNavigationLinks[6]}`}>
                {lang.ProductNavigation[6]}
-            </AniLink>
-         </div>
+            </RhombusNavBtn>
+         </RhombusNavContainer>
       )
    }
 }

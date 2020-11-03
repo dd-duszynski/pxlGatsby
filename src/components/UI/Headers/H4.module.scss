@@ -1,1 +1,8 @@
 @import '../../../scss/variables.scss';
+
+.H4{
+   @include Roboto400;
+   color: $color-main;
+   font-size: $font-size-4;
+   line-height: $line-height-4;
+}

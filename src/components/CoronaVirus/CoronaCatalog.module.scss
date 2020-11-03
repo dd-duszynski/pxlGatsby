@@ -13,11 +13,11 @@
 	text-align: justify;
 }
 .container {
-   width: 90%;
+   width: 80%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-   padding: 100px 0 50px;
+   padding: 80px 0 50px;
 }
 
 .imageContainer {
@@ -46,20 +46,10 @@
    text-align: left;
    margin-bottom: 35px;
 }
-.CTAbutton {
-	display: flex;
-	justify-content: center;
-	&:hover {
-		cursor: pointer;
-		transform: scale(1.02);
-	}
-}
 
 .CTAlink {
-	clip-path: polygon(0 0, 90% 0%, 100% 100%, 10% 100%);
-	text-decoration: none;
-	display: inline-block;
-	min-width: 250px;
+   min-width: 250px;
+   position: relative;
 }
 
 .CTAtext {

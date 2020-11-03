@@ -19,23 +19,19 @@
    position: absolute;
 }
 .title{
-   color: $color-font;
-   font-size: 20px;
    margin-bottom: 4px;
    margin-left: 13px;
 }
 .date{
    margin-left: 13px;
-   font-size: 14px;
-   margin-bottom: 16px;
-   display: block;
+   margin-bottom: 10px;
 }
 .paragraph{
    margin-left: 13px;
    margin-bottom: 20px;
    text-align: left;
-   width: 400px;
-
+   width: 400px; 
+   color: 'red' !important
 }
 .linkContainer{
    margin-left: 13px;

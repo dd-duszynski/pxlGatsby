@@ -17,7 +17,7 @@
    display: flex;
    justify-content: center;
    align-items: center;
-   border: 1px solid $color-main-light;
+   border: 1px solid $color-light-gray;
    border-top-left-radius: 15px;
    border-top-right-radius: 15px;
    position: relative;
@@ -33,12 +33,11 @@
    width: 100%;
    height: 50%;
    padding: 8px 12px;
-   background-color: $color-main-light;
+   background-color: $color-light-gray;
 }
 .description {
    text-decoration: none;
    text-align: left;
-   font-size: $font-size-5;
 }
 .description {
    @include paragraph;
@@ -66,7 +65,7 @@
    width: 25px;
    height: 100%;
    &:hover {
-      background-color: $color-main-light;
+      background-color: $color-light-gray;
       cursor: pointer;
    }
    svg {

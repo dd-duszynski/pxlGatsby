@@ -2,14 +2,14 @@ import React from "react"
 import styles from "./ProductsList.module.scss"
 import ProductCard from "../ProductCard/ProductCard"
 
-const Products = ({ data }) => {
+const ProductsList = ({ data }) => {
    return (
-      <div className={styles.Products}>
+      <section className={styles.ProductsList}>
          {data.nodes.map(item => {
-            return <ProductCard data={item} />
+            return <ProductCard data={item} key={item.nazwa}/>
          })}
-      </div>
+      </section>
    )
 }
 
-export default Products
+export default ProductsList

@@ -1,6 +1,8 @@
 import React from "react"
 import styles from "./Newsletter.module.scss"
 import { GeneralPL } from "../../../content/GeneralPL"
+import Paragraph from "../../UI/Paragraph/Paragraph"
+import RhombusInput from "../../UI/RhombusInput/RhombusInput"
 
 const Newsletter = () => {
    let lang = GeneralPL
@@ -8,12 +10,13 @@ const Newsletter = () => {
    return (
       <div className={styles.Newsletter}>
          <div className={styles.container}>
-            <p className={styles.paragraph}>
+            <Paragraph addClass={styles.paragraph}>
                {lang.Newsletter[0]}
                <br />
                {lang.Newsletter[1]}
                <br />
-            </p>
+            </Paragraph>
+
             <form className={styles.form}>
                <div className={styles.inputsContainer}>
                   <span className={styles.userIcon} />
@@ -33,10 +36,9 @@ const Newsletter = () => {
                      placeholder={lang.Newsletter[3]}
                   />
                </div>
-               <input
-                  className={styles.submitInput}
-                  type="submit"
-                  value={lang.Newsletter[4]}
+               <RhombusInput
+                  addClass={styles.submitInput}
+                  text={lang.Newsletter[4]}
                />
             </form>
          </div>

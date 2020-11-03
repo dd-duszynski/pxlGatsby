@@ -1,9 +1,7 @@
 import React, { useState } from "react"
 import styles from "./ProductCard.module.scss"
 import Tag from "../../UI/Tag/Tag"
-import arrowLeft from "../../../assets/icons/arrowLeft.svg"
-import arrowRight from "../../../assets/icons/arrowRight.svg"
-import RhombusBtn from "../../UI/RhombusBtn/RhombusBtn"
+import RhombusLink from "../../UI/RhombusLink/RhombusLink"
 import { RiArrowLeftSLine, RiArrowRightSLine } from "react-icons/ri"
 import H3 from "../../UI/Headers/H3"
 
@@ -54,7 +52,7 @@ const ProductCard = ({ data }) => {
          <div className={styles.aboutContainer}>
             <H3>{data.nazwa}</H3>
             <p className={styles.description}>{data.opisKrotki}</p>
-            <RhombusBtn link={`/${data.url}`}>Zobacz produkt</RhombusBtn>
+            <RhombusLink link={`/${data.url}`}>Zobacz produkt</RhombusLink>
          </div>
       </article>
    )

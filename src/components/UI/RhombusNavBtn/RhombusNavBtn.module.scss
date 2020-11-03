@@ -1,0 +1,34 @@
+@import "../../../scss/variables.scss";
+
+.RhombusNavBtn {
+   @include Roboto400;
+   margin-right: 5px;
+   margin-bottom: 15px;
+   clip-path: polygon(0 0, 88% 0, 100% 100%, 12% 100%);
+   border-top: 1px solid $color-main;
+   border-bottom: 1px solid $color-main;
+   color: $color-main;
+   font-size: 18px;
+   padding: 5px 24px;
+   text-align: center;
+   min-width: 140px;
+   &:last-child {
+      margin-right: 0;
+   }
+
+   &:hover {
+      cursor: pointer;
+      background: -webkit-linear-gradient(to right, $color-main, $color-main2);
+      background: linear-gradient(to right, $color-main, $color-main2);
+      color: white;
+      transition: 0.2s linear;
+      border-top: 1px solid $color-main;
+      border-bottom: 1px solid $color-main;
+   }
+}
+.active {
+   @extend .RhombusNavBtn;
+   background: -webkit-linear-gradient(to right, $color-main, $color-main2);
+   background: linear-gradient(to right, $color-main, $color-main2);
+   color: white !important;
+}

@@ -10,7 +10,7 @@ const Products = ({ language }) => {
          <div className={styles.container}>
             <LeftBar text="Produkty" />
             <RightBar />
-            <GroupCards language={language} type="products"/>
+            Tu będą wybrane produkty
          </div>
       </section>
    )

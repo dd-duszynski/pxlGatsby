@@ -4,9 +4,17 @@
 
 .H1{
    @include Roboto900;
-   font-size: 26px;
+   color: $color-main;
+   font-size: $font-size-1;
+   line-height: $line-height-1;
 }
 .H1_Italic{
    @include Roboto900i;
-   font-size: 26px;
+   color: $color-main;
+   font-size: $font-size-1;
+   line-height: $line-height-1;
+}
+
+.H3{
+   @include Roboto400;
 }

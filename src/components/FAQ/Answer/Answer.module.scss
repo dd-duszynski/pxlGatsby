@@ -10,15 +10,14 @@
       margin-bottom: 0;
    }
    &:hover {
-      background-color: $color-main-light;
+      background-color: $color-light-gray;
       cursor: pointer;
    }
 }
 .listItemExpanded {
    @extend .listItem;
-   background-color: $color-main-light;
+   background-color: $color-light-gray;
 }
-
 .arrow {
    width: 25px;
    height: 25px;
@@ -28,15 +27,7 @@
    @extend .arrow;
    transform: rotate(180deg);
 }
-.title {
-   @include Roboto400;
-   font-size: $font-size-3;
-   line-height: $line-height-3;
-   color: $color-main;
+.titleContainer {
    display: flex;
    justify-content: space-between;
-}
-.content {
-   margin-top: 2px;
-   @include paragraph;
 }

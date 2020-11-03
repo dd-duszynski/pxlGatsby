@@ -1,13 +1,15 @@
 import React from "react"
 import styles from "./ContactForm.module.scss"
+import RhombusInput from '../../UI/RhombusInput/RhombusInput'
 
 const ContactForm = ({ text }) => {
    return (
       <section className={styles.ContactForm}>
-         <header>{text[7]}</header>
+         <header className={styles.header}>{text[7]}</header>
          <form
             action="https://formspree.io/dd.duszynski@gmail.com"
             method="POST"
+            className={styles.form}
          >
             <div>
                <label htmlFor="name">{text[2]}:</label>
@@ -36,14 +38,11 @@ const ContactForm = ({ text }) => {
                   row="10"
                />
             </div>
-            <div>
-               <input
-                  className={styles.submit}
-                  value={text[6]}
-                  type="submit"
-                  id="submit"
-               />
-            </div>
+            <RhombusInput
+               // addClass={styles.submitBtn}
+               input
+               text={text[6]}
+            />
          </form>
       </section>
    )

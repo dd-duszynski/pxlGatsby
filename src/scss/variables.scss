@@ -5,22 +5,23 @@ $color-main3: rgb(3, 70, 153);
 $color-accent: #99cc33;
 $color-accent2: #c0ee63;
 $color-font: rgb(45, 45, 45);
-$color-main-light: #E8E8E8;
-// $color-main-light: rgb(226,245,255);
+$color-light-gray: #E8E8E8;
 
 // variables__font-size
-$font-size-1: 42px;
-$font-size-2: 26px;
-$font-size-3: 18px;
-$font-size-4: 16px;
-$font-size-5: 13px;
+$font-size-1: 26px;
+$font-size-2: 18px;
+$font-size-3: 16px;
+$font-size-4: 15px;
+$font-size-5: 12px;
+$font-size-6: 10px;
 
 // variables__line-height
-$line-height-1: 47px;
-$line-height-2: 31px;
-$line-height-3: 25px;
-$line-height-4: 23px;
-$line-height-5: 17px;
+$line-height-1: 39px;
+$line-height-2: 27px;
+$line-height-3: 24px;
+$line-height-4: 22px;
+$line-height-5: 18px;
+$line-height-6: 15px;
 
 // variables__font-family
 @mixin Roboto400i {
@@ -46,7 +47,6 @@ $line-height-5: 17px;
 @mixin paragraph {
    font-family: 'Montserrat', sans-serif;
    font-weight: 500;
-   font-style: normal;
    font-size: 15px;
    line-height: 24px;
 }
@@ -54,7 +54,6 @@ $line-height-5: 17px;
    display: grid;
    grid-template-columns: 7% 86% 7%;
 }
-
 @mixin navButton {
    @include Roboto400;
    margin-right: 5px;

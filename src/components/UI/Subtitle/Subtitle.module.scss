@@ -1,0 +1,7 @@
+@import '../../../scss/variables.scss';
+
+.Subtitle{
+   @include Roboto400;
+   font-size: 14px;
+   display: block;
+}

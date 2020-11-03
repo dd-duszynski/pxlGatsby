@@ -5,6 +5,7 @@ import ContactInfo from "./ContactInfo/ContactInfo"
 import Newsletter from "./Newsletter/Newsletter"
 import { GeneralPL } from "../../content/GeneralPL"
 // import LanguageContext from "../../context/context"
+import H2 from "../UI/Headers/H2"
 
 const ContactContainer = props => {
    // const langContext = useContext(LanguageContext)
@@ -13,7 +14,11 @@ const ContactContainer = props => {
    return (
       <section className={styles.ContactContainer} id="contact">
          <div className={styles.container}>
-            <div className={styles.header}>{Contact[0]}</div>
+            <div className={styles.headerBox}>
+               <H2 addClass={styles.header}>
+                  {Contact[0]}
+               </H2>
+            </div>
             <ContactInfo text={Contact} />
             <div className={styles.verticalLine} />
             <ContactForm text={Contact} />

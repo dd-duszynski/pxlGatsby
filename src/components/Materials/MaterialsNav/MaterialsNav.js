@@ -1,10 +1,10 @@
 import React from "react"
-import styles from "./MaterialsNav.module.scss"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
 import { GeneralPL } from "../../../content/GeneralPL"
 import { GeneralEN } from "../../../content/GeneralEN"
 import { GeneralDE } from "../../../content/GeneralDE"
 import { GeneralFR } from "../../../content/GeneralFR"
+import RhombusNavContainer from "../../UI/RhombusNavContainer/RhombusNavContainer"
+import RhombusNavBtn from "../../UI/RhombusNavBtn/RhombusNavBtn"
 
 class MaterialNav extends React.Component {
    componentDidMount() {
@@ -24,48 +24,23 @@ class MaterialNav extends React.Component {
       }
 
       return (
-         <div className={styles.MaterialNav}>
-            <AniLink
-               activeClassName={styles.active}
-               partiallyActive
-               fade
-               to={`/${lang.MaterialNavigationLinks[0]}`}
-            >
+         <RhombusNavContainer>
+            <RhombusNavBtn link={`/${lang.MaterialNavigationLinks[0]}`}>
                {lang.MaterialNavigation[0]}
-            </AniLink>
-            <AniLink
-               activeClassName={styles.active}
-               partiallyActive
-               fade
-               to={`/${lang.MaterialNavigationLinks[1]}`}
-            >
+            </RhombusNavBtn>
+            <RhombusNavBtn link={`/${lang.MaterialNavigationLinks[1]}`}>
                {lang.MaterialNavigation[1]}
-            </AniLink>
-            <AniLink
-               activeClassName={styles.active}
-               partiallyActive
-               fade
-               to={`/${lang.MaterialNavigationLinks[2]}`}
-            >
+            </RhombusNavBtn>
+            <RhombusNavBtn link={`/${lang.MaterialNavigationLinks[2]}`}>
                {lang.MaterialNavigation[2]}
-            </AniLink>
-            <AniLink
-               activeClassName={styles.active}
-               partiallyActive
-               fade
-               to={`/${lang.MaterialNavigationLinks[3]}`}
-            >
+            </RhombusNavBtn>
+            <RhombusNavBtn link={`/${lang.MaterialNavigationLinks[3]}`}>
                {lang.MaterialNavigation[3]}
-            </AniLink>
-            <AniLink
-               activeClassName={styles.active}
-               partiallyActive
-               fade
-               to={`/${lang.MaterialNavigationLinks[4]}`}
-            >
+            </RhombusNavBtn>
+            <RhombusNavBtn link={`/${lang.MaterialNavigationLinks[4]}`}>
                {lang.MaterialNavigation[4]}
-            </AniLink>
-         </div>
+            </RhombusNavBtn>
+         </RhombusNavContainer>
       )
    }
 }

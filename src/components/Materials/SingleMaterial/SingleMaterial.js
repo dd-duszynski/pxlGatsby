@@ -1,8 +1,8 @@
 import React from "react"
 import ReactImageMagnify from "react-image-magnify"
 import styles from "./SingleMaterial.module.scss"
-import H3 from '../../UI/Headers/H3'
-import Paragraph from '../../UI/Paragraph/Paragraph'
+import H2 from "../../UI/Headers/H2"
+import Paragraph from "../../UI/Paragraph/Paragraph"
 import { GeneralPL } from "../../../content/GeneralPL"
 import { GeneralEN } from "../../../content/GeneralEN"
 import { GeneralDE } from "../../../content/GeneralDE"
@@ -85,17 +85,13 @@ class SingleMaterial extends React.Component {
             </div>
 
             <div className={styles.textContainer}>
-               {/* <div> */}
-                  <H3>{data.nazwa}</H3>
-               {/* </div> */}
+               <H2>{data.nazwa}</H2>
                <Paragraph>{data.opis.opis}</Paragraph>
                <Paragraph>
                   <strong>{lang.MaterialSection[1]}:</strong> {data.zadruk}
                </Paragraph>
                <Paragraph>
-                  <strong>
-                     {lang.MaterialSection[2]}:{" "}
-                  </strong> 
+                  <strong>{lang.MaterialSection[2]}: </strong>
                   {data.szerokosc}
                </Paragraph>
             </div>
@@ -122,9 +118,7 @@ class SingleMaterial extends React.Component {
                   <strong>{lang.MaterialSection[1]}:</strong> {data.zadruk}
                </p>
                <p>
-                  <strong>
-                     {lang.MaterialSection[2]}:
-                  </strong> 
+                  <strong>{lang.MaterialSection[2]}:</strong>
                   {data.szerokosc}
                </p>
             </div>

@@ -3,7 +3,8 @@ import styles from "./CoronaCatalog.module.scss"
 import LeftBar from "../UI/Bars/LeftBar"
 import RightBar from "../UI/Bars/RightBar"
 import img_loopka from "../../assets/images/catalog_PL.jpg"
-
+import Paragraph from "../UI/Paragraph/Paragraph"
+import RhombusLink from "../UI/RhombusLink/RhombusLink"
 export default class CoronaCatalog extends Component {
    state = {
       isSmallDevice: false,
@@ -36,29 +37,29 @@ export default class CoronaCatalog extends Component {
             <RightBar />
             <article className={styles.container}>
                <div className={styles.imageContainer}>
-                  <img src={img_loopka} className={styles.image} alt="The man in the mask" />
+                  <img
+                     src={img_loopka}
+                     className={styles.image}
+                     alt="The man in the mask"
+                  />
                </div>
 
                <div className={styles.description_container}>
-                  <p className={styles.innerDescription}>
+                  <Paragraph addClass={styles.innerDescription}>
                      Zachęcamy do pobrania naszego nowego katalogu.
                      <br />
                      <br />
-                     Znajdą w nim Państwo aktualną ofertę na produkty ochronne
-                     oraz przydatne akcesoria.
-                  </p>
-                  <div className={styles.CTAbutton}>
-                     <a
-                        className={styles.CTAlink}
-                        href={link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                     >
-                        <p className={styles.CTAtext}>
-                           {`>> Pobierz katalog <<`}
-                        </p>
-                     </a>
-                  </div>
+                     Znajdą w nim Państwo aktualną ofertę na produkty i
+                     przydatne akcesoria pomagające w walce z Covid-19.
+                  </Paragraph>
+                  <RhombusLink
+                     addClass={styles.CTAlink}
+                     link
+                     externalLink
+                     link={link}
+                  >
+                     {`>> Pobierz katalog <<`}
+                  </RhombusLink>
                </div>
             </article>
          </section>

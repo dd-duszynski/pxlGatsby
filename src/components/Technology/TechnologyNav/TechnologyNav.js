@@ -1,10 +1,10 @@
 import React from "react"
-import styles from "./TechnologyNav.module.scss"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
 import { GeneralPL } from "../../../content/GeneralPL"
 import { GeneralEN } from "../../../content/GeneralEN"
 import { GeneralDE } from "../../../content/GeneralDE"
 import { GeneralFR } from "../../../content/GeneralFR"
+import RhombusNavContainer from "../../UI/RhombusNavContainer/RhombusNavContainer"
+import RhombusNavBtn from "../../UI/RhombusNavBtn/RhombusNavBtn"
 
 class MaterialNav extends React.Component {
    componentDidMount() {
@@ -24,36 +24,20 @@ class MaterialNav extends React.Component {
       }
 
       return (
-         <div className={styles.MaterialNav}>
-            <AniLink 
-               activeClassName={styles.active} 
-               fade to={`/${lang.TechnologyNavigationLinks[0]}`}
-            >
+         <RhombusNavContainer>
+            <RhombusNavBtn link={`/${lang.TechnologyNavigationLinks[0]}`}>
                {lang.TechnologyNavigation[0]}
-            </AniLink>
-
-            <AniLink 
-               activeClassName={styles.active} 
-               fade to={`/${lang.TechnologyNavigationLinks[1]}`}
-            >
+            </RhombusNavBtn>
+            <RhombusNavBtn link={`/${lang.TechnologyNavigationLinks[1]}`}>
                {lang.TechnologyNavigation[1]}
-            </AniLink>
-
-            <AniLink 
-               activeClassName={styles.active} 
-               fade to={`/${lang.TechnologyNavigationLinks[2]}`}
-            >
+            </RhombusNavBtn>
+            <RhombusNavBtn link={`/${lang.TechnologyNavigationLinks[2]}`}>
                {lang.TechnologyNavigation[2]}
-            </AniLink>
-
-            <AniLink 
-               activeClassName={styles.active} 
-               fade to={`/${lang.TechnologyNavigationLinks[3]}`}
-            >
+            </RhombusNavBtn>
+            <RhombusNavBtn link={`/${lang.TechnologyNavigationLinks[3]}`}>
                {lang.TechnologyNavigation[3]}
-            </AniLink>
-
-         </div>
+            </RhombusNavBtn>
+         </RhombusNavContainer>
       )
    }
 }

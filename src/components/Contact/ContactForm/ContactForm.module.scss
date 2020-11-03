@@ -8,10 +8,20 @@
    background-color: white;
    border-radius: 8px;
    position: relative;
-   header {
+   .header {
       display: none;
    }
-   input,
+   form{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      div{
+         width: 100%;
+         margin-bottom: 8px;
+      }
+   }
+
    label,
    textarea {
       display: block;
@@ -19,7 +29,7 @@
       margin-bottom: 6px;
    }
 
-   input {
+   .formControl {
       font-size: $font-size-4;
       line-height: $line-height-4;
       color: $color-font;
@@ -47,28 +57,11 @@
          border-bottom: 1px solid $color-accent;
       }
    }
-   input[type="submit"] {
-      font-size: $font-size-4;
-      background-color: $color-main;
-      border-style: none;
-      color: white;
-      padding: 12px 80px;
-      clip-path: polygon(0 0, 93% 0, 100% 100%, 7% 100%);
-      margin-top: 15px;
-      margin-bottom: 0;
-      &:hover {
-         cursor: pointer;
-         transform: scale(1.02);
-      }
-   }
-}
-.formControl{
-
 }
 
 @media (max-width: 800px) {
    .ContactForm {
-      header {
+      .header {
          display: block;
          margin-left: auto;
          font-size: 18px;
