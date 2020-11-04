@@ -1,22 +1,21 @@
-@import '../../../scss/variables.scss';
-.RhombusInput{
+@import "../../../scss/variables.scss";
+.RhombusInput {
    @include Roboto400;
    position: relative;
    text-align: center;
    min-width: 250px;
    text-transform: uppercase;
-   clip-path: polygon(0 0, 88% 0, 100% 100%, 12% 100%);
+   clip-path: polygon(0 0, 91% 0, 100% 100%, 9% 100%);
    background: $color-main;
    font-size: $font-size-3;
    color: white;
-   transition: 0.2s linear;
-   padding: 10px 0;
-   &:focus{
+   padding: 8px 0;
+   &:focus {
       outline: none;
-      transform: scale(1.01);
+      transform: scale(1.02);
    }
    &:hover {
       cursor: pointer;
-      transform: scale(1.01);
+      transform: scale(1.02);
    }
 }

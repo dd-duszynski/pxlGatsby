@@ -2,7 +2,7 @@
 
 .heroVideo {
    grid-column: 1/4;
-   @include Roboto400i;
+   @include Roboto400;
    position: relative;
    height: 100%;
    overflow-x: hidden;

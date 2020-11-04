@@ -5,7 +5,7 @@
    width: 100%;
    padding: 10px 20px;
    border-radius: 8px;
-   box-shadow: 1px 2px 3px rgb(230,230,230);
+   box-shadow: 2px 2px 3px rgb(189, 189, 189);
    &:nth-last-child(1) {
       margin-bottom: 0;
    }
@@ -22,6 +22,7 @@
    width: 25px;
    height: 25px;
    transition: all 0.35s;
+   color: $color-main;
 }
 .arrowRotate {
    @extend .arrow;
@@ -30,4 +31,5 @@
 .titleContainer {
    display: flex;
    justify-content: space-between;
+   margin-bottom: 3px;
 }

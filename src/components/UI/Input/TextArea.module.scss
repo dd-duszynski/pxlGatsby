@@ -1,0 +1,45 @@
+@import "../../../scss/variables.scss";
+
+.TextArea {
+   padding-top: 7px;
+   display: flex;
+   // align-items: center;
+   justify-content: flex-start;
+   // background-color: white;
+   // border: 1px solid $color-main;
+   background-color: $color-light-gray;
+   border-radius: 5px;
+   padding-left: 15px;
+   margin-bottom: 12px;
+   width: 100%;
+   min-width: 290px;
+   height: 120px;
+}
+.messageInput {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: calc(100% - 50px);
+   height: 90%;
+   font-size: $font-size-4;
+   line-height: auto;
+   color: $color-font;
+   border-style: none;
+   background-color: $color-light-gray;
+   resize: none;
+   background-color: none;
+   &:focus {
+      outline: none;
+   }
+   &::placeholder {
+      color: gray;
+      height: 100%;
+   }
+}
+
+.emailIcon {
+   color: $color-main;
+   height: 30px;
+   width: 30px;
+   margin-right: 15px;
+}

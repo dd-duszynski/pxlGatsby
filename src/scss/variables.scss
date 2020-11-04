@@ -9,9 +9,9 @@ $color-light-gray: #E8E8E8;
 
 // variables__font-size
 $font-size-1: 26px;
-$font-size-2: 18px;
+$font-size-2: 19px;
 $font-size-3: 16px;
-$font-size-4: 15px;
+$font-size-4: 14px;
 $font-size-5: 12px;
 $font-size-6: 10px;
 
@@ -19,16 +19,11 @@ $font-size-6: 10px;
 $line-height-1: 39px;
 $line-height-2: 27px;
 $line-height-3: 24px;
-$line-height-4: 22px;
-$line-height-5: 18px;
-$line-height-6: 15px;
+$line-height-4: 19px;
+$line-height-5: 17px;
+$line-height-6: 13px;
 
 // variables__font-family
-@mixin Roboto400i {
-   font-family: "Roboto", sans-serif;
-   font-weight: 400;
-   font-style: italic;
-}
 @mixin Roboto400 {
    font-family: "Roboto", sans-serif;
    font-weight: 400;
@@ -48,36 +43,5 @@ $line-height-6: 15px;
    font-family: 'Montserrat', sans-serif;
    font-weight: 500;
    font-size: 15px;
-   line-height: 24px;
-}
-@mixin gridContainer {
-   display: grid;
-   grid-template-columns: 7% 86% 7%;
-}
-@mixin navButton {
-   @include Roboto400;
-   margin-right: 5px;
-   margin-bottom: 15px;
-   clip-path: polygon(0 0, 88% 0, 100% 100%, 12% 100%);
-   border-top: 1px solid $color-main;
-   border-bottom: 1px solid $color-main;
-   color: $color-main;
-   font-size: $font-size-3;
-   padding: 5px 24px;
-   text-align: center;
-   min-width: 130px;
-
-   &:last-child {
-      margin-right: 0;
-   }
-
-   &:hover {
-      cursor: pointer;
-      background: -webkit-linear-gradient(to right, $color-main, $color-main2);
-      background: linear-gradient(to right, $color-main, $color-main2);
-      color: white;
-      transition: 0.2s linear;
-      border-top: 1px solid $color-main;
-      border-bottom: 1px solid $color-main;
-   }
+   line-height: $line-height-3;
 }

@@ -3,7 +3,8 @@ import styles from "./ProductCard.module.scss"
 import Tag from "../../UI/Tag/Tag"
 import RhombusLink from "../../UI/RhombusLink/RhombusLink"
 import { RiArrowLeftSLine, RiArrowRightSLine } from "react-icons/ri"
-import H3 from "../../UI/Headers/H3"
+import H2 from "../../UI/Headers/H2"
+import Paragraph from "../../UI/Paragraph/Paragraph"
 
 const ProductCard = ({ data }) => {
    const [imgIndex, setImgIndex] = useState(0)
@@ -50,8 +51,10 @@ const ProductCard = ({ data }) => {
             </div>
          </div>
          <div className={styles.aboutContainer}>
-            <H3>{data.nazwa}</H3>
-            <p className={styles.description}>{data.opisKrotki}</p>
+            <H2>{data.nazwa}</H2>
+            <Paragraph addClass={styles.description}>
+               {data.opisKrotki}
+            </Paragraph>
             <RhombusLink link={`/${data.url}`}>Zobacz produkt</RhombusLink>
          </div>
       </article>

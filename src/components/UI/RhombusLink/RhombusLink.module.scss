@@ -9,10 +9,10 @@
    text-transform: uppercase;
 
    @include Roboto400;
-   clip-path: polygon(0 0, 88% 0, 100% 100%, 12% 100%);
+   clip-path: polygon(0 0, 91% 0, 100% 100%, 9% 100%);
    border-top: 1px solid $color-main;
    border-bottom: 1px solid $color-main;
-   font-size: $font-size-4;
+   font-size: $font-size-3;
    padding: 5px 24px;
    text-align: center;
    min-width: 130px;
@@ -52,16 +52,3 @@
       cursor: pointer;
    }
 }
-// input[type="submit"] {
-//    background: linear-gradient(to right, #10549b, #1078bf);
-//    background: -webkit-linear-gradient(to right, #10549b, #1078bf);
-//    border-style: none;
-//    color: white;
-//    padding: 10px 70px;
-//    clip-path: polygon(0 0, 93% 0, 100% 100%, 7% 100%);
-//    margin-bottom: 0;
-//    &:hover {
-//       cursor: pointer;
-//       transform: scale(1.01);
-//    }
-// }

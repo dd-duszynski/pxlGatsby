@@ -2,7 +2,14 @@ import React from "react"
 import { Link } from "gatsby"
 import styles from "./RhombusLink.module.scss"
 
-const RhombusLink = ({ children, link, addClass, externalLink, input, inputText }) => {
+const RhombusLink = ({
+   children,
+   link,
+   addClass,
+   externalLink,
+   input,
+   inputText,
+}) => {
    const extLink = (
       <a
          href={link}
@@ -19,7 +26,12 @@ const RhombusLink = ({ children, link, addClass, externalLink, input, inputText 
       </Link>
    )
    const rhombusInput = (
-      <input type='submit' to={link} className={[styles.RhombusInput, addClass].join(" ")} value={inputText}/>
+      <input
+         type="submit"
+         to={link}
+         className={[styles.RhombusInput, addClass].join(" ")}
+         value={inputText}
+      />
    )
    return externalLink ? extLink : input ? rhombusInput : intLink
 }

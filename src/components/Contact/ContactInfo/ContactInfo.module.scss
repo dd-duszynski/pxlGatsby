@@ -3,13 +3,6 @@
 .ContactInfo {
    grid-column: 1/2;
 }
-span {
-   background-size: 35px 35px;
-   height: 35px;
-   width: 35px;
-   background-repeat: no-repeat;
-   margin-right: 20px;
-}
 
 .adres,
 .mail,
@@ -20,36 +13,15 @@ span {
    align-items: center;
 }
 
-.adres span {
-   background-image: url(../../../assets/icons/home.png);
-}
-
-.mail span {
-   background-image: url(../../../assets/icons/mail.png);
-}
-
-.phone span {
-   background-image: url(../../../assets/icons/phone.png);
-}
-
-.fb span {
-   background-image: url(../../../assets/icons/icon_fb.png);
-}
-
-.yt span {
-   background-image: url(../../../assets/icons/icon_yt.png);
+.icon {
+   color: $color-main;
+   height: 30px;
+   width: 30px;
+   margin-right: 15px;
 }
 
 .line {
-   border-bottom: 1px solid $color-main;
-   width: 100%;
+   border-bottom: 1px solid $color-font;
+   width: 90%;
    margin: 10px 0;
-}
-
-//------------------------------------------------------
-
-@media only screen and (max-width: 600px) {
-   .phone {
-      line-height: 35px; //weird
-   }
 }

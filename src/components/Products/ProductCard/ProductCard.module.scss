@@ -1,6 +1,5 @@
 @import "../../../scss/variables.scss";
 .ProductCard {
-   color: $color-main;
    width: 315px;
    height: 400px;
    margin: 30px;
@@ -38,11 +37,6 @@
 .description {
    text-decoration: none;
    text-align: left;
-}
-.description {
-   @include paragraph;
-   color: $color-font;
-   // line-height: $line-height-4;
 }
 
 .tagsContainer {

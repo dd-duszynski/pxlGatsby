@@ -1,5 +1,9 @@
 import React from "react"
 import styles from "./ContactInfo.module.scss"
+import { AiFillHome, AiFillPhone } from "react-icons/ai"
+import { IoMdMail } from "react-icons/io"
+import { GrYoutube } from "react-icons/gr"
+import { FaFacebookSquare } from "react-icons/fa"
 
 const ContactInfo = () => {
    return (
@@ -10,7 +14,7 @@ const ContactInfo = () => {
             target="_blank"
             rel="noopener noreferrer"
          >
-            <span />
+            <AiFillHome className={styles.icon} />
             PrintXL
             <br />
             ul. Czochralskiego 6,
@@ -21,13 +25,14 @@ const ContactInfo = () => {
          <div className={styles.line} />
 
          <a className={styles.mail} href="mailto:info@printxl.pl">
-            <span /> info@printxl.pl
+            <IoMdMail className={styles.icon} />
+            info@printxl.pl
          </a>
 
          <div className={styles.line} />
 
          <a className={styles.phone} href="tel:+48 695-859-808">
-            <span /> +48 695-859-808
+            <AiFillPhone className={styles.icon} /> +48 695-859-808
          </a>
 
          <div className={styles.line} />
@@ -38,7 +43,7 @@ const ContactInfo = () => {
             target="_blank"
             rel="noopener noreferrer"
          >
-            <span /> Facebook
+            <FaFacebookSquare className={styles.icon} /> Facebook
          </a>
 
          <div className={styles.line} />
@@ -49,7 +54,7 @@ const ContactInfo = () => {
             target="_blank"
             rel="noopener noreferrer"
          >
-            <span /> YouTube
+            <GrYoutube className={styles.icon} /> YouTube
          </a>
       </section>
    )

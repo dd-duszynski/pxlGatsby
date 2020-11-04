@@ -4,7 +4,7 @@ import img_loopka from "../../assets/images/hero_img.jpg"
 import Counter from "../Counter/Counter"
 import LeftBar from "../UI/Bars/LeftBar"
 import RightBar from "../UI/Bars/RightBar"
-
+import Paragraph from '../UI/Paragraph/Paragraph';
 class Hero extends Component {
    render() {
       return (
@@ -21,7 +21,7 @@ class Hero extends Component {
                </div>
 
                <div className={styles.descriptionContainer}>
-                  <p className={styles.innerDescription}>
+                  <Paragraph addClass={styles.innerDescription}>
                      Jesteśmy prężnie działającą drukarnią cyfrową,
                      specjalizującą się w druku wielkoformatowym dla klientów z
                      całej Europy. Cechuje nas wysoka jakość i szybkie terminy
@@ -36,7 +36,7 @@ class Hero extends Component {
                      Serdecznie zapraszamy do kontaktu.
                      <br />
                      <br />
-                  </p>
+                  </Paragraph>
                </div>
             </article>
             <Counter />

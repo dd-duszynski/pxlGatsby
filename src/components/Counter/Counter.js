@@ -2,13 +2,13 @@ import React, { useState } from "react"
 import styles from "./Counter.module.scss"
 import CountUp from "react-countup"
 import VisibilitySensor from "react-visibility-sensor"
+import H2 from "../UI/Headers/H2"
 
 const style = {
    componentName: {},
    col: {},
    countup: {},
 }
-
 const Counter = () => {
    const [didViewCountUp, setDidViewCountUp] = useState(false)
 
@@ -22,7 +22,10 @@ const Counter = () => {
       <article className={styles.counter}>
          <div className={styles.counter_container}>
             <div className={styles.box_item}>
-               <p className={styles.box_title}>Zrealizowanych zleceń:</p>
+               <H2 addClass={styles.box_title}>
+                  Zrealizowanych zleceń:
+               </H2>
+               {/* <H2 addClass={styles.box_title}>Zrealizowanych zleceń:</H2> */}
                <span className={styles.counter_boxes_span1} />
                <p className={styles.box_item_nr}>
                   <VisibilitySensor
@@ -33,7 +36,7 @@ const Counter = () => {
                      delayedCall
                   >
                      <CountUp
-                        className={style.countup}
+                        className={styles.countup}
                         start={0}
                         end={didViewCountUp ? 133000 : 0}
                         duration={3}
@@ -44,7 +47,9 @@ const Counter = () => {
             </div>
 
             <div className={styles.box_item}>
-               <p className={styles.box_title}>Zadowolonych klientów:</p>
+               <H2 addClass={styles.box_title}>
+                  Zadowolonych klientów:
+               </H2>
                <span className={styles.counter_boxes_span2} />
                <p className={styles.box_item_nr}>
                   <VisibilitySensor
@@ -67,7 +72,9 @@ const Counter = () => {
             </div>
 
             <div className={styles.box_item}>
-               <p className={styles.box_title}>Wydrukowane m2:</p>
+               <H2 addClass={styles.box_title}>
+                  Wydrukowane m2:
+               </H2>
                <span className={styles.counter_boxes_span3} />
                <p className={styles.box_item_nr}>
                   <VisibilitySensor

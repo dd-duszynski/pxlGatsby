@@ -1,9 +1,9 @@
-@import '../../scss/variables.scss';
+@import "../../scss/variables.scss";
 
 .Layout {
-   @include gridContainer;
+   display: grid;
+   grid-template-columns: 10% 80% 10%;
    color: rgb(45, 45, 45);
    font-family: "Roboto", sans-serif;
    position: relative;
 }
-

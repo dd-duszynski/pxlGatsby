@@ -3,7 +3,7 @@ import styles from "./BlogCard.module.scss"
 import RhombusLink from "../../UI/RhombusLink/RhombusLink"
 import Card from "../../UI/Card/Card"
 import Paragraph from "../../UI/Paragraph/Paragraph"
-import H3 from "../../UI/Headers/H3"
+import H2 from "../../UI/Headers/H2"
 import Subtitle from "../../UI/Subtitle/Subtitle"
 
 const BlogCard = ({ blog }) => {
@@ -14,7 +14,7 @@ const BlogCard = ({ blog }) => {
          <Card tags={kategorie} img={zdjecia[0].fluid} />
          <div className={styles.textContainer}>
             <div className={styles.bar}></div>
-            <H3 addClass={styles.title}>{tytul}</H3>
+            <H2 addClass={styles.title}>{tytul}</H2>
             <Subtitle addClass={styles.date}>
                {dataPublikacji} | 5 min czytania
             </Subtitle>
