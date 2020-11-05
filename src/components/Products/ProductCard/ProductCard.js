@@ -29,7 +29,8 @@ const ProductCard = ({ data }) => {
          setImgIndex(0)
       }
    }
-
+   const bestseller = data.opcjeProduktu.findIndex(el => el === "Bestseller")
+   console.log(bestseller);
    return (
       <article className={styles.ProductCard}>
          <div className={styles.imageContainer}>
@@ -44,10 +45,17 @@ const ProductCard = ({ data }) => {
             <div className={styles.arrowRight} onClick={imgNext}>
                <RiArrowRightSLine />
             </div>
+            {
+               bestseller >= 0 ? (
+                  <div className={styles.tagsTopContainer}>
+                     <Tag type="bestseller">{data.opcjeProduktu[bestseller]}</Tag>
+                  </div>
+               ) : null
+            }
             <div className={styles.tagsContainer}>
-               <Tag type="group">Banery</Tag>
-               <Tag type="indOut">Indoor</Tag>
-               <Tag type="print">UV/Latex</Tag>
+               <Tag type="group">{data.rodzaj}</Tag>
+               <Tag type="indOut">{data.opcjeProduktu[0]}</Tag>
+               <Tag type="print">{data.zadruk[0]}</Tag>
             </div>
          </div>
          <div className={styles.aboutContainer}>

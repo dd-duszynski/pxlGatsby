@@ -25,6 +25,7 @@ export const getData = graphql`
          nodes {
             nazwa
             zadruk
+            opcjeProduktu
             opis {
                content {
                   content {
