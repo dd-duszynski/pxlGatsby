@@ -1,0 +1,37 @@
+@import "../../../scss/variables.scss";
+
+.GroupItem {
+   margin-bottom: 12px;
+   width: 500px;
+   &:nth-last-child(1) {
+      margin-bottom: 0;
+   }
+}
+.choosenGroupItem {
+   @extend .GroupItem;
+}
+
+.titleContainer {
+   display: flex;
+   justify-content: space-between;
+   margin-bottom: 3px;
+   box-shadow: 1px 1px 2px rgb(189, 189, 189);
+   padding: 10px 20px;
+   border-radius: 8px;
+   &:hover {
+      cursor: pointer;
+      box-shadow: 2px 2px 3px rgb(189, 189, 189);
+      transform: scale(1.004);
+   }
+}
+
+.arrow {
+   width: 25px;
+   height: 25px;
+   transition: all 0.35s;
+   color: $color-main;
+}
+.arrowRotate {
+   @extend .arrow;
+   transform: rotate(180deg);
+}

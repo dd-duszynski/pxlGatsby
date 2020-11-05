@@ -1,0 +1,49 @@
+@import "../../../scss/variables.scss";
+
+.ProductItem {
+   width: 90%;
+   margin-left: 5%;
+   margin-bottom: 10px;
+   
+   &:nth-last-child(1) {
+      margin-bottom: 0;
+   }
+   &:hover {
+      cursor: pointer;
+      transform: scale(1.004);
+   }
+}
+
+.titleContainer {
+   display: flex;
+   justify-content: space-between;
+   margin-bottom: 3px;
+   color: $color-font;
+   padding: 10px 20px;
+   border-radius: 8px;
+   box-shadow: 1px 1px 2px rgb(189, 189, 189);
+   &:first-child{
+      box-shadow: 2px 2px 3px rgb(189, 189, 189);
+      margin-top: 12px;
+   }
+}
+.arrow {
+   width: 25px;
+   height: 25px;
+   transition: all 0.35s;
+   color: $color-main;
+}
+.arrowRotate {
+   @extend .arrow;
+   transform: rotate(180deg);
+}
+.titleContainer {
+   display: flex;
+   justify-content: space-between;
+   margin-bottom: 3px;
+}
+
+
+.TemplateItem{
+   @extend .ProductItem;
+}
