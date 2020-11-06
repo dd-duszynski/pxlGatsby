@@ -19,13 +19,15 @@
 }
 .bestsellerTag {
    background-color: red;
-   border-top-left-radius: 14px;
 }
 .printing {
-   background-color: black;
+   background-color: $color-main;
+   // background-color: black;
+   border-left: 1px solid white;
 }
 .products {
    background-color: $color-main;
+
 }
 .dtp {
    background-color: orangered;

@@ -29,8 +29,15 @@ const ProductCard = ({ data }) => {
          setImgIndex(0)
       }
    }
+   const uv = data.zadruk.findIndex(el => el === "UV")
+   const solvent = data.zadruk.findIndex(el => el === "Solvent")
+   const sublimacja = data.zadruk.findIndex(el => el === "Sublimacja")
+   const latex = data.zadruk.findIndex(el => el === "Latex")
+   const indoor = data.opcjeProduktu.findIndex(el => el === "Indoor")
+   const outdoor = data.opcjeProduktu.findIndex(el => el === "Outdoor")
+   const nowosc = data.opcjeProduktu.findIndex(el => el === "Nowość")
    const bestseller = data.opcjeProduktu.findIndex(el => el === "Bestseller")
-   console.log(bestseller);
+
    return (
       <article className={styles.ProductCard}>
          <div className={styles.imageContainer}>
@@ -45,17 +52,40 @@ const ProductCard = ({ data }) => {
             <div className={styles.arrowRight} onClick={imgNext}>
                <RiArrowRightSLine />
             </div>
-            {
-               bestseller >= 0 ? (
-                  <div className={styles.tagsTopContainer}>
-                     <Tag type="bestseller">{data.opcjeProduktu[bestseller]}</Tag>
-                  </div>
-               ) : null
-            }
+            <div className={styles.tagsTopContainer}>
+               {bestseller >= 0 ? (
+                  <Tag type="bestseller" value={data.opcjeProduktu[bestseller]}/>
+               ) : null}
+               {nowosc >= 0 ? (
+                  <Tag type="nowosc" value={data.opcjeProduktu[nowosc]}/>
+               ) : null}
+            </div>
             <div className={styles.tagsContainer}>
-               <Tag type="group">{data.rodzaj}</Tag>
-               <Tag type="indOut">{data.opcjeProduktu[0]}</Tag>
-               <Tag type="print">{data.zadruk[0]}</Tag>
+               {/* <Tag type="group" value={data.rodzaj}>
+                  {data.rodzaj}
+               </Tag> */}
+               <Tag
+                  type="indOut"
+                  value={[
+                     data.opcjeProduktu[indoor],
+                     data.opcjeProduktu[outdoor]
+                  ]}
+               >
+                  {data.opcjeProduktu[0]}
+               </Tag>
+
+               {uv >= 0 ? (
+                  <Tag type="printing" value="UV"/>
+               ) : null}
+               {solvent >= 0 ? (
+                  <Tag type="printing" value="SOL"/>
+               ) : null}
+               {sublimacja >= 0 ? (
+                  <Tag type="printing" value="SUB"/>
+               ) : null}
+               {latex >= 0 ? (
+                  <Tag type="printing" value="LAT"/>
+               ) : null}
             </div>
          </div>
          <div className={styles.aboutContainer}>

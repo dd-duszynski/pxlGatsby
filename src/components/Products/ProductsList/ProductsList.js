@@ -3,6 +3,7 @@ import styles from "./ProductsList.module.scss"
 import ProductCard from "../ProductCard/ProductCard"
 
 const ProductsList = ({ data }) => {
+   console.log("[ProductsList]",data.nodes);
    return (
       <section className={styles.ProductsList}>
          {data.nodes.map(item => {
