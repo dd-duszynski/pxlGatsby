@@ -1,13 +1,12 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Img from "gatsby-image"
 import Layout from "../components/Layout/Layout"
 import TechnologyNav from "../components/Technology/TechnologyNav/TechnologyNav"
 import Technology from "../components/Technology/Technology"
 import SEO from "../components/SEO/SEO"
 
-const TechnologyTemplate = ({ data, pageContext }) => {
-   const { nazwa, zdjecia, opis } = data.contentfulTechnologiePl
+const TechnologyTemplate = ({ data }) => {
+   const { nazwa, zdjecia } = data.contentfulTechnologiePl
 
    // const [mainImage, ...otherImages] = zdjecia
    const [...images] = zdjecia
@@ -17,9 +16,7 @@ const TechnologyTemplate = ({ data, pageContext }) => {
          <SEO title={`PrintXL - ${nazwa}`} />
          <TechnologyNav language="PL" />
          <Technology 
-            nazwa={nazwa} 
-            zdjecia={zdjecia} 
-            opis={opis}
+            machine={data.contentfulTechnologiePl}
          />
       </Layout>
    )
