@@ -1,4 +1,5 @@
-import React, { useState } from "react"
+import React, { useState, useContext } from "react"
+import Context from "../../context/context"
 import styles from "./Counter.module.scss"
 import CountUp from "react-countup"
 import VisibilitySensor from "react-visibility-sensor"
@@ -11,7 +12,7 @@ const style = {
 }
 const Counter = () => {
    const [didViewCountUp, setDidViewCountUp] = useState(false)
-
+   const { textContent } = useContext(Context)
    const onVisibilityChange = isVisible => {
       if (isVisible) {
          setDidViewCountUp(true)
@@ -23,7 +24,7 @@ const Counter = () => {
          <div className={styles.counter_container}>
             <div className={styles.box_item}>
                <H2 addClass={styles.box_title}>
-                  Zrealizowanych zleceń:
+                  {textContent.mainPage.aboutUs[4]}
                </H2>
                {/* <H2 addClass={styles.box_title}>Zrealizowanych zleceń:</H2> */}
                <span className={styles.counter_boxes_span1} />
@@ -48,7 +49,7 @@ const Counter = () => {
 
             <div className={styles.box_item}>
                <H2 addClass={styles.box_title}>
-                  Zadowolonych klientów:
+                  {textContent.mainPage.aboutUs[5]}
                </H2>
                <span className={styles.counter_boxes_span2} />
                <p className={styles.box_item_nr}>
@@ -73,7 +74,7 @@ const Counter = () => {
 
             <div className={styles.box_item}>
                <H2 addClass={styles.box_title}>
-                  Wydrukowane m2:
+                  {textContent.mainPage.aboutUs[6]}
                </H2>
                <span className={styles.counter_boxes_span3} />
                <p className={styles.box_item_nr}>

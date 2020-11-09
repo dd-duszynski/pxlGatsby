@@ -13,7 +13,10 @@ const Technology = ({ machine }) => {
    const [...images] = machine.zdjecia
    const data = useStaticQuery(graphql`
       query {
-         Produkty: allContentfulProduktyPl(filter: {zadruk: {in: "Sublimacja"}}, limit: 6) {
+         Produkty: allContentfulProduktyPl(
+            filter: { zadruk: { in: "Sublimacja" } }
+            limit: 6
+         ) {
             nodes {
                nazwa
                zadruk
@@ -37,6 +40,7 @@ const Technology = ({ machine }) => {
          }
       }
    `)
+
    const imgChangeHandler = item => {
       setNrImg(item)
    }

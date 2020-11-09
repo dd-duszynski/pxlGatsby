@@ -1,11 +1,11 @@
-import React from "react"
+import React  from "react"
 import styles from "./ContactInfo.module.scss"
 import { AiFillHome, AiFillPhone } from "react-icons/ai"
 import { IoMdMail } from "react-icons/io"
 import { GrYoutube } from "react-icons/gr"
 import { FaFacebookSquare } from "react-icons/fa"
 
-const ContactInfo = () => {
+const ContactInfo = ({text}) => {
    return (
       <section className={styles.ContactInfo}>
          <a
@@ -15,11 +15,11 @@ const ContactInfo = () => {
             rel="noopener noreferrer"
          >
             <AiFillHome className={styles.icon} />
-            PrintXL
+            PrintXL Sp. z o.o.
             <br />
             ul. Czochralskiego 6,
             <br />
-            61-248 Poznań, Polska
+            61-248 Poznań, {text[1]}
          </a>
 
          <div className={styles.line} />

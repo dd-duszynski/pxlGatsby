@@ -2,7 +2,6 @@ import React from "react"
 import styles from "./Tag.module.scss"
 
 const Tag = ({ type, children, value }) => {
-   console.log(type, value)
    let css
    let text
    switch (type) {

@@ -1,10 +1,10 @@
 import React, { Component } from "react"
 import styles from "./HeroVideo.module.scss"
 import movie from "../../assets/videos/XL.mp4"
-import { GeneralPL } from "../../content/GeneralPL"
-import { GeneralEN } from "../../content/GeneralEN"
-import { GeneralDE } from "../../content/GeneralDE"
-import { GeneralFR } from "../../content/GeneralFR"
+import { contentPL } from "../../content/contentPL"
+import { contentEN } from "../../content/contentEN"
+import { contentDE } from "../../content/contentDE"
+import { contentFR } from "../../content/contentFR"
 
 //-------------------------------------------------------------------
 
@@ -41,19 +41,19 @@ class HeroVideo extends Component {
       let lang
       switch (this.props.language) {
          case "PL":
-            lang = GeneralPL
+            lang = contentPL
             break
          case "EN":
-            lang = GeneralEN
+            lang = contentEN
             break
          case "DE":
-            lang = GeneralDE
+            lang = contentDE
             break
          case "FR":
-            lang = GeneralFR
+            lang = contentFR
             break
          default:
-            lang = GeneralEN
+            lang = contentEN
       }
 
       const heroMovie = this.state.videoDidMount ? (
@@ -81,10 +81,10 @@ class HeroVideo extends Component {
                   }
                >
                   <h2 className={styles.element_title}>
-                     {lang.HeroVideo[0][0]}
+                     {lang.mainPage.heroVideo[0][0]}
                   </h2>
                   <div className={styles.element_text}>
-                     {lang.HeroVideo[0][1]}
+                     {lang.mainPage.heroVideo[0][1]}
                   </div>
                </article>
 
@@ -96,10 +96,10 @@ class HeroVideo extends Component {
                   }
                >
                   <h2 className={styles.element_title}>
-                     {lang.HeroVideo[1][0]}
+                     {lang.mainPage.heroVideo[1][0]}
                   </h2>
                   <div className={styles.element_text}>
-                     {lang.HeroVideo[1][0]}
+                     {lang.mainPage.heroVideo[1][1]}
                   </div>
                </article>
 
@@ -111,10 +111,10 @@ class HeroVideo extends Component {
                   }
                >
                   <h2 className={styles.element_title}>
-                     {lang.HeroVideo[2][0]}
+                     {lang.mainPage.heroVideo[2][0]}
                   </h2>
                   <div className={styles.element_text}>
-                     {lang.HeroVideo[2][0]}
+                     {lang.mainPage.heroVideo[2][1]}
                   </div>
                </article>
 
@@ -126,10 +126,10 @@ class HeroVideo extends Component {
                   }
                >
                   <h2 className={styles.element_title}>
-                     {lang.HeroVideo[3][0]}
+                     {lang.mainPage.heroVideo[3][0]}
                   </h2>
                   <div className={styles.element_text}>
-                     {lang.HeroVideo[3][0]}
+                     {lang.mainPage.heroVideo[3][1]}
                   </div>
                </article>
 

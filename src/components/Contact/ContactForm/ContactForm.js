@@ -33,7 +33,7 @@ const ContactForm = ({ text }) => {
             />
             <RhombusInput
                input
-               text={text[6]}
+               text={text[5]}
             />
          </form>
       </section>
@@ -41,33 +41,3 @@ const ContactForm = ({ text }) => {
 }
 
 export default ContactForm
-
-
-
-// <div>
-// <label htmlFor="name">{text[2]}:</label>
-// <input
-//    className={styles.formControl}
-//    type="text"
-//    name="name"
-//    id="name"
-// />
-// </div>
-// <div>
-// <label htmlFor="email">{text[3]}:</label>
-// <input
-//    className={styles.formControl}
-//    type="email"
-//    name="email"
-//    id="email"
-// />
-// </div>
-// <div>
-// <label htmlFor="message">{text[4]}:</label>
-// <textarea
-//    className={styles.formControl}
-//    name="message"
-//    id="message"
-//    row="10"
-// />
-// </div>
