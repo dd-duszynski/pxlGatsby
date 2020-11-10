@@ -1,5 +1,5 @@
-import React, {useContext} from "react"
-import Context from '../../context/context'
+import React, { useContext } from "react"
+import Context from "../../context/context"
 import styles from "./ContactContainer.module.scss"
 import ContactForm from "./ContactForm/ContactForm"
 import ContactInfo from "./ContactInfo/ContactInfo"
@@ -20,7 +20,7 @@ const ContactContainer = () => {
             <div className={styles.verticalLine} />
             <ContactForm text={textContent.mainPage.contact} />
          </div>
-         <Newsletter text={textContent.mainPage.contact}/>
+         <Newsletter text={textContent.mainPage.contact} />
       </section>
    )
 }

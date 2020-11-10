@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react"
-import Context from '../../context/context'
+import Context from "../../context/context"
 import styles from "./FAQ.module.scss"
 import Answer from "./Answer/Answer"
 import LeftBar from "../UI/Bars/LeftBar"
@@ -15,7 +15,7 @@ const FAQ = () => {
          setExpandedTab(tabId)
       }
    }
-   
+
    return (
       <section className={styles.FAQ} id="FAQ">
          <LeftBar text="FAQ" />

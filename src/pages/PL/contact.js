@@ -8,7 +8,7 @@ class Contact extends Component {
       return (
          <Layout language="PL">
             <SEO title="PrintXL - Kontakt" />
-            <ContactContainer language="PL" />
+            <ContactContainer />
          </Layout>
       )
    }

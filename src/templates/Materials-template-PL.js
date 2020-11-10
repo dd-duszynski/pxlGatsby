@@ -9,7 +9,7 @@ const MaterialsTemplate = ({ data: { Materials } }) => {
    return (
       <Layout language="PL">
          <SEO title="PrintXL - Materiały" />
-         <MaterialsNav language="PL" />
+         <MaterialsNav />
          <Material data={Materials} />
       </Layout>
    )

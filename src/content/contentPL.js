@@ -20,6 +20,8 @@ export const contentPL = {
          "Zachęcamy do pobrania naszego nowego katalogu.",
          "Znajdą w nim Państwo aktualną ofertę na produkty i przydatne akcesoria pomagające w walce z Covid-19.",
          ">> POBIERZ KATALOG <<",
+         "http://printxl.pl/pdf/COVID_PL_d.pdf",
+         "http://printxl.pl/pdf/COVID_PL_m.pdf",
       ],
       productSection: ["Produkty", "ZOBACZ WSZYSTKIE"],
       contact: [
@@ -75,7 +77,7 @@ export const contentPL = {
             "Dane firmy",
             "KRS",
             "NIP",
-            "REGON"
+            "REGON",
          ],
          links: [
             "http://printxl.pl/Instructions/termsOfCooperation_PL.pdf",
@@ -83,54 +85,123 @@ export const contentPL = {
          ],
       },
    },
-   productGroup: [
-      {
-         text: "Banery",
-         id: "banners",
+   navigation: {
+      text: [
+         "Produkty",
+         "Materiały",
+         "Technologie",
+         "Specyfikacje",
+         "FAQ",
+         "Kontakt",
+         "Blog",
+      ],
+      links: [
+         "PL/",
+         "PL/products",
+         "PL/materials",
+         "PL/technology",
+         "PL/specifications",
+         "PL/#FAQ",
+         "PL/contact",
+         "PL/blog",
+      ],
+   },
+   products: {
+      mainLink: "PL/products",
+      navigation: {
+         text: [
+            "Covid-19",
+            "Banery",
+            "Flagi",
+            "Rollupy",
+            "Ścianki",
+            "Standy",
+            "Trybunki",
+            "Pozostałe",
+         ],
+         links: [
+            "PL/products/covid-19",
+            "PL/products/banners",
+            "PL/products/flags",
+            "PL/products/rollups",
+            "PL/products/walls",
+            "PL/products/stands",
+            "PL/products/tribunes",
+            "PL/products/others",
+         ],
       },
-      {
-         text: "Rollupy",
-         id: "rollups",
+   },
+   materials: {
+      navigation: {
+         text: ["Vinyle", "Folie", "Płaskie", "Dekoracyjne", "Tekstylia"],
+         links: [
+            "PL/materials/vinyls",
+            "PL/materials/foils",
+            "PL/materials/flat",
+            "PL/materials/decorative",
+            "PL/materials/textiles",
+         ],
       },
-      {
-         text: "Flagi",
-         id: "flags",
+   },
+   technology: {
+      navigation: {
+         text: ["Sublimacja", "Latex", "UV", "Solvent"],
+         links: [
+            "PL/technology/sublimation",
+            "PL/technology/latex",
+            "PL/technology/uv",
+            "PL/technology/solvent",
+         ],
       },
-      {
-         text: "Ścianki",
-         id: "walls",
+   },
+   blog: {
+      navigation: {
+         categoryHeader: "Kategorie",
+         text: ["Druk", "Produkty", "Przygotowanie plików", "Technologie"],
+         links: [
+            "PL/blog/printing",
+            "PL/blog/products",
+            "PL/blog/dtp",
+            "PL/blog/technology",
+         ],
       },
-      {
-         text: "Standy",
-         id: "stands",
-      },
-      {
-         text: "Trybunki",
-         id: "tribunes",
-      },
-      {
-         text: "Pozostałe",
-         id: "others",
-      },
-   ],
-   navigationText: [
-      "Produkty",
-      "Materiały",
-      "Technologie",
-      "Specyfikacje",
-      "FAQ",
-      "Kontakt",
-      "Blog",
-   ],
-   navigationLinks: [
-      "PL/",
-      "PL/products",
-      "PL/materials",
-      "PL/technology",
-      "PL/specifications",
-      "PL/#FAQ",
-      "PL/contact",
-      "PL/blog",
-   ],
-   blogTags: ["Druk", "Przygotowanie plików", "Produkty", "Technologie"],
+      cards: [
+         "Druk", 
+         "Przygotowanie plików",
+         "Produkty", 
+         "Technologie"
+      ],
+   },
+   specifications: {
+      navigation: [
+         {
+            text: "Banery",
+            id: "banners",
+         },
+         {
+            text: "Rollupy",
+            id: "rollups",
+         },
+         {
+            text: "Flagi",
+            id: "flags",
+         },
+         {
+            text: "Ścianki",
+            id: "walls",
+         },
+         {
+            text: "Standy",
+            id: "stands",
+         },
+         {
+            text: "Trybunki",
+            id: "tribunes",
+         },
+         {
+            text: "Pozostałe",
+            id: "others",
+         },
+      ],
+   },
 }

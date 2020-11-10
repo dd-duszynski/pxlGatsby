@@ -1,12 +1,12 @@
 import React from "react"
+import Helmet from "react-helmet"
 import "../../scss/main.scss"
+import styles from "./Layout.module.scss"
+import Context from "../../context/context"
 import Footer from "../Footer/Footer"
 import Navigation from "../Navigation/Navigation"
 import ReturnToTopArrow from "./ReturnToTopArrow/ReturnToTopArrow"
-import styles from "./Layout.module.scss"
-import Helmet from "react-helmet"
 import favicon from "../../../static/favicon.png"
-import LanguageContext from "../../context/context"
 import { contentPL } from "../../content/contentPL"
 import { contentEN } from "../../content/contentEN"
 import { contentDE } from "../../content/contentDE"
@@ -17,9 +17,6 @@ const Layout = ({ children, language }) => {
    switch (language) {
       case "PL":
          textContent = contentPL
-         break
-      case "EN":
-         textContent = contentEN
          break
       case "DE":
          textContent = contentDE
@@ -32,22 +29,22 @@ const Layout = ({ children, language }) => {
    }
 
    return (
-      <LanguageContext.Provider
+      <Context.Provider
          value={{
             language: language,
-            textContent: textContent
+            textContent: textContent,
          }}
       >
          <main className={styles.Layout}>
             <Helmet>
                <link rel="icon" href={favicon} />
             </Helmet>
-            <Navigation/>
+            <Navigation />
             {children}
-            <Footer/>
+            <Footer />
             <ReturnToTopArrow />
          </main>
-      </LanguageContext.Provider>
+      </Context.Provider>
    )
 }
 

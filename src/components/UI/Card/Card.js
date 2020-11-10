@@ -1,29 +1,32 @@
-import React from "react"
+import React, { useContext } from "react"
+import Context from "../../../context/context"
 import Image from "gatsby-image"
 import styles from "./Card.module.scss"
-import {contentPL} from "../../../content/contentPL"
 
 const Card = ({ tags, img }) => {
+   const { textContent } = useContext(Context)
+   
    let tagsWithProperLang = []
+
    tags.forEach(tag => {
       if (tag === "druk") {
          tagsWithProperLang.push({
-            text: contentPL.blogTags[0],
+            text: textContent.blog.cards[0],
             css: styles.printing,
          })
       } else if (tag === "przygotowanie plików") {
          tagsWithProperLang.push({
-            text: contentPL.blogTags[1],
+            text: textContent.blog.cards[1],
             css: styles.dtp,
          })
       } else if (tag === "produkty") {
          tagsWithProperLang.push({
-            text: contentPL.blogTags[2],
+            text: textContent.blog.cards[2],
             css: styles.products,
          })
       } else if (tag === "technologie") {
          tagsWithProperLang.push({
-            text: contentPL.blogTags[3],
+            text: textContent.blog.cards[3],
             css: styles.technology,
          })
       }

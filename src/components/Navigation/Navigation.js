@@ -1,21 +1,14 @@
 import React, { useState, useContext } from "react"
-// import { useLanguage } from '../../hooks/language-hook'
 import { Link } from "gatsby"
 import TopBar from "./TopBar/TopBar"
 import TopBarMobile from "./TopBarMobile/TopBarMobile"
 import logoWhite from "../../assets/icons/logo_white.svg"
-import { contentPL } from "../../content/contentPL"
-import { GeneralEN } from "../../content/GeneralEN"
-import { GeneralDE } from "../../content/GeneralDE"
-import { GeneralFR } from "../../content/GeneralFR"
 import Context from "../../context/context"
 import styles from "./Navigation.module.scss"
 
-const Navigation = ({ languageChange }) => {
+const Navigation = () => {
    const [classNav, setClassNav] = useState(styles.Nav)
-   const { language } = useContext(Context)
-   // muszę potestować
-   // const test = useLanguage(language)
+   const { textContent } = useContext(Context)
 
    const toggleNavSlide = () => {
       let css = classNav === styles.Nav ? styles.Nav__active : styles.Nav
@@ -26,17 +19,6 @@ const Navigation = ({ languageChange }) => {
       setClassNav(styles.Nav)
    }
 
-   let lang
-   if (language === "PL") {
-      lang = contentPL
-   } else if (language === "EN") {
-      lang = GeneralEN
-   } else if (language === "DE") {
-      lang = GeneralDE
-   } else if (language === "FR") {
-      lang = GeneralFR
-   }
-
    return (
       <header
          className={
@@ -45,10 +27,10 @@ const Navigation = ({ languageChange }) => {
                : styles.Navigation
          }
       >
-         <TopBar languageChange={e => languageChange(e)} />
+         <TopBar />
          <div className={styles.Container}>
             <h1>
-               <Link to={`/${lang.navigationLinks[0]}`}>
+               <Link to={`/${textContent.navigation.links[0]}`}>
                   <img
                      className={styles.logo}
                      src={logoWhite}
@@ -73,9 +55,9 @@ const Navigation = ({ languageChange }) => {
                         onClick={e => hideNavSlide(e)}
                         activeClassName={styles.active}
                         partiallyActive
-                        to={`/${lang.navigationLinks[1]}`}
+                        to={`/${textContent.navigation.links[1]}`}
                      >
-                        {lang.navigationText[0]}
+                        {textContent.navigation.text[0]}
                      </Link>
                   </li>
                   <li>
@@ -83,9 +65,9 @@ const Navigation = ({ languageChange }) => {
                         onClick={e => hideNavSlide(e)}
                         activeClassName={styles.active}
                         partiallyActive
-                        to={`/${lang.navigationLinks[2]}`}
+                        to={`/${textContent.navigation.links[2]}`}
                      >
-                        {lang.navigationText[1]}
+                        {textContent.navigation.text[1]}
                      </Link>
                   </li>
                   <li>
@@ -93,9 +75,9 @@ const Navigation = ({ languageChange }) => {
                         onClick={e => hideNavSlide(e)}
                         activeClassName={styles.active}
                         partiallyActive
-                        to={`/${lang.navigationLinks[3]}`}
+                        to={`/${textContent.navigation.links[3]}`}
                      >
-                        {lang.navigationText[2]}
+                        {textContent.navigation.text[2]}
                      </Link>
                   </li>
                   <li>
@@ -103,27 +85,17 @@ const Navigation = ({ languageChange }) => {
                         onClick={e => hideNavSlide(e)}
                         activeClassName={styles.active}
                         partiallyActive
-                        to={`/${lang.navigationLinks[4]}`}
+                        to={`/${textContent.navigation.links[4]}`}
                      >
-                        {lang.navigationText[3]}
+                        {textContent.navigation.text[3]}
                      </Link>
                   </li>
                   <li>
                      <Link
                         onClick={e => hideNavSlide(e)}
-                        to={`/${lang.navigationLinks[5]}`}
+                        to={`/${textContent.navigation.links[5]}`}
                      >
-                        {lang.navigationText[4]}
-                     </Link>
-                  </li>
-                  <li>
-                     <Link
-                        onClick={e => hideNavSlide(e)}
-                        activeClassName={styles.active}
-                        partiallyActive
-                        to={`/${lang.navigationLinks[6]}`}
-                     >
-                        {lang.navigationText[5]}
+                        {textContent.navigation.text[4]}
                      </Link>
                   </li>
                   <li>
@@ -131,15 +103,22 @@ const Navigation = ({ languageChange }) => {
                         onClick={e => hideNavSlide(e)}
                         activeClassName={styles.active}
                         partiallyActive
-                        to={`/${lang.navigationLinks[7]}`}
+                        to={`/${textContent.navigation.links[6]}`}
                      >
-                        {lang.navigationText[6]}
+                        {textContent.navigation.text[5]}
                      </Link>
                   </li>
-                  <TopBarMobile
-                     languageChange={e => languageChange(e)}
-                     hideNavSlide={() => hideNavSlide()}
-                  />
+                  <li>
+                     <Link
+                        onClick={e => hideNavSlide(e)}
+                        activeClassName={styles.active}
+                        partiallyActive
+                        to={`/${textContent.navigation.links[7]}`}
+                     >
+                        {textContent.navigation.text[6]}
+                     </Link>
+                  </li>
+                  <TopBarMobile hideNavSlide={() => hideNavSlide()} />
                </ul>
             </nav>
          </div>

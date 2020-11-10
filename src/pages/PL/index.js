@@ -11,13 +11,13 @@ import Products from "../../components/Products/Products"
 const IndexPage = () => {
    return (
       <Layout language="PL">
-         <SEO title="PL" />
-         <HeroVideo language="PL" />
-         <AboutUs language="PL"/>
-         <CoronaCatalog language="PL"/>
-         <Products language="PL" />
-         <ContactContainer language="PL"/>
-         <FAQ language="PL" />
+         <SEO title="PrintXL - Cyfrowa Drukarnia Wielkoformatowa - Poznań" />
+         <HeroVideo  />
+         <AboutUs />
+         <CoronaCatalog />
+         <Products />
+         <ContactContainer />
+         <FAQ />
       </Layout>
    )
 }

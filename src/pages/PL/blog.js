@@ -8,7 +8,7 @@ const blog = () => {
    return (
       <Layout language="PL">
          <SEO title="PrintXL - Blog" />
-         <BlogList language="PL" />
+         <BlogList  />
          <SearchBar/>
       </Layout>
    )

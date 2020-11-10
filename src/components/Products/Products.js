@@ -1,4 +1,4 @@
-import React, {useContext} from "react"
+import React, { useContext } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Context from "../../context/context"
 import styles from "./Products.module.scss"
@@ -6,7 +6,6 @@ import LeftBar from "../UI/Bars/LeftBar"
 import RightBar from "../UI/Bars/RightBar"
 import RhombusLink from "../UI/RhombusLink/RhombusLink"
 import ProductCard from "./ProductCard/ProductCard"
-import {contentPL} from '../../content/contentPL';
 
 const Products = () => {
    const data = useStaticQuery(graphql`
@@ -38,11 +37,11 @@ const Products = () => {
          }
       }
    `)
-   const { language } = useContext(Context)
+   const { textContent } = useContext(Context)
    return (
       <section className={styles.Products}>
          <div className={styles.container}>
-            <LeftBar text={contentPL.mainPage.productSection[0]} />
+            <LeftBar text={textContent.mainPage.productSection[0]} />
             <RightBar />
             <div className={styles.productsContainer}>
                {data.Produkty.nodes.map(item => {
@@ -50,8 +49,11 @@ const Products = () => {
                })}
             </div>
          </div>
-         <RhombusLink link="PL/products" addClass={styles.seeAll}>
-            {contentPL.mainPage.productSection[1]}
+         <RhombusLink
+            link={textContent.products.mainLink}
+            addClass={styles.seeAll}
+         >
+            {textContent.mainPage.productSection[1]}
          </RhombusLink>
       </section>
    )

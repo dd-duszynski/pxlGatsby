@@ -35,33 +35,5 @@ const ReturnToTopArrow = () => {
    }
    return <Arrow css={visible} onClick={handleClick} onScroll={handleScroll} />
 }
-// class ReturnToTopArrow extends Component {
-// 	state = {
-// 		visible: false
-// 	};
-// 	componentDidMount() {
-// 		window.addEventListener("scroll", this.handleScroll);
-// 	}
-// 	componentWillUnmount() {
-// 		window.removeEventListener("scroll", this.handleScroll);
-// 	}
-// 	handleScroll = () => {
-// 		if (window.scrollY > 120) {
-// 			this.setState({
-// 				visible: true
-// 			});
-// 		} else if (window.scrollY < 120) {
-// 			this.setState({
-// 				visible: false
-// 			});
-// 		}
-// 	};
-// 	handleClick = () => {
-// 		window.scrollTo(0, 0);
-// 	};
-// 	render() {
-// 		return <Arrow css={this.state.visible} onClick={this.handleClick} onScroll={this.handleScroll} />;
-// 	}
-// }
 
 export default ReturnToTopArrow

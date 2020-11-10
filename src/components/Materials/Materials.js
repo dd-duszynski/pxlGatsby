@@ -1,8 +1,11 @@
-import React from "react"
+import React, {useEffect} from "react"
 import styles from "./Materials.module.scss"
 import SingleMaterial from "./SingleMaterial/SingleMaterial"
 
 const Materials = ({ data }) => {
+   useEffect(() => {
+      window.scrollTo(0, 0)
+   }, [])
    return (
       <section className={styles.Materials}>
          {data.nodes.map(item => {

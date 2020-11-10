@@ -10,6 +10,7 @@ import RhombusLink from "../UI/RhombusLink/RhombusLink"
 const CoronaCatalog = () => {
    const [isSmallDevice, setIsSmallDevice] = useState(false)
    const { textContent } = useContext(Context)
+
    const updateDimensions = () => {
       if (window.innerWidth <= 1000) {
          setIsSmallDevice(true)
@@ -17,6 +18,7 @@ const CoronaCatalog = () => {
          setIsSmallDevice(false)
       }
    }
+
    useEffect(() => {
       updateDimensions()
       window.addEventListener("resize", updateDimensions)
@@ -24,8 +26,11 @@ const CoronaCatalog = () => {
          window.removeEventListener("resize", updateDimensions)
       }
    }, [])
+   
+   const linkToCatalog = isSmallDevice
+      ? textContent.mainPage.news[5]
+      : textContent.mainPage.news[4]
 
-   const link = "http://printxl.pl/pdf/COVID_PL_m.pdf"
    return (
       <section className={styles.CoronaCatalog}>
          <LeftBar text={textContent.mainPage.news[0]} />
@@ -50,7 +55,7 @@ const CoronaCatalog = () => {
                   addClass={styles.CTAlink}
                   link
                   externalLink
-                  link={link}
+                  link={linkToCatalog}
                >
                   {textContent.mainPage.news[3]}
                </RhombusLink>

@@ -8,13 +8,12 @@ import SEO from "../components/SEO/SEO"
 const TechnologyTemplate = ({ data }) => {
    const { nazwa, zdjecia } = data.contentfulTechnologiePl
 
-   // const [mainImage, ...otherImages] = zdjecia
    const [...images] = zdjecia
 
    return (
       <Layout language="PL">
          <SEO title={`PrintXL - ${nazwa}`} />
-         <TechnologyNav language="PL" />
+         <TechnologyNav />
          <Technology 
             machine={data.contentfulTechnologiePl}
          />

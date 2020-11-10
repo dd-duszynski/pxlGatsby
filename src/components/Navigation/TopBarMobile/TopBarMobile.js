@@ -23,13 +23,11 @@ const TopBarMobile = () => {
                <AniLink
                   to={`/EN/${path}`}
                   className={styles.flagEN}
-                  // onClick={e => this.hideNavSlide(e)}
                   activeClassName={styles.flagEN_Active}
                />
                <AniLink
                   to={`/PL/${path}`}
                   className={styles.flagPL}
-                  // onClick={e => this.hideNavSlide(e)}
                   activeClassName={styles.flagPL_Active}
                />
                <AniLink

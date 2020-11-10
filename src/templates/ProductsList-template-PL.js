@@ -6,7 +6,6 @@ import ProductsNav from "../components/Products/ProductsNav/ProductsNav"
 import ProductsList from "../components/Products/ProductsList/ProductsList"
 
 const ProductsListTemplate = ({ data: { Produkty } }) => {
-
    return (
       <Layout language="PL">
          <SEO title="PrintXL - Produkty" />

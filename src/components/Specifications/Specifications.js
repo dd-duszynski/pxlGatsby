@@ -1,12 +1,12 @@
-import React, { useState } from "react"
+import React, { useState, useContext } from "react"
+import Context from '../../context/context'
 import styles from "./Specifications.module.scss"
 import GroupItem from "./TemplateItem/GroupItem"
-import { contentPL } from "../../content/contentPL"
 
 const Specifications = ({ data }) => {
    const [productsGroup, setProductsGroup] = useState(null)
    const [productId, setProductId] = useState(null)
-
+   const {textContent} = useContext(Context)
    const initialProducts = data.Produkty.nodes
 
    const setProductsGroupHandler = group => {
@@ -25,7 +25,7 @@ const Specifications = ({ data }) => {
       <section className={styles.Specifications}>
          <div className={styles.container}>
             <ul className={styles.templates}>
-               {contentPL.productGroup.map(item => {
+               {textContent.specifications.navigation.map(item => {
                   return (
                      <GroupItem
                         id={item.id}
