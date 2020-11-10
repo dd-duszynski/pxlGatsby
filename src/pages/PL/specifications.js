@@ -24,7 +24,7 @@ export const query = graphql`
                }
             }
             zdjecia {
-               fixed(height: 100) {
+               fixed(height: 300) {
                   src
                }
             }

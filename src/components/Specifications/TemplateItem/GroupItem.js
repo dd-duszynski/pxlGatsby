@@ -5,6 +5,7 @@ import H2 from "../../UI/Headers/H2"
 import ProductItem from './ProductItem';
 
 const GroupItem = ({ text, id, clickFnc, choosen,products, setProductHandler,productId }) => {
+   console.log('GroupItem',products);
    const itemCSS = choosen ? styles.choosenGroupItem : styles.GroupItem
    const arrowCSS = choosen ? styles.arrowRotate : styles.arrow
    return (

@@ -1,29 +1,33 @@
 @import "../../../scss/variables.scss";
 
 .ProductItem {
-   width: 90%;
-   margin-left: 5%;
+   width: 80%;
+   margin-left: 10%;
    margin-bottom: 10px;
-   
    &:nth-last-child(1) {
       margin-bottom: 0;
    }
    &:hover {
       cursor: pointer;
-      transform: scale(1.004);
+      .image {
+         opacity: 1;
+      }
+      .titleContainer {
+         transform: scale(1.004);
+         color: $color-main;
+      }
    }
 }
-
 .titleContainer {
    display: flex;
    justify-content: space-between;
+   align-items: center;
    margin-bottom: 3px;
    color: $color-font;
-   padding: 10px 20px;
+   padding: 2px 20px;
    border-radius: 8px;
-   box-shadow: 1px 1px 2px rgb(189, 189, 189);
-   &:first-child{
-      box-shadow: 2px 2px 3px rgb(189, 189, 189);
+   box-shadow: 1px 2px 3px rgb(189, 189, 189);
+   &:first-child {
       margin-top: 12px;
    }
 }
@@ -37,13 +41,13 @@
    @extend .arrow;
    transform: rotate(180deg);
 }
-.titleContainer {
+.imageContainer {
    display: flex;
-   justify-content: space-between;
-   margin-bottom: 3px;
+   justify-content: center;
+   width: 80px;
 }
-
-
-.TemplateItem{
-   @extend .ProductItem;
+.image {
+   height: 60px;
+   max-width: 85px;
+   opacity: 0.7;
 }

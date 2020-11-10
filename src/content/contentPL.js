@@ -173,6 +173,7 @@ export const contentPL = {
       ],
    },
    specifications: {
+      //brakuje covid-19
       navigation: [
          {
             text: "Banery",

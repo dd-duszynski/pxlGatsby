@@ -1,26 +1,10 @@
 import React from "react"
 import styles from "./ProductItem.module.scss"
-import { RiArrowDownSLine } from "react-icons/ri"
 import H3 from "../../UI/Headers/H3"
-
-const TemplateItem = ({ product }) => {
-   return product.specyfikacje ? (
-      product.specyfikacje.map(item => {
-         return (
-            <li className={styles.TemplateItem}>
-               <a href={item.file.url} target="_blank">
-                  {item.file.fileName}
-               </a>
-            </li>
-         )
-      })
-   ) : (
-      <li className={styles.TemplateItem}>Brak</li>
-   )
-}
+import TemplateItem from "./TemplateItem"
 
 const ProductItem = ({ product, setProductHandler, choosen }) => {
-   const arrowCSS = choosen ? styles.arrowRotate : styles.arrow
+   const image = product.zdjecia[0].fixed.src
    return (
       <ul
          className={styles.ProductItem}
@@ -28,7 +12,9 @@ const ProductItem = ({ product, setProductHandler, choosen }) => {
       >
          <H3 addClass={styles.titleContainer}>
             {product.nazwa}
-            <RiArrowDownSLine className={arrowCSS} />
+            <div className={styles.imageContainer}>
+               <img src={image} alt="" className={styles.image} />
+            </div>
          </H3>
          {choosen && <TemplateItem product={product} />}
       </ul>
