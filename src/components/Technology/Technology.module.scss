@@ -12,7 +12,29 @@
 .linkedProductsContainer{
    width: 100%;
    display: flex;
-   flex-wrap: wrap;
    justify-content: center;
    align-items: center;
+}
+.carousel{
+
+}
+.left{
+   width: 20px;
+   height: 20px;
+   background-color: red;
+   cursor: pointer;
+}
+.right{
+   width: 20px;
+   height: 20px;
+   background-color: orange;
+   cursor: pointer;
+
+}
+.show{
+   display: block;
+}
+.hide{
+   display: none;
+
 }

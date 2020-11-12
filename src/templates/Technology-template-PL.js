@@ -32,6 +32,26 @@ export const query = graphql`
                ...GatsbyContentfulFluid
             }
          }
+         produkty {
+            nazwa
+            zadruk
+            opcjeProduktu
+            opis {
+               content {
+                  content {
+                     value
+                  }
+               }
+            }
+            opisKrotki
+            rodzaj
+            zdjecia {
+               fluid {
+                  src
+               }
+            }
+            url
+         }
       }
    }
 `

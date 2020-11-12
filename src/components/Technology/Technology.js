@@ -7,11 +7,13 @@ import Gallery from "../UI/Gallery/Gallery"
 import arrowLeft from "../../assets/icons/arrowLeft.svg"
 import arrowRight from "../../assets/icons/arrowRight.svg"
 import ProductCard from "../Products/ProductCard/ProductCard"
+import Carousel from "react-elastic-carousel"
 
 const Technology = ({ machine }) => {
    const [nrImg, setNrImg] = useState(0)
+   const [prod, setProd] = useState(0)
    const [...images] = machine.zdjecia
-   const data = useStaticQuery(graphql`
+   const products = useStaticQuery(graphql`
       query {
          Produkty: allContentfulProduktyPl(
             filter: { zadruk: { in: "Sublimacja" } }
@@ -63,11 +65,18 @@ const Technology = ({ machine }) => {
          setNrImg(0)
       }
    }
-   console.log(data)
+   console.log("machine", machine)
+   const handleLeftProd = () => {
+      setProd(2)
+   }
+   const handleRightProd = () => {
+      setProd(1)
+   }
+
    return (
       <section className={styles.Technology}>
          <article className={styles.container}>
-            <H2>Opis technologii</H2>
+            <H2>{machine.nazwa} - Opis technologii</H2>
             {/* <H2>{machine.nazwa}</H2> */}
             <Paragraph>{machine.opis.opis}</Paragraph>
             <Gallery
@@ -93,11 +102,17 @@ const Technology = ({ machine }) => {
                połyskiem przy wysokiej rozdzielczości do 1200dpi.
             </Paragraph>
             <H2>Powiązane produkty</H2>
-            <div className={styles.linkedProductsContainer}>
-               {data.Produkty.nodes.map(item => {
+            <Carousel itemsToShow={2} itemsToScroll={2}>
+               {machine.produkty.map(item => {
                   return <ProductCard data={item} key={item.nazwa} />
                })}
-            </div>
+            </Carousel>
+            <H2>Powiązane Materiały</H2>
+            <Carousel itemsToShow={2} itemsToScroll={2}>
+               {machine.produkty.map(item => {
+                  return <ProductCard data={item} key={item.nazwa} />
+               })}
+            </Carousel>
          </article>
       </section>
    )
