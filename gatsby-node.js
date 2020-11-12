@@ -82,6 +82,16 @@ exports.createPages = async ({ graphql, actions }) => {
          },
       })
    })
+   //Lista Specyfikacji PL -------------------------------------
+   data.productsPL.edges.forEach(({ node }) => {
+      createPage({
+         path: `PL/specifications/${node.rodzaj}`,
+         component: path.resolve("./src/templates/Specifications-template-PL.js"),
+         context: {
+            name: node.rodzaj,
+         },
+      })
+   })
    //Lista Produktów EN
    data.productsEN.edges.forEach(({ node }) => {
       createPage({

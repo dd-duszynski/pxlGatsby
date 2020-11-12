@@ -8,8 +8,9 @@ const TemplateItem = ({ product }) => {
          return (
             <a
                href={item.file.url}
-               target="_blank"
                className={styles.TemplateItem}
+               target="_blank"
+               rel="noopener noreferrer" 
             >
                <li className={styles.link}>
                   <AiFillFilePdf className={styles.icon} />
@@ -19,7 +20,7 @@ const TemplateItem = ({ product }) => {
          )
       })
    ) : (
-      <li className={styles.TemplateItem}>Brak</li>
+      <li className={styles.TemplateItem}>No template</li>
    )
 }
 

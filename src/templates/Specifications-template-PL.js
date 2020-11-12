@@ -2,15 +2,15 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/Layout/Layout"
 import SEO from "../components/SEO/SEO"
-import ProductsNav from "../components/Products/ProductsNav/ProductsNav"
-import ProductsList from "../components/Products/ProductsList/ProductsList"
+import SpecificationsNav from "../components/Specifications/SpecificationsNav/SpecificationsNav"
+import SpecificationsList from "../components/Specifications/SpecificationsList/SpecificationsList"
 
-const ProductsListTemplate = ({ data: { Produkty } }) => {
+const SpecificationsTemplate = ({ data: { Produkty } }) => {
    return (
       <Layout language="PL">
-         <SEO title="PrintXL - Produkty" />
-         <ProductsNav />
-         <ProductsList data={Produkty} />
+         <SEO title="PrintXL - Specyfikacje" />
+         <SpecificationsNav />
+         <SpecificationsList data={Produkty} />
       </Layout>
    )
 }
@@ -28,6 +28,7 @@ export const getData = graphql`
             opisKrotki
             rodzaj
             url
+            id
             opis {
                content {
                   content {
@@ -42,7 +43,7 @@ export const getData = graphql`
                }
             }
             zdjecia {
-               fluid {
+               fixed(height: 200) {
                   src
                }
             }
@@ -50,4 +51,4 @@ export const getData = graphql`
       }
    }
 `
-export default ProductsListTemplate
+export default SpecificationsTemplate

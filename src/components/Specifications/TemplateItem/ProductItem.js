@@ -1,22 +1,29 @@
-import React from "react"
+import React, { useState } from "react"
 import styles from "./ProductItem.module.scss"
 import H3 from "../../UI/Headers/H3"
 import TemplateItem from "./TemplateItem"
+import { RiArrowDownSLine } from "react-icons/ri"
+const ProductItem = ({ item }) => {
+   const [choosen, setChoosen] = useState(false)
 
-const ProductItem = ({ product, setProductHandler, choosen }) => {
-   const image = product.zdjecia[0].fixed.src
+   const image = item.zdjecia[0].fixed.src
+
+   const handleChoosen = () => {
+      setChoosen(!choosen)
+   }
+   const arrowCSS = choosen ? styles.arrowRotate : styles.arrow
    return (
-      <ul
-         className={styles.ProductItem}
-         onClick={() => setProductHandler(product.id)}
-      >
-         <H3 addClass={styles.titleContainer}>
-            {product.nazwa}
-            <div className={styles.imageContainer}>
-               <img src={image} alt="" className={styles.image} />
+      <ul className={styles.ProductItem} onClick={handleChoosen}>
+         <div className={styles.header}>
+            <div className={styles.innerContainer}>
+               <div className={styles.imageContainer}>
+                  <img src={image} alt="" className={styles.image} />
+               </div>
+               <H3 addClass={styles.title}>{item.nazwa}</H3>
             </div>
-         </H3>
-         {choosen && <TemplateItem product={product} />}
+            <RiArrowDownSLine className={arrowCSS} />
+         </div>
+         {choosen ? <TemplateItem product={item} /> : null}
       </ul>
    )
 }

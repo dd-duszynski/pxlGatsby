@@ -1,14 +1,13 @@
-@import '../../../scss/variables.scss';
+@import "../../../scss/variables.scss";
 
-.ProductsList{
-   grid-column: 1/4;
+.ProductsList {
+   grid-column: 2/3;
    display: flex;
    flex-wrap: wrap;
    justify-content: center;
-   // margin-left: 5%;
 }
-@media(max-width: 1000px){
-   .ProductsList{
+@media (max-width: 1000px) {
+   .ProductsList {
       width: 94%;
       margin-left: 3%;
    }

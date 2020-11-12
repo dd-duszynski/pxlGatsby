@@ -131,6 +131,31 @@ export const contentPL = {
          ],
       },
    },
+   specifications: {
+      mainLink: "PL/specifications",
+      navigation: {
+         text: [
+            "Covid-19",
+            "Banery",
+            "Flagi",
+            "Rollupy",
+            "Ścianki",
+            "Standy",
+            "Trybunki",
+            "Pozostałe",
+         ],
+         links: [
+            "PL/specifications/covid-19",
+            "PL/specifications/banners",
+            "PL/specifications/flags",
+            "PL/specifications/rollups",
+            "PL/specifications/walls",
+            "PL/specifications/stands",
+            "PL/specifications/tribunes",
+            "PL/specifications/others",
+         ],
+      },
+   },
    materials: {
       navigation: {
          text: ["Vinyle", "Folie", "Płaskie", "Dekoracyjne", "Tekstylia"],
@@ -165,44 +190,6 @@ export const contentPL = {
             "PL/blog/technology",
          ],
       },
-      cards: [
-         "Druk", 
-         "Przygotowanie plików",
-         "Produkty", 
-         "Technologie"
-      ],
-   },
-   specifications: {
-      //brakuje covid-19
-      navigation: [
-         {
-            text: "Banery",
-            id: "banners",
-         },
-         {
-            text: "Rollupy",
-            id: "rollups",
-         },
-         {
-            text: "Flagi",
-            id: "flags",
-         },
-         {
-            text: "Ścianki",
-            id: "walls",
-         },
-         {
-            text: "Standy",
-            id: "stands",
-         },
-         {
-            text: "Trybunki",
-            id: "tribunes",
-         },
-         {
-            text: "Pozostałe",
-            id: "others",
-         },
-      ],
+      cards: ["Druk", "Przygotowanie plików", "Produkty", "Technologie"],
    },
 }

@@ -6,17 +6,13 @@ import Technology from "../components/Technology/Technology"
 import SEO from "../components/SEO/SEO"
 
 const TechnologyTemplate = ({ data }) => {
-   const { nazwa, zdjecia } = data.contentfulTechnologiePl
-
-   const [...images] = zdjecia
+   const { nazwa } = data.contentfulTechnologiePl
 
    return (
       <Layout language="PL">
          <SEO title={`PrintXL - ${nazwa}`} />
          <TechnologyNav />
-         <Technology 
-            machine={data.contentfulTechnologiePl}
-         />
+         <Technology machine={data.contentfulTechnologiePl} />
       </Layout>
    )
 }

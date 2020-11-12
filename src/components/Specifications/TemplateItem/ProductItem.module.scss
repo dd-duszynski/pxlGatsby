@@ -1,8 +1,8 @@
 @import "../../../scss/variables.scss";
 
 .ProductItem {
-   width: 80%;
-   margin-left: 10%;
+   width: 100%;
+   max-width: 450px;
    margin-bottom: 10px;
    &:nth-last-child(1) {
       margin-bottom: 0;
@@ -18,18 +18,28 @@
       }
    }
 }
-.titleContainer {
+.header{
    display: flex;
+   padding: 0 10px;
+   border-radius: 8px;
+   box-shadow: 1px 2px 3px rgb(189, 189, 189);
    justify-content: space-between;
    align-items: center;
    margin-bottom: 3px;
-   color: $color-font;
-   padding: 2px 20px;
-   border-radius: 8px;
-   box-shadow: 1px 2px 3px rgb(189, 189, 189);
+   height: 65px;
    &:first-child {
       margin-top: 12px;
    }
+}
+.innerContainer{
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+   width: 90%;
+}
+.title {
+   color: $color-font;
+   margin-left: 12px;
 }
 .arrow {
    width: 25px;
@@ -44,10 +54,10 @@
 .imageContainer {
    display: flex;
    justify-content: center;
-   width: 80px;
+   width: 85px;
 }
 .image {
-   height: 60px;
-   max-width: 85px;
+   max-height: 60px;
+   max-width: 100%;
    opacity: 0.7;
 }

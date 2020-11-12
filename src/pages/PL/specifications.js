@@ -1,36 +1,8 @@
-import React from "react"
-import { graphql } from "gatsby"
-import Layout from "../../components/Layout/Layout"
-import Specifications from "../../components/Specifications/Specifications"
+import { navigate } from "gatsby"
 
-const specifications = ({ data }) => {
-   return (
-      <Layout language="PL">
-         <Specifications data={data} />
-      </Layout>
-   )
+const Products = () => {
+   navigate("/PL/specifications/banners")
+   return null
 }
-export const query = graphql`
-   {
-      Produkty: allContentfulProduktyPl {
-         nodes {
-            id
-            rodzaj
-            nazwa
-            specyfikacje {
-               file {
-                  fileName
-                  url
-               }
-            }
-            zdjecia {
-               fixed(height: 300) {
-                  src
-               }
-            }
-         }
-      }
-   }
-`
 
-export default specifications
+export default Products
