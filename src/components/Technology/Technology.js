@@ -1,118 +1,65 @@
-import React, { useState } from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import React from "react"
 import styles from "./Technology.module.scss"
 import H2 from "../UI/Headers/H2"
 import Paragraph from "../UI/Paragraph/Paragraph"
-import Gallery from "../UI/Gallery/Gallery"
-import arrowLeft from "../../assets/icons/arrowLeft.svg"
-import arrowRight from "../../assets/icons/arrowRight.svg"
 import ProductCard from "../Products/ProductCard/ProductCard"
-import Carousel from "react-elastic-carousel"
-
+import Carousel from "../Carousel/Carousel"
+import SingleMaterial from "../../components/Materials/SingleMaterialTech/SingleMaterialTech"
 const Technology = ({ machine }) => {
-   const [nrImg, setNrImg] = useState(0)
-   const [prod, setProd] = useState(0)
    const [...images] = machine.zdjecia
-   const products = useStaticQuery(graphql`
-      query {
-         Produkty: allContentfulProduktyPl(
-            filter: { zadruk: { in: "Sublimacja" } }
-            limit: 6
-         ) {
-            nodes {
-               nazwa
-               zadruk
-               opcjeProduktu
-               opis {
-                  content {
-                     content {
-                        value
-                     }
-                  }
-               }
-               opisKrotki
-               rodzaj
-               zdjecia {
-                  fluid {
-                     src
-                  }
-               }
-               url
-            }
-         }
-      }
-   `)
-
-   const imgChangeHandler = item => {
-      setNrImg(item)
-   }
-   const imgPrev = () => {
-      let currentState = nrImg
-      let test = images.length - 1
-      if (currentState > 0) {
-         setNrImg(currentState - 1)
-      } else if (currentState === 0) {
-         setNrImg(test)
-      }
-   }
-
-   const imgNextHandler = () => {
-      let currentState = nrImg
-      let arrayOfImgLength = images.length - 1
-      if (currentState < arrayOfImgLength) {
-         setNrImg(currentState + 1)
-      } else if (currentState === arrayOfImgLength) {
-         setNrImg(0)
-      }
-   }
    console.log("machine", machine)
-   const handleLeftProd = () => {
-      setProd(2)
-   }
-   const handleRightProd = () => {
-      setProd(1)
-   }
-
    return (
       <section className={styles.Technology}>
          <article className={styles.container}>
-            <H2>{machine.nazwa} - Opis technologii</H2>
-            {/* <H2>{machine.nazwa}</H2> */}
-            <Paragraph>{machine.opis.opis}</Paragraph>
-            <Gallery
-               arrowLeft={arrowLeft}
-               arrowRight={arrowRight}
-               imgPrev={() => imgPrev()}
-               imgNext={() => imgNextHandler()}
-               imgArray={images}
-               imgCurrent={nrImg}
-               imgChange={imgChangeHandler}
-               name={machine.nazwa}
-            />
-            <Paragraph>
-               Zastosowanie technologii lateksowej daje możliwość druku na
-               nieograniczonej ilości mediów: foliach, tkaninach, papierze,
-               płótnie, mediach poliestrowych i innych nośnikach powlekanych i
-               niepowlekanych. Dzięki zastosowaniu w farbach bazy wodnej
-               otrzymujemy druk ekologiczny w 100%, całkowicie nie szkodliwy dla
-               zdrowia. Wydruki nadają się idealnie do użytku wewnętrznego oraz
-               wewnętrznego. Posiadają dużo wyższą trwałość niż wydruki
-               ekosolwentowe. Dzięki tuszom lateksowym otrzymuje się wydruki
-               bardziej nasycone kolorystycznie z intensywną czernią i wysokim
-               połyskiem przy wysokiej rozdzielczości do 1200dpi.
-            </Paragraph>
-            <H2>Powiązane produkty</H2>
-            <Carousel itemsToShow={2} itemsToScroll={2}>
-               {machine.produkty.map(item => {
-                  return <ProductCard data={item} key={item.nazwa} />
-               })}
-            </Carousel>
-            <H2>Powiązane Materiały</H2>
-            <Carousel itemsToShow={2} itemsToScroll={2}>
-               {machine.produkty.map(item => {
-                  return <ProductCard data={item} key={item.nazwa} />
-               })}
-            </Carousel>
+            <div className={styles.paragraphBox}>
+               <H2 addClass={styles.header}>
+                  {machine.nazwa} - Opis technologii
+               </H2>
+               <Paragraph addClass={styles.paragraph}>
+                  {machine.opis.opis}
+               </Paragraph>
+               <Carousel>
+                  {images.map(item => {
+                     return (
+                        <img
+                           alt=""
+                           src={item.fluid.src}
+                           className={styles.img}
+                        />
+                     )
+                  })}
+               </Carousel>
+            </div>
+            <div className={styles.paragraphBox}>
+               <H2 addClass={styles.header}>Powiązane produkty</H2>
+               <Paragraph addClass={styles.paragraph}>
+                  Poniżej znajduje się lista powiązanych produktów. Znajdą
+                  Państwo wśród nich np. Beachflagi, Namioty czy Skarpety.
+               </Paragraph>
+               <Carousel itemsToShow={2}>
+                  {machine.produkty.map(item => {
+                     return <ProductCard data={item} key={item.nazwa} />
+                  })}
+               </Carousel>
+            </div>
+            <div className={styles.paragraphBox}>
+               <H2 addClass={styles.header}>Powiązane Materiały</H2>
+               <Paragraph addClass={styles.paragraph}>
+                  Poniżej znajduje się lista powiązanych produktów. Znajdą
+                  Państwo wśród nich np. Beachflagi, Namioty czy Skarpety.
+               </Paragraph>
+               <Carousel itemsToShow={1}>
+                  {machine.materialy.map(item => {
+                     return (
+                        <SingleMaterial
+                           data={item}
+                           language="PL"
+                           key={item.nazwa}
+                        />
+                     )
+                  })}
+               </Carousel>
+            </div>
          </article>
       </section>
    )

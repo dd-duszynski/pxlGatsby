@@ -1,0 +1,31 @@
+.rec-arrow {
+   border-radius: 0;
+}
+.rec-arrow {
+   border-radius: 50%;
+   background-color: white !important;
+   color: #10549b !important;
+   border: 1px solid #10549b !important;
+   /* background-color: #1078bf !important;
+   color: white !important; */
+}
+.rec-arrow:hover {
+   border-radius: 50%;
+   background-color: #10549b !important;
+   color: white !important;
+}
+
+.rec-dot{
+   background-color: white !important;
+}
+.rec-dot:hover{
+   box-shadow: 0 0 1px 2px rgba(35, 48, 235, 0.5) !important;
+}
+.rec-dot_active{
+   background-color: white !important;
+   box-shadow: 0 0 1px 3px #10549b !important;
+}
+.rec-dot_active:hover{
+   background-color: #1078bf !important;
+   box-shadow: 0 0 1px 3px #10549b !important;
+}

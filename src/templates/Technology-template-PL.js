@@ -52,6 +52,21 @@ export const query = graphql`
             }
             url
          }
+         materialy {
+            nazwa
+            rodzaj
+            opis {
+               opis
+            }
+            zadruk
+            szerokosc
+            kod
+            zdjecia {
+               fluid {
+                  src
+               }
+            }
+         }
       }
    }
 `
