@@ -8,9 +8,11 @@ const ProductsList = ({ data }) => {
    }, [])
    return (
       <section className={styles.ProductsList}>
-         {data.nodes.map(item => {
-            return <ProductCard data={item} key={item.nazwa} />
-         })}
+         <div className={styles.container}>
+            {data.nodes.map(item => {
+               return <ProductCard data={item} key={item.nazwa} />
+            })}
+         </div>
       </section>
    )
 }

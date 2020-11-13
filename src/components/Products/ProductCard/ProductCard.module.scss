@@ -2,13 +2,13 @@
 .ProductCard {
    width: 315px;
    height: 400px;
-   margin: 30px;
    padding: 0;
    position: relative;
    display: flex;
    flex-direction: column;
    justify-content: center;
    align-items: flex-end;
+   margin-bottom: 20px;
 }
 .imageContainer {
    width: 100%;

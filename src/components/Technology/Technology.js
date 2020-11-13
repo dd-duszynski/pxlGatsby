@@ -42,7 +42,7 @@ const Technology = ({ machine }) => {
                   })}
                </Carousel>
             </div>
-            <div className={styles.paragraphBox}>
+            <div className={[styles.paragraphBox, styles.materials].join(' ')}>
                <H2 addClass={styles.header}>Powiązane Materiały</H2>
                <Paragraph addClass={styles.paragraph}>
                   Poniżej znajduje się lista powiązanych produktów. Znajdą

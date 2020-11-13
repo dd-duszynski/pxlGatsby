@@ -5,9 +5,6 @@
    position: relative;
    display: flex;
    flex-wrap: wrap;
-   justify-content: center;
-   height: auto;
-   display: flex;
    flex-direction: column;
    justify-content: center;
    align-items: center;
@@ -15,18 +12,22 @@
 .container{
    padding-top: 100px;
    padding-bottom: 20px;
-   width: 80%;
-}
-.productsContainer{
    width: 100%;
    display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.productsContainer{
+   max-width: 1200px;
+   width: 80%;
+   display: flex;
    flex-wrap: wrap;
-   justify-content: center;
+   justify-content: space-around;
    align-items: center;
 }
 .seeAll{
    position: relative;
    width: 240px;
    margin-bottom: 35px;
-
 }
