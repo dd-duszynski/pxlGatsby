@@ -1,12 +1,13 @@
 @import "../../../scss/variables.scss";
 
 .TemplateItem {
-   width: 70%;
-   margin-left: 15%;
+   background-color: #eee;
+   width: 78%;
+   margin-left: 85px;
    margin-top: 10px;
    display: flex;
    align-items: center;
-   padding: 6px 0 6px 20px;
+   padding: 6px 0 6px 11px;
    border-radius: 4px;
    box-shadow: 1px 2px 3px rgb(189, 189, 189);
    &:hover{
@@ -23,7 +24,22 @@
 }
 .icon {
    color: $color-main;
-   height: 25px;
-   width: 25px;
-   margin-right: 15px;
+   height: 30px;
+   width: 30px;
+   margin-right: 12px;
+}
+@media(max-width: 600px){
+   .TemplateItem {
+      width: 90%;
+      margin-left: 5%;
+      margin-top: 10px;
+      display: flex;
+      align-items: center;
+      padding: 6px 0 6px 11px;
+      border-radius: 4px;
+      box-shadow: 1px 2px 3px rgb(189, 189, 189);
+   }
+   .link {
+      font-size: 14px;
+   }
 }

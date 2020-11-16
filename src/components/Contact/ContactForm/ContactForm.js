@@ -7,7 +7,7 @@ import TextArea from "../../UI/Input/TextArea"
 const ContactForm = ({ text }) => {
    return (
       <section className={styles.ContactForm}>
-         <header className={styles.header}>{text[7]}</header>
+         <header className={styles.header}>{text[9]}</header>
          <form
             action="https://formspree.io/dd.duszynski@gmail.com"
             method="POST"

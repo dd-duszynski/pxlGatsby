@@ -34,6 +34,7 @@ export const contentPL = {
          "Chcesz być na bieżąco z naszą ofertą i promocjami?",
          "Zapisz się na Newsletter!",
          "Zapisz się",
+         "Napisz do Nas:",
       ],
       faq: [
          [

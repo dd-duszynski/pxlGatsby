@@ -1,6 +1,6 @@
 @import "../../scss/variables.scss";
 
-.ContactContainer {
+.Contact {
    grid-column: 1/4;
    display: flex;
    justify-content: center;
@@ -44,13 +44,12 @@
    box-shadow: 2px 3px 2px 0px gray;
    z-index: 2;
 }
-.header{
+.header {
    color: white;
    margin-top: 12px;
-
 }
 
-.verticalLine{
+.verticalLine {
    grid-column: 2/3;
    justify-self: center;
    width: 1px;
@@ -58,17 +57,21 @@
 }
 //------------------------------------------------------
 
-@media only screen and (max-width: 800px) {
+@media (max-width: 830px) {
    .container {
       display: flex;
       flex-direction: column;
-      padding: 60px 40px 40px;
-      border-radius: 8px;
+      justify-content: center;
+      align-items: center;
+      width: 90%;
+      padding: 50px 20px;
+   }
+   .verticalLine{
+      height: 1px;
+      width: 60%;
+      margin-bottom: 30px;
+      min-width: 300px;
+      // border: 1px solid black;
    }
 }
 
-@media only screen and (max-width: 440px) {
-   .container {
-      padding: 50px 20px 30px;
-   }
-}

@@ -7,3 +7,9 @@
    font-family: "Roboto", sans-serif;
    position: relative;
 }
+
+@media (max-width: 600px) {
+   .Layout {
+      grid-template-columns: 3% 94% 3%;
+   }
+}

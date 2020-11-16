@@ -9,7 +9,7 @@ const ContactInfo = ({text}) => {
    return (
       <section className={styles.ContactInfo}>
          <a
-            className={styles.adres}
+            className={styles.item}
             href="https://goo.gl/maps/AcYmcUi4WEWm3GQb7"
             target="_blank"
             rel="noopener noreferrer"
@@ -22,23 +22,20 @@ const ContactInfo = ({text}) => {
             61-248 Poznań, {text[1]}
          </a>
 
-         <div className={styles.line} />
 
-         <a className={styles.mail} href="mailto:info@printxl.pl">
+         <a className={styles.item} href="mailto:info@printxl.pl">
             <IoMdMail className={styles.icon} />
             info@printxl.pl
          </a>
 
-         <div className={styles.line} />
 
-         <a className={styles.phone} href="tel:+48 695-859-808">
+         <a className={styles.item} href="tel:+48 695-859-808">
             <AiFillPhone className={styles.icon} /> +48 695-859-808
          </a>
 
-         <div className={styles.line} />
 
          <a
-            className={styles.fb}
+            className={styles.item}
             href="https://www.facebook.com/printxl/"
             target="_blank"
             rel="noopener noreferrer"
@@ -46,10 +43,9 @@ const ContactInfo = ({text}) => {
             <FaFacebookSquare className={styles.icon} /> Facebook
          </a>
 
-         <div className={styles.line} />
 
          <a
-            className={styles.yt}
+            className={styles.item}
             href="https://www.youtube.com/channel/UCDXDNkGSK8PZYBfDVa4VZwg"
             target="_blank"
             rel="noopener noreferrer"

@@ -6,10 +6,10 @@ import ContactInfo from "./ContactInfo/ContactInfo"
 import Newsletter from "./Newsletter/Newsletter"
 import H2 from "../UI/Headers/H2"
 
-const ContactContainer = () => {
+const Contact = () => {
    const { textContent } = useContext(Context)
    return (
-      <section className={styles.ContactContainer} id="contact">
+      <section className={styles.Contact} id="contact">
          <div className={styles.container}>
             <div className={styles.headerBox}>
                <H2 addClass={styles.header}>
@@ -25,4 +25,4 @@ const ContactContainer = () => {
    )
 }
 
-export default ContactContainer
+export default Contact

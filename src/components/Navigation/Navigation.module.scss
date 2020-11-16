@@ -3,8 +3,7 @@
 .Navigation {
    width: 100%;
    @include Roboto900;
-   background: -webkit-linear-gradient(to right, $color-main, $color-main2);
-   background: linear-gradient(to right, $color-main, $color-main2);
+   @include mainGradient;
    grid-column: 1/4;
    position: relative;
    z-index: 11;

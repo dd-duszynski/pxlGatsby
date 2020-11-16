@@ -4,13 +4,11 @@
    grid-column: 1/2;
 }
 
-.adres,
-.mail,
-.phone,
-.fb,
-.yt {
+.item {
    display: flex;
    align-items: center;
+   margin-left: 12px;
+   margin-bottom: 20px;
 }
 
 .icon {
@@ -20,8 +18,14 @@
    margin-right: 15px;
 }
 
-.line {
-   border-bottom: 1px solid $color-font;
-   width: 90%;
-   margin: 10px 0;
+@media (max-width: 830px) {
+   .ContactInfo {
+      width: 90%;
+      max-width: 340px;
+      margin-bottom: 16px;
+      margin-top: 16px;
+   }
+   .item{
+      margin-bottom: 12px;
+   }
 }

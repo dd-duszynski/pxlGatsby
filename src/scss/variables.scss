@@ -45,3 +45,7 @@ $line-height-6: 13px;
    font-size: 15px;
    line-height: $line-height-3;
 }
+@mixin mainGradient {
+   background: -webkit-linear-gradient(to right, $color-main, $color-main2);
+   background: linear-gradient(to right, $color-main, $color-main2);
+}

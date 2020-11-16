@@ -108,15 +108,15 @@ const Footer = () => {
                   {textContent.mainPage.footer.text[7]}
                </H3>
                <div className={styles.boxItem}>
-                  <div>
+                  <div className={styles.innerContainer}>
                      <BsInfoCircleFill className={styles.icon} />
                      <p>{textContent.mainPage.footer.text[8]}: 0000427764</p>
                   </div>
-                  <div>
+                  <div className={styles.innerContainer}>
                      <BsInfoCircleFill className={styles.icon} />
                      <p>{textContent.mainPage.footer.text[9]}: 7780111456</p>
                   </div>
-                  <div>
+                  <div className={styles.innerContainer}>
                      <BsInfoCircleFill className={styles.icon} />
                      <p>{textContent.mainPage.footer.text[10]}: 632429082</p>
                   </div>
