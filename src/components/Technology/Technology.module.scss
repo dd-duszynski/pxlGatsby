@@ -17,9 +17,6 @@
    justify-content: flex-start;
    max-width: 100ch;
 }
-.materials{
-   margin-top: 15px;
-}
 .paragraph {
    margin-bottom: 20px;
    text-align: left;
@@ -30,4 +27,9 @@
 }
 .img {
    height: 400px;
+}
+.line{
+   width: 100%;
+   border-bottom: 1px solid $color-main;
+   margin: 20px 0;
 }

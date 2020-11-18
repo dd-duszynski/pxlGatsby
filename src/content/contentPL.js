@@ -179,6 +179,13 @@ export const contentPL = {
             "PL/technology/solvent",
          ],
       },
+      description: {
+         text: [
+            "Opis technologii",
+            "Powiązane produkty",
+            "Powiązane materiały",
+         ],
+      },
    },
    blog: {
       navigation: {

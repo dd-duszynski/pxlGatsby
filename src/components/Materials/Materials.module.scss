@@ -2,15 +2,7 @@
 
 .Materials{
    grid-column: 2/3;
-   width: 100%;
    display: flex;
    flex-direction: column;
    align-items: center;
-}
-
-@media(max-width: 1000px){
-   .Materials{
-      width: 90%;
-      margin-left: 5%;
-   }
 }

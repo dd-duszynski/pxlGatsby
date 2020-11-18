@@ -1,4 +1,5 @@
-import React from "react"
+import React, { useContext } from "react"
+import Context from "../../context/context"
 import styles from "./Technology.module.scss"
 import H2 from "../UI/Headers/H2"
 import Paragraph from "../UI/Paragraph/Paragraph"
@@ -7,13 +8,14 @@ import Carousel from "../Carousel/Carousel"
 import SingleMaterial from "../../components/Materials/SingleMaterialTech/SingleMaterialTech"
 const Technology = ({ machine }) => {
    const [...images] = machine.zdjecia
-   console.log("machine", machine)
+   const { textContent } = useContext(Context)
+
    return (
       <section className={styles.Technology}>
          <article className={styles.container}>
             <div className={styles.paragraphBox}>
                <H2 addClass={styles.header}>
-                  {machine.nazwa} - Opis technologii
+                  {textContent.technology.description.text[0]}
                </H2>
                <Paragraph addClass={styles.paragraph}>
                   {machine.opis.opis}
@@ -30,8 +32,11 @@ const Technology = ({ machine }) => {
                   })}
                </Carousel>
             </div>
+            <div className={styles.line}></div>
             <div className={styles.paragraphBox}>
-               <H2 addClass={styles.header}>Powiązane produkty</H2>
+               <H2 addClass={styles.header}>
+                  {textContent.technology.description.text[1]}
+               </H2>
                <Paragraph addClass={styles.paragraph}>
                   Poniżej znajduje się lista powiązanych produktów. Znajdą
                   Państwo wśród nich np. Beachflagi, Namioty czy Skarpety.
@@ -42,8 +47,11 @@ const Technology = ({ machine }) => {
                   })}
                </Carousel>
             </div>
-            <div className={[styles.paragraphBox, styles.materials].join(' ')}>
-               <H2 addClass={styles.header}>Powiązane Materiały</H2>
+            <div className={styles.line}></div>
+            <div className={styles.paragraphBox}>
+               <H2 addClass={styles.header}>
+                  {textContent.technology.description.text[2]}
+               </H2>
                <Paragraph addClass={styles.paragraph}>
                   Poniżej znajduje się lista powiązanych produktów. Znajdą
                   Państwo wśród nich np. Beachflagi, Namioty czy Skarpety.

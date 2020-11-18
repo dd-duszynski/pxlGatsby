@@ -5,7 +5,7 @@
    max-width: 110ch;
    position: relative;
    display: flex;
-   padding-bottom: 40px;
+   padding-bottom: 50px;
    &:nth-last-of-type(1) {
       .Material_line {
          display: none;
@@ -14,21 +14,17 @@
 }
 
 .MaterialSmall {
-   height: auto;
-   width: 100%;
-   position: relative;
+   @extend .Material;
    display: flex;
    flex-direction: column;
    align-items: center;
-   padding-bottom: 40px;
-   &:nth-last-of-type(1) {
-      .Material_line {
-         display: none;
-      }
-   }
    .textContainer{
       max-width: 800px;
    }
+}
+
+.marginTop{
+   margin-top: 6px;
 }
 
 .imgContainer {
@@ -65,7 +61,7 @@
    margin-right: 10px;
 }
 
-.Material_line {
+.line {
    position: absolute;
    bottom: 0;
    width: 100%;
@@ -91,8 +87,5 @@
    .textContainer {
       padding: 0 10px 0;
       margin-left: 0px;
-      h3 {
-         margin-top: 10px;
-      }
    }
 }

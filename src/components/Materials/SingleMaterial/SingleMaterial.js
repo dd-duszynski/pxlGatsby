@@ -95,7 +95,7 @@ class SingleMaterial extends React.Component {
                   {data.szerokosc}
                </Paragraph>
             </div>
-            <div className={styles.Material_line}></div>
+            <div className={styles.line}></div>
          </div>
       )
 
@@ -103,26 +103,24 @@ class SingleMaterial extends React.Component {
          <div className={styles.MaterialSmall}>
             <div className={styles.imgContainerSmall} id={data.id}>
                <img
-                  src={data.zdjecia.fluid.src}
                   className={styles.imageSmall}
+                  src={data.zdjecia.fluid.src}
                   alt={data.nazwa}
-               ></img>
+               />
             </div>
 
             <div className={styles.textContainer}>
-               <div>
-                  <h3>{data.nazwa}</h3>
-               </div>
-               <p>{data.opis.opis}</p>
-               <p>
+               <H2 addClass={styles.marginTop}>{data.nazwa}</H2>
+               <Paragraph addClass={styles.marginTop}>{data.opis.opis}</Paragraph>
+               <Paragraph addClass={styles.marginTop}>
                   <strong>{lang.MaterialSection[1]}:</strong> {data.zadruk}
-               </p>
-               <p>
-                  <strong>{lang.MaterialSection[2]}:</strong>
+               </Paragraph>
+               <Paragraph addClass={styles.marginTop}>
+                  <strong>{lang.MaterialSection[2]}: </strong>
                   {data.szerokosc}
-               </p>
+               </Paragraph>
             </div>
-            <div className={styles.Material_line}></div>
+            <div className={styles.line}></div>
          </div>
       )
 
