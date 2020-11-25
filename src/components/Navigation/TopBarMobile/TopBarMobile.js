@@ -1,5 +1,5 @@
 import React from "react"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
+import { Link } from "gatsby"
 import styles from "./TopBarMobile.module.scss"
 
 const TopBarMobile = () => {
@@ -20,23 +20,23 @@ const TopBarMobile = () => {
          </li>
          <li className={styles.TopBarMobile_li}>
             <div className={styles.Navigation__languages}>
-               <AniLink
+               <Link
                   to={`/EN/${path}`}
                   className={styles.flagEN}
                   activeClassName={styles.flagEN_Active}
                />
-               <AniLink
+               <Link
                   to={`/PL/${path}`}
                   className={styles.flagPL}
                   activeClassName={styles.flagPL_Active}
                />
-               <AniLink
+               <Link
                   to="/DE"
                   className={styles.flagDE}
                   onClick={e => this.hideNavSlide(e)}
                   activeClassName={styles.flagDE_Active}
                />
-               <AniLink
+               <Link
                   to="/FR"
                   className={styles.flagFR}
                   onClick={e => this.hideNavSlide(e)}

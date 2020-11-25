@@ -17,7 +17,7 @@
    padding-left: 10px;
    width: 50%;
 }
-.img{
+.img {
    width: 100%;
    border-radius: 8px;
    border: 1px solid $color-main;
@@ -37,3 +37,20 @@
    margin: 0 0 20px;
 }
 
+@media (max-width: 1000px) {
+   .Material {
+      display: flex;
+      flex-direction: column;
+      
+   }
+   .imgContainer {
+      padding-left: 0;
+      width: 100%;
+   }
+   .textContainer {
+      width: 100%;
+      margin-left: 0;
+      margin-bottom: 0;
+      margin-right: 0;
+   }
+}

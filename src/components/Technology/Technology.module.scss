@@ -11,11 +11,13 @@
    justify-content: center;
    align-items: center;
 }
+
 .paragraphBox {
    display: flex;
    flex-direction: column;
    justify-content: flex-start;
-   max-width: 100ch;
+   width: 90ch;
+   max-width: 90ch;
 }
 .paragraph {
    margin-bottom: 20px;

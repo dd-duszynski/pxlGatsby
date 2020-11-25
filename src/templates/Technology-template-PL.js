@@ -10,7 +10,7 @@ const TechnologyTemplate = ({ data }) => {
 
    return (
       <Layout language="PL">
-         <SEO title={`PrintXL - ${nazwa}`} />
+         <SEO title={`PrintXL - Technologie - ${nazwa}`} />
          <TechnologyNav />
          <Technology machine={data.contentfulTechnologiePl} />
       </Layout>
@@ -23,6 +23,12 @@ export const query = graphql`
          nazwa
          opis {
             opis
+         }
+         opisProduktow {
+            opisProduktow
+         }
+         opisMaterialow {
+            opisMaterialow
          }
          url
          eco

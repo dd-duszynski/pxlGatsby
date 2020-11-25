@@ -20,7 +20,7 @@ const Answer = ({ expanded, onToggle, question, answer }) => {
    }
 
    const arrowCSS = expanded ? styles.arrowRotate : styles.arrow
-   const listItemCSS = expanded ? styles.listItemExpanded : styles.listItem
+   const listItemCSS = expanded ? styles.answerExpanded : styles.answer
    return (
       <li className={listItemCSS} onClick={() => toogleResults()}>
          <H2 addClass={styles.titleContainer}>

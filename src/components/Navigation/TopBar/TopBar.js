@@ -4,6 +4,7 @@ import styles from "./TopBar.module.scss"
 
 const TopBar = () => {
    const path = window.location.pathname.slice(3)
+   
 
    return (
       <div className={styles.Navigation__topBar}>

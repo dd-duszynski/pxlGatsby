@@ -1,4 +1,4 @@
-import React, { useContext } from "react"
+import React, { useContext, useEffect, useState } from "react"
 import Context from "../../context/context"
 import styles from "./Technology.module.scss"
 import H2 from "../UI/Headers/H2"
@@ -6,9 +6,27 @@ import Paragraph from "../UI/Paragraph/Paragraph"
 import ProductCard from "../Products/ProductCard/ProductCard"
 import Carousel from "../Carousel/Carousel"
 import SingleMaterial from "../../components/Materials/SingleMaterialTech/SingleMaterialTech"
+
 const Technology = ({ machine }) => {
-   const [...images] = machine.zdjecia
+   const [isSmallDevice, setSmallDevice] = useState(false)
    const { textContent } = useContext(Context)
+   const [...images] = machine.zdjecia
+
+   const updateDimensions = () => {
+      if (window.innerWidth <= 1000) {
+         setSmallDevice(true)
+      } else {
+         setSmallDevice(false)
+      }
+   }
+
+   useEffect(() => {
+      updateDimensions()
+      window.addEventListener("resize", updateDimensions)
+      return () => {
+         window.removeEventListener("resize", updateDimensions)
+      }
+   }, [])
 
    return (
       <section className={styles.Technology}>
@@ -38,10 +56,9 @@ const Technology = ({ machine }) => {
                   {textContent.technology.description.text[1]}
                </H2>
                <Paragraph addClass={styles.paragraph}>
-                  Poniżej znajduje się lista powiązanych produktów. Znajdą
-                  Państwo wśród nich np. Beachflagi, Namioty czy Skarpety.
+                  {machine.opisProduktow.opisProduktow}
                </Paragraph>
-               <Carousel itemsToShow={2}>
+               <Carousel itemsToShow={isSmallDevice ? 1 : 2}>
                   {machine.produkty.map(item => {
                      return <ProductCard data={item} key={item.nazwa} />
                   })}
@@ -53,8 +70,7 @@ const Technology = ({ machine }) => {
                   {textContent.technology.description.text[2]}
                </H2>
                <Paragraph addClass={styles.paragraph}>
-                  Poniżej znajduje się lista powiązanych produktów. Znajdą
-                  Państwo wśród nich np. Beachflagi, Namioty czy Skarpety.
+                  {machine.opisMaterialow.opisMaterialow}
                </Paragraph>
                <Carousel itemsToShow={1}>
                   {machine.materialy.map(item => {

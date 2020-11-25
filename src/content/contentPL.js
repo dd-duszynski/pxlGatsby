@@ -15,14 +15,10 @@ export const contentPL = {
          "Zadowolonych klientów:",
          "Wydrukowane m2:",
       ],
-      news: [
-         "Aktualności",
-         "Zachęcamy do pobrania naszego nowego katalogu.",
-         "Znajdą w nim Państwo aktualną ofertę na produkty i przydatne akcesoria pomagające w walce z Covid-19.",
-         ">> POBIERZ KATALOG <<",
-         "http://printxl.pl/pdf/COVID_PL_d.pdf",
-         "http://printxl.pl/pdf/COVID_PL_m.pdf",
-      ],
+      news: {
+         header: "Aktualności",
+         downloadBtn: ">> POBIERZ KATALOG <<",
+      }, 
       productSection: ["Produkty", "ZOBACZ WSZYSTKIE"],
       contact: [
          "Kontakt",
@@ -168,6 +164,7 @@ export const contentPL = {
             "PL/materials/textiles",
          ],
       },
+      text:["Zadruk: ", "Szerokość: ", "Powiększ"]
    },
    technology: {
       navigation: {

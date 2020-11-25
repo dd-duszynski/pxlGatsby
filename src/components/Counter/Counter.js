@@ -10,6 +10,7 @@ const style = {
    col: {},
    countup: {},
 }
+
 const Counter = () => {
    const [didViewCountUp, setDidViewCountUp] = useState(false)
    const { textContent } = useContext(Context)

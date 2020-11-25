@@ -1,130 +1,99 @@
-import React from "react"
+import React, { useContext, useState, useEffect } from "react"
 import ReactImageMagnify from "react-image-magnify"
 import styles from "./SingleMaterial.module.scss"
 import H2 from "../../UI/Headers/H2"
 import Paragraph from "../../UI/Paragraph/Paragraph"
-import { GeneralPL } from "../../../content/GeneralPL"
-import { GeneralEN } from "../../../content/GeneralEN"
-import { GeneralDE } from "../../../content/GeneralDE"
-import { GeneralFR } from "../../../content/GeneralFR"
+import Context from "../../../context/context"
 
-class SingleMaterial extends React.Component {
-   state = {
-      isSmallDevice: false,
-   }
-   updateDimensions = () => {
+const SingleMaterial = ({ data }) => {
+   const [isSmallDevice, setSmallDevice] = useState(false)
+   const { textContent } = useContext(Context)
+
+   const updateDimensions = () => {
       if (window.innerWidth <= 1000) {
-         this.setState({
-            isSmallDevice: true,
-         })
+         setSmallDevice(true)
       } else {
-         this.setState({
-            isSmallDevice: false,
-         })
+         setSmallDevice(false)
       }
    }
 
-   componentDidMount() {
-      this.updateDimensions()
-      window.addEventListener("resize", this.updateDimensions)
-   }
-
-   componentWillUnmount() {
-      window.removeEventListener("resize", this.updateDimensions)
-   }
-
-   render() {
-      let lang
-      switch (this.props.language) {
-         case "PL":
-            lang = GeneralPL
-            break
-         case "EN":
-            lang = GeneralEN
-            break
-         case "DE":
-            lang = GeneralDE
-            break
-         case "FR":
-            lang = GeneralFR
-            break
-         default:
-            lang = GeneralEN
+   useEffect(() => {
+      updateDimensions()
+      window.addEventListener("resize", updateDimensions)
+      return () => {
+         window.removeEventListener("resize", updateDimensions)
       }
+   }, [])
 
-      let hintText = lang.MaterialSection[0]
-      const data = this.props.data
-
-      const imageMagnify = (
-         <div className={styles.Material}>
-            <div className={styles.imgContainer} id={data.id}>
-               <ReactImageMagnify
-                  // imageClassName={styles.ImageMagnify_smallImage}
-                  enlargedImageContainerClassName={
-                     styles.ImageMagnify_largeImageContainer
-                  }
-                  enlargedImageClassName={styles.ImageMagnify_largeImage}
-                  {...{
-                     smallImage: {
-                        alt: data.nazwa,
-                        src: data.zdjecia.fluid.src,
-                        width: 426,
-                        height: 284,
-                        isFluidWidth: false,
-                     },
-                     largeImage: {
-                        src: data.zdjecia.fluid.src,
-                        width: 1200,
-                        height: 800,
-                     },
-                     isHintEnabled: true,
-                     shouldHideHintAfterFirstActivation: false,
-                     hintTextMouse: hintText,
-                  }}
-               />
-            </div>
-
-            <div className={styles.textContainer}>
-               <H2>{data.nazwa}</H2>
-               <Paragraph>{data.opis.opis}</Paragraph>
-               <Paragraph>
-                  <strong>{lang.MaterialSection[1]}:</strong> {data.zadruk}
-               </Paragraph>
-               <Paragraph>
-                  <strong>{lang.MaterialSection[2]}: </strong>
-                  {data.szerokosc}
-               </Paragraph>
-            </div>
-            <div className={styles.line}></div>
+   const imageMagnify = (
+      <div className={styles.Material}>
+         <div className={styles.imgContainer} id={data.id}>
+            <ReactImageMagnify
+               // imageClassName={styles.ImageMagnify_smallImage}
+               enlargedImageContainerClassName={
+                  styles.ImageMagnify_largeImageContainer
+               }
+               enlargedImageClassName={styles.ImageMagnify_largeImage}
+               {...{
+                  smallImage: {
+                     alt: data.nazwa,
+                     src: data.zdjecia.fluid.src,
+                     width: 426,
+                     height: 284,
+                     isFluidWidth: false,
+                  },
+                  largeImage: {
+                     src: data.zdjecia.fluid.src,
+                     width: 1200,
+                     height: 800,
+                  },
+                  isHintEnabled: true,
+                  shouldHideHintAfterFirstActivation: false,
+                  hintTextMouse: textContent.materials.text[2],
+               }}
+            />
          </div>
-      )
 
-      const imageForSmallerDevices = (
-         <div className={styles.MaterialSmall}>
-            <div className={styles.imgContainerSmall} id={data.id}>
-               <img
-                  className={styles.imageSmall}
-                  src={data.zdjecia.fluid.src}
-                  alt={data.nazwa}
-               />
-            </div>
-
-            <div className={styles.textContainer}>
-               <H2 addClass={styles.marginTop}>{data.nazwa}</H2>
-               <Paragraph addClass={styles.marginTop}>{data.opis.opis}</Paragraph>
-               <Paragraph addClass={styles.marginTop}>
-                  <strong>{lang.MaterialSection[1]}:</strong> {data.zadruk}
-               </Paragraph>
-               <Paragraph addClass={styles.marginTop}>
-                  <strong>{lang.MaterialSection[2]}: </strong>
-                  {data.szerokosc}
-               </Paragraph>
-            </div>
-            <div className={styles.line}></div>
+         <div className={styles.textContainer}>
+            <H2>{data.nazwa}</H2>
+            <Paragraph>{data.opis.opis}</Paragraph>
+            <Paragraph>
+               <strong>{textContent.materials.text[0]}</strong> {data.zadruk}
+            </Paragraph>
+            <Paragraph>
+               <strong>{textContent.materials.text[1]}</strong>
+               {data.szerokosc}
+            </Paragraph>
          </div>
-      )
+         <div className={styles.line}></div>
+      </div>
+   )
 
-      return this.state.isSmallDevice ? imageForSmallerDevices : imageMagnify
-   }
+   const imageForSmallerDevices = (
+      <div className={styles.MaterialSmall}>
+         <div className={styles.imgContainerSmall} id={data.id}>
+            <img
+               className={styles.imageSmall}
+               src={data.zdjecia.fluid.src}
+               alt={data.nazwa}
+            />
+         </div>
+
+         <div className={styles.textContainer}>
+            <H2 addClass={styles.marginTop}>{data.nazwa}</H2>
+            <Paragraph addClass={styles.marginTop}>{data.opis.opis}</Paragraph>
+            <Paragraph addClass={styles.marginTop}>
+               <strong>{textContent.materials.text[0]}</strong> {data.zadruk}
+            </Paragraph>
+            <Paragraph addClass={styles.marginTop}>
+               <strong>{textContent.materials.text[1]}</strong>
+               {data.szerokosc}
+            </Paragraph>
+         </div>
+         <div className={styles.line}></div>
+      </div>
+   )
+
+   return isSmallDevice ? imageForSmallerDevices : imageMagnify
 }
 export default SingleMaterial

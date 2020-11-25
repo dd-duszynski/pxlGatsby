@@ -35,7 +35,7 @@ const Layout = ({ children, language }) => {
             textContent: textContent,
          }}
       >
-         <main className={styles.Layout}>
+         <div className={styles.Layout}>
             <Helmet>
                <link rel="icon" href={favicon} />
             </Helmet>
@@ -43,7 +43,7 @@ const Layout = ({ children, language }) => {
             {children}
             <Footer />
             <ReturnToTopArrow />
-         </main>
+         </div>
       </Context.Provider>
    )
 }
