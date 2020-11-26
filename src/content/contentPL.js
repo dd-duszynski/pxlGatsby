@@ -197,4 +197,13 @@ export const contentPL = {
       },
       cards: ["Druk", "Przygotowanie plików", "Produkty", "Technologie"],
    },
+   productPage:{
+      breadcrumbs:["Strona Główna"]
+   },
+   page404:{
+      text:[
+         "Błąd 404. Niestety w naszym serwisie nie ma takiego adresu.",
+         "Wróć na stronę główną"
+      ]
+   }
 }

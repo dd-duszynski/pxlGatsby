@@ -3,11 +3,10 @@ import Layout from "../../components/Layout/Layout"
 import SEO from "../../components/SEO/SEO"
 import HeroVideo from "../../components/HeroVideo/HeroVideo"
 import AboutUs from "../../components/AboutUs/AboutUs"
-import CoronaCatalog from "../../components/CoronaVirus/CoronaCatalog"
 import News from "../../components/News/News"
 import ContactContainer from "../../components/Contact/ContactContainer"
 import FAQ from "../../components/FAQ/FAQ"
-import Products from "../../components/Products/Products"
+import MainPageProducts from "../../components/Products/MainPageProducts/MainPageProducts"
 
 const IndexPage = () => {
    return (
@@ -16,8 +15,7 @@ const IndexPage = () => {
          <HeroVideo />
          <AboutUs />
          <News />
-         {/* <CoronaCatalog /> */}
-         <Products />
+         <MainPageProducts />
          <ContactContainer />
          <FAQ />
       </Layout>

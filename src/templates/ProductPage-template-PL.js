@@ -1,38 +1,12 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Img from "gatsby-image"
 import Layout from "../components/Layout/Layout"
-import { FaMoneyBillWave } from "react-icons/fa"
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
+import ProductPage from "../components/ProductPage/ProductPage"
 
-const ProductPageTemplate = ({ data, pageContext }) => {
-   const {
-      nazwa,
-      zdjecia,
-      opis: { json },
-   } = data.contentfulProduktyPl
-
-   // const opisValue = opis.content[0].content[0].value
-   const [...otherImages] = zdjecia
-
-   const options = {
-      renderNode: {
-         "embedded-asset-block": node => {
-            console.log(node)
-         },
-      },
-   }
+const ProductPageTemplate = ({ data }) => {
    return (
       <Layout language="PL">
-         <h1>
-            <FaMoneyBillWave style={{ color: "blue" }} />
-            {nazwa}
-         </h1>
-         {/* <p>{opisValue}</p> */}
-         {documentToReactComponents(json, options)}
-         {otherImages.map((item, index) => {
-            return <Img fluid={item.fluid} alt={nazwa} key={index} />
-         })}
+         <ProductPage data={data} />
       </Layout>
    )
 }
@@ -60,6 +34,15 @@ export const query = graphql`
          }
          opis {
             opis
+         }
+         opcjeProduktu
+         zadruk
+         specyfikacje {
+            title
+            file {
+               url
+               fileName
+            }
          }
       }
    }

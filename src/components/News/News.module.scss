@@ -1,7 +1,6 @@
 @import "../../scss/variables.scss";
 
 .News {
-	@include Roboto400;
 	grid-column: 1/4;
 	height: auto;
 	font-size: $font-size-3;
@@ -10,21 +9,24 @@
 	top: -4px;
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
+	justify-content: center;
 	text-align: justify;
-	margin-bottom: 50px;
+	margin-bottom: 35px;
 }
 .container {
-	width: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	width: 90%;
 	padding: 100px 0 10px;
 	outline: none !important;
+}
+.innerContainer{
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }
 
 .imgContainer {
 	width: 35%;
+	margin-right: 5%;
 	height: 100%;
 	z-index: -1;
 	display: flex;
@@ -37,7 +39,8 @@
 	}
 }
 .descriptionContainer {
-	width: 65%;
+   width: 60%;
+   max-width: 70ch;
 	height: 100%;
 	display: flex;
 	flex-direction: column;
@@ -70,6 +73,12 @@
 	font-size: $font-size-3;
 	background: linear-gradient(to right, $color-accent, $color-accent2);
 	color: $color-main;
+}
+
+.CTAlink {
+   min-width: 250px;
+   position: relative;
+   margin-top: 55px;
 }
 
 @media screen and (max-width: 900px) {

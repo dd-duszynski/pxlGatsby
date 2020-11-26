@@ -1,13 +1,13 @@
 import React, { useContext } from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import Context from "../../context/context"
-import styles from "./Products.module.scss"
-import LeftBar from "../UI/Bars/LeftBar"
-import RightBar from "../UI/Bars/RightBar"
-import RhombusLink from "../UI/RhombusLink/RhombusLink"
-import ProductCard from "./ProductCard/ProductCard"
+import Context from "../../../context/context"
+import styles from "./MainPageProducts.module.scss"
+import LeftBar from "../../UI/Bars/LeftBar"
+import RightBar from "../../UI/Bars/RightBar"
+import RhombusLink from "../../UI/RhombusLink/RhombusLink"
+import ProductCard from "../ProductCard/ProductCard"
 
-const Products = () => {
+const MainPageProducts = () => {
    const data = useStaticQuery(graphql`
       query {
          Produkty: allContentfulProduktyPl(
@@ -59,4 +59,4 @@ const Products = () => {
    )
 }
 
-export default Products
+export default MainPageProducts

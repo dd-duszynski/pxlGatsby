@@ -3,7 +3,6 @@ import Carousel from "react-elastic-carousel"
 import './Carousel.css'
 
 const CarouselPXL = ({ children, itemsToShow, itemsToScroll }) => {
-   console.log(typeof (itemsToShow));   
    return (
       <Carousel 
          itemsToShow={itemsToShow} 
