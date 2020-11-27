@@ -1,10 +1,13 @@
 @import "../../../scss/variables.scss";
 
 .breadcrumbs {
+   height: 16px;
+   margin-top: 10px;
    display: flex;
    align-items: center;
    justify-content: center;
 }
+
 .link {
 	@include Roboto400;
 	font-size: $font-size-5;
@@ -20,9 +23,8 @@
    height: 12px;
    color: $color-main;
 }
-@media only screen and (max-width: 900px) {
+@media (max-width: 1100px) {
 	.breadcrumbs {
-		grid-row: 1/2;
-		margin: auto 5px;
+      margin-bottom: 10px;
 	}
 }

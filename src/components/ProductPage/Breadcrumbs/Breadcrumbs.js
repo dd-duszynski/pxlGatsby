@@ -8,11 +8,11 @@ const Breadcrumbs = ({ b1, b2, b3 }) => (
       <Link className={styles.link} to={"/"}>
          {b1}
       </Link>
-      <MdPlayArrow className={styles.icon}/>
+      <MdPlayArrow className={styles.icon} />
       <Link className={styles.link} to={"/"}>
          {b2}
       </Link>
-      <MdPlayArrow className={styles.icon}/>
+      <MdPlayArrow className={styles.icon} />
       <Link className={styles.link} to={"/"}>
          {b3}
       </Link>
