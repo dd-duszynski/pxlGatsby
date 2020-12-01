@@ -38,7 +38,7 @@ export const query = graphql`
          }
          zdjecia {
             fluid {
-               src
+               ...GatsbyContentfulFluid
             }
          }
       }

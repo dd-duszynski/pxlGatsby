@@ -19,7 +19,7 @@ export const contentPL = {
          header: "Aktualności",
          downloadBtn: ">> POBIERZ KATALOG <<",
       }, 
-      productSection: ["Produkty", "ZOBACZ WSZYSTKIE"],
+      productSection: ["Produkty", "ZOBACZ WSZYSTKIE PRODUKTY"],
       contact: [
          "Kontakt",
          "Polska",
@@ -198,7 +198,34 @@ export const contentPL = {
       cards: ["Druk", "Przygotowanie plików", "Produkty", "Technologie"],
    },
    productPage:{
-      breadcrumbs:["Strona Główna"]
+      breadcrumbs:["Strona Główna", "/PL/"],
+      groupOfProducts: [
+         "Covid-19",
+         "Banery",
+         "Flagi",
+         "Rollupy",
+         "Ścianki",
+         "Standy",
+         "Trybunki",
+         "Pozostałe",
+      ],
+      linkToGroupOfProducts:[
+         "PL/products/covid-19",
+         "PL/products/banners",
+         "PL/products/flags",
+         "PL/products/rollups",
+         "PL/products/walls",
+         "PL/products/stands",
+         "PL/products/tribunes",
+         "PL/products/others",
+      ],
+      text: [
+         "Zainteresowany? Napisz do Nas!",
+         "Zalety produktu:",
+         "Polecane materiały:",
+         "Instrukcje DTP:",
+         "Przykładowe wymiary [cm]:"
+      ]
    },
    page404:{
       text:[

@@ -21,15 +21,18 @@ export const query = graphql`
          zalety
          polecaneMateriay {
             nazwa
+            id
+            kod
+            rodzaj
          }
          zdjecia {
             fluid {
-               src
+               ...GatsbyContentfulFluid
             }
          }
          wymiary {
-            fluid {
-               src
+            file {
+               url
             }
          }
          opis {

@@ -7,7 +7,8 @@
    display: flex;
    padding-bottom: 50px;
    &:nth-last-of-type(1) {
-      .Material_line {
+      padding-bottom: 30px;
+      .line {
          display: none;
       }
    }

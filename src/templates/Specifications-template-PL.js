@@ -43,8 +43,8 @@ export const getData = graphql`
                }
             }
             zdjecia {
-               fixed(height: 200) {
-                  src
+               fluid {
+                  ...GatsbyContentfulFluid
                }
             }
          }

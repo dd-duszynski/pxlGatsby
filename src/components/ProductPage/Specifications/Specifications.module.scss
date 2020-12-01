@@ -1,0 +1,64 @@
+@import "../../../scss/variables.scss";
+
+.Specifications {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   margin: 5px 0;
+}
+.iconContainer {
+   display: flex;
+   align-items: center;
+}
+.icon {
+   color: $color-main;
+   width: 25px;
+   height: 25px;
+   margin-right: 8px;
+}
+.link {
+   @include paragraph;
+   color: $color-main;
+   line-height: 20px;
+   &:hover {
+      cursor: pointer;
+      color: $color-main2;
+   }
+}
+
+.selectContainer {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.select {
+   width: 180px;
+   margin-right: 10px;
+   border: 1px solid $color-main;
+   text-align: center;
+   height: 30px;
+   border-radius: 4px;
+   @include paragraph;
+   option{
+      @include paragraph;
+   }
+   &:focus {
+      outline: none;
+   }
+}
+.select_link {
+   @include paragraph;
+   color: white;
+   background-color: $color-main2;
+   height: 31px;
+   margin-left: 10px;
+   padding: 8px 30px;
+   border-radius: 4px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   &:hover {
+      cursor: pointer;
+      transform: scale(1.02);
+   }
+}

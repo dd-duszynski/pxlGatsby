@@ -24,6 +24,7 @@ export const getData = graphql`
          nodes {
             nazwa
             id
+            kod
             zadruk
             szerokosc
             opis {

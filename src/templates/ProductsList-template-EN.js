@@ -34,7 +34,7 @@ export const getData = graphql`
             rodzaj
             zdjecia {
                fluid {
-                  src
+                  ...GatsbyContentfulFluid
                }
             }
             url

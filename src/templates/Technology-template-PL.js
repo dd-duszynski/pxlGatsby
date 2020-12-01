@@ -53,7 +53,7 @@ export const query = graphql`
             rodzaj
             zdjecia {
                fluid {
-                  src
+                  ...GatsbyContentfulFluid
                }
             }
             url
@@ -69,7 +69,7 @@ export const query = graphql`
             kod
             zdjecia {
                fluid {
-                  src
+                  ...GatsbyContentfulFluid
                }
             }
          }

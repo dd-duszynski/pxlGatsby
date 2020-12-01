@@ -43,7 +43,7 @@ export const getData = graphql`
             }
             zdjecia {
                fluid {
-                  src
+                  ...GatsbyContentfulFluid
                }
             }
          }

@@ -3,6 +3,7 @@ import styles from "./Materials.module.scss"
 import SingleMaterial from "./SingleMaterial/SingleMaterial"
 
 const Materials = ({ data }) => {
+   
    useEffect(() => {
       window.scrollTo(0, 0)
    }, [])

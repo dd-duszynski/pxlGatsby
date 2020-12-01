@@ -29,3 +29,11 @@
    background-color: #1078bf !important;
    box-shadow: 0 0 1px 3px #10549b !important;
 }
+@media(max-width: 500px){
+   .rec-arrow{
+      min-width: 35px !important;
+      width: 35px !important;
+      height: 35px !important;
+      line-height: 35px !important;
+   }
+}

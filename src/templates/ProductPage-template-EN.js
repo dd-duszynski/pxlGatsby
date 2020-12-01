@@ -50,7 +50,7 @@ query($name: String!) {
       }
       zdjecia {
          fluid {
-            src
+            ...GatsbyContentfulFluid
          }
       }
       wymiary {

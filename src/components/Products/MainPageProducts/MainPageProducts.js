@@ -29,7 +29,7 @@ const MainPageProducts = () => {
                rodzaj
                zdjecia {
                   fluid {
-                     src
+                     ...GatsbyContentfulFluid
                   }
                }
                url

@@ -8,7 +8,6 @@ import Context from "../../../context/context"
 const SingleMaterial = ({ data }) => {
    const [isSmallDevice, setSmallDevice] = useState(false)
    const { textContent } = useContext(Context)
-
    const updateDimensions = () => {
       if (window.innerWidth <= 1000) {
          setSmallDevice(true)
@@ -26,8 +25,8 @@ const SingleMaterial = ({ data }) => {
    }, [])
 
    const imageMagnify = (
-      <div className={styles.Material}>
-         <div className={styles.imgContainer} id={data.id}>
+      <div className={styles.Material} id={data.kod}>
+         <div className={styles.imgContainer} >
             <ReactImageMagnify
                // imageClassName={styles.ImageMagnify_smallImage}
                enlargedImageContainerClassName={

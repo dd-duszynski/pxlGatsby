@@ -61,9 +61,6 @@ const ProductCard = ({ data }) => {
                ) : null}
             </div>
             <div className={styles.tagsContainer}>
-               {/* <Tag type="group" value={data.rodzaj}>
-                  {data.rodzaj}
-               </Tag> */}
                <Tag
                   type="indOut"
                   value={[
