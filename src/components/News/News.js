@@ -12,15 +12,15 @@ import christmasImg from "../../assets/images/catalogChristmas.jpg"
 
 const Catalog = ({ img, t1, t2, link, btn }) => {
    return (
-      <div className={styles.innerContainer}>
-         <div className={styles.imgContainer}>
+      <div className={styles.Catalog}>
+         <div className={styles.imgBox}>
             <img src={img} className={styles.img} alt="" />
             {/* 
-               Dopiero jak bede pobierał z graphQL
+               Dopiero jak bede pobierał z contentful
                <Image fluid={img} className={styles.img} /> 
             */}
          </div>
-         <div className={styles.descriptionContainer}>
+         <div className={styles.descriptionBox}>
             <Paragraph>
                {t1}
                <br />

@@ -54,10 +54,13 @@ const ProductCard = ({ data }) => {
             </div>
             <div className={styles.tagsTopContainer}>
                {bestseller >= 0 ? (
-                  <Tag type="bestseller" value={data.opcjeProduktu[bestseller]}/>
+                  <Tag
+                     type="bestseller"
+                     value={data.opcjeProduktu[bestseller]}
+                  />
                ) : null}
                {nowosc >= 0 ? (
-                  <Tag type="nowosc" value={data.opcjeProduktu[nowosc]}/>
+                  <Tag type="nowosc" value={data.opcjeProduktu[nowosc]} />
                ) : null}
             </div>
             <div className={styles.tagsContainer}>
@@ -65,29 +68,21 @@ const ProductCard = ({ data }) => {
                   type="indOut"
                   value={[
                      data.opcjeProduktu[indoor],
-                     data.opcjeProduktu[outdoor]
+                     data.opcjeProduktu[outdoor],
                   ]}
                >
                   {data.opcjeProduktu[0]}
                </Tag>
 
-               {uv >= 0 ? (
-                  <Tag type="printing" value="UV"/>
-               ) : null}
-               {solvent >= 0 ? (
-                  <Tag type="printing" value="SOL"/>
-               ) : null}
-               {sublimacja >= 0 ? (
-                  <Tag type="printing" value="SUB"/>
-               ) : null}
-               {latex >= 0 ? (
-                  <Tag type="printing" value="LAT"/>
-               ) : null}
+               {uv >= 0 ? <Tag type="printing" value="UV" /> : null}
+               {solvent >= 0 ? <Tag type="printing" value="SOL" /> : null}
+               {sublimacja >= 0 ? <Tag type="printing" value="SUB" /> : null}
+               {latex >= 0 ? <Tag type="printing" value="LAT" /> : null}
             </div>
          </div>
          <div className={styles.aboutContainer}>
             <H2>{data.nazwa}</H2>
-            <Paragraph addClass={styles.description}>
+            <Paragraph addClass={styles.paragraph} fontSize="15px">
                {data.opisKrotki}
             </Paragraph>
             <RhombusLink link={`/${data.url}`}>Zobacz produkt</RhombusLink>

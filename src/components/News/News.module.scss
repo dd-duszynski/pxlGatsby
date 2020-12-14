@@ -1,121 +1,77 @@
 @import "../../scss/variables.scss";
 
+//News
 .News {
-	grid-column: 1/4;
-	height: auto;
-	font-size: $font-size-3;
-	line-height: 28px;
-	position: relative;
-	top: -4px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	text-align: justify;
-	margin-bottom: 35px;
+   grid-column: 1/4;
+   position: relative;
+   top: -4px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-bottom: 20px;
 }
 .container {
-	width: 90%;
-	padding: 100px 0 10px;
-	outline: none !important;
+   width: 90%;
+   padding: 100px 0 10px;
+   outline: none !important;
 }
-.innerContainer{
+
+//Catalog
+.Catalog {
    display: flex;
    justify-content: center;
    align-items: center;
 }
-
-.imgContainer {
-	width: 35%;
-	margin-right: 5%;
-	height: 100%;
-	z-index: -1;
-	display: flex;
-	align-items: center;
-	justify-content: flex-start;
-	.img {
-		max-width: 100%;
-		max-height: 500px;
-		padding-top: 30px;
-	}
+.imgBox {
+   width: 35%;
+   margin-right: 5%;
+   height: 100%;
+   .img {
+      max-width: 100%;
+      max-height: 400px;
+      padding-top: 30px;
+   }
 }
-.descriptionContainer {
+.descriptionBox {
    width: 60%;
-   max-width: 70ch;
-	height: 100%;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+   max-width: 50ch;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
 }
-.innerDescription {
-	width: 85%;
-	text-align: left;
-	margin-bottom: 35px;
-}
-.seeAllButton {
-	display: flex;
-	justify-content: center;
-	width: 100%;
-	&:hover {
-		cursor: pointer;
-		transform: scale(1.02);
-	}
-}
-.link {
-	@include Roboto400;
-	clip-path: polygon(0 0, 90% 0%, 100% 100%, 10% 100%);
-	display: inline-block;
-	text-decoration: none;
-	text-align: center;
-	min-width: 250px;
-	height: 40px;
-	line-height: 40px;
-	font-size: $font-size-3;
-	background: linear-gradient(to right, $color-accent, $color-accent2);
-	color: $color-main;
-}
-
 .CTAlink {
    min-width: 250px;
    position: relative;
    margin-top: 55px;
 }
 
-@media screen and (max-width: 900px) {
-	.container {
-		width: 100%;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		padding: 60px 0 50px;
-	}
-	.descriptionContainer {
-		padding-top: 30px;
-		width: 100%;
-	}
-	.innerDescription {
-		width: 100%;
-		text-align: left;
-		margin-bottom: 35px;
-	}
-	.imgContainer {
-		width: 100%;
-		z-index: -1;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	}
-}
-
-@media screen and (max-width: 500px) {
+@media (max-width: 900px) {
    .News {
-      font-size: 17px;
+      margin-bottom: 15px;
    }
-	.link {
-		min-width: 210px;
-		height: 40px;
-		line-height: 40px;
-		font-size: 16px;
-	}
+   .container {
+      width: 96%;
+      padding: 60px 0 10px;
+   }
+   .Catalog {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0 0 5px;
+   }
+   .descriptionBox {
+      padding-top: 30px;
+      width: 100%;
+   }
+   .imgBox {
+      width: 100%;
+      z-index: -1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   }
 }
