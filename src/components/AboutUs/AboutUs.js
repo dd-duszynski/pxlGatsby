@@ -2,7 +2,7 @@ import React, { useContext } from "react"
 import Context from "../../context/context"
 import styles from "./AboutUs.module.scss"
 import img_loopka from "../../assets/images/hero_img.jpg"
-import Counter from "../Counter/Counter"
+import Counter from "./Counter/Counter"
 import LeftBar from "../UI/Bars/LeftBar"
 import RightBar from "../UI/Bars/RightBar"
 import Paragraph from "../UI/Paragraph/Paragraph"
@@ -11,7 +11,7 @@ const AboutUs = () => {
    const { textContent } = useContext(Context)
    return (
       <section className={styles.AboutUs}>
-         <LeftBar text= {textContent.mainPage.aboutUs[0]} />
+         <LeftBar text= {textContent.mainPage.aboutUs.header} />
          <RightBar />
          <article className={styles.container}>
             <div className={styles.magnifier}>
@@ -24,13 +24,13 @@ const AboutUs = () => {
 
             <div className={styles.descriptionContainer}>
                <Paragraph addClass={styles.innerDescription}>
-                  {textContent.mainPage.aboutUs[1]}
+                  {textContent.mainPage.aboutUs.text[0]}
                   <br />
                   <br />
-                  {textContent.mainPage.aboutUs[2]}
+                  {textContent.mainPage.aboutUs.text[1]}
                   <br />
                   <br />
-                  {textContent.mainPage.aboutUs[3]}
+                  {textContent.mainPage.aboutUs.text[2]}
                   <br />
                   <br />
                </Paragraph>

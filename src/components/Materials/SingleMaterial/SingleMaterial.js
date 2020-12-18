@@ -25,66 +25,56 @@ const SingleMaterial = ({ data }) => {
    }, [])
 
    const imageMagnify = (
-      <div className={styles.Material} id={data.kod}>
-         <div className={styles.imgContainer} >
-            <ReactImageMagnify
-               // imageClassName={styles.ImageMagnify_smallImage}
-               enlargedImageContainerClassName={
-                  styles.ImageMagnify_largeImageContainer
-               }
-               enlargedImageClassName={styles.ImageMagnify_largeImage}
-               {...{
-                  smallImage: {
-                     alt: data.nazwa,
-                     src: data.zdjecia.fluid.src,
-                     width: 426,
-                     height: 284,
-                     isFluidWidth: false,
-                  },
-                  largeImage: {
-                     src: data.zdjecia.fluid.src,
-                     width: 1200,
-                     height: 800,
-                  },
-                  isHintEnabled: true,
-                  shouldHideHintAfterFirstActivation: false,
-                  hintTextMouse: textContent.materials.text[2],
-               }}
-            />
-         </div>
-
-         <div className={styles.textContainer}>
-            <H2>{data.nazwa}</H2>
-            <Paragraph>{data.opis.opis}</Paragraph>
-            <Paragraph>
-               <strong>{textContent.materials.text[0]}</strong> {data.zadruk}
-            </Paragraph>
-            <Paragraph>
-               <strong>{textContent.materials.text[1]}</strong>
-               {data.szerokosc}
-            </Paragraph>
-         </div>
-         <div className={styles.line}></div>
+      <div className={styles.imgContainer}>
+         <ReactImageMagnify
+            // imageClassName={styles.ImageMagnify_smallImage}
+            enlargedImageContainerClassName={
+               styles.ImageMagnify_largeImageContainer
+            }
+            enlargedImageClassName={styles.ImageMagnify_largeImage}
+            {...{
+               smallImage: {
+                  alt: data.nazwa,
+                  src: data.zdjecia.fluid.src,
+                  width: 426,
+                  height: 284,
+                  isFluidWidth: false,
+               },
+               largeImage: {
+                  src: data.zdjecia.fluid.src,
+                  width: 1200,
+                  height: 800,
+               },
+               isHintEnabled: true,
+               shouldHideHintAfterFirstActivation: false,
+               hintTextMouse: textContent.materials.text[2],
+            }}
+         />
       </div>
    )
 
    const imageForSmallerDevices = (
-      <div className={styles.MaterialSmall}>
-         <div className={styles.imgContainerSmall} id={data.id}>
-            <img
-               className={styles.imageSmall}
-               src={data.zdjecia.fluid.src}
-               alt={data.nazwa}
-            />
-         </div>
+      <div className={styles.imgContainerSmall} id={data.id}>
+         <img
+            className={styles.imageSmall}
+            src={data.zdjecia.fluid.src}
+            alt={data.nazwa}
+         />
+      </div>
+   )
 
+   // return isSmallDevice ? imageForSmallerDevices : imageMagnify
+   const css = isSmallDevice ? styles.MaterialSmall : styles.Material
+   return (
+      <div className={css} id={data.kod}>
+         {isSmallDevice ? imageForSmallerDevices : imageMagnify}
          <div className={styles.textContainer}>
-            <H2 addClass={styles.marginTop}>{data.nazwa}</H2>
-            <Paragraph addClass={styles.marginTop}>{data.opis.opis}</Paragraph>
-            <Paragraph addClass={styles.marginTop}>
+            <H2>{data.nazwa}</H2>
+            <Paragraph fontSize="15px">{data.opis.opis}</Paragraph>
+            <Paragraph fontSize="15px">
                <strong>{textContent.materials.text[0]}</strong> {data.zadruk}
             </Paragraph>
-            <Paragraph addClass={styles.marginTop}>
+            <Paragraph fontSize="15px">
                <strong>{textContent.materials.text[1]}</strong>
                {data.szerokosc}
             </Paragraph>
@@ -92,7 +82,5 @@ const SingleMaterial = ({ data }) => {
          <div className={styles.line}></div>
       </div>
    )
-
-   return isSmallDevice ? imageForSmallerDevices : imageMagnify
 }
 export default SingleMaterial

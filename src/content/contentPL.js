@@ -1,37 +1,56 @@
 export const contentPL = {
    mainPage: {
       heroVideo: [
-         ["DRUK WIELKOFORMATOWY", "MATERIAŁY TEKSTYLNE / VINYLOWE / PŁASKIE"],
+         ["DRUK WIELKOFORMATOWY", "TEKSTYLIA / VINYLE / FOLIE / PŁYTY"],
          ["4 TECHNOLOGIE DRUKU", "LATEX / UV / SUBLIMACJA / SOLVENT"],
          ["INFRASTRUKTURA", "UMOŻLIWIAJĄCA SZYBKĄ REALIZACJĘ ZLECEŃ"],
          ["GOTOWE SYSTEMY", "BEACHFLAGI / ŚCIANKI / NAMIOTY I WIELE INNYCH"],
       ],
-      aboutUs: [
-         "O Nas",
-         "Jesteśmy prężnie działającą drukarnią cyfrową, specjalizującą się w druku wielkoformatowym dla klientów z całej Europy. Cechuje nas wysoka jakość i szybkie terminy realizacji, w bardzo konkurencyjnych cenach.",
-         "Oferujemy druk na różnego rodzaju podłożach: m.in. materiałach flagowych, banerach, siatkach i foliach z szeroką gamą wykończeń i systemów do wyboru.",
-         "Serdecznie zapraszamy do kontaktu.",
-         "Zrealizowanych zleceń:",
-         "Zadowolonych klientów:",
-         "Wydrukowane m2:",
-      ],
+      aboutUs: {
+         header: "O Nas",
+         text: [
+            "Jesteśmy prężnie działającą drukarnią cyfrową, specjalizującą się w druku wielkoformatowym dla klientów z całej Europy. Cechuje nas wysoka jakość i szybkie terminy realizacji, w bardzo konkurencyjnych cenach.",
+            "Oferujemy druk na różnego rodzaju podłożach: m.in. materiałach flagowych, banerach, siatkach i foliach z szeroką gamą wykończeń i systemów do wyboru.",
+            "Serdecznie zapraszamy do kontaktu.",
+         ],
+         counter: [
+            "Zrealizowanych zleceń:",
+            "Zadowolonych klientów:",
+            "Wydrukowane m2:",
+         ],
+      },
       news: {
          header: "Aktualności",
          downloadBtn: ">> POBIERZ KATALOG <<",
-      }, 
-      productSection: ["Produkty", "ZOBACZ WSZYSTKIE PRODUKTY"],
-      contact: [
-         "Kontakt",
-         "Polska",
-         "Imię",
-         "E-mail",
-         "Treść wiadomości...",
-         "Wyślij wiadomość",
-         "Chcesz być na bieżąco z naszą ofertą i promocjami?",
-         "Zapisz się na Newsletter!",
-         "Zapisz się",
-         "Napisz do Nas:",
-      ],
+         christmasCatalog: [
+            "Katalog ze świątecznymi produktami już dostępny!",
+            "Zachęcamy do zapoznania się z systemami, w których łatwo wymienisz grafikę po okresie świątecznym.",
+            "http://printxl.pl/pdf/christmas_PL.pdf",
+         ],
+         CovidCatalog: [
+            "Zachęcamy do pobrania naszego nowego katalogu.",
+            "Znajdą w nim Państwo aktualną ofertę na produkty ochronne oraz przydatne akcesoria.",
+            "http://printxl.pl/pdf/COVID_PL_m.pdf",
+         ],
+      },
+      productSection: {
+         header: "Produkty",
+         seeAllBtn: ">> ZOBACZ WSZYSTKIE <<"
+      },
+      contact: {
+         header: "Kontakt",
+         text: [
+            "Polska",
+            "Imię",
+            "E-mail",
+            "Treść wiadomości...",
+            "Wyślij wiadomość",
+            "Chcesz być na bieżąco z naszą ofertą i promocjami?",
+            "Zapisz się na Newsletter!",
+            "Zapisz się",
+            "Napisz do Nas:",
+         ],
+      },
       faq: [
          [
             "Jak złożyć zamówienie?",
@@ -61,26 +80,26 @@ export const contentPL = {
             "Jakie są warunki przyjęcia reklamacji?",
             "Wychodząc naprzeciw potrzebom naszych klientów, reklamacje i ewentualne kwestie sporne, rozpatrujemy na bieżąco. Szczegółowe informacje znajdują się w Warunkach Współpracy, gdzie precyzyjnie została opisana cała procedura zgłoszenia i proces rozpatrywania reklamacji.",
          ],
+      ]
+   },
+   footer: {
+      text: [
+         "Lokalizacja",
+         "Polska",
+         "Kontakt",
+         "Social Media",
+         "Współpraca",
+         "Warunki współpracy",
+         "Instrukcja DTP",
+         "Dane firmy",
+         "KRS",
+         "NIP",
+         "REGON",
       ],
-      footer: {
-         text: [
-            "Lokalizacja",
-            "Polska",
-            "Kontakt",
-            "Social Media",
-            "Współpraca",
-            "Warunki współpracy",
-            "Instrukcja DTP",
-            "Dane firmy",
-            "KRS",
-            "NIP",
-            "REGON",
-         ],
-         links: [
-            "http://printxl.pl/Instructions/termsOfCooperation_PL.pdf",
-            "http://printxl.pl/Instructions/Instructions_PL.pdf",
-         ],
-      },
+      links: [
+         "http://printxl.pl/Instructions/termsOfCooperation_PL.pdf",
+         "http://printxl.pl/Instructions/Instructions_PL.pdf",
+      ],
    },
    navigation: {
       text: [
@@ -164,7 +183,7 @@ export const contentPL = {
             "PL/materials/textiles",
          ],
       },
-      text:["Zadruk: ", "Szerokość: ", "Powiększ"]
+      text: ["Zadruk: ", "Szerokość: ", "Powiększ"],
    },
    technology: {
       navigation: {
@@ -197,8 +216,8 @@ export const contentPL = {
       },
       cards: ["Druk", "Przygotowanie plików", "Produkty", "Technologie"],
    },
-   productPage:{
-      breadcrumbs:["Strona Główna", "/PL/"],
+   productPage: {
+      breadcrumbs: ["Strona Główna", "/PL/"],
       groupOfProducts: [
          "Covid-19",
          "Banery",
@@ -209,7 +228,7 @@ export const contentPL = {
          "Trybunki",
          "Pozostałe",
       ],
-      linkToGroupOfProducts:[
+      linkToGroupOfProducts: [
          "PL/products/covid-19",
          "PL/products/banners",
          "PL/products/flags",
@@ -224,13 +243,13 @@ export const contentPL = {
          "Zalety produktu:",
          "Polecane materiały:",
          "Instrukcje DTP:",
-         "Przykładowe wymiary [cm]:"
-      ]
+         "Przykładowe wymiary [cm]:",
+      ],
    },
-   page404:{
-      text:[
+   page404: {
+      text: [
          "Błąd 404. Niestety w naszym serwisie nie ma takiego adresu.",
-         "Wróć na stronę główną"
-      ]
-   }
+         "Wróć na stronę główną",
+      ],
+   },
 }

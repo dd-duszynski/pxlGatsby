@@ -56,54 +56,46 @@ const ProductPage = ({ data }) => {
                url={url}
             />
             <Carousel>
-               {images.map((item, index) => {
-                  return (
-                     <div className={styles.imgContainer}>
-                        <img
-                           src={item.fluid.src}
-                           alt={nazwa}
-                           key={index}
-                           className={styles.img}
-                        />
-                     </div>
-                  )
-               })}
+               {images.map((item, index) => (
+                  <div className={styles.imgContainer}>
+                     <img
+                        src={item.fluid.src}
+                        alt={nazwa}
+                        key={index}
+                        className={styles.img}
+                     />
+                  </div>
+               ))}
             </Carousel>
             <BtnContainer text={textContent.productPage.text[0]} />
          </div>
+
          <div className={styles.rightSection}>
             <H1 addClass={styles.header}>{nazwa}</H1>
-            <Paragraph addClass={styles.paragraph}>
+            <Paragraph fontSize="15px">
                {opis.content[0].content[0].value}
             </Paragraph>
             <H2 addClass={styles.header}>{textContent.productPage.text[1]}</H2>
-            {zalety.map(item => {
-               return (
-                  <div className={styles.iconContainer}>
-                     <AiOutlineCheck className={styles.icon} />
-                     <Paragraph addClass={styles.paragraph}>{item}</Paragraph>
-                  </div>
-               )
-            })}
+            {zalety.map(item => (
+               <div className={styles.iconContainer}>
+                  <AiOutlineCheck className={styles.icon} />
+                  <Paragraph fontSize="15px">{item}</Paragraph>
+               </div>
+            ))}
             <H2 addClass={styles.header}>{textContent.productPage.text[2]}</H2>
-            {polecaneMateriay.map(item => {
-               return (
-                  <div className={styles.iconContainer}>
-                     <GiRolledCloth className={styles.icon} />
-                     <Link
-                        to={`/PL/materials/${item.rodzaj}/#${item.kod}`}
-                        className={styles.link}
-                     >
-                        {item.nazwa}
-                     </Link>
-                  </div>
-               )
-            })}
-
+            {polecaneMateriay.map(item => (
+               <div className={styles.iconContainer}>
+                  <GiRolledCloth className={styles.icon} />
+                  <Link
+                     to={`/PL/materials/${item.rodzaj}/#${item.kod}`}
+                     className={styles.link}
+                  >
+                     {item.nazwa}
+                  </Link>
+               </div>
+            ))}
             <H2 addClass={styles.header}>{textContent.productPage.text[3]}</H2>
-            <Specifications
-               specyfikacje={specyfikacje}
-            />
+            <Specifications specyfikacje={specyfikacje} />
             <H2 addClass={styles.header}>{textContent.productPage.text[4]}</H2>
             <img
                className={styles.sizes_img}

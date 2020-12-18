@@ -49,8 +49,9 @@ const Technology = ({ machine }) => {
                      )
                   })}
                </Carousel>
+               <div className={styles.line} />
             </div>
-            <div className={styles.line}></div>
+
             <div className={styles.paragraphBox}>
                <H2 addClass={styles.header}>
                   {textContent.technology.description.text[1]}
@@ -63,8 +64,9 @@ const Technology = ({ machine }) => {
                      return <ProductCard data={item} key={item.nazwa} />
                   })}
                </Carousel>
+               <div className={styles.line} />
             </div>
-            <div className={styles.line}></div>
+
             <div className={styles.paragraphBox}>
                <H2 addClass={styles.header}>
                   {textContent.technology.description.text[2]}

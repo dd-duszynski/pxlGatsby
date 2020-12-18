@@ -5,15 +5,8 @@
    max-width: 110ch;
    position: relative;
    display: flex;
-   &:nth-last-of-type(1) {
-      .Material_line {
-         display: none;
-      }
-   }
 }
-
 .imgContainer {
-   position: relative;
    padding-left: 10px;
    width: 50%;
 }

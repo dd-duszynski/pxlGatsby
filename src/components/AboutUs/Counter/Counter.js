@@ -1,9 +1,9 @@
 import React, { useState, useContext } from "react"
-import Context from "../../context/context"
-import styles from "./Counter.module.scss"
-import CountUp from "react-countup"
 import VisibilitySensor from "react-visibility-sensor"
-import H2 from "../UI/Headers/H2"
+import CountUp from "react-countup"
+import styles from "./Counter.module.scss"
+import Context from "../../../context/context"
+import H2 from "../../UI/Headers/H2"
 
 const style = {
    componentName: {},
@@ -25,9 +25,8 @@ const Counter = () => {
          <div className={styles.counter_container}>
             <div className={styles.box_item}>
                <H2 addClass={styles.box_title}>
-                  {textContent.mainPage.aboutUs[4]}
+                  {textContent.mainPage.aboutUs.counter[0]}
                </H2>
-               {/* <H2 addClass={styles.box_title}>Zrealizowanych zleceń:</H2> */}
                <span className={styles.counter_boxes_span1} />
                <p className={styles.box_item_nr}>
                   <VisibilitySensor
@@ -50,7 +49,7 @@ const Counter = () => {
 
             <div className={styles.box_item}>
                <H2 addClass={styles.box_title}>
-                  {textContent.mainPage.aboutUs[5]}
+                  {textContent.mainPage.aboutUs.counter[1]}
                </H2>
                <span className={styles.counter_boxes_span2} />
                <p className={styles.box_item_nr}>
@@ -75,7 +74,7 @@ const Counter = () => {
 
             <div className={styles.box_item}>
                <H2 addClass={styles.box_title}>
-                  {textContent.mainPage.aboutUs[6]}
+                  {textContent.mainPage.aboutUs.counter[2]}
                </H2>
                <span className={styles.counter_boxes_span3} />
                <p className={styles.box_item_nr}>

@@ -41,7 +41,7 @@ const MainPageProducts = () => {
    return (
       <section className={styles.Products}>
          <div className={styles.container}>
-            <LeftBar text={textContent.mainPage.productSection[0]} />
+            <LeftBar text={textContent.mainPage.productSection.header} />
             <RightBar />
             <div className={styles.productsContainer}>
                {data.Produkty.nodes.map(item => {
@@ -53,7 +53,7 @@ const MainPageProducts = () => {
             link={textContent.products.mainLink}
             addClass={styles.seeAll}
          >
-            {textContent.mainPage.productSection[1]}
+            {textContent.mainPage.productSection.seeAllBtn}
          </RhombusLink>
       </section>
    )

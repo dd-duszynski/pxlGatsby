@@ -31,13 +31,13 @@ const TopBarMobile = () => {
                   activeClassName={styles.flagPL_Active}
                />
                <Link
-                  to="/DE"
+                  to={`/DE/${path}`}
                   className={styles.flagDE}
                   onClick={e => this.hideNavSlide(e)}
                   activeClassName={styles.flagDE_Active}
                />
                <Link
-                  to="/FR"
+                  to={`/FR/${path}`}
                   className={styles.flagFR}
                   onClick={e => this.hideNavSlide(e)}
                   activeClassName={styles.flagFR_Active}

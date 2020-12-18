@@ -1,11 +1,11 @@
-import React  from "react"
+import React from "react"
 import styles from "./ContactInfo.module.scss"
 import { AiFillHome, AiFillPhone } from "react-icons/ai"
 import { IoMdMail } from "react-icons/io"
 import { GrYoutube } from "react-icons/gr"
 import { FaFacebookSquare } from "react-icons/fa"
 
-const ContactInfo = ({text}) => {
+const ContactInfo = ({ text }) => {
    return (
       <section className={styles.ContactInfo}>
          <a
@@ -19,20 +19,17 @@ const ContactInfo = ({text}) => {
             <br />
             ul. Czochralskiego 6,
             <br />
-            61-248 Poznań, {text[1]}
+            61-248 Poznań, {text[0]}
          </a>
-
 
          <a className={styles.item} href="mailto:info@printxl.pl">
             <IoMdMail className={styles.icon} />
             info@printxl.pl
          </a>
 
-
          <a className={styles.item} href="tel:+48 695-859-808">
             <AiFillPhone className={styles.icon} /> +48 695-859-808
          </a>
-
 
          <a
             className={styles.item}
@@ -42,7 +39,6 @@ const ContactInfo = ({text}) => {
          >
             <FaFacebookSquare className={styles.icon} /> Facebook
          </a>
-
 
          <a
             className={styles.item}

@@ -14,11 +14,11 @@ const SingleMaterialTech = ({ data }) => {
 
          <div className={styles.textContainer}>
             <H2>{data.nazwa}</H2>
-            <Paragraph>{data.opis.opis}</Paragraph>
-            <Paragraph>
+            <Paragraph fontSize="15px">{data.opis.opis}</Paragraph>
+            <Paragraph fontSize="15px">
                <strong>{textContent.materials.text[0]}</strong> {data.zadruk}
             </Paragraph>
-            <Paragraph>
+            <Paragraph fontSize="15px">
                <strong>{textContent.materials.text[1]}</strong>
                {data.szerokosc}
             </Paragraph>

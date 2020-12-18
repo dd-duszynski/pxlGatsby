@@ -13,14 +13,14 @@ const Contact = () => {
          <div className={styles.container}>
             <div className={styles.headerBox}>
                <H2 addClass={styles.header}>
-                  {textContent.mainPage.contact[0]}
+                  {textContent.mainPage.contact.header}
                </H2>
             </div>
-            <ContactInfo text={textContent.mainPage.contact} />
+            <ContactInfo text={textContent.mainPage.contact.text} />
             <div className={styles.verticalLine} />
-            <ContactForm text={textContent.mainPage.contact} />
+            <ContactForm text={textContent.mainPage.contact.text} />
          </div>
-         <Newsletter text={textContent.mainPage.contact} />
+         <Newsletter text={textContent.mainPage.contact.text} />
       </section>
    )
 }

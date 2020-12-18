@@ -15,7 +15,7 @@ const Footer = () => {
          <div className={styles.container}>
             <div className={styles.box}>
                <H3 addClass={styles.heading}>
-                  {textContent.mainPage.footer.text[0]}
+                  {textContent.footer.text[0]}
                </H3>
                <div className={styles.boxItem}>
                   <a
@@ -29,14 +29,14 @@ const Footer = () => {
                      <br />
                      ul. Czochralskiego 6,
                      <br />
-                     61-248 Poznań, {textContent.mainPage.footer.text[1]}
+                     61-248 Poznań, {textContent.footer.text[1]}
                   </a>
                </div>
             </div>
 
             <div className={styles.box}>
                <H3 addClass={styles.heading}>
-                  {textContent.mainPage.footer.text[2]}
+                  {textContent.footer.text[2]}
                </H3>
                <div className={styles.boxItem}>
                   <a className={styles.link} href="mailto:info@printxl.pl">
@@ -53,7 +53,7 @@ const Footer = () => {
 
             <div className={styles.box}>
                <H3 addClass={styles.heading}>
-                  {textContent.mainPage.footer.text[3]}
+                  {textContent.footer.text[3]}
                </H3>
                <div className={styles.boxItem}>
                   <a
@@ -79,46 +79,46 @@ const Footer = () => {
 
             <div className={styles.box}>
                <H3 addClass={styles.heading}>
-                  {textContent.mainPage.footer.text[4]}
+                  {textContent.footer.text[4]}
                </H3>
                <div className={styles.boxItem}>
                   <a
                      className={styles.link}
-                     href={textContent.mainPage.footer.links[0]}
+                     href={textContent.footer.links[0]}
                      target="_blank"
                      rel="noopener noreferrer"
                   >
                      <AiFillFilePdf className={styles.icon} />
-                     {textContent.mainPage.footer.text[5]}
+                     {textContent.footer.text[5]}
                   </a>
                   <a
                      className={styles.link}
-                     href={textContent.mainPage.footer.links[1]}
+                     href={textContent.footer.links[1]}
                      target="_blank"
                      rel="noopener noreferrer"
                   >
                      <AiFillFilePdf className={styles.icon} />
-                     {textContent.mainPage.footer.text[6]}
+                     {textContent.footer.text[6]}
                   </a>
                </div>
             </div>
 
             <div className={styles.box}>
                <H3 addClass={styles.heading}>
-                  {textContent.mainPage.footer.text[7]}
+                  {textContent.footer.text[7]}
                </H3>
                <div className={styles.boxItem}>
                   <div className={styles.innerContainer}>
                      <BsInfoCircleFill className={styles.icon} />
-                     <p>{textContent.mainPage.footer.text[8]}: 0000427764</p>
+                     <p>{textContent.footer.text[8]}: 0000427764</p>
                   </div>
                   <div className={styles.innerContainer}>
                      <BsInfoCircleFill className={styles.icon} />
-                     <p>{textContent.mainPage.footer.text[9]}: 7780111456</p>
+                     <p>{textContent.footer.text[9]}: 7780111456</p>
                   </div>
                   <div className={styles.innerContainer}>
                      <BsInfoCircleFill className={styles.icon} />
-                     <p>{textContent.mainPage.footer.text[10]}: 632429082</p>
+                     <p>{textContent.footer.text[10]}: 632429082</p>
                   </div>
                </div>
             </div>

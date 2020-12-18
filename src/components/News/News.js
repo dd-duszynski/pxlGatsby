@@ -45,20 +45,16 @@ const News = () => {
             <Carousel>
                <Catalog
                   img={christmasImg}
-                  t1={"Katalog ze świątecznymi produktami już dostępny!"}
-                  t2={
-                     "Zachęcamy do zapoznania się z systemami, w których łatwo wymienisz grafikę po okresie świątecznym."
-                  }
-                  link={"http://printxl.pl/pdf/christmas_PL.pdf"}
+                  t1={textContent.mainPage.news.christmasCatalog[0]}
+                  t2={textContent.mainPage.news.christmasCatalog[1]}
+                  link={textContent.mainPage.news.christmasCatalog[2]}
                   btn={textContent.mainPage.news.downloadBtn}
                />
                <Catalog
                   img={covidImg}
-                  t1={"Zachęcamy do pobrania naszego nowego katalogu."}
-                  t2={
-                     "Znajdą w nim Państwo aktualną ofertę na produkty ochronne oraz przydatne akcesoria."
-                  }
-                  link={"http://printxl.pl/pdf/COVID_PL_m.pdf"}
+                  t1={textContent.mainPage.news.CovidCatalog[0]}
+                  t2={textContent.mainPage.news.CovidCatalog[1]}
+                  link={textContent.mainPage.news.CovidCatalog[2]}
                   btn={textContent.mainPage.news.downloadBtn}
                />
             </Carousel>

@@ -18,11 +18,13 @@
 }
 .link {
    @include paragraph;
+   font-size: 15px;
    color: $color-main;
    line-height: 20px;
    &:hover {
       cursor: pointer;
       color: $color-main2;
+      transform: scale(1.02);
    }
 }
 
