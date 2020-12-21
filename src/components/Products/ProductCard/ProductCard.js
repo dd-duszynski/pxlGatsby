@@ -1,13 +1,16 @@
-import React, { useState } from "react"
+import React, { useState, useContext } from "react"
+
 import styles from "./ProductCard.module.scss"
 import Tag from "../../UI/Tag/Tag"
 import RhombusLink from "../../UI/RhombusLink/RhombusLink"
 import { RiArrowLeftSLine, RiArrowRightSLine } from "react-icons/ri"
 import H2 from "../../UI/Headers/H2"
 import Paragraph from "../../UI/Paragraph/Paragraph"
+import Context from "../../../context/context"
 
 const ProductCard = ({ data }) => {
    const [imgIndex, setImgIndex] = useState(0)
+   const { textContent } = useContext(Context)
 
    const imgPrev = () => {
       let currentIndex = imgIndex
@@ -31,11 +34,11 @@ const ProductCard = ({ data }) => {
    }
    const uv = data.zadruk.findIndex(el => el === "UV")
    const solvent = data.zadruk.findIndex(el => el === "Solvent")
-   const sublimacja = data.zadruk.findIndex(el => el === "Sublimacja")
+   const sublimation = data.zadruk.findIndex(el => el === "Sublimacja")
    const latex = data.zadruk.findIndex(el => el === "Latex")
    const indoor = data.opcjeProduktu.findIndex(el => el === "Indoor")
    const outdoor = data.opcjeProduktu.findIndex(el => el === "Outdoor")
-   const nowosc = data.opcjeProduktu.findIndex(el => el === "Nowość")
+   const news = data.opcjeProduktu.findIndex(el => el === "Nowość")
    const bestseller = data.opcjeProduktu.findIndex(el => el === "Bestseller")
 
    return (
@@ -53,31 +56,69 @@ const ProductCard = ({ data }) => {
                <RiArrowRightSLine />
             </div>
             <div className={styles.tagsTopContainer}>
-               {bestseller >= 0 ? (
+               {bestseller >= 0 && (
                   <Tag
-                     type="bestseller"
-                     value={data.opcjeProduktu[bestseller]}
+                     type="best"
+                     value={textContent.products.tag.bestseller[0]}
+                     tooltip={textContent.products.tag.bestseller[1]}
                   />
-               ) : null}
-               {nowosc >= 0 ? (
-                  <Tag type="nowosc" value={data.opcjeProduktu[nowosc]} />
-               ) : null}
+               )}
+               {news >= 0 && (
+                  <Tag
+                     type="news"
+                     value={textContent.products.tag.news[0]}
+                     tooltip={textContent.products.tag.news[1]}
+                  />
+               )}
             </div>
             <div className={styles.tagsContainer}>
-               <Tag
-                  type="indOut"
-                  value={[
-                     data.opcjeProduktu[indoor],
-                     data.opcjeProduktu[outdoor],
-                  ]}
-               >
-                  {data.opcjeProduktu[0]}
-               </Tag>
-
-               {uv >= 0 ? <Tag type="printing" value="UV" /> : null}
-               {solvent >= 0 ? <Tag type="printing" value="SOL" /> : null}
-               {sublimacja >= 0 ? <Tag type="printing" value="SUB" /> : null}
-               {latex >= 0 ? <Tag type="printing" value="LAT" /> : null}
+               {indoor >= 0 && outdoor >= 0 ? (
+                  <Tag
+                     type="inOut"
+                     value={textContent.products.tag.inOut[0]}
+                     tooltip={textContent.products.tag.inOut[1]}
+                  />
+               ) : indoor >= 0 && outdoor < 0 ? (
+                  <Tag
+                     type="inOut"
+                     value={textContent.products.tag.indoor[0]}
+                     tooltip={textContent.products.tag.indoor[1]}
+                  />
+               ) : outdoor >= 0 && indoor < 0 ? (
+                  <Tag
+                     type="inOut"
+                     value={textContent.products.tag.outdoor[0]}
+                     tooltip={textContent.products.tag.outdoor[1]}
+                  />
+               ) : null}
+               {sublimation >= 0 && (
+                  <Tag
+                     type="printing"
+                     value={textContent.products.tag.sublimation[0]}
+                     tooltip={textContent.products.tag.sublimation[1]}
+                  />
+               )}
+               {latex >= 0 && (
+                  <Tag
+                     type="printing"
+                     value={textContent.products.tag.latex[0]}
+                     tooltip={textContent.products.tag.latex[1]}
+                  />
+               )}
+               {uv >= 0 && (
+                  <Tag
+                     type="printing"
+                     value={textContent.products.tag.uv[0]}
+                     tooltip={textContent.products.tag.uv[1]}
+                  />
+               )}
+               {solvent >= 0 && (
+                  <Tag
+                     type="printing"
+                     value={textContent.products.tag.solvent[0]}
+                     tooltip={textContent.products.tag.solvent[1]}
+                  />
+               )}
             </div>
          </div>
          <div className={styles.aboutContainer}>
@@ -85,7 +126,9 @@ const ProductCard = ({ data }) => {
             <Paragraph addClass={styles.paragraph} fontSize="15px">
                {data.opisKrotki}
             </Paragraph>
-            <RhombusLink link={`/${data.url}`}>Zobacz produkt</RhombusLink>
+            <RhombusLink link={`/${data.url}`}>
+               {textContent.products.productCard[0]}
+            </RhombusLink>
          </div>
       </article>
    )

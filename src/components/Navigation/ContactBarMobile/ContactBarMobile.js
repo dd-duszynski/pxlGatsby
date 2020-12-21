@@ -1,9 +1,9 @@
 import React from "react"
 import { Link } from "gatsby"
-import styles from "./TopBarMobile.module.scss"
+import styles from "./ContactBarMobile.module.scss"
 
-const TopBarMobile = () => {
-   const path = window.location.pathname.slice(3)
+const ContactBarMobile = () => {
+   let path = window.location.pathname.slice(3)
 
    return (
       <>
@@ -33,13 +33,11 @@ const TopBarMobile = () => {
                <Link
                   to={`/DE/${path}`}
                   className={styles.flagDE}
-                  onClick={e => this.hideNavSlide(e)}
                   activeClassName={styles.flagDE_Active}
                />
                <Link
                   to={`/FR/${path}`}
                   className={styles.flagFR}
-                  onClick={e => this.hideNavSlide(e)}
                   activeClassName={styles.flagFR_Active}
                />
             </div>
@@ -48,4 +46,4 @@ const TopBarMobile = () => {
    )
 }
 
-export default TopBarMobile
+export default ContactBarMobile

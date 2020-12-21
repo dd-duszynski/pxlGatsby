@@ -7,287 +7,105 @@
    grid-column: 1/4;
    position: relative;
    z-index: 11;
-
 }
-.NavigationFixed {
+.NavigationOpened {
    @extend .Navigation;
    position: fixed;
 }
-.Container {
+.container {
    height: 70px;
    margin: 0 10%;
    display: flex;
    justify-content: space-between;
    align-items: center;
-   .active {
-      color: $color-accent;
-   }
 }
-.logo {
-   cursor: pointer;
-   height: 50px;
-   margin-top: -18px;
-   max-width: 200px;
-   padding-top: 3px;
-   &:hover {
-      transform: scale(1.03);
-   }
-}
-.Nav ul {
+
+.listOfNavItems {
    display: flex;
    justify-content: flex-end;
+   align-items: center;
 }
-.Nav a {
+
+.link {
    list-style: none;
    color: white;
    margin-right: 24px;
    font-size: $font-size-2;
    text-decoration: none;
+   list-style: none;
+   &:hover {
+      color: $color-accent2;
+      cursor: pointer;
+   }
 }
-.Nav li:nth-child(7) a {
+.active {
+   color: $color-accent;
+}
+
+.navItem:nth-child(7) .link {
    margin-right: 0px;
 }
-.Nav li a:hover {
-   color: $color-accent2;
-   cursor: pointer;
-}
 
-// do 1150 px ----------------------------------------------------
 @media screen and (max-width: 1150px) {
-   .logo {
-      max-width: 180px;
-      padding-top: 10px;
-      margin-top: 0;
-   }
-
-   .burger {
-      display: block;
-      cursor: pointer;
-      div {
-         width: 35px;
-         height: 3px;
-         margin: 7px;
-         border-radius: 3px;
-         background-color: white;
-         transition: transform 0.5s ease;
-      }
-   }
-   .burger_active {
-      display: block;
-      cursor: pointer;
-      div {
-         width: 35px;
-         height: 3px;
-         margin: 7px;
-         border-radius: 3px;
-         background-color: white;
-         transition: transform 0.5s ease;
-         &:nth-child(1) {
-            transform: rotate(-45deg) translate(-14px, 1px);
-         }
-         &:nth-child(2) {
-            opacity: 0;
-         }
-         &:nth-child(3) {
-            transform: rotate(45deg) translate(-14px, 1px);
-         }
-      }
-   }
-
-   @keyframes navLinkFade {
-      from {
-         opacity: 0;
-         transform: translateX(200px);
-      }
-      to {
-         opacity: 1;
-         transform: translateX(0px);
-      }
-   }
-
-   .Nav {
-      position: absolute;
+   .navInactive {
       display: none;
-      right: 0;
-      height: calc(100vh - 70px);
-      top: 70px;
-      width: 400px;
-      background: -webkit-linear-gradient(to right, $color-main, $color-main2);
-      background: linear-gradient(to right, $color-main, $color-main2);
-      z-index: 11;
-      transition: transform 0.5s ease-in;
-      transform: translateX(100%);
-      ul {
-         display: flex;
-         flex-direction: column;
-         align-items: center;
-      }
-      li {
-         margin-top: 7vh;
-         opacity: 0;
-      }
-      a {
-         padding: 5vh;
-         list-style: none;
-         color: white;
-         font-size: $font-size-3;
-         text-decoration: none;
-         &:hover {
-            color: $color-accent2;
-            cursor: pointer;
-         }
-      }
    }
-
-   .Nav__active {
+   .navActive {
       position: fixed;
       right: 0;
       height: calc(100vh - 70px);
       top: 70px;
       width: 100%;
-      background: -webkit-linear-gradient(to right, $color-main, $color-main2);
-      background: linear-gradient(to right, $color-main, $color-main2);
+      @include mainGradient;
       z-index: 11;
       transform: translateX(0);
       transition: transform 0.5s ease-in;
-      ul {
-         display: flex;
-         flex-direction: column;
-         align-items: center;
-      }
       li {
-         margin-top: 25px;
+         margin-top: 28px;
          &:nth-child(1) {
-            animation: navLinkFade 0.5s ease forwards;
+            animation: navLinkFade 0.4s ease forwards;
          }
          &:nth-child(2) {
-            animation: navLinkFade 0.8s ease forwards;
+            animation: navLinkFade 0.5s ease forwards;
          }
          &:nth-child(3) {
-            animation: navLinkFade 1.1s ease forwards;
+            animation: navLinkFade 0.6s ease forwards;
          }
          &:nth-child(4) {
-            animation: navLinkFade 1.4s ease forwards;
+            animation: navLinkFade 0.7s ease forwards;
          }
          &:nth-child(5) {
-            animation: navLinkFade 1.7s ease forwards;
+            animation: navLinkFade 0.8s ease forwards;
          }
          &:nth-child(6) {
-            animation: navLinkFade 2s ease forwards;
+            animation: navLinkFade 0.9s ease forwards;
          }
          &:nth-child(7) {
-            animation: navLinkFade 2.3s ease forwards;
+            animation: navLinkFade 1s ease forwards;
          }
          &:nth-child(8) {
-            animation: navLinkFade 2.6s ease forwards;
+            animation: navLinkFade 1.2s ease forwards;
          }
          &:nth-child(9) {
-            animation: navLinkFade 2.9s ease forwards;
+            animation: navLinkFade 1.4s ease forwards;
          }
       }
-      a {
-         padding: 10px 40px;
-         list-style: none;
-         color: white;
-         font-size: $font-size-3;
-         text-decoration: none;
-         &:hover {
-            color: $color-accent2;
-            cursor: pointer;
-         }
-      }
+   }
+   .listOfNavItems{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
    }
 }
 
-// do 400 px-----------------------------------------------
-@media screen and (max-width: 400px) {
-   .logo {
-      max-width: 150px;
-      padding-top: 10px;
-      margin-top: 0;
+@keyframes navLinkFade {
+   from {
+      opacity: 0;
+      transform: translateX(200px);
    }
-
-   .Nav {
-      position: absolute;
-      right: 0;
-      height: calc(100vh - 70px);
-      top: 70px;
-      width: 100%;
-      background: -webkit-linear-gradient(to right, $color-main, $color-main2);
-      background: linear-gradient(to right, $color-main, $color-main2);
-      transition: transform 0.5s ease-in;
-      transform: translateX(100%);
-      ul {
-         display: flex;
-         flex-direction: column;
-         align-items: center;
-      }
-      li {
-         margin-top: 20px;
-         opacity: 0;
-      }
-      a {
-         list-style: none;
-         color: white;
-         font-size: $font-size-3;
-         text-decoration: none;
-         &:hover {
-            color: $color-accent2;
-            cursor: pointer;
-         }
-      }
-   }
-
-   .Nav__active {
-      position: absolute;
-      right: 0;
-      height: calc(100vh - 70px);
-      top: 70px;
-      width: 100%;
-      z-index: 5;
-      background: -webkit-linear-gradient(to right, $color-main, $color-main2);
-      background: linear-gradient(to right, $color-main, $color-main2);
-      transform: translateX(0);
-      transition: transform 0.5s ease-in;
-      ul {
-         display: flex;
-         flex-direction: column;
-         align-items: center;
-      }
-      li {
-         margin-top: 20px;
-         &:nth-child(1) {
-            animation: navLinkFade 0.7s ease forwards;
-         }
-         &:nth-child(2) {
-            animation: navLinkFade 1s ease forwards;
-         }
-         &:nth-child(3) {
-            animation: navLinkFade 1.2s ease forwards;
-         }
-         &:nth-child(4) {
-            animation: navLinkFade 1.5s ease forwards;
-         }
-         &:nth-child(5) {
-            animation: navLinkFade 1.8s ease forwards;
-         }
-         &:nth-child(6) {
-            animation: navLinkFade 2.1s ease forwards;
-         }
-         &:nth-child(7) {
-            animation: navLinkFade 2.4s ease forwards;
-         }
-      }
-      a {
-         padding: 10px 40px;
-         list-style: none;
-         color: white;
-         font-size: $font-size-3;
-         text-decoration: none;
-         &:hover {
-            color: $color-accent2;
-            cursor: pointer;
-         }
-      }
+   to {
+      opacity: 1;
+      transform: translateX(0px);
    }
 }

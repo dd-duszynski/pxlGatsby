@@ -1,10 +1,14 @@
-import React from "react"
+import React, { useEffect } from "react"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
-import styles from "./TopBar.module.scss"
+import styles from "./ContactBar.module.scss"
 
-const TopBar = () => {
-   const path = window.location.pathname.slice(3)
-   
+const ContactBar = () => {
+   let path
+   if (window !== undefined) {
+      path = window.location.pathname.slice(3)
+   } else {
+      path = ""
+   }
 
    return (
       <div className={styles.Navigation__topBar}>
@@ -47,4 +51,4 @@ const TopBar = () => {
    )
 }
 
-export default TopBar
+export default ContactBar

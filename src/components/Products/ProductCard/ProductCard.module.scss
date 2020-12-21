@@ -54,11 +54,7 @@
    left: 0;
    :nth-child(1){
       border-top-left-radius: 14px;
-      border-right: 1px solid white;
    }
-   // div:first-child{
-   //    border-top-left-radius: 14px;
-   // }
 }
 
 .arrowLeft,
@@ -67,7 +63,7 @@
    width: 25px;
    height: 100%;
    &:hover {
-      background-color: $color-light-gray;
+      background-color: rgba(240,240,240,0.6);
       cursor: pointer;
    }
    svg {

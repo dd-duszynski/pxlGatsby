@@ -1,6 +1,5 @@
 import React, { useContext } from "react"
-import { graphql, Link } from "gatsby"
-import Img from "gatsby-image"
+import { Link } from "gatsby"
 import Context from "../../context/context"
 import Carousel from "../Carousel/Carousel"
 import Paragraph from "../UI/Paragraph/Paragraph"
@@ -10,9 +9,8 @@ import RhombusLink from "../UI/RhombusLink/RhombusLink"
 import Breadcrumbs from "./Breadcrumbs/Breadcrumbs"
 import Specifications from "./Specifications/Specifications"
 import { GiRolledCloth } from "react-icons/gi"
-import { AiOutlineCheck, AiOutlineFilePdf } from "react-icons/ai"
+import { AiOutlineCheck } from "react-icons/ai"
 import styles from "./ProductPage.module.scss"
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 
 const BtnContainer = ({ text }) => {
    return (
@@ -24,8 +22,6 @@ const BtnContainer = ({ text }) => {
 
 const ProductPage = ({ data }) => {
    const { textContent } = useContext(Context)
-   console.log("textContent", textContent)
-   console.log("ProductPage", data.contentfulProduktyPl)
    const {
       nazwa,
       zdjecia,
@@ -39,10 +35,12 @@ const ProductPage = ({ data }) => {
    } = data.contentfulProduktyPl
 
    const [...images] = zdjecia
+   console.log("images", data)
+
    const options = {
       renderNode: {
          "embedded-asset-block": node => {
-            console.log(node)
+            // console.log(node)
          },
       },
    }
@@ -57,12 +55,11 @@ const ProductPage = ({ data }) => {
             />
             <Carousel>
                {images.map((item, index) => (
-                  <div className={styles.imgContainer}>
+                  <div className={styles.imgContainer} key={index}>
                      <img
+                        className={styles.img}
                         src={item.fluid.src}
                         alt={nazwa}
-                        key={index}
-                        className={styles.img}
                      />
                   </div>
                ))}

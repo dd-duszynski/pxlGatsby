@@ -13,12 +13,11 @@ const ProductPageTemplate = ({ data, pageContext }) => {
    } = data.contentfulProduktyEn
    // const opisValue = opis.content[0].content[0].value
    const [...otherImages] = zdjecia
-   console.log("ProductPageTemplate", pageContext)
 
    const options = {
       renderNode: {
          "embedded-asset-block": node => {
-            console.log(node)
+            // console.log(node)
          },
       },
    }

@@ -17,7 +17,6 @@ const Post = () => {
          }
       }
    `)
-   console.log("[Post.js]", posty)
 
    return (
       <div>

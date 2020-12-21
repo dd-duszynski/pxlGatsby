@@ -1,22 +1,17 @@
 import React from "react"
 import styles from "./Tag.module.scss"
+import ReactTooltip from "react-tooltip"
 
-const Tag = ({ type, children, value }) => {
+const Tag = ({ type, value, tooltip }) => {
    let css
    let text
    switch (type) {
       case "products":
          css = styles.products
          break
-      case "indOut":
+      case "inOut":
          css = styles.indoorOutdoorTag
-         if (value.indexOf(undefined) < 0) {
-            text = "IN / OUT"
-         } else if (value.indexOf("Indoor") >= 0) {
-            text = "Indoor"
-         } else {
-            text = "Outdoor"
-         }
+         text = value
          break
       case "printing":
          css = styles.printing
@@ -26,12 +21,12 @@ const Tag = ({ type, children, value }) => {
          css = styles.groupTag
          text = value
          break
-      case "bestseller":
+      case "best":
          css = styles.bestsellerTag
          text = value
          break
-      case "nowosc":
-         css = styles.bestsellerTag
+      case "news":
+         css = styles.news
          text = value
          break
       case "dtp":
@@ -47,24 +42,25 @@ const Tag = ({ type, children, value }) => {
          css = styles.groupTag
    }
 
-
-   // if (type === "indOut") {
-   //    css = styles.indoorOutdoorTag
-   //    if (value.indexOf(undefined) >= 0) {
-   //       text = "IN / OUT"
-   //    } else if (value[0] === "Indoor") {
-   //       text = "Indoor"
-   //    } else {
-   //       text = "Outdoor"
-   //    }
-   // }
-
-   // if ((type = "group")) {
-   //    css = styles.groupTag
-   //    text = value
-   // }
-
-   return <div className={[styles.Tag, css].join(" ")}>{text}</div>
+   return (
+      <div className={[styles.Tag, css].join(" ")}>
+         <span 
+            className={styles.tagText}
+            data-tip data-for={tooltip} 
+         >
+            {text}
+         </span>
+         <ReactTooltip
+            id={tooltip}
+            place="top"
+            type="dark"
+            effect="solid"
+            offset={{ top: -2 }}
+         >
+            <span>{tooltip}</span>
+         </ReactTooltip>
+      </div>
+   )
 }
 
 export default Tag

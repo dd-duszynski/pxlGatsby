@@ -14,6 +14,7 @@ const style = {
 const Counter = () => {
    const [didViewCountUp, setDidViewCountUp] = useState(false)
    const { textContent } = useContext(Context)
+   
    const onVisibilityChange = isVisible => {
       if (isVisible) {
          setDidViewCountUp(true)

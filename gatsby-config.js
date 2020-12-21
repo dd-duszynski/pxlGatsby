@@ -10,8 +10,9 @@ module.exports = {
       configAuthor: "dd.duszynski@gmail.com",
       configData: ["item1", "item2"],
       configTwitterUserName: "dd.duszynski",
-      configImg: "/acm.png",
-      configSiteUrl: "http://localhost:8000/",
+      configImg: "/favicon.png",
+      configSiteUrl: "printxl.pl",
+      siteUrl: "http://localhost:8000/"
    },
    plugins: [
       {

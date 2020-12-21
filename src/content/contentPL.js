@@ -35,7 +35,7 @@ export const contentPL = {
       },
       productSection: {
          header: "Produkty",
-         seeAllBtn: ">> ZOBACZ WSZYSTKIE <<"
+         seeAllBtn: ">> ZOBACZ WSZYSTKIE <<",
       },
       contact: {
          header: "Kontakt",
@@ -80,7 +80,7 @@ export const contentPL = {
             "Jakie są warunki przyjęcia reklamacji?",
             "Wychodząc naprzeciw potrzebom naszych klientów, reklamacje i ewentualne kwestie sporne, rozpatrujemy na bieżąco. Szczegółowe informacje znajdują się w Warunkach Współpracy, gdzie precyzyjnie została opisana cała procedura zgłoszenia i proces rozpatrywania reklamacji.",
          ],
-      ]
+      ],
    },
    footer: {
       text: [
@@ -102,24 +102,15 @@ export const contentPL = {
       ],
    },
    navigation: {
-      text: [
-         "Produkty",
-         "Materiały",
-         "Technologie",
-         "Specyfikacje",
-         "FAQ",
-         "Kontakt",
-         "Blog",
-      ],
-      links: [
-         "PL/",
-         "PL/products",
-         "PL/materials",
-         "PL/technology",
-         "PL/specifications",
-         "PL/#FAQ",
-         "PL/contact",
-         "PL/blog",
+      mainPageLink: "PL/",
+      navItem: [
+         ["Produkty", "PL/products"],
+         ["Materiały", "PL/materials"],
+         ["Technologie", "PL/technology"],
+         ["Specyfikacje", "PL/specifications"],
+         ["FAQ", "PL/#FAQ"],
+         ["Kontakt", "PL/contact"],
+         ["Blog", "PL/blog"],
       ],
    },
    products: {
@@ -145,6 +136,18 @@ export const contentPL = {
             "PL/products/tribunes",
             "PL/products/others",
          ],
+      },
+      productCard: ["ZOBACZ PRODUKT"],
+      tag: {
+         bestseller: ["BESTSELLER", "Jeden z najpopularniejszych produktów."],
+         news: ["NOWOŚĆ", "Nowość w naszej ofercie."],
+         inOut: ["IN / OUT", "Wykorzystanie wewnątrz i poza budynkiem."],
+         indoor: ["INDOOR", "Zalecane wykorzystanie wewnątrz budynku."],
+         outdoor: ["OUTDOOR", "Możliwość wykorzystania na zewnątrz."],
+         uv: ["UV", "Technologia druku: UV"],
+         solvent: ["SOL", "Technologia druku: Solvent"],
+         latex: ["LAT", "Technologia druku: Latex"],
+         sublimation: ["SUB", "Technologia druku: Sublimacja"],
       },
    },
    specifications: {

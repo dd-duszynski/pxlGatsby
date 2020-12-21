@@ -37,11 +37,11 @@ export const query = graphql`
          }
          opis {
             opis
-            content{
-               content{
-                 value
+            content {
+               content {
+                  value
                }
-             }
+            }
          }
          opcjeProduktu
          zadruk

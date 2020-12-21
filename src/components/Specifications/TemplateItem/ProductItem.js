@@ -5,7 +5,6 @@ import TemplateItem from "./TemplateItem"
 import { RiArrowDownSLine } from "react-icons/ri"
 const ProductItem = ({ item }) => {
    const [choosen, setChoosen] = useState(false)
-   console.log(item);
    const image = item.zdjecia[0].fluid.src
    const handleChoosen = () => {
       setChoosen(!choosen)

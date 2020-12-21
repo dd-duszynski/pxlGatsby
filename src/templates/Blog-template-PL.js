@@ -5,7 +5,6 @@ import AniLink from "gatsby-plugin-transition-link/AniLink"
 import SEO from "../components/SEO/SEO"
 
 const BlogTemplate = ({ data }) => {
-   console.log("BlogTemplate", data);
    
    const {
       tytul,
