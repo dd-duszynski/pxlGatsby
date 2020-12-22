@@ -6,40 +6,29 @@
    font-size: 12px;
    padding: 1px 7px;
    color: white;
-   &:hover{
+   border-left: 1px solid white;
+   &:nth-child(1) {
+      border-left: 0;
+   }
+   &:hover {
       cursor: help;
    }
 }
-.tagText{
+.tagText {
    text-transform: uppercase;
 }
-.groupTag {
-   background-color: $color-main;
+.red {
+   background-color: red;
 }
-.indoorOutdoorTag {
+.green {
    background-color: #89bb1e;
 }
-.printingTag {
-   background-color: #2d2d2d;
+.gray {
+   background-color: #222;
 }
-.bestsellerTag {
-   background-color: red;
-}
-.news {
-   background-color: red;
-   border-left: 1px solid white;
-}
-.printing {
+.blue {
    background-color: $color-main;
-   border-left: 1px solid white;
 }
-.products {
-   background-color: $color-main;
-
-}
-.dtp {
+.orange {
    background-color: orangered;
-}
-.technology {
-   background-color: #89bb1e;
 }

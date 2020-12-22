@@ -1,5 +1,4 @@
 import React, { useContext } from "react"
-// import Image from "gatsby-image"
 import Context from "../../context/context"
 import styles from "./News.module.scss"
 import LeftBar from "../UI/Bars/LeftBar"
@@ -15,10 +14,6 @@ const Catalog = ({ img, t1, t2, link, btn }) => {
       <div className={styles.Catalog}>
          <div className={styles.imgBox}>
             <img src={img} className={styles.img} alt="" />
-            {/* 
-               Dopiero jak bede pobierał z contentful
-               <Image fluid={img} className={styles.img} /> 
-            */}
          </div>
          <div className={styles.descriptionBox}>
             <Paragraph>

@@ -4,51 +4,39 @@ import ReactTooltip from "react-tooltip"
 
 const Tag = ({ type, value, tooltip }) => {
    let css
-   let text
    switch (type) {
-      case "products":
-         css = styles.products
-         break
-      case "inOut":
-         css = styles.indoorOutdoorTag
-         text = value
-         break
-      case "printing":
-         css = styles.printing
-         text = value
-         break
-      case "group":
-         css = styles.groupTag
-         text = value
-         break
       case "best":
-         css = styles.bestsellerTag
-         text = value
+         css = styles.red
          break
       case "news":
-         css = styles.news
-         text = value
+         css = styles.red
          break
-      case "dtp":
-         css = styles.dtp
+      case "inOut":
+         css = styles.green
          break
-      case "technology":
-         css = styles.technology
+      case "printing":
+         css = styles.blue
          break
-      case "print":
-         css = styles.printingTag
+      case "blogPrinting":
+         css = styles.blue
+         break
+      case "blogDTP":
+         css = styles.orange
+         break
+      case "blogProduct":
+         css = styles.green
+         break
+      case "blogTechnology":
+         css = styles.gray
          break
       default:
-         css = styles.groupTag
+         css = styles.blue
    }
 
    return (
       <div className={[styles.Tag, css].join(" ")}>
-         <span 
-            className={styles.tagText}
-            data-tip data-for={tooltip} 
-         >
-            {text}
+         <span className={styles.tagText} data-tip data-for={tooltip}>
+            {value}
          </span>
          <ReactTooltip
             id={tooltip}

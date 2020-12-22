@@ -19,7 +19,7 @@ const Footer = () => {
                </H3>
                <div className={styles.boxItem}>
                   <a
-                     href="https://goo.gl/maps/AcYmcUi4WEWm3GQb7"
+                     href="https://goo.gl/maps/uPsmeVfGyKLyoCcy6"
                      target="_blank"
                      rel="noopener noreferrer"
                      className={styles.link}

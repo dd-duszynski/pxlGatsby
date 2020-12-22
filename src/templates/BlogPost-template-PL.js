@@ -1,35 +1,23 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/Layout/Layout"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
 import SEO from "../components/SEO/SEO"
+import Post from "../components/Blog/Post/Post"
 
 const BlogTemplate = ({ data }) => {
-   
-   const {
-      tytul,
-      dataPublikacji,
-      tresc: { tresc },
-   } = data.posty
-
    return (
       <Layout language="PL">
-         <SEO title={tytul} />
-         <section>
-            <h1>{tytul}</h1>
-            <p>{dataPublikacji}</p>
-            <p>{tresc}</p>
-            <AniLink fade to="PL/blog">
-               Wróć na stronę
-            </AniLink>
-         </section>
+         <SEO title={data.post.tytul} />
+         <Post
+            data={data}
+         />
       </Layout>
    )
 }
 export const query = graphql`
    
    query($name: String!) {
-      posty: contentfulBlogPl(tytul: { eq: $name }) {
+      post: contentfulBlogPl(tytul: { eq: $name }) {
          tytul
          dataPublikacji(formatString: "DD-MM-YYYY")
          tresc {

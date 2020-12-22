@@ -1,44 +1,54 @@
 import React from "react"
 import { Link } from "gatsby"
 import styles from "./ContactBarMobile.module.scss"
+import { AiFillPhone } from "react-icons/ai"
+import { IoMdMail } from "react-icons/io"
+import { MdLocationOn } from "react-icons/md"
 
 const ContactBarMobile = () => {
    let path = window.location.pathname.slice(3)
 
    return (
       <>
-         <li className={styles.TopBarMobile_list}>
-            <div className={styles.TopBarMobile_list_line} />
-            <div className={styles.Navigation__phone}>
+         <li className={styles.ContactBarMobile}>
+            <div className={styles.line} />
+            <div className={styles.iconsContainer}>
                <a href="tel:+48 695-859-808">
-                  <span className={styles.phone} />
+                  <AiFillPhone className={styles.icon} />
                </a>
                <a href="mailto:info@printxl.pl">
-                  <span className={styles.mail} />
+                  <IoMdMail className={styles.icon} />
+               </a>
+               <a
+                  href="https://goo.gl/maps/uPsmeVfGyKLyoCcy6"
+                  target="_blank"
+                  rel="noopener noreferrer"
+               >
+                  <MdLocationOn className={styles.icon} />
                </a>
             </div>
          </li>
-         <li className={styles.TopBarMobile_li}>
-            <div className={styles.Navigation__languages}>
+         <li className={styles.ContactBarMobile}>
+            <div className={styles.languagesContainer}>
                <Link
                   to={`/EN/${path}`}
-                  className={styles.flagEN}
-                  activeClassName={styles.flagEN_Active}
+                  className={[styles.flagEN, styles.flag].join(' ')}
+                  activeClassName={styles.flagActive}
                />
                <Link
                   to={`/PL/${path}`}
-                  className={styles.flagPL}
-                  activeClassName={styles.flagPL_Active}
+                  className={[styles.flagPL, styles.flag].join(' ')}
+                  activeClassName={styles.flagActive}
                />
                <Link
                   to={`/DE/${path}`}
-                  className={styles.flagDE}
-                  activeClassName={styles.flagDE_Active}
+                  className={[styles.flagDE, styles.flag].join(' ')}
+                  activeClassName={styles.flagActive}
                />
                <Link
                   to={`/FR/${path}`}
-                  className={styles.flagFR}
-                  activeClassName={styles.flagFR_Active}
+                  className={[styles.flagFR, styles.flag].join(' ')}
+                  activeClassName={styles.flagActive}
                />
             </div>
          </li>

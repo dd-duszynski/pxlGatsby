@@ -1,29 +1,37 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
+import Context from "../../../context/context"
+import styles from "./Post.module.scss"
+import H1 from "../../UI/Headers/H1"
+import H2 from "../../UI/Headers/H2"
+import Subtitle from "../../UI/Subtitle/Subtitle"
+import Paragraph from "../../UI/Paragraph/Paragraph"
+import Carousel from "../../Carousel/Carousel"
 
-const Post = () => {
-   const { posty } = useStaticQuery(graphql`
-      {
-         posty: allContentfulBlogPl {
-            edges {
-               node {
-                  tytul
-                  dataPublikacji(formatString: "DD-MMMM-Y")
-                  tresc {
-                     tresc
-                  }
-               }
-            }
-         }
-      }
-   `)
+const Post = ({ data }) => {
+   const {
+      tytul,
+      dataPublikacji,
+      tresc: { tresc },
+      zdjecia,
+   } = data.post
+
+   console.log(data)
 
    return (
-      <div>
-         {posty.edges.map((item, index) => {
-            return <h2 key={index}>{item.node.tytul}</h2>
-         })}
-      </div>
+      <section className={styles.Post}>
+         <article className={styles.container}>
+            <AniLink fade to="PL/blog">
+               {`Blog > ${tytul}`} 
+            </AniLink>
+            <div className={styles.imageBox}>
+               <img src={zdjecia[0].fluid.src} alt="" />
+            </div>
+            <H1>{tytul}</H1>
+            <Subtitle>{dataPublikacji} | 5 min czytania</Subtitle>
+            <Paragraph>{tresc}</Paragraph>
+         </article>
+      </section>
    )
 }
 export default Post

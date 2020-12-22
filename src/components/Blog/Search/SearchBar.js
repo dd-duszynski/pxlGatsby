@@ -9,27 +9,27 @@ const SearchBar = () => {
    return (
       <div className={styles.SearchBar}>
          <h3 className={styles.title}>
-            {textContent.blog.navigation.categoryHeader}
+            {textContent.blog.navigationHeader}
          </h3>
          <div className={styles.container}>
-            <Link to={textContent.blog.navigation.links[0]}>
+            <Link to={textContent.blog.cardsLinks[0]}>
                <Tag type="printing">
-                  {textContent.blog.navigation.text[0]}
+                  {textContent.blog.cards[0]}
                </Tag>
             </Link>
-            <Link to={textContent.blog.navigation.links[1]}>
+            <Link to={textContent.blog.cardsLinks[1]}>
                <Tag type="products">
-                  {textContent.blog.navigation.text[1]}
+                  {textContent.blog.cards[1]}
                </Tag>
             </Link>
-            <Link to={textContent.blog.navigation.links[2]}>
+            <Link to={textContent.blog.cardsLinks[2]}>
                <Tag type="dtp">
-                  {textContent.blog.navigation.text[2]}
+                  {textContent.blog.cards[2]}
                </Tag>
             </Link>
-            <Link to={textContent.blog.navigation.links[3]}>
+            <Link to={textContent.blog.cardsLinks[3]}>
                <Tag type="technology">
-                  {textContent.blog.navigation.text[3]}
+                  {textContent.blog.cards[3]}
                </Tag>
             </Link>
          </div>

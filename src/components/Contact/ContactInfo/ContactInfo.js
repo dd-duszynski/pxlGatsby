@@ -10,7 +10,7 @@ const ContactInfo = ({ text }) => {
       <section className={styles.ContactInfo}>
          <a
             className={styles.item}
-            href="https://goo.gl/maps/AcYmcUi4WEWm3GQb7"
+            href="https://goo.gl/maps/uPsmeVfGyKLyoCcy6"
             target="_blank"
             rel="noopener noreferrer"
          >

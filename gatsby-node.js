@@ -82,17 +82,17 @@ exports.createPages = async ({ graphql, actions }) => {
       })
    })
 
-   // Blog PL ---------------------------------------
+   // Blog Post PL ---------------------------------------
    data.postyPL.edges.forEach(({ node }) => {
       createPage({
          path: `PL/blog/${node.tytul}`,
-         component: path.resolve("./src/templates/Blog-template-PL.js"),
+         component: path.resolve("./src/templates/BlogPost-template-PL.js"),
          context: {
             name: node.tytul,
          },
       })
    })
-   // Blog TEST Kategorii
+   // Blog Kategorie
    data.kategoriePL.distinct.forEach(node => {
       createPage({
          path: `PL/blog/${node}`,

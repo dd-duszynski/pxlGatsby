@@ -1,6 +1,9 @@
-import React, { useEffect } from "react"
+import React from "react"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import styles from "./ContactBar.module.scss"
+import {  AiFillPhone } from "react-icons/ai"
+import { IoMdMail } from "react-icons/io"
+import { MdLocationOn } from "react-icons/md"
 
 const ContactBar = () => {
    let path
@@ -11,39 +14,56 @@ const ContactBar = () => {
    }
 
    return (
-      <div className={styles.Navigation__topBar}>
-         <div className={styles.Navigation__phone}>
-            <span />
-            <a href="tel:+48 695-859-808">+48 695-859-808</a>
-         </div>
+      <div className={styles.ContactBar}>
+         <a 
+            href="tel:+48 695-859-808" 
+            className={styles.linkContainer}
+         >
+            <AiFillPhone className={styles.icon} />
+            48 695-859-808
+         </a>
 
-         <div className={styles.Navigation__mail}>
-            <span />
-            <a href="mailto:info@printxl.pl">info@printxl.pl</a>
-         </div>
-         <div className={styles.Navigation__languages}>
+         <a 
+            href="mailto:info@printxl.pl" 
+            className={styles.linkContainer}
+         >
+            <IoMdMail className={styles.icon} />
+            info@printxl.pl
+         </a>
+
+         <a
+            className={styles.linkContainer}
+            href="https://goo.gl/maps/uPsmeVfGyKLyoCcy6"
+            target="_blank"
+            rel="noopener noreferrer"
+         >
+            <MdLocationOn className={styles.icon} />
+            Poznań, Czochralskiego 6
+         </a>
+
+         <div className={styles.languagesContainer}>
             <AniLink
                to={`/EN/${path}`}
-               className={styles.flagEN}
-               activeClassName={styles.flagEN_Active}
+               className={[styles.flagEN, styles.flag].join(" ")}
+               activeClassName={styles.flag_Active}
                partiallyActive
             />
             <AniLink
                to={`/PL/${path}`}
-               className={styles.flagPL}
-               activeClassName={styles.flagPL_Active}
+               className={[styles.flagPL, styles.flag].join(" ")}
+               activeClassName={styles.flag_Active}
                partiallyActive
             />
             <AniLink
                to={`/DE/${path}`}
-               className={styles.flagDE}
-               activeClassName={styles.flagDE_Active}
+               className={[styles.flagDE, styles.flag].join(" ")}
+               activeClassName={styles.flag_Active}
                partiallyActive
             />
             <AniLink
                to={`/FR/${path}`}
-               className={styles.flagFR}
-               activeClassName={styles.flagFR_Active}
+               className={[styles.flagFR, styles.flag].join(" ")}
+               activeClassName={styles.flag_Active}
                partiallyActive
             />
          </div>

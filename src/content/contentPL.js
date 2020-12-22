@@ -207,17 +207,21 @@ export const contentPL = {
       },
    },
    blog: {
-      navigation: {
-         categoryHeader: "Kategorie",
-         text: ["Druk", "Produkty", "Przygotowanie plików", "Technologie"],
-         links: [
-            "PL/blog/printing",
-            "PL/blog/products",
-            "PL/blog/dtp",
-            "PL/blog/technology",
-         ],
-      },
-      cards: ["Druk", "Przygotowanie plików", "Produkty", "Technologie"],
+      prefix: "PL/blog/",
+      text: ["CZYTAJ DALEJ"],
+      navigationHeader: "Kategorie",
+      cards: [
+         "Druk", 
+         "DTP", 
+         "Produkty", 
+         "Technologie"
+      ],
+      cardsLinks: [
+         "PL/blog/printing",
+         "PL/blog/products",
+         "PL/blog/dtp",
+         "PL/blog/technology",
+      ],
    },
    productPage: {
       breadcrumbs: ["Strona Główna", "/PL/"],
