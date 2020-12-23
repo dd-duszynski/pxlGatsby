@@ -45,26 +45,26 @@ const ContactBar = () => {
             <AniLink
                to={`/EN/${path}`}
                className={[styles.flagEN, styles.flag].join(" ")}
-               activeClassName={styles.flag_Active}
                partiallyActive
+               activeClassName={styles.flag_Active}
             />
             <AniLink
                to={`/PL/${path}`}
                className={[styles.flagPL, styles.flag].join(" ")}
-               activeClassName={styles.flag_Active}
                partiallyActive
+               activeClassName={styles.flag_Active}
             />
             <AniLink
                to={`/DE/${path}`}
                className={[styles.flagDE, styles.flag].join(" ")}
-               activeClassName={styles.flag_Active}
                partiallyActive
+               activeClassName={styles.flag_Active}
             />
             <AniLink
                to={`/FR/${path}`}
                className={[styles.flagFR, styles.flag].join(" ")}
-               activeClassName={styles.flag_Active}
                partiallyActive
+               activeClassName={styles.flag_Active}
             />
          </div>
       </div>

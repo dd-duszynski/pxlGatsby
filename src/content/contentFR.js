@@ -1,4 +1,4 @@
-export const contentPL = {
+export const contentFR = {
    mainPage: {
       heroVideo: [
          ["DRUK WIELKOFORMATOWY", "TEKSTYLIA / VINYLE / FOLIE / PŁYTY"],

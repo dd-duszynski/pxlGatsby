@@ -9,7 +9,7 @@ const BlogTemplate = ({ data }) => {
       <Layout language="PL">
          <SEO title={data.post.tytul} />
          <Post
-            data={data}
+            data={data.post}
          />
       </Layout>
    )
@@ -20,9 +20,9 @@ export const query = graphql`
       post: contentfulBlogPl(tytul: { eq: $name }) {
          tytul
          dataPublikacji(formatString: "DD-MM-YYYY")
-         tresc {
-            tresc
-         }
+         tekst{
+            json
+          }
          zdjecia {
             fluid {
                ...GatsbyContentfulFluid

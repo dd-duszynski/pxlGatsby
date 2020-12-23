@@ -1,11 +1,8 @@
-import React, { useEffect } from "react"
+import React from "react"
 import styles from "./SpecificationsList.module.scss"
 import ProductItem from "../TemplateItem/ProductItem"
 
 const SpecificationsList = ({ data }) => {
-   useEffect(() => {
-      window.scrollTo(0, 0)
-   }, [])
    return (
       <section className={styles.SpecificationsList}>
          {data.nodes.map(item => {

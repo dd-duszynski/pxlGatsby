@@ -1,35 +1,40 @@
-import React from "react"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
+import React, { useContext } from "react"
 import Context from "../../../context/context"
 import styles from "./Post.module.scss"
 import H1 from "../../UI/Headers/H1"
-import H2 from "../../UI/Headers/H2"
 import Subtitle from "../../UI/Subtitle/Subtitle"
-import Paragraph from "../../UI/Paragraph/Paragraph"
-import Carousel from "../../Carousel/Carousel"
+import Breadcrumbs from "../../UI/Breadcrumbs/Breadcrumbs"
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
+import {RICHTEXT_OPTIONS} from '../../UI/RichText/RichText'
 
 const Post = ({ data }) => {
    const {
       tytul,
       dataPublikacji,
-      tresc: { tresc },
       zdjecia,
-   } = data.post
-
+      tekst,
+   } = data
    console.log(data)
+   const {
+      textContent: { blog },
+   } = useContext(Context)
 
    return (
       <section className={styles.Post}>
          <article className={styles.container}>
-            <AniLink fade to="PL/blog">
-               {`Blog > ${tytul}`} 
-            </AniLink>
+            <Breadcrumbs
+               b1={[blog.breadcrumbs.b1[0], blog.breadcrumbs.b1[1]]}
+               b2={[blog.breadcrumbs.b2[0], blog.breadcrumbs.b2[1]]}
+               b3={[`${blog.breadcrumbs.b2[0]}${tytul}/`, tytul]}
+            />
             <div className={styles.imageBox}>
                <img src={zdjecia[0].fluid.src} alt="" />
             </div>
             <H1>{tytul}</H1>
-            <Subtitle>{dataPublikacji} | 5 min czytania</Subtitle>
-            <Paragraph>{tresc}</Paragraph>
+            <Subtitle>
+               {dataPublikacji} | 6 {blog.text[1]}
+            </Subtitle>
+            {documentToReactComponents(tekst.json, RICHTEXT_OPTIONS)}
          </article>
       </section>
    )

@@ -45,6 +45,7 @@ const Technology = ({ machine }) => {
                            alt=""
                            src={item.fluid.src}
                            className={styles.img}
+                           key={item.fluid.src}
                         />
                      )
                   })}

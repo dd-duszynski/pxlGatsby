@@ -150,6 +150,36 @@ export const contentPL = {
          sublimation: ["SUB", "Technologia druku: Sublimacja"],
       },
    },
+   productPage: {
+      breadcrumbs: ["/PL/", "Strona Główna"],
+      groupOfProducts: [
+         "Covid-19",
+         "Banery",
+         "Flagi",
+         "Rollupy",
+         "Ścianki",
+         "Standy",
+         "Trybunki",
+         "Pozostałe",
+      ],
+      linkToGroupOfProducts: [
+         "PL/products/covid-19",
+         "PL/products/banners",
+         "PL/products/flags",
+         "PL/products/rollups",
+         "PL/products/walls",
+         "PL/products/stands",
+         "PL/products/tribunes",
+         "PL/products/others",
+      ],
+      text: [
+         "Zainteresowany? Napisz do Nas!",
+         "Zalety produktu:",
+         "Polecane materiały:",
+         "Instrukcje DTP:",
+         "Przykładowe wymiary [cm]:",
+      ],
+   },
    specifications: {
       mainLink: "PL/specifications",
       navigation: {
@@ -207,8 +237,11 @@ export const contentPL = {
       },
    },
    blog: {
-      prefix: "PL/blog/",
-      text: ["CZYTAJ DALEJ"],
+      breadcrumbs: {
+         b1: ["PL/", "Strona Główna"],
+         b2: ["PL/blog/", "Blog"]
+      },
+      text: ["CZYTAJ DALEJ", "minut czytania"],
       navigationHeader: "Kategorie",
       cards: [
          "Druk", 
@@ -217,40 +250,10 @@ export const contentPL = {
          "Technologie"
       ],
       cardsLinks: [
-         "PL/blog/printing",
-         "PL/blog/products",
-         "PL/blog/dtp",
-         "PL/blog/technology",
-      ],
-   },
-   productPage: {
-      breadcrumbs: ["Strona Główna", "/PL/"],
-      groupOfProducts: [
-         "Covid-19",
-         "Banery",
-         "Flagi",
-         "Rollupy",
-         "Ścianki",
-         "Standy",
-         "Trybunki",
-         "Pozostałe",
-      ],
-      linkToGroupOfProducts: [
-         "PL/products/covid-19",
-         "PL/products/banners",
-         "PL/products/flags",
-         "PL/products/rollups",
-         "PL/products/walls",
-         "PL/products/stands",
-         "PL/products/tribunes",
-         "PL/products/others",
-      ],
-      text: [
-         "Zainteresowany? Napisz do Nas!",
-         "Zalety produktu:",
-         "Polecane materiały:",
-         "Instrukcje DTP:",
-         "Przykładowe wymiary [cm]:",
+         "PL/blog/printing/",
+         "PL/blog/products/",
+         "PL/blog/dtp/",
+         "PL/blog/technology/",
       ],
    },
    page404: {

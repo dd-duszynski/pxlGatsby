@@ -50,7 +50,7 @@ const MainPageProducts = () => {
             </div>
          </div>
          <RhombusLink
-            link={textContent.products.mainLink}
+            link={`/${textContent.products.mainLink}`}
             addClass={styles.seeAll}
          >
             {textContent.mainPage.productSection.seeAllBtn}

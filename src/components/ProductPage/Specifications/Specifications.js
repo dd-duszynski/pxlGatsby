@@ -20,7 +20,7 @@ const Specifications = ({ specyfikacje }) => {
    const lessThanXSpecification = (
       <>
          {specyfikacje.map(item => (
-            <div className={styles.iconContainer}>
+            <div className={styles.iconContainer} key={item.file.url}>
                <AiOutlineFilePdf className={styles.icon} />
                <a
                   className={styles.link}

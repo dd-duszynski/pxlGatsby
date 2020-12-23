@@ -29,7 +29,7 @@ const Navigation = () => {
             <nav className={isBurgerOpen ? styles.navActive : styles.navInactive}>
                <ul className={styles.listOfNavItems}>
                   {textContent.navigation.navItem.map(item => (
-                     <li className={styles.navItem}>
+                     <li className={styles.navItem} key={item[0]}>
                         <Link
                            onClick={e => hideNavSlide(e)}
                            activeClassName={styles.active}

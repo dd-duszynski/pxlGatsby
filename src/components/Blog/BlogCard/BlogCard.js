@@ -24,7 +24,7 @@ const BlogCard = ({ blog }) => {
                {trescKrotka.trescKrotka}
             </Paragraph>
             <RhombusLink 
-               link={`${textContent.blog.prefix}${tytul}`}
+               link={`${textContent.blog.breadcrumbs.b2[0]}${tytul}/`}
             >
                {textContent.blog.text[0]}
             </RhombusLink>

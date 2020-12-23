@@ -3,6 +3,7 @@ import styles from "./ProductItem.module.scss"
 import H3 from "../../UI/Headers/H3"
 import TemplateItem from "./TemplateItem"
 import { RiArrowDownSLine } from "react-icons/ri"
+
 const ProductItem = ({ item }) => {
    const [choosen, setChoosen] = useState(false)
    const image = item.zdjecia[0].fluid.src
