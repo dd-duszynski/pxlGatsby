@@ -14,6 +14,9 @@
       cursor: help;
    }
 }
+.link:hover {
+   cursor: pointer;
+}
 .tagText {
    text-transform: uppercase;
 }
@@ -28,6 +31,11 @@
 }
 .blue {
    background-color: $color-main;
+}
+.blueOutline {
+   background-color: white;
+   border: 1px solid $color-main !important;
+   color: $color-main;
 }
 .orange {
    background-color: orangered;

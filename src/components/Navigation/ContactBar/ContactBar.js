@@ -6,13 +6,6 @@ import { IoMdMail } from "react-icons/io"
 import { MdLocationOn } from "react-icons/md"
 
 const ContactBar = () => {
-   let path
-   if (window !== undefined) {
-      path = window.location.pathname.slice(3)
-   } else {
-      path = ""
-   }
-
    return (
       <div className={styles.ContactBar}>
          <a 
@@ -43,25 +36,25 @@ const ContactBar = () => {
 
          <div className={styles.languagesContainer}>
             <AniLink
-               to={`/EN/${path}`}
+               to={`/EN`}
                className={[styles.flagEN, styles.flag].join(" ")}
                partiallyActive
                activeClassName={styles.flag_Active}
             />
             <AniLink
-               to={`/PL/${path}`}
+               to={`/PL`}
                className={[styles.flagPL, styles.flag].join(" ")}
                partiallyActive
                activeClassName={styles.flag_Active}
             />
             <AniLink
-               to={`/DE/${path}`}
+               to={`/DE`}
                className={[styles.flagDE, styles.flag].join(" ")}
                partiallyActive
                activeClassName={styles.flag_Active}
             />
             <AniLink
-               to={`/FR/${path}`}
+               to={`/FR`}
                className={[styles.flagFR, styles.flag].join(" ")}
                partiallyActive
                activeClassName={styles.flag_Active}

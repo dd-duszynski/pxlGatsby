@@ -2,7 +2,7 @@ import React from "react"
 import styles from "./Tag.module.scss"
 import ReactTooltip from "react-tooltip"
 
-const Tag = ({ type, value, tooltip }) => {
+const Tag = ({ type, value, tooltip, link }) => {
    let css
    switch (type) {
       case "best":
@@ -29,24 +29,29 @@ const Tag = ({ type, value, tooltip }) => {
       case "blogTechnology":
          css = styles.gray
          break
+      case "blogAll":
+         css = styles.blueOutline
+         break
       default:
          css = styles.blue
    }
-
+   const linkCSS = link ? styles.link : null
    return (
-      <div className={[styles.Tag, css].join(" ")}>
+      <div className={[styles.Tag, css, linkCSS].join(" ")}>
          <span className={styles.tagText} data-tip data-for={tooltip}>
             {value}
          </span>
-         <ReactTooltip
-            id={tooltip}
-            place="top"
-            type="dark"
-            effect="solid"
-            offset={{ top: -2 }}
-         >
-            <span>{tooltip}</span>
-         </ReactTooltip>
+         {link ? null : (
+            <ReactTooltip
+               id={tooltip}
+               place="top"
+               type="dark"
+               effect="solid"
+               offset={{ top: -2 }}
+            >
+               <span>{tooltip}</span>
+            </ReactTooltip>
+         )}
       </div>
    )
 }

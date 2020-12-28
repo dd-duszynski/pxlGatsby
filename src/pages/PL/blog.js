@@ -2,16 +2,15 @@ import React from "react"
 import Layout from "../../components/Layout/Layout"
 import BlogList from "../../components/Blog/BlogList/BlogList"
 import SEO from "../../components/SEO/SEO"
-import SearchBar from "../../components/Blog/Search/SearchBar"
+import BlogSearchBar from "../../components/Blog/Search/SearchBar"
 import { graphql } from "gatsby"
 
 const blog = ({ data }) => {
-   console.log(data)
    return (
       <Layout language="PL">
          <SEO title="PrintXL - Blog" />
          <BlogList data={data.allContentfulBlogPl.edges} />
-         <SearchBar />
+         <BlogSearchBar />
       </Layout>
    )
 }
@@ -29,8 +28,8 @@ export const query = graphql`
                   }
                }
                dataPublikacji(formatString: "DD-MM-Y")
-               tresc {
-                  tresc
+               tekst {
+                  json
                }
                trescKrotka {
                   trescKrotka

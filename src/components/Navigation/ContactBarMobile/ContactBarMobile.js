@@ -6,8 +6,6 @@ import { IoMdMail } from "react-icons/io"
 import { MdLocationOn } from "react-icons/md"
 
 const ContactBarMobile = () => {
-   let path = window.location.pathname.slice(3)
-
    return (
       <>
          <li className={styles.ContactBarMobile}>
@@ -31,23 +29,23 @@ const ContactBarMobile = () => {
          <li className={styles.ContactBarMobile}>
             <div className={styles.languagesContainer}>
                <Link
-                  to={`/EN/${path}`}
-                  className={[styles.flagEN, styles.flag].join(' ')}
+                  to={`/EN`}
+                  className={[styles.flagEN, styles.flag].join(" ")}
                   activeClassName={styles.flagActive}
                />
                <Link
-                  to={`/PL/${path}`}
-                  className={[styles.flagPL, styles.flag].join(' ')}
+                  to={`/PL`}
+                  className={[styles.flagPL, styles.flag].join(" ")}
                   activeClassName={styles.flagActive}
                />
                <Link
-                  to={`/DE/${path}`}
-                  className={[styles.flagDE, styles.flag].join(' ')}
+                  to={`/DE`}
+                  className={[styles.flagDE, styles.flag].join(" ")}
                   activeClassName={styles.flagActive}
                />
                <Link
-                  to={`/FR/${path}`}
-                  className={[styles.flagFR, styles.flag].join(' ')}
+                  to={`/FR`}
+                  className={[styles.flagFR, styles.flag].join(" ")}
                   activeClassName={styles.flagActive}
                />
             </div>

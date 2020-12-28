@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import styles from "./Specifications.module.scss"
-import { AiOutlineFilePdf } from "react-icons/ai"
+import { AiOutlineFilePdf, AiOutlineDownload } from "react-icons/ai"
 
 const Specifications = ({ specyfikacje }) => {
    const [link, setLink] = useState("")
@@ -34,7 +34,7 @@ const Specifications = ({ specyfikacje }) => {
          ))}
       </>
    )
-   
+
    const moreThanXSpecification = (
       <form className={styles.selectContainer}>
          <select onChange={e => handleChange(e)} className={styles.select}>
@@ -50,7 +50,7 @@ const Specifications = ({ specyfikacje }) => {
             rel="noopener noreferrer"
             className={styles.select_link}
          >
-            Pobierz
+            Pobierz <AiOutlineDownload className={styles.iconDownload} /> 
          </a>
       </form>
    )

@@ -10,25 +10,25 @@ const Card = ({ tags, img }) => {
    let tagsWithProperLang = []
 
    tags.forEach(tag => {
-      if (tag === "druk") {
+      if (tag === "printing") {
          tagsWithProperLang.push({
             type: "blogPrinting",
             text: textContent.blog.cards[0],
             tooltip: textContent.blog.cards[0],
          })
-      } else if (tag === "przygotowanie plików") {
+      } else if (tag === "dtp") {
          tagsWithProperLang.push({
             type: "blogDTP",
             text: textContent.blog.cards[1],
             tooltip: textContent.blog.cards[1],
          })
-      } else if (tag === "produkty") {
+      } else if (tag === "products") {
          tagsWithProperLang.push({
             type: "blogProduct",
             text: textContent.blog.cards[2],
             tooltip: textContent.blog.cards[2],
          })
-      } else if (tag === "technologie") {
+      } else if (tag === "technology") {
          tagsWithProperLang.push({
             type: "blogTechnology",
             text: textContent.blog.cards[3],

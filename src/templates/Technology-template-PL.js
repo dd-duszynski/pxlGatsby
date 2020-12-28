@@ -21,9 +21,9 @@ export const query = graphql`
    query($name: String!) {
       contentfulTechnologiePl(url: { eq: $name }) {
          nazwa
-         opis {
-            opis
-         }
+         tekst{
+            json
+          }
          opisProduktow {
             opisProduktow
          }

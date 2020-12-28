@@ -1,5 +1,6 @@
 import React, { useContext } from "react"
 import { Link } from "gatsby"
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import Context from "../../context/context"
 import Carousel from "../Carousel/Carousel"
 import Paragraph from "../UI/Paragraph/Paragraph"
@@ -11,6 +12,7 @@ import Specifications from "./Specifications/Specifications"
 import { GiRolledCloth } from "react-icons/gi"
 import { AiOutlineCheck } from "react-icons/ai"
 import styles from "./ProductPage.module.scss"
+import { RICHTEXT_OPTIONS } from "../UI/RichText/RichText"
 
 const BtnContainer = ({ text }) => {
    return (
@@ -37,13 +39,6 @@ const ProductPage = ({ data }) => {
    const [...images] = zdjecia
    console.log("images", data)
 
-   const options = {
-      renderNode: {
-         "embedded-asset-block": node => {
-            // console.log(node)
-         },
-      },
-   }
    return (
       <main className={styles.ProductPage}>
          <div className={styles.leftSection}>
@@ -69,9 +64,7 @@ const ProductPage = ({ data }) => {
 
          <div className={styles.rightSection}>
             <H1 addClass={styles.header}>{nazwa}</H1>
-            <Paragraph fontSize="15px">
-               {opis.content[0].content[0].value}
-            </Paragraph>
+            {documentToReactComponents(opis.json, RICHTEXT_OPTIONS)}
             <H2 addClass={styles.header}>{productPage.text[1]}</H2>
             {zalety.map(item => (
                <div className={styles.iconContainer}>

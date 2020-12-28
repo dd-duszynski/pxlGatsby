@@ -1,19 +1,14 @@
 import React, { useContext } from "react"
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import Context from "../../../context/context"
 import styles from "./Post.module.scss"
 import H1 from "../../UI/Headers/H1"
 import Subtitle from "../../UI/Subtitle/Subtitle"
 import Breadcrumbs from "../../UI/Breadcrumbs/Breadcrumbs"
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
-import {RICHTEXT_OPTIONS} from '../../UI/RichText/RichText'
+import { RICHTEXT_OPTIONS } from "../../UI/RichText/RichText"
 
 const Post = ({ data }) => {
-   const {
-      tytul,
-      dataPublikacji,
-      zdjecia,
-      tekst,
-   } = data
+   const { tytul, dataPublikacji, zdjecia, tekst } = data
    console.log(data)
    const {
       textContent: { blog },

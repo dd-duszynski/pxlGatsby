@@ -6,6 +6,8 @@ import Paragraph from "../UI/Paragraph/Paragraph"
 import ProductCard from "../Products/ProductCard/ProductCard"
 import Carousel from "../Carousel/Carousel"
 import SingleMaterial from "../../components/Materials/SingleMaterialTech/SingleMaterialTech"
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
+import { RICHTEXT_OPTIONS } from "../UI/RichText/RichText"
 
 const Technology = ({ machine }) => {
    const [isSmallDevice, setSmallDevice] = useState(false)
@@ -35,9 +37,7 @@ const Technology = ({ machine }) => {
                <H2 addClass={styles.header}>
                   {textContent.technology.description.text[0]}
                </H2>
-               <Paragraph addClass={styles.paragraph}>
-                  {machine.opis.opis}
-               </Paragraph>
+               {documentToReactComponents(machine.tekst.json, RICHTEXT_OPTIONS)}
                <Carousel>
                   {images.map(item => {
                      return (

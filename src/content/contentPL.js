@@ -247,13 +247,15 @@ export const contentPL = {
          "Druk", 
          "DTP", 
          "Produkty", 
-         "Technologie"
+         "Technologie",
+         "Wszystkie"
       ],
       cardsLinks: [
          "PL/blog/printing/",
-         "PL/blog/products/",
          "PL/blog/dtp/",
+         "PL/blog/products/",
          "PL/blog/technology/",
+         "PL/blog/"
       ],
    },
    page404: {

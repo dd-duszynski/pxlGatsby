@@ -9,12 +9,19 @@
 .iconContainer {
    display: flex;
    align-items: center;
+   margin-top: 2px;
 }
 .icon {
    color: $color-main;
    width: 25px;
    height: 25px;
    margin-right: 8px;
+}
+.iconDownload {
+   color: $color-main;
+   width: 25px;
+   height: 25px;
+   margin-left: 8px;
 }
 .link {
    @include paragraph;
@@ -50,17 +57,21 @@
 }
 .select_link {
    @include paragraph;
-   color: white;
-   background-color: $color-main2;
+   border-radius: 4px;
+   border: 1px solid $color-main;
+   color: $color-main;
    height: 31px;
    margin-left: 10px;
-   padding: 8px 30px;
-   border-radius: 4px;
+   padding: 8px 20px;
    display: flex;
    align-items: center;
    justify-content: center;
    &:hover {
       cursor: pointer;
-      transform: scale(1.02);
+      color: white;
+      background-color: $color-main;
+      svg{
+         color: white;
+      }
    }
 }

@@ -1,26 +1,24 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/Layout/Layout"
-import SearchBar from '../components/Blog/Search/SearchBar'
-import BlogCard from "../components/Blog/BlogCard/BlogCard"
+import BlogList from "../components/Blog/BlogList/BlogList"
+import BlogSearchBar from "../components/Blog/Search/SearchBar"
+import SEO from "../components/SEO/SEO"
 
-const BlogCategory = ({data}) => {
-   const {postyPL} = data
+const BlogCategory = ({ data }) => {
+   const { postyPL } = data
    return (
       <Layout language="PL">
-         <section>
-            {postyPL.edges.map((item, index) => {
-               return <BlogCard key={index} blog={item} />
-            })}
-         </section>
-         <SearchBar />
+         <SEO title="PrintXL - Blog" />
+         <BlogList data={postyPL.edges} />
+         <BlogSearchBar />
       </Layout>
    )
 }
 
 export const query = graphql`
-   query($name: String) {
-      postyPL: allContentfulBlogPl(filter: { kategorie: { eq: $name } }) {
+   query($category: String) {
+      postyPL: allContentfulBlogPl(filter: { kategorie: { eq: $category } }) {
          edges {
             node {
                tytul
@@ -30,9 +28,9 @@ export const query = graphql`
                      ...GatsbyContentfulFluid
                   }
                }
-               dataPublikacji(formatString: "DD-MM-YYYY")
-               tresc {
-                  tresc
+               dataPublikacji(formatString: "DD-MM-Y")
+               tekst {
+                  json
                }
                trescKrotka {
                   trescKrotka

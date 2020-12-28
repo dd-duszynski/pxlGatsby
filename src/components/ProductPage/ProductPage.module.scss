@@ -38,12 +38,12 @@
 }
 
 .header {
-   margin-bottom: 5px;
-   margin-top: 5px;
+   margin-top: 10px;
 }
 .iconContainer{
    display: flex;
    align-items: center;  
+   margin-top: 2px;
 }
 .icon{
    color: $color-main;

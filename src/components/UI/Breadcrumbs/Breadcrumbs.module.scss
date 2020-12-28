@@ -1,11 +1,13 @@
 @import '../../../scss/variables.scss';
 
 .breadcrumbs {
-   height: 15px;
+   height: auto;
    margin-top: 8px;
+   width: 100%;
    display: flex;
    align-items: center;
-   justify-content: center;
+   justify-content: flex-start;
+   flex-wrap: wrap;
 }
 
 .link {
@@ -27,8 +29,8 @@
    margin-left: 5px;
 }
 
-@media (max-width: 1100px) {
-	.breadcrumbs {
-      margin-bottom: 10px;
-	}
-}
+// @media (max-width: 1100px) {
+// 	.breadcrumbs {
+//       margin-bottom: 10px;
+// 	}
+// }

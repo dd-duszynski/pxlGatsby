@@ -98,7 +98,7 @@ exports.createPages = async ({ graphql, actions }) => {
          path: `PL/blog/${node}`,
          component: path.resolve("./src/templates/BlogCategory-template-PL.js"),
          context: {
-            cat: node,
+            category: node,
          },
       })
    })
