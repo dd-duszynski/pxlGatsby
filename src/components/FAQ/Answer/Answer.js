@@ -5,7 +5,7 @@ import H2 from "../../UI/Headers/H2"
 import Paragraph from "../../UI/Paragraph/Paragraph"
 
 const AnswerContent = ({ which }) =>
-   which && <Paragraph fontSize="15px">{which[1]}</Paragraph>
+   which && <Paragraph>{which[1]}</Paragraph>
 
 const Answer = ({ expanded, onToggle, question, answer }) => {
    const [results, setResults] = useState(null)

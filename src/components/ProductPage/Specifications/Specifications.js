@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from "react"
+import React, { useContext, useState, useEffect } from "react"
+import Context from "../../../context/context"
 import styles from "./Specifications.module.scss"
 import { AiOutlineFilePdf, AiOutlineDownload } from "react-icons/ai"
 
 const Specifications = ({ specyfikacje }) => {
    const [link, setLink] = useState("")
-
+   const { textContent } = useContext(Context)
    const handleChange = event => {
       setLink(event.target["value"])
    }
@@ -50,7 +51,8 @@ const Specifications = ({ specyfikacje }) => {
             rel="noopener noreferrer"
             className={styles.select_link}
          >
-            Pobierz <AiOutlineDownload className={styles.iconDownload} /> 
+            {textContent.productPage.text[5]}
+            <AiOutlineDownload className={styles.iconDownload} />
          </a>
       </form>
    )

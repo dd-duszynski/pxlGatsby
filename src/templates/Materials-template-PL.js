@@ -31,9 +31,10 @@ export const getData = graphql`
                opis
             }
             rodzaj
+            
             zdjecia {
-               fluid {
-                  ...GatsbyContentfulFluid
+               fixed(height: 1200) {
+                  ...GatsbyContentfulFixed
                }
             }
          }

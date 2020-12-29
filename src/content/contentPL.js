@@ -152,6 +152,7 @@ export const contentPL = {
    },
    productPage: {
       breadcrumbs: ["/PL/", "Strona Główna"],
+      materialLink: "/PL/materials",
       groupOfProducts: [
          "Covid-19",
          "Banery",
@@ -178,6 +179,7 @@ export const contentPL = {
          "Polecane materiały:",
          "Instrukcje DTP:",
          "Przykładowe wymiary [cm]:",
+         "Pobierz"
       ],
    },
    specifications: {

@@ -6,24 +6,24 @@ import Technology from "../components/Technology/Technology"
 import SEO from "../components/SEO/SEO"
 
 const TechnologyTemplate = ({ data }) => {
-   const { nazwa } = data.contentfulTechnologiePl
+   const { nazwa } = data.TechnologiePl
 
    return (
       <Layout language="PL">
          <SEO title={`PrintXL - Technologie - ${nazwa}`} />
          <TechnologyNav />
-         <Technology machine={data.contentfulTechnologiePl} />
+         <Technology machine={data.TechnologiePl} />
       </Layout>
    )
 }
 
 export const query = graphql`
    query($name: String!) {
-      contentfulTechnologiePl(url: { eq: $name }) {
+      TechnologiePl: contentfulTechnologiePl(url: { eq: $name }) {
          nazwa
-         tekst{
+         tekst {
             json
-          }
+         }
          opisProduktow {
             opisProduktow
          }
@@ -52,8 +52,8 @@ export const query = graphql`
             opisKrotki
             rodzaj
             zdjecia {
-               fluid {
-                  ...GatsbyContentfulFluid
+               fixed(height: 190) {
+                  ...GatsbyContentfulFixed
                }
             }
             url
@@ -68,8 +68,8 @@ export const query = graphql`
             szerokosc
             kod
             zdjecia {
-               fluid {
-                  ...GatsbyContentfulFluid
+               fixed(height: 1200) {
+                  ...GatsbyContentfulFixed
                }
             }
          }

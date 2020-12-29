@@ -1,5 +1,6 @@
 import React, { useContext, useState, useEffect } from "react"
 import ReactImageMagnify from "react-image-magnify"
+
 import styles from "./SingleMaterial.module.scss"
 import H2 from "../../UI/Headers/H2"
 import Paragraph from "../../UI/Paragraph/Paragraph"
@@ -27,7 +28,6 @@ const SingleMaterial = ({ data }) => {
    const imageMagnify = (
       <div className={styles.imgContainer}>
          <ReactImageMagnify
-            // imageClassName={styles.ImageMagnify_smallImage}
             enlargedImageContainerClassName={
                styles.ImageMagnify_largeImageContainer
             }
@@ -35,13 +35,13 @@ const SingleMaterial = ({ data }) => {
             {...{
                smallImage: {
                   alt: data.nazwa,
-                  src: data.zdjecia.fluid.src,
+                  src: data.zdjecia.fixed.src,
                   width: 426,
                   height: 284,
                   isFluidWidth: false,
                },
                largeImage: {
-                  src: data.zdjecia.fluid.src,
+                  src: data.zdjecia.fixed.src,
                   width: 1200,
                   height: 800,
                },
@@ -57,24 +57,23 @@ const SingleMaterial = ({ data }) => {
       <div className={styles.imgContainerSmall} id={data.id}>
          <img
             className={styles.imageSmall}
-            src={data.zdjecia.fluid.src}
+            src={data.zdjecia.fixed.src}
             alt={data.nazwa}
          />
       </div>
    )
 
-   // return isSmallDevice ? imageForSmallerDevices : imageMagnify
    const css = isSmallDevice ? styles.MaterialSmall : styles.Material
    return (
       <div className={css} id={data.kod}>
          {isSmallDevice ? imageForSmallerDevices : imageMagnify}
          <div className={styles.textContainer}>
             <H2>{data.nazwa}</H2>
-            <Paragraph fontSize="15px">{data.opis.opis}</Paragraph>
-            <Paragraph fontSize="15px">
+            <Paragraph>{data.opis.opis}</Paragraph>
+            <Paragraph>
                <strong>{textContent.materials.text[0]}</strong> {data.zadruk}
             </Paragraph>
-            <Paragraph fontSize="15px">
+            <Paragraph>
                <strong>{textContent.materials.text[1]}</strong>
                {data.szerokosc}
             </Paragraph>

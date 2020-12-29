@@ -28,8 +28,8 @@ const MainPageProducts = () => {
                opisKrotki
                rodzaj
                zdjecia {
-                  fluid {
-                     ...GatsbyContentfulFluid
+                  fixed(height: 200) {
+                     ...GatsbyContentfulFixed
                   }
                }
                url

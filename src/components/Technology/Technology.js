@@ -1,4 +1,6 @@
 import React, { useContext, useEffect, useState } from "react"
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
+import { RICHTEXT_OPTIONS } from "../UI/RichText/RichText"
 import Context from "../../context/context"
 import styles from "./Technology.module.scss"
 import H2 from "../UI/Headers/H2"
@@ -6,8 +8,6 @@ import Paragraph from "../UI/Paragraph/Paragraph"
 import ProductCard from "../Products/ProductCard/ProductCard"
 import Carousel from "../Carousel/Carousel"
 import SingleMaterial from "../../components/Materials/SingleMaterialTech/SingleMaterialTech"
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
-import { RICHTEXT_OPTIONS } from "../UI/RichText/RichText"
 
 const Technology = ({ machine }) => {
    const [isSmallDevice, setSmallDevice] = useState(false)

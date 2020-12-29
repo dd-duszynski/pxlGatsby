@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from "react"
+import React, { useContext } from "react"
 import Context from "../../../context/context"
 import styles from "./SingleMaterialTech.module.scss"
 import H2 from "../../UI/Headers/H2"
@@ -6,19 +6,20 @@ import Paragraph from "../../UI/Paragraph/Paragraph"
 
 const SingleMaterialTech = ({ data }) => {
    const { textContent } = useContext(Context)
+   console.log(data)
    return (
       <div className={styles.Material}>
          <div className={styles.imgContainer} id={data.id}>
-            <img src={data.zdjecia.fluid.src} alt="" className={styles.img} />
+            <img src={data.zdjecia.fixed.src} alt="" className={styles.img} />
          </div>
 
          <div className={styles.textContainer}>
             <H2>{data.nazwa}</H2>
-            <Paragraph fontSize="15px">{data.opis.opis}</Paragraph>
-            <Paragraph fontSize="15px">
+            <Paragraph>{data.opis.opis}</Paragraph>
+            <Paragraph>
                <strong>{textContent.materials.text[0]}</strong> {data.zadruk}
             </Paragraph>
-            <Paragraph fontSize="15px">
+            <Paragraph>
                <strong>{textContent.materials.text[1]}</strong>
                {data.szerokosc}
             </Paragraph>

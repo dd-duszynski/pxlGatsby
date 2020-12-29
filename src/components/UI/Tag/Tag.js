@@ -44,7 +44,7 @@ const Tag = ({ type, value, tooltip, link }) => {
          {link ? null : (
             <ReactTooltip
                id={tooltip}
-               place="top"
+               place="bottom"
                type="dark"
                effect="solid"
                offset={{ top: -2 }}

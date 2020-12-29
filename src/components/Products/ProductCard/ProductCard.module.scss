@@ -22,10 +22,10 @@
    position: relative;
 }
 .image {
-   max-width: 95%;
-   max-height: 80%;
    object-fit: cover;
-   padding-bottom: 21px;
+   padding-bottom: 22px;
+   max-width: 80%;
+   max-height: 80%;
 }
 .aboutContainer {
    position: relative;
@@ -52,7 +52,7 @@
    display: flex;
    top: 0;
    left: 0;
-   :nth-child(1){
+   :nth-child(1) {
       border-top-left-radius: 14px;
    }
 }
@@ -63,7 +63,7 @@
    width: 25px;
    height: 100%;
    &:hover {
-      background-color: rgba(240,240,240,0.6);
+      background-color: rgba(240, 240, 240, 0.6);
       cursor: pointer;
    }
    svg {
@@ -76,9 +76,11 @@
 .arrowLeft {
    border-top-left-radius: 13px;
    left: 0;
+   z-index: 1;
 }
 
 .arrowRight {
    border-top-right-radius: 13px;
    right: 0;
+   z-index: 1;
 }
