@@ -1,0 +1,58 @@
+@import "../../scss/variables.scss";
+
+.Modal{
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100vw;
+   height: 100vh;
+   z-index: 20;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   overflow-y: hidden;
+}
+.backdrop{
+   position: absolute;
+   height: 100%;
+   width: 100%;
+   background-color: rgba(50,50,50,.5);
+}
+
+.container{
+   position: relative;
+   padding: 60px 60px 40px;
+   background-color: #fff;
+   border-radius: 8px;
+   z-index: 21;
+}
+.closeBtn{
+   position: absolute;
+   right: 10px;
+   top: 8px;
+   width: 40px;
+   height: 40px;
+   &:hover{
+      cursor: pointer;
+      .line1, .line2{
+         background-color: $color-main2;
+      }
+   }
+   
+}
+.line1, .line2{
+   background-color: $color-main;
+   height: 2px;
+   width: 30px;
+}
+
+.line1{
+   transform: rotate(-45deg) translate(-10px, 18px);
+}
+.line2{
+   transform: rotate(45deg) translate(16px, 10px);
+}
+
+.box{
+   width: 400px;
+}

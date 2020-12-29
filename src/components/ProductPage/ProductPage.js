@@ -1,4 +1,4 @@
-import React, { useContext } from "react"
+import React, { useContext, useState } from "react"
 import { Link } from "gatsby"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { GiRolledCloth } from "react-icons/gi"
@@ -8,22 +8,29 @@ import Carousel from "../Carousel/Carousel"
 import Paragraph from "../UI/Paragraph/Paragraph"
 import H1 from "../UI/Headers/H1"
 import H2 from "../UI/Headers/H2"
-import RhombusLink from "../UI/RhombusLink/RhombusLink"
+import RhombusBtn from "../UI/RhombusBtn/RhombusBtn"
 import BreadcrumbsContainer from "./BreadcrumbsContainer/BreadcrumbsContainer"
 import Specifications from "./Specifications/Specifications"
 import styles from "./ProductPage.module.scss"
 import { RICHTEXT_OPTIONS } from "../UI/RichText/RichText"
 import TagsContainer from "./TagsContainer/TagsContainer"
+import Modal from "../Modal/Modal"
+import ContactForm from '../Contact/ContactForm/ContactForm'
 
-const BtnContainer = ({ text }) => {
+const BtnContainer = ({ text, switchModalVisibility }) => {
    return (
-      <div className={styles.btnContainer}>
-         <RhombusLink addClass={styles.btn}>{text}</RhombusLink>
+      <div className={styles.btnContainer} onClick={switchModalVisibility}>
+         <RhombusBtn type="button" addClass={styles.btn} text={text}/>
       </div>
    )
 }
 
 const ProductPage = ({ data }) => {
+   const [isModalOpen, setModalOpen] = useState(false)
+   const switchModalVisibility = () => {
+      console.log("Modal")
+      isModalOpen === false ? setModalOpen(true) : setModalOpen(false)
+   }
    const { textContent } = useContext(Context)
    const {
       nazwa,
@@ -43,6 +50,9 @@ const ProductPage = ({ data }) => {
 
    return (
       <main className={styles.ProductPage}>
+         <Modal isVisible={isModalOpen} switchModalVisibility={switchModalVisibility}>
+            <ContactForm text={textContent.mainPage.contact.text}/>
+         </Modal>
          <div className={styles.leftSection}>
             <BreadcrumbsContainer
                nazwa={nazwa}
@@ -50,6 +60,7 @@ const ProductPage = ({ data }) => {
                text={textContent.productPage}
                url={url}
             />
+
             <TagsContainer zadruk={zadruk} opcjeProduktu={opcjeProduktu} />
 
             <Carousel>
@@ -64,7 +75,10 @@ const ProductPage = ({ data }) => {
                ))}
             </Carousel>
 
-            <BtnContainer text={textContent.productPage.text[0]} />
+            <BtnContainer
+               switchModalVisibility={switchModalVisibility}
+               text={textContent.productPage.text[0]}
+            />
          </div>
 
          <div className={styles.rightSection}>
@@ -97,7 +111,10 @@ const ProductPage = ({ data }) => {
                src={wymiary.file.url}
                alt="sizes"
             />
-            <BtnContainer text={textContent.productPage.text[0]} />
+            <BtnContainer
+               switchModalVisibility={switchModalVisibility}
+               text={textContent.productPage.text[0]}
+            />
          </div>
       </main>
    )

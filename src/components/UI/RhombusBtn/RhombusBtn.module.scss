@@ -1,0 +1,21 @@
+@import "../../../scss/variables.scss";
+.RhombusBtn {
+   @include Roboto400;
+   position: relative;
+   text-align: center;
+   min-width: 250px;
+   width: auto;
+   clip-path: polygon(0 0, 91% 0, 100% 100%, 9% 100%);
+   background: $color-main;
+   font-size: $font-size-3;
+   color: white;
+   padding: 10px 50px;
+   &:focus {
+      outline: none;
+      transform: scale(1.02);
+   }
+   &:hover {
+      cursor: pointer;
+      transform: scale(1.02);
+   }
+}

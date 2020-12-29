@@ -1,5 +1,5 @@
 import React from "react"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
+import { Link } from "gatsby"
 import styles from "./ContactBar.module.scss"
 import {  AiFillPhone } from "react-icons/ai"
 import { IoMdMail } from "react-icons/io"
@@ -35,25 +35,25 @@ const ContactBar = () => {
          </a>
 
          <div className={styles.languagesContainer}>
-            <AniLink
+            <Link
                to={`/EN`}
                className={[styles.flagEN, styles.flag].join(" ")}
                partiallyActive
                activeClassName={styles.flag_Active}
             />
-            <AniLink
+            <Link
                to={`/PL`}
                className={[styles.flagPL, styles.flag].join(" ")}
                partiallyActive
                activeClassName={styles.flag_Active}
             />
-            <AniLink
+            <Link
                to={`/DE`}
                className={[styles.flagDE, styles.flag].join(" ")}
                partiallyActive
                activeClassName={styles.flag_Active}
             />
-            <AniLink
+            <Link
                to={`/FR`}
                className={[styles.flagFR, styles.flag].join(" ")}
                partiallyActive

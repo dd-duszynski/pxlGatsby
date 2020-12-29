@@ -179,7 +179,7 @@ export const contentPL = {
          "Polecane materiały:",
          "Instrukcje DTP:",
          "Przykładowe wymiary [cm]:",
-         "Pobierz"
+         "Pobierz",
       ],
    },
    specifications: {
@@ -241,23 +241,17 @@ export const contentPL = {
    blog: {
       breadcrumbs: {
          b1: ["PL/", "Strona Główna"],
-         b2: ["PL/blog/", "Blog"]
+         b2: ["PL/blog/", "Blog"],
       },
       text: ["CZYTAJ DALEJ", "minut czytania"],
       navigationHeader: "Kategorie",
-      cards: [
-         "Druk", 
-         "DTP", 
-         "Produkty", 
-         "Technologie",
-         "Wszystkie"
-      ],
+      cards: ["Druk", "DTP", "Produkty", "Technologie", "Wszystkie"],
       cardsLinks: [
          "PL/blog/printing/",
          "PL/blog/dtp/",
          "PL/blog/products/",
          "PL/blog/technology/",
-         "PL/blog/"
+         "PL/blog/",
       ],
    },
    page404: {
