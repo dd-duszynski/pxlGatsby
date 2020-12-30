@@ -1,21 +1,76 @@
 @import "../../../scss/variables.scss";
-.RhombusBtn {
+
+.RhombusBtn,
+.RhombusLink,
+.RhombusNavBtn{
    @include Roboto400;
-   position: relative;
    text-align: center;
-   min-width: 250px;
-   width: auto;
-   clip-path: polygon(0 0, 91% 0, 100% 100%, 9% 100%);
-   background: $color-main;
    font-size: $font-size-3;
-   color: white;
-   padding: 10px 50px;
-   &:focus {
-      outline: none;
-      transform: scale(1.02);
-   }
+   clip-path: polygon(0 0, 91% 0, 100% 100%, 9% 100%);
    &:hover {
       cursor: pointer;
-      transform: scale(1.02);
+      transform: scale(1.01);
    }
 }
+
+.RhombusBtn {
+   background: $color-main;
+   color: white;
+   min-width: 250px;
+   position: relative;
+   padding: 10px 50px;
+   width: auto;
+}
+
+.RhombusLink{
+   border-top: 1px solid $color-main;
+   border-bottom: 1px solid $color-main;
+   bottom: 5px;
+   background: none;
+   color: $color-main;
+   font-size: $font-size-3;
+   margin-top: 8px;
+   min-width: 130px;
+   position: absolute;
+   padding: 5px 24px;
+   right: 5px;
+   text-transform: uppercase;
+   width: 185px;
+   &:hover {
+      color: white;
+      background: -webkit-linear-gradient(to right, $color-main, $color-main2);
+      background: linear-gradient(to right, $color-main, $color-main2);
+   }
+}
+
+.RhombusNavBtn {
+   border-top: 1px solid $color-main;
+   border-bottom: 1px solid $color-main;
+   clip-path: polygon(0 0, 88% 0, 100% 100%, 12% 100%);
+   color: $color-main;
+   font-size: 18px;
+   margin-right: 5px;
+   margin-bottom: 15px;
+   min-width: 140px;
+   padding: 5px 24px;
+   &:last-child {
+      margin-right: 0;
+   }
+   &:hover {
+      background: -webkit-linear-gradient(to right, $color-main, $color-main2);
+      background: linear-gradient(to right, $color-main, $color-main2);
+      border-top: 1px solid $color-main;
+      border-bottom: 1px solid $color-main;
+      cursor: pointer;
+      color: white;
+   }
+}
+
+.active {
+   @extend .RhombusNavBtn;
+   background: -webkit-linear-gradient(to right, $color-main, $color-main2);
+   background: linear-gradient(to right, $color-main, $color-main2);
+   color: white !important;
+}
+
+

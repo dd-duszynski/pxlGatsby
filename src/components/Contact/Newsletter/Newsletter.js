@@ -1,7 +1,7 @@
 import React from "react"
 import styles from "./Newsletter.module.scss"
 import Paragraph from "../../UI/Paragraph/Paragraph"
-import RhombusInput from "../../UI/RhombusInput/RhombusInput"
+import RhombusBtn from "../../UI/RhombusBtn/RhombusBtn"
 import Input from "../../UI/Input/Input"
 
 const Newsletter = ({ text }) => {
@@ -27,9 +27,10 @@ const Newsletter = ({ text }) => {
                   name="email"
                   placeholder={text[2]}
                />
-               <RhombusInput 
+               <RhombusBtn 
                   addClass={styles.submitInput} 
-                  text={text[7]} 
+                  text={text[7]}
+                  type="input" 
                />
             </form>
          </div>

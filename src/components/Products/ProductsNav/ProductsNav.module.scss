@@ -1,0 +1,5 @@
+@import "../../../scss/variables.scss";
+
+.ProductsNav {
+   @include navContainer;
+}

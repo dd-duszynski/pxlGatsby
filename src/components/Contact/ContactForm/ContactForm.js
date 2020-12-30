@@ -1,6 +1,6 @@
 import React from "react"
 import styles from "./ContactForm.module.scss"
-import RhombusInput from '../../UI/RhombusInput/RhombusInput'
+import RhombusBtn from '../../UI/RhombusBtn/RhombusBtn'
 import Input from "../../UI/Input/Input"
 import TextArea from "../../UI/Input/TextArea"
 
@@ -33,9 +33,10 @@ const ContactForm = ({ text }) => {
                name="message"
                placeholder={text[3]}
             />
-            <RhombusInput
+            <RhombusBtn
                input
                text={text[4]}
+               type="input"
             />
          </form>
       </section>

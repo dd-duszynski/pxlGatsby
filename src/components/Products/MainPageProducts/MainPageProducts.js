@@ -4,7 +4,7 @@ import Context from "../../../context/context"
 import styles from "./MainPageProducts.module.scss"
 import LeftBar from "../../UI/Bars/LeftBar"
 import RightBar from "../../UI/Bars/RightBar"
-import RhombusLink from "../../UI/RhombusLink/RhombusLink"
+import RhombusBtn from "../../UI/RhombusBtn/RhombusBtn"
 import ProductCard from "../ProductCard/ProductCard"
 
 const MainPageProducts = () => {
@@ -49,12 +49,13 @@ const MainPageProducts = () => {
                })}
             </div>
          </div>
-         <RhombusLink
+         <RhombusBtn
+            type="link"
             link={`/${textContent.products.mainLink}`}
             addClass={styles.seeAll}
          >
             {textContent.mainPage.productSection.seeAllBtn}
-         </RhombusLink>
+         </RhombusBtn>
       </section>
    )
 }

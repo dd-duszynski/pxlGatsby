@@ -49,3 +49,11 @@ $line-height-6: 13px;
    background: -webkit-linear-gradient(to right, $color-main, $color-main2);
    background: linear-gradient(to right, $color-main, $color-main2);
 }
+
+@mixin navContainer{
+   grid-column: 2/3;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   margin-top: 15px;
+}

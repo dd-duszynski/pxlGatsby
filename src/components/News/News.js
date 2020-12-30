@@ -4,7 +4,7 @@ import styles from "./News.module.scss"
 import LeftBar from "../UI/Bars/LeftBar"
 import RightBar from "../UI/Bars/RightBar"
 import Paragraph from "../UI/Paragraph/Paragraph"
-import RhombusLink from "../UI/RhombusLink/RhombusLink"
+import RhombusBtn from "../UI/RhombusBtn/RhombusBtn"
 import Carousel from "../Carousel/Carousel"
 import covidImg from "../../assets/images/catalog_PL.jpg"
 import christmasImg from "../../assets/images/catalogChristmas.jpg"
@@ -22,9 +22,9 @@ const Catalog = ({ img, t1, t2, link, btn }) => {
                <br />
                {t2}
             </Paragraph>
-            <RhombusLink addClass={styles.CTAlink} externalLink link={link}>
+            <RhombusBtn addClass={styles.CTAlink} type="extLink" link={link}>
                {btn}
-            </RhombusLink>
+            </RhombusBtn>
          </div>
       </div>
    )

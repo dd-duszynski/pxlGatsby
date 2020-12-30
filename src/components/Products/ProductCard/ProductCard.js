@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react"
 import styles from "./ProductCard.module.scss"
 import Tag from "../../UI/Tag/Tag"
-import RhombusLink from "../../UI/RhombusLink/RhombusLink"
+import RhombusBtn from "../../UI/RhombusBtn/RhombusBtn"
 import { RiArrowLeftSLine, RiArrowRightSLine } from "react-icons/ri"
 import H2 from "../../UI/Headers/H2"
 import Paragraph from "../../UI/Paragraph/Paragraph"
@@ -134,9 +134,9 @@ const ProductCard = ({ data }) => {
          <div className={styles.aboutContainer}>
             <H2>{data.nazwa}</H2>
             <Paragraph addClass={styles.paragraph}>{data.opisKrotki}</Paragraph>
-            <RhombusLink link={`/${data.url}`}>
+            <RhombusBtn link={`/${data.url}`} type="link">
                {textContent.products.productCard[0]}
-            </RhombusLink>
+            </RhombusBtn>
          </div>
       </article>
    )

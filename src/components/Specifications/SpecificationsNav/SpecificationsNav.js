@@ -1,53 +1,61 @@
 import React, { useContext } from "react"
+import styles from "./SpecificationsNav.module.scss"
 import Context from "../../../context/context"
-import RhombusNavContainer from "../../UI/RhombusNavContainer/RhombusNavContainer"
-import RhombusNavBtn from "../../UI/RhombusNavBtn/RhombusNavBtn"
+import RhombusBtn from "../../UI/RhombusBtn/RhombusBtn"
 
 const SpecificationsNav = () => {
    const { textContent } = useContext(Context)
    return (
-      <RhombusNavContainer>
-         <RhombusNavBtn
+      <div className={styles.SpecificationsNav}>
+         <RhombusBtn
+            type="navLink"
             link={`/${textContent.specifications.navigation.links[0]}`}
          >
             {textContent.specifications.navigation.text[0]}
-         </RhombusNavBtn>
-         <RhombusNavBtn
+         </RhombusBtn>
+         <RhombusBtn
+            type="navLink"
             link={`/${textContent.specifications.navigation.links[1]}`}
          >
             {textContent.specifications.navigation.text[1]}
-         </RhombusNavBtn>
-         <RhombusNavBtn
+         </RhombusBtn>
+         <RhombusBtn
+            type="navLink"
             link={`/${textContent.specifications.navigation.links[2]}`}
          >
             {textContent.specifications.navigation.text[2]}
-         </RhombusNavBtn>
-         <RhombusNavBtn
+         </RhombusBtn>
+         <RhombusBtn
+            type="navLink"
             link={`/${textContent.specifications.navigation.links[3]}`}
          >
             {textContent.specifications.navigation.text[3]}
-         </RhombusNavBtn>
-         <RhombusNavBtn
+         </RhombusBtn>
+         <RhombusBtn
+            type="navLink"
             link={`/${textContent.specifications.navigation.links[4]}`}
          >
             {textContent.specifications.navigation.text[4]}
-         </RhombusNavBtn>
-         <RhombusNavBtn
+         </RhombusBtn>
+         <RhombusBtn
+            type="navLink"
             link={`/${textContent.specifications.navigation.links[5]}`}
          >
             {textContent.specifications.navigation.text[5]}
-         </RhombusNavBtn>
-         <RhombusNavBtn
+         </RhombusBtn>
+         <RhombusBtn
+            type="navLink"
             link={`/${textContent.specifications.navigation.links[6]}`}
          >
             {textContent.specifications.navigation.text[6]}
-         </RhombusNavBtn>
-         <RhombusNavBtn
+         </RhombusBtn>
+         <RhombusBtn
+            type="navLink"
             link={`/${textContent.specifications.navigation.links[7]}`}
          >
             {textContent.specifications.navigation.text[7]}
-         </RhombusNavBtn>
-      </RhombusNavContainer>
+         </RhombusBtn>
+      </div>
    )
 }
 

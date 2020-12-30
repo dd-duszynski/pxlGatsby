@@ -5,7 +5,7 @@ import LeftBar from "../UI/Bars/LeftBar"
 import RightBar from "../UI/Bars/RightBar"
 import img_loopka from "../../assets/images/catalog_PL.jpg"
 import Paragraph from "../UI/Paragraph/Paragraph"
-import RhombusLink from "../UI/RhombusLink/RhombusLink"
+import RhombusBtn from "../UI/RhombusBtn/RhombusBtn"
 
 const CoronaCatalog = () => {
    const [isSmallDevice, setIsSmallDevice] = useState(false)
@@ -51,14 +51,13 @@ const CoronaCatalog = () => {
                   <br />
                   {textContent.mainPage.news[2]}
                </Paragraph>
-               <RhombusLink
+               <RhombusBtn
                   addClass={styles.CTAlink}
-                  link
-                  externalLink
+                  type='extLink'
                   link={linkToCatalog}
                >
                   {textContent.mainPage.news[3]}
-               </RhombusLink>
+               </RhombusBtn>
             </div>
          </article>
       </section>

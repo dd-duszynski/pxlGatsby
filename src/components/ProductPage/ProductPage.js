@@ -15,12 +15,12 @@ import styles from "./ProductPage.module.scss"
 import { RICHTEXT_OPTIONS } from "../UI/RichText/RichText"
 import TagsContainer from "./TagsContainer/TagsContainer"
 import Modal from "../Modal/Modal"
-import ContactForm from '../Contact/ContactForm/ContactForm'
+import ContactForm from "../Contact/ContactForm/ContactForm"
 
 const BtnContainer = ({ text, switchModalVisibility }) => {
    return (
       <div className={styles.btnContainer} onClick={switchModalVisibility}>
-         <RhombusBtn type="button" addClass={styles.btn} text={text}/>
+         <RhombusBtn type="button" addClass={styles.btn} text={text} />
       </div>
    )
 }
@@ -50,8 +50,11 @@ const ProductPage = ({ data }) => {
 
    return (
       <main className={styles.ProductPage}>
-         <Modal isVisible={isModalOpen} switchModalVisibility={switchModalVisibility}>
-            <ContactForm text={textContent.mainPage.contact.text}/>
+         <Modal
+            isVisible={isModalOpen}
+            switchModalVisibility={switchModalVisibility}
+         >
+            <ContactForm text={textContent.mainPage.contact.text} />
          </Modal>
          <div className={styles.leftSection}>
             <BreadcrumbsContainer
@@ -60,8 +63,6 @@ const ProductPage = ({ data }) => {
                text={textContent.productPage}
                url={url}
             />
-
-            <TagsContainer zadruk={zadruk} opcjeProduktu={opcjeProduktu} />
 
             <Carousel>
                {images.map((item, index) => (
@@ -75,6 +76,7 @@ const ProductPage = ({ data }) => {
                ))}
             </Carousel>
 
+            <TagsContainer zadruk={zadruk} opcjeProduktu={opcjeProduktu} />
             <BtnContainer
                switchModalVisibility={switchModalVisibility}
                text={textContent.productPage.text[0]}
