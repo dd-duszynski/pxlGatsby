@@ -11,14 +11,15 @@
    justify-content: center;
    align-items: center;
    overflow-y: hidden;
+   opacity: 1;
+   transition: all 2s;
 }
 .backdrop{
    position: absolute;
    height: 100%;
    width: 100%;
-   background-color: rgba(50,50,50,.5);
+   background-color: rgba(50,50,50,.9);
 }
-
 .container{
    position: relative;
    padding: 60px 60px 40px;
@@ -38,14 +39,12 @@
          background-color: $color-main2;
       }
    }
-   
 }
 .line1, .line2{
    background-color: $color-main;
    height: 2px;
    width: 30px;
 }
-
 .line1{
    transform: rotate(-45deg) translate(-10px, 18px);
 }

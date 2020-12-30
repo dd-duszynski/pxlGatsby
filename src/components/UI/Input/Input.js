@@ -3,7 +3,7 @@ import styles from "./Input.module.scss"
 import { ImUser } from "react-icons/im"
 import { IoMdMail } from "react-icons/io"
 
-const Input = ({ idFor, type, name, placeholder }) => {
+const Input = ({ idFor, type, name, placeholder, val, onChange }) => {
    let iconCSS
    switch (idFor) {
       case "name":
@@ -21,6 +21,8 @@ const Input = ({ idFor, type, name, placeholder }) => {
          {/* <span className={iconCSS} for={idFor} /> */}
          {iconCSS}
          <input
+            onChange={onChange}
+            value={val}
             className={styles.input}
             type={type}
             name={name}
