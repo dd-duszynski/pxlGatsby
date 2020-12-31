@@ -91,7 +91,10 @@
          }
       }
    }
-   .listOfNavItems{
+   .link {
+      margin-right: 0;
+   }
+   .listOfNavItems {
       display: flex;
       flex-direction: column;
       align-items: center;

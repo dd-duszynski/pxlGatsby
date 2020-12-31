@@ -16,13 +16,11 @@ const Newsletter = ({ text }) => {
             </Paragraph>
             <form className={styles.form}>
                <Input
-                  idFor="name"
                   type="text"
-                  name="firstName"
+                  name="name"
                   placeholder={text[1]}
                />
                <Input
-                  idFor="email"
                   type="email"
                   name="email"
                   placeholder={text[2]}

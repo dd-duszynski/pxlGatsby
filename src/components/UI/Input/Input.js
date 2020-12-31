@@ -3,9 +3,9 @@ import styles from "./Input.module.scss"
 import { ImUser } from "react-icons/im"
 import { IoMdMail } from "react-icons/io"
 
-const Input = ({ idFor, type, name, placeholder, val, onChange }) => {
+const Input = ({ type, name, placeholder, val, onChange }) => {
    let iconCSS
-   switch (idFor) {
+   switch (name) {
       case "name":
          iconCSS = <ImUser className={styles.icon} />
          break
@@ -18,7 +18,6 @@ const Input = ({ idFor, type, name, placeholder, val, onChange }) => {
 
    return (
       <div className={styles.inputsContainer}>
-         {/* <span className={iconCSS} for={idFor} /> */}
          {iconCSS}
          <input
             onChange={onChange}
@@ -27,7 +26,6 @@ const Input = ({ idFor, type, name, placeholder, val, onChange }) => {
             type={type}
             name={name}
             placeholder={placeholder}
-            id={idFor}
          />
       </div>
    )

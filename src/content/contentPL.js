@@ -49,6 +49,7 @@ export const contentPL = {
             "Zapisz się na Newsletter!",
             "Zapisz się",
             "Napisz do Nas:",
+            "Strona Kontaktowa"
          ],
       },
       faq: [
@@ -164,7 +165,7 @@ export const contentPL = {
          "Pozostałe",
       ],
       linkToGroupOfProducts: [
-         "PL/products/covid-19",
+         "PL/products/covid",
          "PL/products/banners",
          "PL/products/flags",
          "PL/products/rollups",
