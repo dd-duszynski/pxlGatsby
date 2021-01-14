@@ -2,10 +2,10 @@
 
 .FAQ {
    grid-column: 1/4;
-   height: auto;
    display: flex;
-   justify-content: center;
    align-items: flex-start;
+   justify-content: center;
+   height: auto;
    position: relative;
    margin-bottom: 50px;
 }
@@ -20,8 +20,8 @@
    position: relative;
 }
 
-@media(max-width: 450px){
-   .FAQ{
+@media (max-width: 450px) {
+   .FAQ {
       margin-bottom: 30px;
    }
    .list {

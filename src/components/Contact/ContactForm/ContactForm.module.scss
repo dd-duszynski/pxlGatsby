@@ -8,8 +8,13 @@
    border-radius: 8px;
    position: relative;
    .header {
-      display: none;
+      display: block;
+      font-size: 17px;
+      margin-bottom: 5px;
+      color: $color-main;
+      @include Roboto900;
    }
+
    form{
       display: flex;
       flex-direction: column;

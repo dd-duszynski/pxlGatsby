@@ -49,7 +49,7 @@ export const contentPL = {
             "Zapisz się na Newsletter!",
             "Zapisz się",
             "Napisz do Nas:",
-            "Strona Kontaktowa"
+            "Strona Kontaktowa",
          ],
       },
       faq: [
@@ -108,17 +108,17 @@ export const contentPL = {
          ["Produkty", "PL/products"],
          ["Materiały", "PL/materials"],
          ["Technologie", "PL/technology"],
+         ["Blog", "PL/blog"],
          ["Specyfikacje", "PL/specifications"],
          ["FAQ", "PL/#FAQ"],
          ["Kontakt", "PL/contact"],
-         ["Blog", "PL/blog"],
       ],
    },
    products: {
       mainLink: "PL/products",
       navigation: {
          text: [
-            "Covid-19",
+            "Covid",
             "Banery",
             "Flagi",
             "Rollupy",
@@ -128,7 +128,7 @@ export const contentPL = {
             "Pozostałe",
          ],
          links: [
-            "PL/products/covid-19",
+            "PL/products/covid",
             "PL/products/banners",
             "PL/products/flags",
             "PL/products/rollups",
@@ -155,7 +155,7 @@ export const contentPL = {
       breadcrumbs: ["/PL/", "Strona Główna"],
       materialLink: "/PL/materials",
       groupOfProducts: [
-         "Covid-19",
+         "Covid",
          "Banery",
          "Flagi",
          "Rollupy",
@@ -187,7 +187,7 @@ export const contentPL = {
       mainLink: "PL/specifications",
       navigation: {
          text: [
-            "Covid-19",
+            "Covid",
             "Banery",
             "Flagi",
             "Rollupy",
@@ -197,7 +197,7 @@ export const contentPL = {
             "Pozostałe",
          ],
          links: [
-            "PL/specifications/covid-19",
+            "PL/specifications/covid",
             "PL/specifications/banners",
             "PL/specifications/flags",
             "PL/specifications/rollups",
@@ -240,20 +240,39 @@ export const contentPL = {
       },
    },
    blog: {
+      navigationHeader: "Kategorie",
       breadcrumbs: {
          b1: ["PL/", "Strona Główna"],
          b2: ["PL/blog/", "Blog"],
       },
       text: ["CZYTAJ DALEJ", "minut czytania"],
-      navigationHeader: "Kategorie",
-      cards: ["Druk", "DTP", "Produkty", "Technologie", "Wszystkie"],
-      cardsLinks: [
-         "PL/blog/printing/",
-         "PL/blog/dtp/",
-         "PL/blog/products/",
-         "PL/blog/technology/",
-         "PL/blog/",
-      ],
+      tag: {
+         printing: [
+            "Druk",
+            "Druk - Jeden z najpopularniejszych produktów.",
+            "PL/blog/printing/",
+         ],
+         dtp: [
+            "DTP",
+            "DTP - Jeden z najpopularniejszych produktów.",
+            "PL/blog/dtp/",
+         ],
+         products: [
+            "Produkty",
+            "Produkty - Jeden z najpopularniejszych produktów.",
+            "PL/blog/products/",
+         ],
+         technology: [
+            "Technologie",
+            "Technologie Jeden z najpopularniejszych produktów.",
+            "PL/blog/technology/",
+         ],
+         all: [
+            "Wszystkie",
+            "Wszystkie - Jeden z najpopularniejszych produktów.",
+            "PL/blog/",
+         ],
+      },
    },
    page404: {
       text: [

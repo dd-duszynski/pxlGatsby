@@ -8,28 +8,35 @@ import Paragraph from "../../UI/Paragraph/Paragraph"
 import Context from "../../../context/context"
 
 const TagsContainer = ({ data, text, top, bottom }) => {
-   const news = data.opcjeProduktu.findIndex(el => el === "Nowość")
-   const bestseller = data.opcjeProduktu.findIndex(el => el === "Bestseller")
-   const uv = data.zadruk.findIndex(el => el === "UV")
-   const solvent = data.zadruk.findIndex(el => el === "Solvent")
-   const sublimation = data.zadruk.findIndex(el => el === "Sublimacja")
-   const latex = data.zadruk.findIndex(el => el === "Latex")
-   const indoor = data.opcjeProduktu.findIndex(el => el === "Indoor")
-   const outdoor = data.opcjeProduktu.findIndex(el => el === "Outdoor")
+   let news, bestseller, indoor, outdoor
+   if (data.opcjeProduktu) {
+      news = data.opcjeProduktu.findIndex(el => el === "Nowość")
+      bestseller = data.opcjeProduktu.findIndex(el => el === "Bestseller")
+      indoor = data.opcjeProduktu.findIndex(el => el === "Indoor")
+      outdoor = data.opcjeProduktu.findIndex(el => el === "Outdoor")
+   }
+
+   let uv, solvent, sublimation, latex
+   if (data.zadruk) {
+      uv = data.zadruk.findIndex(el => el === "UV")
+      solvent = data.zadruk.findIndex(el => el === "Solvent")
+      sublimation = data.zadruk.findIndex(el => el === "Sublimacja")
+      latex = data.zadruk.findIndex(el => el === "Latex")
+   }
 
    const containerOnTop = (
       <div className={styles.tagsTopContainer}>
          {bestseller >= 0 && (
             <Tag
                type="best"
-               value={text.tag.bestseller[0]}
+               text={text.tag.bestseller[0]}
                tooltip={text.tag.bestseller[1]}
             />
          )}
          {news >= 0 && (
             <Tag
                type="news"
-               value={text.tag.news[0]}
+               text={text.tag.news[0]}
                tooltip={text.tag.news[1]}
             />
          )}
@@ -40,59 +47,59 @@ const TagsContainer = ({ data, text, top, bottom }) => {
          {indoor >= 0 && outdoor >= 0 ? (
             <Tag
                type="inOut"
-               value={text.tag.inOut[0]}
+               text={text.tag.inOut[0]}
                tooltip={text.tag.inOut[1]}
             />
          ) : indoor >= 0 && outdoor < 0 ? (
             <Tag
                type="inOut"
-               value={text.tag.indoor[0]}
+               text={text.tag.indoor[0]}
                tooltip={text.tag.indoor[1]}
             />
          ) : outdoor >= 0 && indoor < 0 ? (
             <Tag
                type="inOut"
-               value={text.tag.outdoor[0]}
+               text={text.tag.outdoor[0]}
                tooltip={text.tag.outdoor[1]}
             />
          ) : null}
          {sublimation >= 0 && (
             <Tag
                type="printing"
-               value={text.tag.sublimation[0]}
+               text={text.tag.sublimation[0]}
                tooltip={text.tag.sublimation[1]}
             />
          )}
          {latex >= 0 && (
             <Tag
                type="printing"
-               value={text.tag.latex[0]}
+               text={text.tag.latex[0]}
                tooltip={text.tag.latex[1]}
             />
          )}
          {uv >= 0 && (
             <Tag
                type="printing"
-               value={text.tag.uv[0]}
+               text={text.tag.uv[0]}
                tooltip={text.tag.uv[1]}
             />
          )}
          {solvent >= 0 && (
             <Tag
                type="printing"
-               value={text.tag.solvent[0]}
+               text={text.tag.solvent[0]}
                tooltip={text.tag.solvent[1]}
             />
          )}
       </div>
    )
-
    return top ? containerOnTop : bottom ? containerOnBottom : null
 }
 
 const ProductCard = ({ data }) => {
    const [imgIndex, setImgIndex] = useState(0)
    const { textContent } = useContext(Context)
+
    const imgPrev = () => {
       let currentIndex = imgIndex
       const maxIndex = data.zdjecia.length - 1
@@ -103,6 +110,7 @@ const ProductCard = ({ data }) => {
          setImgIndex(maxIndex)
       }
    }
+
    const imgNext = () => {
       let currentIndex = imgIndex
       let maxIndex = data.zdjecia.length - 1

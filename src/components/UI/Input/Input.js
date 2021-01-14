@@ -26,6 +26,7 @@ const Input = ({ type, name, placeholder, val, onChange }) => {
             type={type}
             name={name}
             placeholder={placeholder}
+            required
          />
       </div>
    )

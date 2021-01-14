@@ -17,21 +17,10 @@ import TagsContainer from "./TagsContainer/TagsContainer"
 import Modal from "../Modal/Modal"
 import ContactForm from "../Contact/ContactForm/ContactForm"
 
-const BtnContainer = ({ text, switchModalVisibility }) => {
-   return (
-      <div className={styles.btnContainer} onClick={switchModalVisibility}>
-         <RhombusBtn type="button" addClass={styles.btn} text={text} />
-      </div>
-   )
-}
-
 const ProductPage = ({ data }) => {
-   const [isModalOpen, setModalOpen] = useState(false)
-   const switchModalVisibility = () => {
-      console.log("Modal")
-      isModalOpen === false ? setModalOpen(true) : setModalOpen(false)
-   }
-   const { textContent } = useContext(Context)
+   const { textContent, isModalOpen, switchModalVisibility } = useContext(
+      Context
+   )
    const {
       nazwa,
       zdjecia,
@@ -63,6 +52,7 @@ const ProductPage = ({ data }) => {
                text={textContent.productPage}
                url={url}
             />
+            <TagsContainer zadruk={zadruk} opcjeProduktu={opcjeProduktu} />
 
             <Carousel>
                {images.map((item, index) => (
@@ -76,11 +66,16 @@ const ProductPage = ({ data }) => {
                ))}
             </Carousel>
 
-            <TagsContainer zadruk={zadruk} opcjeProduktu={opcjeProduktu} />
-            <BtnContainer
-               switchModalVisibility={switchModalVisibility}
-               text={textContent.productPage.text[0]}
-            />
+            <div
+               className={styles.btnContainer}
+               onClick={switchModalVisibility}
+            >
+               <RhombusBtn
+                  type="button"
+                  addClass={styles.btn}
+                  text={textContent.productPage.text[0]}
+               />
+            </div>
          </div>
 
          <div className={styles.rightSection}>
@@ -93,30 +88,57 @@ const ProductPage = ({ data }) => {
                   <Paragraph>{item}</Paragraph>
                </div>
             ))}
-            <H2 addClass={styles.header}>{textContent.productPage.text[2]}</H2>
-            {polecaneMateriay.map(item => (
-               <div className={styles.iconContainer}>
-                  <GiRolledCloth className={styles.icon} />
-                  <Link
-                     to={`${textContent.productPage.materialLink}/${item.rodzaj}/#${item.kod}`}
-                     className={styles.link}
-                  >
-                     {item.nazwa}
-                  </Link>
-               </div>
-            ))}
-            <H2 addClass={styles.header}>{textContent.productPage.text[3]}</H2>
-            <Specifications specyfikacje={specyfikacje} />
-            <H2 addClass={styles.header}>{textContent.productPage.text[4]}</H2>
-            <img
-               className={styles.sizes_img}
-               src={wymiary.file.url}
-               alt="sizes"
-            />
-            <BtnContainer
-               switchModalVisibility={switchModalVisibility}
-               text={textContent.productPage.text[0]}
-            />
+
+            {polecaneMateriay ? (
+               <>
+                  <H2 addClass={styles.header}>
+                     {textContent.productPage.text[2]}
+                  </H2>
+                  {polecaneMateriay.map(item => (
+                     <div className={styles.iconContainer}>
+                        <GiRolledCloth className={styles.icon} />
+                        <Link
+                           to={`${textContent.productPage.materialLink}/${item.rodzaj}/#${item.kod}`}
+                           className={styles.link}
+                        >
+                           {item.nazwa}
+                        </Link>
+                     </div>
+                  ))}
+               </>
+            ) : null}
+            {specyfikacje ? (
+               <>
+                  <H2 addClass={styles.header}>
+                     {textContent.productPage.text[3]}
+                  </H2>
+                  <Specifications specyfikacje={specyfikacje} />
+               </>
+            ) : null}
+
+            {wymiary ? (
+               <>
+                  <H2 addClass={styles.header}>
+                     {textContent.productPage.text[4]}
+                  </H2>
+                  <img
+                     className={styles.sizes_img}
+                     src={wymiary.file.url}
+                     alt="sizes"
+                  />
+               </>
+            ) : null}
+            
+            <div
+               className={styles.btnContainer}
+               onClick={switchModalVisibility}
+            >
+               <RhombusBtn
+                  type="button"
+                  addClass={styles.btn}
+                  text={textContent.productPage.text[0]}
+               />
+            </div>
          </div>
       </main>
    )

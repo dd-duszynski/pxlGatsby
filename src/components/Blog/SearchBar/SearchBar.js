@@ -11,38 +11,38 @@ const SearchBar = () => {
       <div className={styles.SearchBar}>
          <h3 className={styles.title}>{textContent.blog.navigationHeader}</h3>
          <div className={styles.container}>
-            <Link to={textContent.blog.cardsLinks[0]}>
+            <Link to={textContent.blog.tag.printing[2]}>
                <Tag
                   type="blogPrinting"
-                  value={textContent.blog.cards[0]}
+                  text={textContent.blog.tag.printing[0]}
                   link
                />
             </Link>
-            <Link to={textContent.blog.cardsLinks[1]}>
+            <Link to={textContent.blog.tag.dtp[2]}>
                <Tag 
                   type="blogDTP"
-                  value={textContent.blog.cards[1]}
+                  text={textContent.blog.tag.dtp[0]}
                   link
                />
             </Link>
-            <Link to={textContent.blog.cardsLinks[2]}>
+            <Link to={textContent.blog.tag.products[2]}>
                <Tag
                   type="blogProduct"
-                  value={textContent.blog.cards[2]}
+                  text={textContent.blog.tag.products[0]}
                   link
                />
             </Link>
-            <Link to={textContent.blog.cardsLinks[3]}>
+            <Link to={textContent.blog.tag.technology[2]}>
                <Tag
                   type="blogTechnology"
-                  value={textContent.blog.cards[3]}
+                  text={textContent.blog.tag.technology[0]}
                   link
                />
             </Link>
-            <Link to={textContent.blog.cardsLinks[4]}>
+            <Link to={textContent.blog.tag.all[2]}>
                <Tag
                   type="blogAll"
-                  value={textContent.blog.cards[4]}
+                  text={textContent.blog.tag.all[0]}
                   link
                />
             </Link>

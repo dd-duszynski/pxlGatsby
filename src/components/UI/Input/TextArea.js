@@ -11,6 +11,7 @@ const TextArea = ({ name, placeholder, val, onChange }) => {
             onChange={onChange}
             name={name}
             placeholder={placeholder}
+            required
          />
       </div>
    )

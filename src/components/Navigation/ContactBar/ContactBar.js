@@ -1,23 +1,34 @@
-import React from "react"
+import React, { useContext } from "react"
 import { Link } from "gatsby"
 import styles from "./ContactBar.module.scss"
-import {  AiFillPhone } from "react-icons/ai"
+import { AiFillPhone } from "react-icons/ai"
 import { IoMdMail } from "react-icons/io"
 import { MdLocationOn } from "react-icons/md"
+import Modal from "../../Modal/Modal"
+import ContactForm from "../../Contact/ContactForm/ContactForm"
+import Context from "../../../context/context"
 
 const ContactBar = () => {
+   const { textContent, isModalOpen, switchModalVisibility } = useContext(
+      Context
+   )
+
    return (
       <div className={styles.ContactBar}>
-         <a 
-            href="tel:+48 695-859-808" 
-            className={styles.linkContainer}
+         <Modal
+            isVisible={isModalOpen}
+            switchModalVisibility={switchModalVisibility}
          >
+            <ContactForm text={textContent.mainPage.contact.text} />
+         </Modal>
+         <a href="tel:+48 695-859-808" className={styles.linkContainer}>
             <AiFillPhone className={styles.icon} />
             48 695-859-808
          </a>
 
-         <a 
-            href="mailto:info@printxl.pl" 
+         <a
+            onClick={switchModalVisibility}
+            // href="mailto:info@printxl.pl"
             className={styles.linkContainer}
          >
             <IoMdMail className={styles.icon} />

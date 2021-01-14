@@ -16,7 +16,6 @@ import { contentFR } from "../../content/contentFR"
 const Layout = ({ children, language }) => {
    const [isModalOpen, setModalOpen] = useState(false) 
    const switchModalVisibility = () => {
-      console.log('Modal');
       isModalOpen === false ? setModalOpen(true) : setModalOpen(false)
    }
    let textContent

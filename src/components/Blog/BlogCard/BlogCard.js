@@ -13,7 +13,9 @@ const BlogCard = ({ blog }) => {
 
    return (
       <article className={styles.BlogCard}>
+         {/* Left Side*/}
          <Card tags={kategorie} img={zdjecia[0].fluid} />
+         {/* Right Side*/}
          <div className={styles.textContainer}>
             <div className={styles.bar} />
             <H2 addClass={styles.title}>{tytul}</H2>

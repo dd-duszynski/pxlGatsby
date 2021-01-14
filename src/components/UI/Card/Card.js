@@ -7,32 +7,32 @@ import Tag from "../../UI/Tag/Tag"
 const Card = ({ tags, img }) => {
    const { textContent } = useContext(Context)
    console.log(tags)
-   let tagsWithProperLang = []
+   let tagsForCard = []
 
    tags.forEach(tag => {
       if (tag === "printing") {
-         tagsWithProperLang.push({
+         tagsForCard.push({
             type: "blogPrinting",
-            text: textContent.blog.cards[0],
-            tooltip: textContent.blog.cards[0],
+            text: textContent.blog.tag.printing[0],
+            tooltip: textContent.blog.tag.printing[1],
          })
       } else if (tag === "dtp") {
-         tagsWithProperLang.push({
+         tagsForCard.push({
             type: "blogDTP",
-            text: textContent.blog.cards[1],
-            tooltip: textContent.blog.cards[1],
+            text: textContent.blog.tag.dtp[0],
+            tooltip: textContent.blog.tag.dtp[1],
          })
       } else if (tag === "products") {
-         tagsWithProperLang.push({
+         tagsForCard.push({
             type: "blogProduct",
-            text: textContent.blog.cards[2],
-            tooltip: textContent.blog.cards[2],
+            text: textContent.blog.tag.products[0],
+            tooltip: textContent.blog.tag.products[1],
          })
       } else if (tag === "technology") {
-         tagsWithProperLang.push({
+         tagsForCard.push({
             type: "blogTechnology",
-            text: textContent.blog.cards[3],
-            tooltip: textContent.blog.cards[3],
+            text: textContent.blog.tag.technology[0],
+            tooltip: textContent.blog.tag.technology[1],
          })
       }
    })
@@ -41,11 +41,11 @@ const Card = ({ tags, img }) => {
       <div className={styles.Card}>
          <Image fluid={img} className={styles.image} />
          <div className={styles.tags}>
-            {tagsWithProperLang &&
-               tagsWithProperLang.map(i => (
+            {tagsForCard &&
+               tagsForCard.map(i => (
                   <Tag 
                      type={i.type} 
-                     value={i.text} 
+                     text={i.text} 
                      tooltip={i.tooltip} 
                   />
                ))}

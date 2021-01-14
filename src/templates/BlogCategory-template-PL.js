@@ -2,7 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/Layout/Layout"
 import BlogList from "../components/Blog/BlogList/BlogList"
-import BlogSearchBar from "../components/Blog/Search/SearchBar"
+import BlogSearchBar from "../components/Blog/SearchBar/SearchBar"
 import SEO from "../components/SEO/SEO"
 
 const BlogCategory = ({ data }) => {

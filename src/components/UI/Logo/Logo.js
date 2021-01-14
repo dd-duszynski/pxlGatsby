@@ -5,8 +5,8 @@ import logoImg from "../../../assets/icons/logo_white.svg"
 
 const Logo = ({ link }) => {
    return (
-      <Link to={link}>
-         <img className={styles.logo} src={logoImg} alt="PrintXL Logo" />
+      <Link to={link} className={styles.logo}>
+         <img className={styles.logoImg} src={logoImg} alt="PrintXL Logo" />
       </Link>
    )
 }

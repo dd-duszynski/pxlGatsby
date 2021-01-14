@@ -2,7 +2,7 @@ import React from "react"
 import styles from "./Tag.module.scss"
 import ReactTooltip from "react-tooltip"
 
-const Tag = ({ type, value, tooltip, link }) => {
+const Tag = ({ type, text, tooltip, link }) => {
    let css
    switch (type) {
       case "best":
@@ -39,7 +39,7 @@ const Tag = ({ type, value, tooltip, link }) => {
    return (
       <div className={[styles.Tag, css, linkCSS].join(" ")}>
          <span className={styles.tagText} data-tip data-for={tooltip}>
-            {value}
+            {text}
          </span>
          {link ? null : (
             <ReactTooltip
