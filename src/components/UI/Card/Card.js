@@ -6,7 +6,6 @@ import Tag from "../../UI/Tag/Tag"
 
 const Card = ({ tags, img }) => {
    const { textContent } = useContext(Context)
-   console.log(tags)
    let tagsForCard = []
 
    tags.forEach(tag => {

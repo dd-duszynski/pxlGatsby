@@ -35,3 +35,24 @@
    width: 100%;
    margin: 20px 0;
 }
+.iconContainer {
+   display: flex;
+   align-items: center;
+   margin-top: 2px;
+}
+.icon {
+   color: $color-main;
+   width: 25px;
+   height: 25px;
+   margin-right: 8px;
+}
+.link {
+   @include paragraph;
+   font-size: 15px;
+   color: $color-main;
+   &:hover {
+      cursor: pointer;
+      color: $color-main2;
+      transform: scale(1.02);
+   }
+}

@@ -1,6 +1,6 @@
 const path = require("path")
 
-exports.createPages = async ({ graphql, actions }) => {
+const createPages = async ({ graphql, actions }) => {
    const { createPage } = actions
    const { data } = await graphql(`
       query {
@@ -13,23 +13,14 @@ exports.createPages = async ({ graphql, actions }) => {
                }
             }
          }
-         productsEN: allContentfulProduktyEn {
-            edges {
-               node {
-                  nazwa
-                  rodzaj
-                  url
-               }
-            }
-         }
-         postyPL: allContentfulBlogPl {
+         blogPL: allContentfulBlogPl {
             edges {
                node {
                   tytul
                }
             }
          }
-         kategoriePL: allContentfulBlogPl {
+         blogCategoryPL: allContentfulBlogPl {
             distinct(field: kategorie)
          }
          materialsPL: allContentfulMaterialyPl {
@@ -81,9 +72,8 @@ exports.createPages = async ({ graphql, actions }) => {
          },
       })
    })
-
-   // Blog Post PL ---------------------------------------
-   data.postyPL.edges.forEach(({ node }) => {
+   // Blog PL ------
+   data.blogPL.edges.forEach(({ node }) => {
       createPage({
          path: `PL/blog/${node.tytul}`,
          component: path.resolve("./src/templates/BlogPost-template-PL.js"),
@@ -92,8 +82,8 @@ exports.createPages = async ({ graphql, actions }) => {
          },
       })
    })
-   // Blog Kategorie
-   data.kategoriePL.distinct.forEach(node => {
+   // Blog Kategorie PL ------
+   data.blogCategoryPL.distinct.forEach(node => {
       createPage({
          path: `PL/blog/${node}`,
          component: path.resolve("./src/templates/BlogCategory-template-PL.js"),
@@ -108,7 +98,7 @@ exports.createPages = async ({ graphql, actions }) => {
          path: `PL/materials/${node.rodzaj}`,
          component: path.resolve("./src/templates/Materials-template-PL.js"),
          context: {
-            name: node.rodzaj,
+            materialType: node.rodzaj,
          },
       })
    })
@@ -124,18 +114,20 @@ exports.createPages = async ({ graphql, actions }) => {
    })
 }
 
-
-exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
+const onCreateWebpackConfig = ({ stage, loaders, actions }) => {
    if (stage === "build-html") {
-     actions.setWebpackConfig({
-       module: {
-         rules: [
-           {
-             test: /bad-module/,
-             use: loaders.null(),
-           },
-         ],
-       },
-     })
+      actions.setWebpackConfig({
+         module: {
+            rules: [
+               {
+                  test: /bad-module/,
+                  use: loaders.null(),
+               },
+            ],
+         },
+      })
    }
- }
+}
+
+exports.createPages = createPages
+exports.onCreateWebpackConfig = onCreateWebpackConfig

@@ -61,10 +61,10 @@ export const query = graphql`
          materialy {
             nazwa
             rodzaj
-            opis {
-               opis
+            tekst {
+               json
             }
-            zadruk
+            druk
             szerokosc
             kod
             zdjecia {

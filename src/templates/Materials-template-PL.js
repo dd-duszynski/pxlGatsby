@@ -16,27 +16,27 @@ const MaterialsTemplate = ({ data: { Materials } }) => {
 }
 
 export const getData = graphql`
-   query($name: String!) {
+   query($materialType: String!) {
       Materials: allContentfulMaterialyPl(
          sort: { fields: nazwa }
-         filter: { rodzaj: { eq: $name } }
+         filter: { rodzaj: { eq: $materialType } }
       ) {
          nodes {
-            nazwa
             id
-            kod
-            zadruk
-            szerokosc
-            opis {
-               opis
-            }
             rodzaj
-            
+            nazwa
+            tekst {
+               json
+            }
+            szerokosc
             zdjecia {
                fixed(height: 1200) {
                   ...GatsbyContentfulFixed
                }
             }
+            kod
+            opcje
+            druk
          }
       }
    }

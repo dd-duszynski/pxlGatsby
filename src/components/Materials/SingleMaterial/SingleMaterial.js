@@ -1,5 +1,8 @@
 import React, { useContext, useState, useEffect } from "react"
 import ReactImageMagnify from "react-image-magnify"
+import { RICHTEXT_OPTIONS } from "../../UI/RichText/RichText"
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
+import TagsContainer from "../../ProductPage/TagsContainer/TagsContainer"
 
 import styles from "./SingleMaterial.module.scss"
 import H2 from "../../UI/Headers/H2"
@@ -69,9 +72,11 @@ const SingleMaterial = ({ data }) => {
          {isSmallDevice ? imageForSmallerDevices : imageMagnify}
          <div className={styles.textContainer}>
             <H2>{data.nazwa}</H2>
-            <Paragraph>{data.opis.opis}</Paragraph>
+            <TagsContainer zadruk={data.druk} opcjeProduktu={data.opcje} />
+            {documentToReactComponents(data.tekst.json, RICHTEXT_OPTIONS)}
             <Paragraph>
-               <strong>{textContent.materials.text[0]}</strong> {data.zadruk}
+               <strong>{textContent.materials.text[0]}</strong> 
+               {data.druk && data.druk.map(i => i)}
             </Paragraph>
             <Paragraph>
                <strong>{textContent.materials.text[1]}</strong>

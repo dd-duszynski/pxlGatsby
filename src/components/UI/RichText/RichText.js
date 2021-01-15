@@ -18,7 +18,6 @@ export const RICHTEXT_OPTIONS = {
    // },
    renderNode: {
       [BLOCKS.EMBEDDED_ASSET]: (node,children) => {
-         console.log(node);
          return <img src={node.data.target.fields.file["en-US"].url} className={styles.img}/>
       },
       [BLOCKS.PARAGRAPH]: (node, children) => {

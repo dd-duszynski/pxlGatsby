@@ -17,6 +17,7 @@ import TagsContainer from "./TagsContainer/TagsContainer"
 import Modal from "../Modal/Modal"
 import ContactForm from "../Contact/ContactForm/ContactForm"
 
+
 const ProductPage = ({ data }) => {
    const { textContent, isModalOpen, switchModalVisibility } = useContext(
       Context
@@ -52,6 +53,7 @@ const ProductPage = ({ data }) => {
                text={textContent.productPage}
                url={url}
             />
+
             <TagsContainer zadruk={zadruk} opcjeProduktu={opcjeProduktu} />
 
             <Carousel>

@@ -9,7 +9,6 @@ import { RICHTEXT_OPTIONS } from "../../UI/RichText/RichText"
 
 const Post = ({ data }) => {
    const { tytul, dataPublikacji, zdjecia, tekst } = data
-   console.log(data)
    const {
       textContent: { blog },
    } = useContext(Context)

@@ -7,7 +7,8 @@ import H2 from "../UI/Headers/H2"
 import Paragraph from "../UI/Paragraph/Paragraph"
 import ProductCard from "../Products/ProductCard/ProductCard"
 import Carousel from "../Carousel/Carousel"
-import SingleMaterial from "../../components/Materials/SingleMaterialTech/SingleMaterialTech"
+import { GiRolledCloth } from "react-icons/gi"
+import { Link } from "gatsby"
 
 const Technology = ({ machine }) => {
    const [isSmallDevice, setSmallDevice] = useState(false)
@@ -33,6 +34,7 @@ const Technology = ({ machine }) => {
    return (
       <section className={styles.Technology}>
          <article className={styles.container}>
+
             <div className={styles.paragraphBox}>
                <H2 addClass={styles.header}>
                   {textContent.technology.description.text[0]}
@@ -52,7 +54,7 @@ const Technology = ({ machine }) => {
                </Carousel>
                <div className={styles.line} />
             </div>
-
+         
             <div className={styles.paragraphBox}>
                <H2 addClass={styles.header}>
                   {textContent.technology.description.text[1]}
@@ -65,27 +67,25 @@ const Technology = ({ machine }) => {
                      return <ProductCard data={item} key={item.nazwa} />
                   })}
                </Carousel>
-               <div className={styles.line} />
             </div>
+            <div className={styles.line} />
 
             <div className={styles.paragraphBox}>
                <H2 addClass={styles.header}>
                   {textContent.technology.description.text[2]}
                </H2>
-               <Paragraph addClass={styles.paragraph}>
-                  {machine.opisMaterialow.opisMaterialow}
-               </Paragraph>
-               <Carousel itemsToShow={1}>
-                  {machine.materialy.map(item => {
-                     return (
-                        <SingleMaterial
-                           data={item}
-                           language="PL"
-                           key={item.nazwa}
-                        />
-                     )
-                  })}
-               </Carousel>
+               <Paragraph>{machine.opisMaterialow.opisMaterialow}:</Paragraph>
+               {machine.materialy.map(item => (
+                  <div className={styles.iconContainer} key={item.nazwa}>
+                     <GiRolledCloth className={styles.icon} />
+                     <Link
+                        className={styles.link}
+                        to={`${textContent.productPage.materialLink}/${item.rodzaj}/#${item.kod}`}
+                     >
+                        {item.nazwa}
+                     </Link>
+                  </div>
+               ))}
             </div>
          </article>
       </section>
