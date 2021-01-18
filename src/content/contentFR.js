@@ -25,30 +25,31 @@ export const contentFR = {
          christmasCatalog: [
             "Katalog ze świątecznymi produktami już dostępny!",
             "Zachęcamy do zapoznania się z systemami, w których łatwo wymienisz grafikę po okresie świątecznym.",
-            "http://printxl.pl/pdf/christmas_PL.pdf",
+            "http://printxl.FR/pdf/christmas_PL.pdf",
          ],
          CovidCatalog: [
             "Zachęcamy do pobrania naszego nowego katalogu.",
             "Znajdą w nim Państwo aktualną ofertę na produkty ochronne oraz przydatne akcesoria.",
-            "http://printxl.pl/pdf/COVID_PL_m.pdf",
+            "http://printxl.FR/pdf/COVID_PL_m.pdf",
          ],
       },
       productSection: {
          header: "Produkty",
-         seeAllBtn: ">> ZOBACZ WSZYSTKIE <<"
+         seeAllBtn: ">> ZOBACZ WSZYSTKIE <<",
       },
       contact: {
-         header: "Kontakt",
+         header: "Contact",
          text: [
-            "Polska",
-            "Imię",
+            "Pologne",
+            "Nom",
             "E-mail",
-            "Treść wiadomości...",
-            "Wyślij wiadomość",
-            "Chcesz być na bieżąco z naszą ofertą i promocjami?",
-            "Zapisz się na Newsletter!",
-            "Zapisz się",
-            "Napisz do Nas:",
+            "Contenu du message...",
+            "Envoyer un message",
+            "Voulez-vous être à jour avec notre offre et nos promotions?",
+            "Abonnez-vous à la newsletter!",
+            "Inscrivez-vous",
+            "Écrivez-nous:",
+            "Page de contact",
          ],
       },
       faq: [
@@ -80,7 +81,7 @@ export const contentFR = {
             "Jakie są warunki przyjęcia reklamacji?",
             "Wychodząc naprzeciw potrzebom naszych klientów, reklamacje i ewentualne kwestie sporne, rozpatrujemy na bieżąco. Szczegółowe informacje znajdują się w Warunkach Współpracy, gdzie precyzyjnie została opisana cała procedura zgłoszenia i proces rozpatrywania reklamacji.",
          ],
-      ]
+      ],
    },
    footer: {
       text: [
@@ -97,36 +98,27 @@ export const contentFR = {
          "REGON",
       ],
       links: [
-         "http://printxl.pl/Instructions/termsOfCooperation_PL.pdf",
-         "http://printxl.pl/Instructions/Instructions_PL.pdf",
+         "http://printxl.FR/Instructions/termsOfCooperation_PL.pdf",
+         "http://printxl.FR/Instructions/Instructions_PL.pdf",
       ],
    },
    navigation: {
-      text: [
-         "Produkty",
-         "Materiały",
-         "Technologie",
-         "Specyfikacje",
-         "FAQ",
-         "Kontakt",
-         "Blog",
-      ],
-      links: [
-         "PL/",
-         "PL/products",
-         "PL/materials",
-         "PL/technology",
-         "PL/specifications",
-         "PL/#FAQ",
-         "PL/contact",
-         "PL/blog",
+      mainPageLink: "FR/",
+      navItem: [
+         ["Produits", "FR/products"],
+         ["Matériels", "FR/materials"],
+         ["Technologies", "FR/technology"],
+         ["Blog", "FR/blog"],
+         ["Spécifications", "FR/specifications"],
+         ["FAQ", "FR/#FAQ"],
+         ["Contact", "FR/contact"],
       ],
    },
    products: {
-      mainLink: "PL/products",
+      mainLink: "FR/products",
       navigation: {
          text: [
-            "Covid-19",
+            "Covid",
             "Banery",
             "Flagi",
             "Rollupy",
@@ -136,104 +128,34 @@ export const contentFR = {
             "Pozostałe",
          ],
          links: [
-            "PL/products/covid-19",
-            "PL/products/banners",
-            "PL/products/flags",
-            "PL/products/rollups",
-            "PL/products/walls",
-            "PL/products/stands",
-            "PL/products/tribunes",
-            "PL/products/others",
+            "FR/products/covid",
+            "FR/products/banners",
+            "FR/products/flags",
+            "FR/products/rollups",
+            "FR/products/walls",
+            "FR/products/stands",
+            "FR/products/tribunes",
+            "FR/products/others",
          ],
       },
-      productCard:[
-         "ZOBACZ PRODUKT"
-      ],
-      tag:{
+      productCard: ["ZOBACZ PRODUKT"],
+      tag: {
          bestseller: ["BESTSELLER", "Jeden z najpopularniejszych produktów."],
          news: ["NOWOŚĆ", "Nowość w naszej ofercie."],
          inOut: ["IN / OUT", "Wykorzystanie wewnątrz i poza budynkiem."],
          indoor: ["INDOOR", "Zalecane wykorzystanie wewnątrz budynku."],
          outdoor: ["OUTDOOR", "Możliwość wykorzystania na zewnątrz."],
-         uv:["UV", "Technologia druku: UV"],
-         solvent:["SOL", "Technologia druku: Solvent"],
-         latex:["LAT", "Technologia druku: Latex"],
-         sublimation:["SUB", "Technologia druku: Sublimacja"],
-      }
-   },
-   specifications: {
-      mainLink: "PL/specifications",
-      navigation: {
-         text: [
-            "Covid-19",
-            "Banery",
-            "Flagi",
-            "Rollupy",
-            "Ścianki",
-            "Standy",
-            "Trybunki",
-            "Pozostałe",
-         ],
-         links: [
-            "PL/specifications/covid-19",
-            "PL/specifications/banners",
-            "PL/specifications/flags",
-            "PL/specifications/rollups",
-            "PL/specifications/walls",
-            "PL/specifications/stands",
-            "PL/specifications/tribunes",
-            "PL/specifications/others",
-         ],
+         uv: ["UV", "Technologia druku: UV"],
+         solvent: ["SOL", "Technologia druku: Solvent"],
+         latex: ["LAT", "Technologia druku: Latex"],
+         sublimation: ["SUB", "Technologia druku: Sublimacja"],
       },
-   },
-   materials: {
-      navigation: {
-         text: ["Vinyle", "Folie", "Płaskie", "Dekoracyjne", "Tekstylia"],
-         links: [
-            "PL/materials/vinyls",
-            "PL/materials/foils",
-            "PL/materials/flat",
-            "PL/materials/decorative",
-            "PL/materials/textiles",
-         ],
-      },
-      text: ["Zadruk: ", "Szerokość: ", "Powiększ"],
-   },
-   technology: {
-      navigation: {
-         text: ["Sublimacja", "Latex", "UV", "Solvent"],
-         links: [
-            "PL/technology/sublimation",
-            "PL/technology/latex",
-            "PL/technology/uv",
-            "PL/technology/solvent",
-         ],
-      },
-      description: {
-         text: [
-            "Opis technologii",
-            "Powiązane produkty",
-            "Powiązane materiały",
-         ],
-      },
-   },
-   blog: {
-      navigation: {
-         categoryHeader: "Kategorie",
-         text: ["Druk", "Produkty", "Przygotowanie plików", "Technologie"],
-         links: [
-            "PL/blog/printing",
-            "PL/blog/products",
-            "PL/blog/dtp",
-            "PL/blog/technology",
-         ],
-      },
-      cards: ["Druk", "Przygotowanie plików", "Produkty", "Technologie"],
    },
    productPage: {
-      breadcrumbs: ["Strona Główna", "/PL/"],
+      breadcrumbs: ["/FR/", "Strona Główna"],
+      materialLink: "/FR/materials",
       groupOfProducts: [
-         "Covid-19",
+         "Covid",
          "Banery",
          "Flagi",
          "Rollupy",
@@ -243,14 +165,14 @@ export const contentFR = {
          "Pozostałe",
       ],
       linkToGroupOfProducts: [
-         "PL/products/covid-19",
-         "PL/products/banners",
-         "PL/products/flags",
-         "PL/products/rollups",
-         "PL/products/walls",
-         "PL/products/stands",
-         "PL/products/tribunes",
-         "PL/products/others",
+         "FR/products/covid",
+         "FR/products/banners",
+         "FR/products/flags",
+         "FR/products/rollups",
+         "FR/products/walls",
+         "FR/products/stands",
+         "FR/products/tribunes",
+         "FR/products/others",
       ],
       text: [
          "Zainteresowany? Napisz do Nas!",
@@ -258,7 +180,99 @@ export const contentFR = {
          "Polecane materiały:",
          "Instrukcje DTP:",
          "Przykładowe wymiary [cm]:",
+         "Pobierz",
       ],
+   },
+   specifications: {
+      mainLink: "FR/specifications",
+      navigation: {
+         text: [
+            "Covid",
+            "Banery",
+            "Flagi",
+            "Rollupy",
+            "Ścianki",
+            "Standy",
+            "Trybunki",
+            "Pozostałe",
+         ],
+         links: [
+            "FR/specifications/covid",
+            "FR/specifications/banners",
+            "FR/specifications/flags",
+            "FR/specifications/rollups",
+            "FR/specifications/walls",
+            "FR/specifications/stands",
+            "FR/specifications/tribunes",
+            "FR/specifications/others",
+         ],
+      },
+   },
+   materials: {
+      navigation: {
+         text: ["Vinyle", "Adhésifs", "Rigide", "Décoration", "Textile"],
+         links: [
+            "FR/materials/vinyls",
+            "FR/materials/foils",
+            "FR/materials/flat",
+            "FR/materials/decorative",
+            "FR/materials/textiles",
+         ],
+      },
+      text: ["Surcharge: ", "Largeur: ", "Zoomer"],
+   },
+   technology: {
+      navigation: {
+         text: ["Sublimation", "Latex", "UV", "Solwent"],
+         links: [
+            "FR/technology/sublimation",
+            "FR/technology/latex",
+            "FR/technology/uv",
+            "FR/technology/solvent",
+         ],
+      },
+      description: {
+         text: [
+            "Description de la technologie",
+            "Produits connexes",
+            "Documents connexes",
+         ],
+      },
+   },
+   blog: {
+      navigationHeader: "Kategorie",
+      breadcrumbs: {
+         b1: ["FR/", "Strona Główna"],
+         b2: ["FR/blog/", "Blog"],
+      },
+      text: ["CZYTAJ DALEJ", "minut czytania"],
+      tag: {
+         printing: [
+            "Druk",
+            "Druk - Jeden z najpopularniejszych produktów.",
+            "FR/blog/printing/",
+         ],
+         dtp: [
+            "DTP",
+            "DTP - Jeden z najpopularniejszych produktów.",
+            "FR/blog/dtp/",
+         ],
+         products: [
+            "Produkty",
+            "Produkty - Jeden z najpopularniejszych produktów.",
+            "FR/blog/products/",
+         ],
+         technology: [
+            "Technologie",
+            "Technologie Jeden z najpopularniejszych produktów.",
+            "FR/blog/technology/",
+         ],
+         all: [
+            "Wszystkie",
+            "Wszystkie - Jeden z najpopularniejszych produktów.",
+            "FR/blog/",
+         ],
+      },
    },
    page404: {
       text: [

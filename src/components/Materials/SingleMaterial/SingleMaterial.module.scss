@@ -39,7 +39,6 @@
    &:hover {
       img {
          transition: all 0.3s ease-in-out;
-         transform: scale(1.015);
       }
    }
 }
@@ -68,6 +67,14 @@
    width: 100%;
    border-bottom: 1px solid $color-main;
    margin-bottom: 24px;
+}
+.tagPositioning{
+   position: absolute;
+   bottom: 1px;
+   right: 1px;
+   &:last-child(){
+      color: red !important;
+   }
 }
 
 @media screen and (max-width: 1000px) {

@@ -30,7 +30,49 @@ const createPages = async ({ graphql, actions }) => {
                }
             }
          }
+         materialsEN: allContentfulMaterialyEn {
+            edges {
+               node {
+                  rodzaj
+               }
+            }
+         }
+         materialsFR: allContentfulMaterialyFr {
+            edges {
+               node {
+                  rodzaj
+               }
+            }
+         }
+         materialsDE: allContentfulMaterialyDe {
+            edges {
+               node {
+                  rodzaj
+               }
+            }
+         }
          technologiesPL: allContentfulTechnologiePl {
+            edges {
+               node {
+                  url
+               }
+            }
+         }
+         technologiesEN: allContentfulTechnologieEn {
+            edges {
+               node {
+                  url
+               }
+            }
+         }
+         technologiesDE: allContentfulTechnologieDe {
+            edges {
+               node {
+                  url
+               }
+            }
+         }
+         technologiesFR: allContentfulTechnologieFr {
             edges {
                node {
                   url
@@ -102,11 +144,72 @@ const createPages = async ({ graphql, actions }) => {
          },
       })
    })
+   // Materiały EN -------
+   data.materialsEN.edges.forEach(({ node }) => {
+      createPage({
+         path: `EN/materials/${node.rodzaj}`,
+         component: path.resolve("./src/templates/Materials-template-EN.js"),
+         context: {
+            materialType: node.rodzaj,
+         },
+      })
+   })
+   // Materiały FR -------
+   data.materialsFR.edges.forEach(({ node }) => {
+      createPage({
+         path: `FR/materials/${node.rodzaj}`,
+         component: path.resolve("./src/templates/Materials-template-FR.js"),
+         context: {
+            materialType: node.rodzaj,
+         },
+      })
+   })
+   // Materiały DE -------
+   data.materialsDE.edges.forEach(({ node }) => {
+      createPage({
+         path: `DE/materials/${node.rodzaj}`,
+         component: path.resolve("./src/templates/Materials-template-DE.js"),
+         context: {
+            materialType: node.rodzaj,
+         },
+      })
+   })
+
    // Technologie PL ---------------------------------------
    data.technologiesPL.edges.forEach(({ node }) => {
       createPage({
          path: `PL/technology/${node.url}`,
          component: path.resolve("./src/templates/Technology-template-PL.js"),
+         context: {
+            name: node.url,
+         },
+      })
+   })
+   // Technologie EN ---------------------------------------
+   data.technologiesEN.edges.forEach(({ node }) => {
+      createPage({
+         path: `EN/technology/${node.url}`,
+         component: path.resolve("./src/templates/Technology-template-EN.js"),
+         context: {
+            name: node.url,
+         },
+      })
+   })
+   // Technologie DE ---------------------------------------
+   data.technologiesDE.edges.forEach(({ node }) => {
+      createPage({
+         path: `DE/technology/${node.url}`,
+         component: path.resolve("./src/templates/Technology-template-DE.js"),
+         context: {
+            name: node.url,
+         },
+      })
+   })
+   // Technologie FR ---------------------------------------
+   data.technologiesFR.edges.forEach(({ node }) => {
+      createPage({
+         path: `FR/technology/${node.url}`,
+         component: path.resolve("./src/templates/Technology-template-FR.js"),
          context: {
             name: node.url,
          },

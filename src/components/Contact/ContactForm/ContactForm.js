@@ -11,7 +11,7 @@ const ContactForm = ({ text }) => {
 
    const handleSubmit = event => {
       event.preventDefault()
-      
+
       fetch("https://pxl-server.herokuapp.com/email", {
          method: "POST",
          headers: {
@@ -21,7 +21,7 @@ const ContactForm = ({ text }) => {
             name: name,
             email: email,
             message: message,
-            subject: window.location.href
+            subject: window.location.href,
          }),
       })
          .then(response => response.json())

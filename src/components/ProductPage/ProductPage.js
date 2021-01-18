@@ -17,7 +17,6 @@ import TagsContainer from "./TagsContainer/TagsContainer"
 import Modal from "../Modal/Modal"
 import ContactForm from "../Contact/ContactForm/ContactForm"
 
-
 const ProductPage = ({ data }) => {
    const { textContent, isModalOpen, switchModalVisibility } = useContext(
       Context
@@ -53,9 +52,6 @@ const ProductPage = ({ data }) => {
                text={textContent.productPage}
                url={url}
             />
-
-            <TagsContainer zadruk={zadruk} opcjeProduktu={opcjeProduktu} />
-
             <Carousel>
                {images.map((item, index) => (
                   <div className={styles.imgContainer} key={index}>
@@ -82,6 +78,7 @@ const ProductPage = ({ data }) => {
 
          <div className={styles.rightSection}>
             <H1 addClass={styles.header}>{nazwa}</H1>
+            <TagsContainer zadruk={zadruk} opcjeProduktu={opcjeProduktu} />
             {documentToReactComponents(opis.json, RICHTEXT_OPTIONS)}
             <H2 addClass={styles.header}>{textContent.productPage.text[1]}</H2>
             {zalety.map(item => (
@@ -130,7 +127,7 @@ const ProductPage = ({ data }) => {
                   />
                </>
             ) : null}
-            
+
             <div
                className={styles.btnContainer}
                onClick={switchModalVisibility}

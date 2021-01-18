@@ -75,8 +75,8 @@ const SingleMaterial = ({ data }) => {
             <TagsContainer zadruk={data.druk} opcjeProduktu={data.opcje} />
             {documentToReactComponents(data.tekst.json, RICHTEXT_OPTIONS)}
             <Paragraph>
-               <strong>{textContent.materials.text[0]}</strong> 
-               {data.druk && data.druk.map(i => i)}
+               <strong>{textContent.materials.text[0]}</strong>
+               {data.druk && data.druk.join(", ")}
             </Paragraph>
             <Paragraph>
                <strong>{textContent.materials.text[1]}</strong>
