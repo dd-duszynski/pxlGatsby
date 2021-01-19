@@ -2,22 +2,22 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/Layout/Layout"
 import SEO from "../components/SEO/SEO"
-import ProductsNav from "../components/Products/ProductsNav/ProductsNav"
-import ProductsList from "../components/Products/ProductsList/ProductsList"
+import SpecificationsNav from "../components/Specifications/SpecificationsNav/SpecificationsNav"
+import SpecificationsList from "../components/Specifications/SpecificationsList/SpecificationsList"
 
-const ProductsListTemplate = ({ data: { Produkty } }) => {
+const SpecificationsTemplate = ({ data: { Products } }) => {
    return (
-      <Layout language="PL">
-         <SEO title="PrintXL - Products" />
-         <ProductsNav />
-         <ProductsList data={Produkty} />
+      <Layout language="DE">
+         <SEO title="PrintXL - Specifications" />
+         <SpecificationsNav />
+         <SpecificationsList data={Products} />
       </Layout>
    )
 }
 
 export const getData = graphql`
    query($name: String!) {
-      Produkty: allContentfulProduktyPl(
+      Products: allContentfulProduktyDe(
          sort: { fields: nazwa }
          filter: { rodzaj: { eq: $name } }
       ) {
@@ -28,6 +28,7 @@ export const getData = graphql`
             opisKrotki
             rodzaj
             url
+            id
             opis {
                content {
                   content {
@@ -42,12 +43,12 @@ export const getData = graphql`
                }
             }
             zdjecia {
-               fixed(height: 190) {
-                  ...GatsbyContentfulFixed
+               fluid {
+                  ...GatsbyContentfulFluid
                }
             }
          }
       }
    }
 `
-export default ProductsListTemplate
+export default SpecificationsTemplate

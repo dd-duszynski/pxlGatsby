@@ -5,7 +5,7 @@ import ProductPage from "../components/ProductPage/ProductPage"
 
 const ProductPageTemplate = ({ data }) => {
    return (
-      <Layout language="PL">
+      <Layout language="FR">
          <ProductPage data={data} />
       </Layout>
    )
@@ -13,7 +13,7 @@ const ProductPageTemplate = ({ data }) => {
 
 export const query = graphql`
    query($name: String!) {
-      products: contentfulProduktyPl(nazwa: { eq: $name }) {
+      products: contentfulProduktyFr(nazwa: { eq: $name }) {
          rodzaj
          nazwa
          opisKrotki

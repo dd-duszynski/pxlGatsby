@@ -68,9 +68,10 @@ const SingleMaterial = ({ data }) => {
 
    const css = isSmallDevice ? styles.MaterialSmall : styles.Material
    return (
-      <div className={css} id={data.kod}>
+      <article className={css} id={data.kod}>
          {isSmallDevice ? imageForSmallerDevices : imageMagnify}
          <div className={styles.textContainer}>
+            <div className={styles.bar} />
             <H2>{data.nazwa}</H2>
             <TagsContainer zadruk={data.druk} opcjeProduktu={data.opcje} />
             {documentToReactComponents(data.tekst.json, RICHTEXT_OPTIONS)}
@@ -84,7 +85,7 @@ const SingleMaterial = ({ data }) => {
             </Paragraph>
          </div>
          <div className={styles.line}></div>
-      </div>
+      </article>
    )
 }
 export default SingleMaterial

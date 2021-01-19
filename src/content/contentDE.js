@@ -117,13 +117,13 @@ export const contentDE = {
       navigation: {
          text: [
             "Covid",
-            "Banery",
-            "Flagi",
-            "Rollupy",
-            "Ścianki",
-            "Standy",
-            "Trybunki",
-            "Pozostałe",
+            "Banner",
+            "Flaggen",
+            "Rollups",
+            "Werbewände",
+            "Ständer",
+            "Messetheke",
+            "Sonstige",
          ],
          links: [
             "DE/products/covid",
@@ -136,7 +136,7 @@ export const contentDE = {
             "DE/products/others",
          ],
       },
-      productCard: ["ZOBACZ PRODUKT"],
+      productCard: ["SEHEN SIE DAS PRODUKT"],
       tag: {
          bestseller: ["BESTSELLER", "Jeden z najpopularniejszych produktów."],
          news: ["NOWOŚĆ", "Nowość w naszej ofercie."],

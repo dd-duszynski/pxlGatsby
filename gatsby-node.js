@@ -13,6 +13,33 @@ const createPages = async ({ graphql, actions }) => {
                }
             }
          }
+         productsEN: allContentfulProduktyEn {
+            edges {
+               node {
+                  nazwa
+                  rodzaj
+                  url
+               }
+            }
+         }
+         productsDE: allContentfulProduktyDe {
+            edges {
+               node {
+                  nazwa
+                  rodzaj
+                  url
+               }
+            }
+         }
+         productsFR: allContentfulProduktyFr {
+            edges {
+               node {
+                  nazwa
+                  rodzaj
+                  url
+               }
+            }
+         }
          blogPL: allContentfulBlogPl {
             edges {
                node {
@@ -82,7 +109,8 @@ const createPages = async ({ graphql, actions }) => {
       }
    `)
 
-   //Lista Produktów PL ---------------------------------------
+   //Lista Produktów --------------------------------------- 
+   //PL 
    data.productsPL.edges.forEach(({ node }) => {
       createPage({
          path: `PL/products/${node.rodzaj}`,
@@ -92,7 +120,39 @@ const createPages = async ({ graphql, actions }) => {
          },
       })
    })
-   //Lista Specyfikacji PL -------------------------------------
+   // EN 
+   data.productsEN.edges.forEach(({ node }) => {
+      createPage({
+         path: `EN/products/${node.rodzaj}`,
+         component: path.resolve("./src/templates/ProductsList-template-EN.js"),
+         context: {
+            name: node.rodzaj,
+         },
+      })
+   })
+   // DE
+   data.productsDE.edges.forEach(({ node }) => {
+      createPage({
+         path: `DE/products/${node.rodzaj}`,
+         component: path.resolve("./src/templates/ProductsList-template-DE.js"),
+         context: {
+            name: node.rodzaj,
+         },
+      })
+   })
+   // FR
+   data.productsFR.edges.forEach(({ node }) => {
+      createPage({
+         path: `FR/products/${node.rodzaj}`,
+         component: path.resolve("./src/templates/ProductsList-template-FR.js"),
+         context: {
+            name: node.rodzaj,
+         },
+      })
+   })
+
+   //Lista Specyfikacji ------------------------------------- 
+   //PL 
    data.productsPL.edges.forEach(({ node }) => {
       createPage({
          path: `PL/specifications/${node.rodzaj}`,
@@ -104,7 +164,45 @@ const createPages = async ({ graphql, actions }) => {
          },
       })
    })
-   //Strona Pojedynczego Produktu PL ---------------------------------------
+   //EN 
+   data.productsEN.edges.forEach(({ node }) => {
+      createPage({
+         path: `EN/specifications/${node.rodzaj}`,
+         component: path.resolve(
+            "./src/templates/Specifications-template-EN.js"
+         ),
+         context: {
+            name: node.rodzaj,
+         },
+      })
+   })
+   //DE
+   data.productsDE.edges.forEach(({ node }) => {
+      createPage({
+         path: `DE/specifications/${node.rodzaj}`,
+         component: path.resolve(
+            "./src/templates/Specifications-template-DE.js"
+         ),
+         context: {
+            name: node.rodzaj,
+         },
+      })
+   })
+   //FR
+   data.productsFR.edges.forEach(({ node }) => {
+      createPage({
+         path: `FR/specifications/${node.rodzaj}`,
+         component: path.resolve(
+            "./src/templates/Specifications-template-FR.js"
+         ),
+         context: {
+            name: node.rodzaj,
+         },
+      })
+   })
+
+   //Strona Pojedynczego Produktu ----------------------------
+   //PL 
    data.productsPL.edges.forEach(({ node }) => {
       createPage({
          path: `${node.url}`,
@@ -114,7 +212,39 @@ const createPages = async ({ graphql, actions }) => {
          },
       })
    })
-   // Blog PL ------
+   //EN
+   data.productsEN.edges.forEach(({ node }) => {
+      createPage({
+         path: `${node.url}`,
+         component: path.resolve("./src/templates/ProductPage-template-EN.js"),
+         context: {
+            name: node.nazwa,
+         },
+      })
+   })
+   //DE
+   data.productsDE.edges.forEach(({ node }) => {
+      createPage({
+         path: `${node.url}`,
+         component: path.resolve("./src/templates/ProductPage-template-DE.js"),
+         context: {
+            name: node.nazwa,
+         },
+      })
+   })
+   //FR
+   data.productsFR.edges.forEach(({ node }) => {
+      createPage({
+         path: `${node.url}`,
+         component: path.resolve("./src/templates/ProductPage-template-FR.js"),
+         context: {
+            name: node.nazwa,
+         },
+      })
+   })
+
+   // BlogPost Page ----------------------------
+   // PL 
    data.blogPL.edges.forEach(({ node }) => {
       createPage({
          path: `PL/blog/${node.tytul}`,
@@ -124,7 +254,9 @@ const createPages = async ({ graphql, actions }) => {
          },
       })
    })
-   // Blog Kategorie PL ------
+
+   // Blog Kategorie  ----------------------------
+   // PL 
    data.blogCategoryPL.distinct.forEach(node => {
       createPage({
          path: `PL/blog/${node}`,
@@ -134,7 +266,8 @@ const createPages = async ({ graphql, actions }) => {
          },
       })
    })
-   // Materiały PL -------
+   // Materiały  ----------------------------
+   // PL 
    data.materialsPL.edges.forEach(({ node }) => {
       createPage({
          path: `PL/materials/${node.rodzaj}`,
@@ -144,7 +277,7 @@ const createPages = async ({ graphql, actions }) => {
          },
       })
    })
-   // Materiały EN -------
+   // EN 
    data.materialsEN.edges.forEach(({ node }) => {
       createPage({
          path: `EN/materials/${node.rodzaj}`,
@@ -154,7 +287,7 @@ const createPages = async ({ graphql, actions }) => {
          },
       })
    })
-   // Materiały FR -------
+   // FR 
    data.materialsFR.edges.forEach(({ node }) => {
       createPage({
          path: `FR/materials/${node.rodzaj}`,
@@ -164,7 +297,7 @@ const createPages = async ({ graphql, actions }) => {
          },
       })
    })
-   // Materiały DE -------
+   // DE 
    data.materialsDE.edges.forEach(({ node }) => {
       createPage({
          path: `DE/materials/${node.rodzaj}`,
@@ -175,7 +308,8 @@ const createPages = async ({ graphql, actions }) => {
       })
    })
 
-   // Technologie PL ---------------------------------------
+   // Technologie/Maszyny --------------------------------------- 
+   // PL 
    data.technologiesPL.edges.forEach(({ node }) => {
       createPage({
          path: `PL/technology/${node.url}`,
@@ -185,7 +319,7 @@ const createPages = async ({ graphql, actions }) => {
          },
       })
    })
-   // Technologie EN ---------------------------------------
+   // EN 
    data.technologiesEN.edges.forEach(({ node }) => {
       createPage({
          path: `EN/technology/${node.url}`,
@@ -195,7 +329,7 @@ const createPages = async ({ graphql, actions }) => {
          },
       })
    })
-   // Technologie DE ---------------------------------------
+   // DE 
    data.technologiesDE.edges.forEach(({ node }) => {
       createPage({
          path: `DE/technology/${node.url}`,
@@ -205,7 +339,7 @@ const createPages = async ({ graphql, actions }) => {
          },
       })
    })
-   // Technologie FR ---------------------------------------
+   // FR 
    data.technologiesFR.edges.forEach(({ node }) => {
       createPage({
          path: `FR/technology/${node.url}`,

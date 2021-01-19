@@ -10,7 +10,7 @@ const TemplateItem = ({ product }) => {
             className={styles.TemplateItem}
             target="_blank"
             rel="noopener noreferrer"
-            key={item.file.fileName}
+            key={item.file.url}
          >
             <li className={styles.link}>
                <AiFillFilePdf className={styles.icon} />

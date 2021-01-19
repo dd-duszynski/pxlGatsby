@@ -21,6 +21,7 @@ const ProductPage = ({ data }) => {
    const { textContent, isModalOpen, switchModalVisibility } = useContext(
       Context
    )
+
    const {
       nazwa,
       zdjecia,
@@ -33,7 +34,7 @@ const ProductPage = ({ data }) => {
       wymiary,
       zadruk,
       opcjeProduktu,
-   } = data.contentfulProduktyPl
+   } = data.products
 
    const [...images] = zdjecia
 
@@ -49,7 +50,6 @@ const ProductPage = ({ data }) => {
             <BreadcrumbsContainer
                nazwa={nazwa}
                rodzaj={rodzaj}
-               text={textContent.productPage}
                url={url}
             />
             <Carousel>

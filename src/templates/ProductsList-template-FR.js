@@ -7,8 +7,8 @@ import ProductsList from "../components/Products/ProductsList/ProductsList"
 
 const ProductsListTemplate = ({ data: { Produkty } }) => {
    return (
-      <Layout language="PL">
-         <SEO title="PrintXL - Products" />
+      <Layout language="FR">
+         <SEO title="PrintXL - Produkty" />
          <ProductsNav />
          <ProductsList data={Produkty} />
       </Layout>
@@ -17,7 +17,7 @@ const ProductsListTemplate = ({ data: { Produkty } }) => {
 
 export const getData = graphql`
    query($name: String!) {
-      Produkty: allContentfulProduktyPl(
+      Produkty: allContentfulProduktyFr(
          sort: { fields: nazwa }
          filter: { rodzaj: { eq: $name } }
       ) {

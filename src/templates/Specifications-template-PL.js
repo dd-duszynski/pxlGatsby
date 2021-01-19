@@ -5,19 +5,19 @@ import SEO from "../components/SEO/SEO"
 import SpecificationsNav from "../components/Specifications/SpecificationsNav/SpecificationsNav"
 import SpecificationsList from "../components/Specifications/SpecificationsList/SpecificationsList"
 
-const SpecificationsTemplate = ({ data: { Produkty } }) => {
+const SpecificationsTemplate = ({ data: { Products } }) => {
    return (
       <Layout language="PL">
          <SEO title="PrintXL - Specyfikacje" />
          <SpecificationsNav />
-         <SpecificationsList data={Produkty} />
+         <SpecificationsList data={Products} />
       </Layout>
    )
 }
 
 export const getData = graphql`
    query($name: String!) {
-      Produkty: allContentfulProduktyPl(
+      Products: allContentfulProduktyPl(
          sort: { fields: nazwa }
          filter: { rodzaj: { eq: $name } }
       ) {
