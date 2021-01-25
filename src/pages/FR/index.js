@@ -8,18 +8,46 @@ import ContactContainer from "../../components/Contact/ContactContainer"
 import FAQ from "../../components/FAQ/FAQ"
 import MainPageProducts from "../../components/Products/MainPageProducts/MainPageProducts"
 
-const IndexPage = () => {
+const IndexPage = ({ data }) => {
    return (
       <Layout language="FR">
          <SEO title="PrintXL - Imprimerie numérique grand format - Pologne" />
          <HeroVideo />
          <AboutUs />
          <News />
-         <MainPageProducts />
+         <MainPageProducts data={data} />
          <ContactContainer />
          <FAQ />
       </Layout>
    )
 }
-
+export const query = graphql`
+   query {
+      Produkty: allContentfulProduktyFr(
+         filter: { opcjeProduktu: { eq: "Strona Główna" } }
+         limit: 12
+      ) {
+         nodes {
+            nazwa
+            zadruk
+            opcjeProduktu
+            opis {
+               content {
+                  content {
+                     value
+                  }
+               }
+            }
+            opisKrotki
+            rodzaj
+            zdjecia {
+               fixed(height: 200) {
+                  ...GatsbyContentfulFixed
+               }
+            }
+            url
+         }
+      }
+   }
+`
 export default IndexPage

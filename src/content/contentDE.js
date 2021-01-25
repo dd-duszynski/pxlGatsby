@@ -18,22 +18,22 @@ export const contentDE = {
          ],
       },
       news: {
-         header: "Aktualności",
-         downloadBtn: ">> POBIERZ KATALOG <<",
+         header: "Nachrichten",
+         downloadBtn: "Katalog herunterladen",
          christmasCatalog: [
-            "Katalog ze świątecznymi produktami już dostępny!",
-            "Zachęcamy do zapoznania się z systemami, w których łatwo wymienisz grafikę po okresie świątecznym.",
-            "http://printxl.DE/pdf/christmas_PL.pdf",
+            "Katalog mit Weihnachtsprodukten jetzt erhältlich!",
+            "Wir empfehlen Ihnen, sich mit Systemen vertraut zu machen, bei denen Sie nach der Weihnachtszeit problemlos Grafiken austauschen können.",
+            "http://printxl.DE/pdf/christmas_EN.pdf",
          ],
          CovidCatalog: [
-            "Zachęcamy do pobrania naszego nowego katalogu.",
-            "Znajdą w nim Państwo aktualną ofertę na produkty ochronne oraz przydatne akcesoria.",
-            "http://printxl.DE/pdf/COVID_PL_m.pdf",
+            "Hier können Sie unseren Katalog herunterladen.",
+            "Darin finden Sie das aktuelle Angebot für Schutzprodukte und nützliches Zubehör.",
+            "http://printxl.DE/pdf/COVID_DE_m.pdf",
          ],
       },
       productSection: {
-         header: "Produkty",
-         seeAllBtn: ">> ZOBACZ WSZYSTKIE <<",
+         header: "Wir empfehlen",
+         seeAllBtn: ">> Mehr anzeigen <<",
       },
       contact: {
          header: "Kontakt",
@@ -150,17 +150,17 @@ export const contentDE = {
       },
    },
    productPage: {
-      breadcrumbs: ["/DE/", "Strona Główna"],
+      breadcrumbs: ["/DE/", "Startseite"],
       materialLink: "/DE/materials",
       groupOfProducts: [
          "Covid",
-         "Banery",
-         "Flagi",
-         "Rollupy",
-         "Ścianki",
-         "Standy",
-         "Trybunki",
-         "Pozostałe",
+         "Banner",
+         "Flaggen",
+         "Rollups",
+         "Werbewände",
+         "Ständer",
+         "Messetheke",
+         "Sonstige",
       ],
       linkToGroupOfProducts: [
          "DE/products/covid",
@@ -186,13 +186,13 @@ export const contentDE = {
       navigation: {
          text: [
             "Covid",
-            "Banery",
-            "Flagi",
-            "Rollupy",
-            "Ścianki",
-            "Standy",
-            "Trybunki",
-            "Pozostałe",
+            "Banner",
+            "Flaggen",
+            "Rollups",
+            "Werbewände",
+            "Ständer",
+            "Messetheke",
+            "Sonstige",
          ],
          links: [
             "DE/specifications/covid",
@@ -217,11 +217,11 @@ export const contentDE = {
             "DE/materials/textiles",
          ],
       },
-      text: ["Zadruk: ", "Szerokość: ", "Powiększ"],
+      text: ["Druck: ", "Breite: ", "Vergrößern"],
    },
    technology: {
       navigation: {
-         text: ["Sublimacja", "Latex", "UV", "Solvent"],
+         text: ["Sublimation", "Latexdruck", "UV - Druck", "Solvent / Öko-Solvent"],
          links: [
             "DE/technology/sublimation",
             "DE/technology/latex",
@@ -231,51 +231,51 @@ export const contentDE = {
       },
       description: {
          text: [
-            "Opis technologii",
-            "Powiązane produkty",
-            "Powiązane materiały",
+            "Beschreibung der Technologie",
+            "Verwandte Produkte",
+            "Verwandte Materialien",
          ],
       },
    },
    blog: {
-      navigationHeader: "Kategorie",
+      navigationHeader: "Kategorien",
       breadcrumbs: {
-         b1: ["DE/", "Strona Główna"],
+         b1: ["DE/", "Startseite"],
          b2: ["DE/blog/", "Blog"],
       },
-      text: ["CZYTAJ DALEJ", "minut czytania"],
+      text: ["Weiter lesen", "Minuten lesen"],
       tag: {
          printing: [
             "Druk",
-            "Druk - Jeden z najpopularniejszych produktów.",
+            "Druk - xxx",
             "DE/blog/printing/",
          ],
          dtp: [
             "DTP",
-            "DTP - Jeden z najpopularniejszych produktów.",
+            "DTP - xxx",
             "DE/blog/dtp/",
          ],
          products: [
             "Produkty",
-            "Produkty - Jeden z najpopularniejszych produktów.",
+            "Produkty - xxx",
             "DE/blog/products/",
          ],
          technology: [
             "Technologie",
-            "Technologie Jeden z najpopularniejszych produktów.",
+            "Technologie - xxx",
             "DE/blog/technology/",
          ],
          all: [
             "Wszystkie",
-            "Wszystkie - Jeden z najpopularniejszych produktów.",
+            "Wszystkie - xxx",
             "DE/blog/",
          ],
       },
    },
    page404: {
       text: [
-         "Błąd 404. Niestety w naszym serwisie nie ma takiego adresu.",
-         "Wróć na stronę główną",
+         "Fehler 404. Leider gibt es auf unserer Website keine solche Adresse.",
+         "Zurück zur Startseite",
       ],
    },
 }

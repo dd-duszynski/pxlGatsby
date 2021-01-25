@@ -40,6 +40,7 @@ const createPages = async ({ graphql, actions }) => {
                }
             }
          }
+         
          blogPL: allContentfulBlogPl {
             edges {
                node {
