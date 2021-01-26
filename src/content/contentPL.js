@@ -118,7 +118,7 @@ export const contentPL = {
       mainLink: "PL/products",
       navigation: {
          text: [
-            "Covid",
+            "Covid-19",
             "Banery",
             "Flagi",
             "Rollupy",
@@ -154,26 +154,6 @@ export const contentPL = {
    productPage: {
       breadcrumbs: ["/PL/", "Strona Główna"],
       materialLink: "/PL/materials",
-      groupOfProducts: [
-         "Covid",
-         "Banery",
-         "Flagi",
-         "Rollupy",
-         "Ścianki",
-         "Standy",
-         "Trybunki",
-         "Pozostałe",
-      ],
-      linkToGroupOfProducts: [
-         "PL/products/covid",
-         "PL/products/banners",
-         "PL/products/flags",
-         "PL/products/rollups",
-         "PL/products/walls",
-         "PL/products/stands",
-         "PL/products/tribunes",
-         "PL/products/others",
-      ],
       text: [
          "Zainteresowany? Napisz do Nas!",
          "Zalety produktu:",

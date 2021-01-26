@@ -2,10 +2,17 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/Layout/Layout"
 import ProductPage from "../components/ProductPage/ProductPage"
+import SEO from "../components/SEO/SEO"
 
 const ProductPageTemplate = ({ data }) => {
+   const { nazwa, opisKrotki } = data.products
    return (
       <Layout language="PL">
+         <SEO
+            title={`PrintXL - ${nazwa}`}
+            description={`${nazwa} - ${opisKrotki}`}
+            lang="pl"
+         />
          <ProductPage data={data} />
       </Layout>
    )

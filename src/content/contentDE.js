@@ -3,7 +3,10 @@ export const contentDE = {
       heroVideo: [
          ["GROßFORMATDRUCK", "TEXTILDRUCK / PLANEN / SCHILDER & PLATTEN"],
          ["4 DRUCKVERFAHREN", "LATEX / UV / SUBLIMATION / SOLVENT"],
-         ["INFRASTRUKTUR", "DIE SCHNELLE REALISATION DER BESTELLUNGEN ERMÖGLICHT"],
+         [
+            "INFRASTRUKTUR",
+            "DIE SCHNELLE REALISATION DER BESTELLUNGEN ERMÖGLICHT",
+         ],
          ["PRODUKTE", "BEACHFLAGS / MESSEWÄNDE/ ZELTE UND VIEL ANDERES"],
       ],
       aboutUs: {
@@ -13,9 +16,7 @@ export const contentDE = {
             "Wir bieten Druck auf verschiedenen Materialien an, unter anderem: Flaggenmaterial, PVC-Banner, Mesh, Folie mit einer großen Auswahl der Konfektionierung und Systeme.",
             "Wir laden zum Kontakt herzlich ein.",
          ],
-         counter: [
-            "Aufträge:", "Zufriedene Kunden:", "Bedruckte m2:"
-         ],
+         counter: ["Aufträge:", "Zufriedene Kunden:", "Bedruckte m2:"],
       },
       news: {
          header: "Nachrichten",
@@ -116,7 +117,7 @@ export const contentDE = {
       mainLink: "DE/products",
       navigation: {
          text: [
-            "Covid",
+            "Covid-19",
             "Banner",
             "Flaggen",
             "Rollups",
@@ -139,7 +140,7 @@ export const contentDE = {
       productCard: ["SEHEN SIE DAS PRODUKT"],
       tag: {
          bestseller: ["BESTSELLER", "Jeden z najpopularniejszych produktów."],
-         news: ["NOWOŚĆ", "Nowość w naszej ofercie."],
+         news: ["NEUHEIT", "Nowość w naszej ofercie."],
          inOut: ["IN / OUT", "Wykorzystanie wewnątrz i poza budynkiem."],
          indoor: ["INDOOR", "Zalecane wykorzystanie wewnątrz budynku."],
          outdoor: ["OUTDOOR", "Możliwość wykorzystania na zewnątrz."],
@@ -152,33 +153,13 @@ export const contentDE = {
    productPage: {
       breadcrumbs: ["/DE/", "Startseite"],
       materialLink: "/DE/materials",
-      groupOfProducts: [
-         "Covid",
-         "Banner",
-         "Flaggen",
-         "Rollups",
-         "Werbewände",
-         "Ständer",
-         "Messetheke",
-         "Sonstige",
-      ],
-      linkToGroupOfProducts: [
-         "DE/products/covid",
-         "DE/products/banners",
-         "DE/products/flags",
-         "DE/products/rollups",
-         "DE/products/walls",
-         "DE/products/stands",
-         "DE/products/tribunes",
-         "DE/products/others",
-      ],
       text: [
-         "Zainteresowany? Napisz do Nas!",
-         "Zalety produktu:",
-         "Polecane materiały:",
-         "Instrukcje DTP:",
-         "Przykładowe wymiary [cm]:",
-         "Pobierz",
+         "Hast Du Interesse? Schreib an uns!",
+         "Vorteile:",
+         "Empfohlene Stoffe:",
+         "DTP- Anleitung:",
+         "Beispielsabmessungen [cm]:",
+         "Herunterladen",
       ],
    },
    specifications: {
@@ -221,7 +202,12 @@ export const contentDE = {
    },
    technology: {
       navigation: {
-         text: ["Sublimation", "Latexdruck", "UV - Druck", "Solvent / Öko-Solvent"],
+         text: [
+            "Sublimation",
+            "Latexdruck",
+            "UV - Druck",
+            "Solvent / Öko-Solvent",
+         ],
          links: [
             "DE/technology/sublimation",
             "DE/technology/latex",
@@ -245,31 +231,13 @@ export const contentDE = {
       },
       text: ["Weiter lesen", "Minuten lesen"],
       tag: {
-         printing: [
-            "Druk",
-            "Druk - xxx",
-            "DE/blog/printing/",
-         ],
-         dtp: [
-            "DTP",
-            "DTP - xxx",
-            "DE/blog/dtp/",
-         ],
-         products: [
-            "Produkty",
-            "Produkty - xxx",
-            "DE/blog/products/",
-         ],
+         printing: ["Drucken", "Drucken - xxx", "DE/blog/printing/"],
+         dtp: ["DTP", "DTP - xxx", "DE/blog/dtp/"],
+         products: ["Produkte", "Produkte - xxx", "DE/blog/products/"],
          technology: [
-            "Technologie",
-            "Technologie - xxx",
-            "DE/blog/technology/",
+            "Technologien","Technologien - xxx", "DE/blog/technology/",
          ],
-         all: [
-            "Wszystkie",
-            "Wszystkie - xxx",
-            "DE/blog/",
-         ],
+         all: ["Alle von ihnen", "Alle Kategorien", "DE/blog/"],
       },
    },
    page404: {

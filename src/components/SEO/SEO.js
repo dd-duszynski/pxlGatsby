@@ -18,15 +18,16 @@ const getData = graphql`
    }
 `
 
-const SEO = ({ title, description }) => {
+const SEO = ({ lang, title, description }) => {
    const { site } = useStaticQuery(getData)
    const { configTitle, configDescription, configImg } = site.siteMetadata
-
+   
+   let langLogic = lang ? lang : "en" 
    let titleLogic = title ? title : configTitle
    let descriptionLogic = description ? description : configDescription
 
    return (
-      <Helmet htmlAttributes={{ lang: "pl" }} title={titleLogic}>
+      <Helmet htmlAttributes={{ lang: langLogic }} title={titleLogic}>
          <meta name="description" content={descriptionLogic} />
          <meta name="image" content={configImg} />
       </Helmet>

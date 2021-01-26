@@ -4,7 +4,7 @@ const LanguageContext = React.createContext({
    language: null,
    switchLanguage: () => {},
    isModalOpen: false,
-   switchModalVisibility: () => {}
+   switchModalVisibility: () => {},
 })
 
 export default LanguageContext

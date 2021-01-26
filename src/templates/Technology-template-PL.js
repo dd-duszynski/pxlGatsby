@@ -6,23 +6,33 @@ import Technology from "../components/Technology/Technology"
 import SEO from "../components/SEO/SEO"
 
 const TechnologyTemplate = ({ data }) => {
-   const { nazwa } = data.TechnologiePl
+   const { nazwa } = data.Technologie
+   const { tekst } = data.Technologie
 
    return (
       <Layout language="PL">
-         <SEO title={`PrintXL - Technologie - ${nazwa}`} />
+         <SEO
+            title={`PrintXL - Technologie - ${nazwa}`}
+            description={`${nazwa} - ${tekst.content[0].content[0].value}`}
+            lang="pl"
+         />
          <TechnologyNav />
-         <Technology machine={data.TechnologiePl} />
+         <Technology machine={data.Technologie} />
       </Layout>
    )
 }
 
 export const query = graphql`
    query($name: String!) {
-      TechnologiePl: contentfulTechnologiePl(url: { eq: $name }) {
+      Technologie: contentfulTechnologiePl(url: { eq: $name }) {
          nazwa
          tekst {
             json
+            content {
+               content {
+                  value
+               }
+            }
          }
          opisProduktow {
             opisProduktow

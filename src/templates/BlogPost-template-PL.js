@@ -5,9 +5,14 @@ import SEO from "../components/SEO/SEO"
 import Post from "../components/Blog/Post/Post"
 
 const BlogTemplate = ({ data }) => {
+   //opis do rozwinięcia
    return (
       <Layout language="PL">
-         <SEO title={data.post.tytul} />
+         <SEO
+            title={data.post.tytul}
+            description="desc"
+            lang="pl"
+         />
          <Post
             data={data.post}
          />

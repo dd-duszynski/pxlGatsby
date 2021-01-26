@@ -84,19 +84,19 @@ export const contentEN = {
       text: [
          "Location",
          "Poland",
-         "Contactt",
+         "Contact",
          "Social Media",
          "Cooperation",
          "Terms of cooperation",
          "DTP Instruction",
          "Company's data",
          "KRS",
-         "VAT nr",
+         "VAT",
          "REGON",
       ],
       links: [
-         "http://printxl.pl/Instructions/termsOfCooperation_PL.pdf",
-         "http://printxl.pl/Instructions/Instructions_PL.pdf",
+         "http://printxl.pl/Instructions/termsOfCooperation_EN.pdf",
+         "http://printxl.pl/Instructions/Instructions_EN.pdf",
       ],
    },
    navigation: {
@@ -115,7 +115,7 @@ export const contentEN = {
       mainLink: "EN/products",
       navigation: {
          text: [
-            "Covid",
+            "Covid-19",
             "Banners",
             "Flags",
             "Rollups",
@@ -152,26 +152,26 @@ export const contentEN = {
       breadcrumbs: ["/EN/", "Main Page"],
       materialLink: "/EN/materials",
       text: [
-         "Zainteresowany? Napisz do Nas!",
-         "Zalety produktu:",
-         "Polecane materiały:",
-         "Instrukcje DTP:",
-         "Przykładowe wymiary [cm]:",
-         "Pobierz",
+         "Interested? Write to us!",
+         "Product advantages:",
+         "Recommended materials:",
+         "DTP instructions:",
+         "Example dimensions [cm]:",
+         "Download",
       ],
    },
    specifications: {
       mainLink: "EN/specifications",
       navigation: {
          text: [
-            "Covid",
-            "Banery",
-            "Flagi",
-            "Rollupy",
-            "Ścianki",
-            "Standy",
-            "Trybunki",
-            "Pozostałe",
+            "Covid-19",
+            "Banners",
+            "Flags",
+            "Rollups",
+            "Walls",
+            "Stands",
+            "Tribunes",
+            "Others",
          ],
          links: [
             "EN/specifications/covid",
@@ -217,12 +217,12 @@ export const contentEN = {
       },
    },
    blog: {
-      navigationHeader: "Kategorie",
+      navigationHeader: "Categories",
       breadcrumbs: {
-         b1: ["EN/", "Strona Główna"],
+         b1: ["EN/", "Main Page"],
          b2: ["EN/blog/", "Blog"],
       },
-      text: ["CZYTAJ DALEJ", "minut czytania"],
+      text: ["READ MORE", "minutes reading"],
       tag: {
          printing: [
             "Druk",
@@ -253,8 +253,8 @@ export const contentEN = {
    },
    page404: {
       text: [
-         "Błąd 404. Niestety w naszym serwisie nie ma takiego adresu.",
-         "Wróć na stronę główną",
+         "Error 404. Unfortunately, there is no such address on our website.",
+         "Back to home page",
       ],
    },
 }

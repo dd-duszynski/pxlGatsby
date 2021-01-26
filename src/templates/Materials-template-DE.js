@@ -6,9 +6,14 @@ import MaterialsNav from "../components/Materials/MaterialsNav/MaterialsNav"
 import SEO from "../components/SEO/SEO"
 
 const MaterialsTemplate = ({ data: { Materials } }) => {
+   // grupa materiałów do wyciągnięcia
    return (
       <Layout language="DE">
-         <SEO title="PrintXL - Werbetechnik" />
+         <SEO
+            title="PrintXL - Werbetechnik"
+            description="PrintXL - Werbetechnik"
+            lang="de"
+         />
          <MaterialsNav />
          <Material data={Materials} />
       </Layout>

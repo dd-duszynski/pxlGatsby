@@ -6,9 +6,17 @@ import ProductsNav from "../components/Products/ProductsNav/ProductsNav"
 import ProductsList from "../components/Products/ProductsList/ProductsList"
 
 const ProductsListTemplate = ({ data: { Produkty } }) => {
+   // grupa do wyciągnięcia
+
+   const { rodzaj } = Produkty.nodes[0]
    return (
       <Layout language="FR">
          <SEO title="PrintXL - Produkty" />
+         <SEO
+            title={`PrintXL - Produkte - ${rodzaj}`}
+            description="PrintXL - Produits"
+            lang="fr"
+         />
          <ProductsNav />
          <ProductsList data={Produkty} />
       </Layout>

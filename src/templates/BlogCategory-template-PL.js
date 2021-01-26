@@ -6,10 +6,16 @@ import BlogSearchBar from "../components/Blog/SearchBar/SearchBar"
 import SEO from "../components/SEO/SEO"
 
 const BlogCategory = ({ data }) => {
+   //kategoria do wyciągnięcia
+   
    const { postyPL } = data
    return (
       <Layout language="PL">
-         <SEO title="PrintXL - Blog" />
+         <SEO
+            title="PrintXL - Blog"
+            description="desc"
+            lang="pl"
+         />
          <BlogList data={postyPL.edges} />
          <BlogSearchBar />
       </Layout>
