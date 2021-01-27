@@ -12,7 +12,11 @@ import MainPageProducts from "../../components/Products/MainPageProducts/MainPag
 const IndexPage = ({ data }) => {
    return (
       <Layout language="EN">
-         <SEO title="PrintXL - Digital Printing House - Poland" />
+         <SEO
+            title="PrintXL - Digital Printing House - Poland"
+            description="Digital large-format printing house in Poznań. We offer printing in the following technologies: Sublimation, Latex, UV, Solvent and ready-made advertising systems: Flags, Banners, Exhibition walls, Stands, Counters, Beachflags."
+            lang="en"
+         />
          <HeroVideo />
          <AboutUs />
          <News />

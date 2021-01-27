@@ -9,6 +9,9 @@ const SEO = {
       "Tribunes",
       "Others",
    ],
+   groupOfMaterials: [
+      "Vinyls", "Foils", "Flat", "Decorative", "Textiles"
+   ],
    specifications: "List of specifications for the group's products: "
 }
 

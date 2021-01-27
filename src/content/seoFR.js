@@ -9,7 +9,8 @@ const SEO = {
       "Comptoirs",
       "Autres",
    ],
-   specifications: "Liste des spécifications des produits du groupe: "
+   groupOfMaterials: ["Vinyle", "Adhésifs", "Rigide", "Décoration", "Textile"],
+   specifications: "Liste des spécifications des produits du groupe: ",
 }
 
 export default SEO

@@ -7,8 +7,6 @@ import H2 from "../UI/Headers/H2"
 import Paragraph from "../UI/Paragraph/Paragraph"
 import ProductCard from "../Products/ProductCard/ProductCard"
 import Carousel from "../Carousel/Carousel"
-import { GiRolledCloth } from "react-icons/gi"
-import { Link } from "gatsby"
 import SingleMaterial from "../Materials/SingleMaterial/SingleMaterial"
 
 const Technology = ({ machine }) => {
@@ -77,7 +75,7 @@ const Technology = ({ machine }) => {
                </Paragraph>
             <Carousel itemsToShow={1} class={styles.materialsBox}>
                {machine.materialy.map(item => {
-                  return <SingleMaterial data={item} key={item.id} />
+                  return <SingleMaterial data={item} key={item.kod} />
                })}
             </Carousel>
             </div>

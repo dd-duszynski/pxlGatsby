@@ -4,14 +4,18 @@ import Material from "../components/Materials/Materials"
 import Layout from "../components/Layout/Layout"
 import MaterialsNav from "../components/Materials/MaterialsNav/MaterialsNav"
 import SEO from "../components/SEO/SEO"
+import { contentEN } from "../content/contentEN"
+import groupOfProductsHandler from "../utils/groupOfProductsHandler"
 
 const MaterialsTemplate = ({ data: { Materials } }) => {
-   // grupa materiałów do wyciągnięcia
+   const { rodzaj } = Materials.nodes[0]
+   const groupOfProducts = groupOfProductsHandler(contentEN, rodzaj)
+
    return (
       <Layout language="EN">
          <SEO
-            title="PrintXL - Materials"
-            description="PrintXL - Materials"
+            title={`${contentEN.seo.matTitle} ${groupOfProducts}`}
+            description={`${contentEN.seo.matDesc} ${groupOfProducts}`}
             lang="en"
          />
          <MaterialsNav />

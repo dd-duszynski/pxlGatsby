@@ -4,45 +4,18 @@ import Layout from "../components/Layout/Layout"
 import SEO from "../components/SEO/SEO"
 import SpecificationsNav from "../components/Specifications/SpecificationsNav/SpecificationsNav"
 import SpecificationsList from "../components/Specifications/SpecificationsList/SpecificationsList"
-import seoEN from "../content/seoEN"
+import { contentEN } from "../content/contentEN"
+import groupOfProductsHandler from "../utils/groupOfProductsHandler"
 
 const SpecificationsTemplate = ({ data: { Products } }) => {
    const { rodzaj } = Products.nodes[0]
-   let groupOfTemplates
-   switch (rodzaj) {
-      case "banners":
-         groupOfTemplates = seoEN.groupOfProducts[1]
-         break
-      case "flags":
-         groupOfTemplates = seoEN.groupOfProducts[2]
-         break
-      case "rollups":
-         groupOfTemplates = seoEN.groupOfProducts[3]
-         break
-      case "walls":
-         groupOfTemplates = seoEN.groupOfProducts[4]
-         break
-      case "stands":
-         groupOfTemplates = seoEN.groupOfProducts[5]
-         break
-      case "tribunes":
-         groupOfTemplates = seoEN.groupOfProducts[6]
-         break
-      case "others":
-         groupOfTemplates = seoEN.groupOfProducts[7]
-         break
-      case "covid":
-         groupOfTemplates = seoEN.groupOfProducts[0]
-         break
-      default:
-         groupOfTemplates = seoEN.groupOfProducts[1]
-   }
+   const groupOfProducts = groupOfProductsHandler(contentEN, rodzaj)
 
    return (
       <Layout language="EN">
          <SEO 
-            title={`PrintXL - Specifications - ${groupOfTemplates}`}
-            description={`${seoEN.specifications} ${groupOfTemplates}`}
+            title={`${contentEN.seo.specTitle} ${groupOfProducts}`}
+            description={`${contentEN.seo.specDesc} ${groupOfProducts}`}
             lang="en"   
          />
          <SpecificationsNav />

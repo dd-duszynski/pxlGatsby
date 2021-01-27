@@ -11,7 +11,11 @@ import MainPageProducts from "../../components/Products/MainPageProducts/MainPag
 const IndexPage = ({ data }) => {
    return (
       <Layout language="PL">
-         <SEO title="PrintXL - Cyfrowa Drukarnia Wielkoformatowa - Poznań" />
+         <SEO
+            title="PrintXL - Cyfrowa Drukarnia Wielkoformatowa - Poznań"
+            description="Cyfrowa drukarnia wielkoformatowa w Poznaniu. Oferujemy druk w technologiach: Sublimacja, Latex, UV, Solwent oraz gotowe systemy reklamowe: Flagi, Banery, Ścianki wystawiennicze, Standy, Trybunki, Beachflagi."
+            lang="pl"
+         />
          <HeroVideo />
          <AboutUs />
          <News />

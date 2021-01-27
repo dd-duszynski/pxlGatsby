@@ -4,28 +4,29 @@ import Layout from "../components/Layout/Layout"
 import SEO from "../components/SEO/SEO"
 import ProductsNav from "../components/Products/ProductsNav/ProductsNav"
 import ProductsList from "../components/Products/ProductsList/ProductsList"
+import {contentPL} from "../content/contentPL"
+import groupOfProductsHandler from "../utils/groupOfProductsHandler"
 
-const ProductsListTemplate = ({ data: { Produkty } }) => {
-   // grupa do wyciągnięcia
+const ProductsListTemplate = ({ data: { Products } }) => {
+   const { rodzaj } = Products.nodes[0]
+   const groupOfProducts = groupOfProductsHandler(contentPL, rodzaj)
 
-   const { rodzaj } = Produkty.nodes[0]
    return (
       <Layout language="PL">
-         <SEO title="PrintXL - Products" />
          <SEO
-            title={`PrintXL - Produkte - ${rodzaj}`}
-            description="PrintXL - Produkty"
+            title={`${contentPL.seo.prodTitle} ${groupOfProducts}`}
+            description={`${contentPL.seo.prodDesc} ${groupOfProducts}`}
             lang="pl"
          />
          <ProductsNav />
-         <ProductsList data={Produkty} />
+         <ProductsList data={Products} />
       </Layout>
    )
 }
 
 export const getData = graphql`
    query($name: String!) {
-      Produkty: allContentfulProduktyPl(
+      Products: allContentfulProduktyPl(
          sort: { fields: nazwa }
          filter: { rodzaj: { eq: $name } }
       ) {

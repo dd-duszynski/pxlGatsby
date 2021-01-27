@@ -8,14 +8,18 @@ import ContactContainer from "../../components/Contact/ContactContainer"
 import FAQ from "../../components/FAQ/FAQ"
 import MainPageProducts from "../../components/Products/MainPageProducts/MainPageProducts"
 
-const IndexPage = ({data}) => {
+const IndexPage = ({ data }) => {
    return (
       <Layout language="DE">
-         <SEO title="PrintXL - Digitale Großformatdruckerei - Polen" />
+         <SEO
+            title="PrintXL - Digitale Großformatdruckerei - Polen"
+            description="Digitale Großformatdruckerei in Posen. Wir bieten Druck in folgenden Technologien an: Sublimation, Latex, UV, Lösungsmittel und fertige Werbesysteme: Flaggen, Banner, Ausstellungswände, Stände, Theken, Strandflaggen."
+            lang="de"
+         />
          <HeroVideo />
          <AboutUs />
          <News />
-         <MainPageProducts data={data}/>
+         <MainPageProducts data={data} />
          <ContactContainer />
          <FAQ />
       </Layout>

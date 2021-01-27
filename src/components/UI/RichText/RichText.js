@@ -1,6 +1,5 @@
 // https://www.youtube.com/watch?v=MSbpKwZMaXQ
 // https://www.npmjs.com/package/@contentful/rich-text-react-renderer
-
 import React from "react"
 import styles from "./RichText.module.scss"
 import H1 from "../Headers/H1"
@@ -11,11 +10,6 @@ import Paragraph from "../Paragraph/Paragraph"
 import { BLOCKS /*MARKS*/ } from "@contentful/rich-text-types"
 
 export const RICHTEXT_OPTIONS = {
-   // renderMark: {
-   //    [MARKS.BOLD]: text => {
-   //       return <Paragraph addClass={styles.paragraphBold}>{text}</Paragraph>
-   //    },
-   // },
    renderNode: {
       [BLOCKS.EMBEDDED_ASSET]: (node,children) => {
          return <img src={node.data.target.fields.file["en-US"].url} className={styles.img}/>

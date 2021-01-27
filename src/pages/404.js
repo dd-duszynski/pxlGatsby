@@ -4,7 +4,7 @@ import Page404 from "../components/404/404"
 
 const page404 = () => {
    return (
-      <Layout language="PL">
+      <Layout language="EN">
          <Page404 />
       </Layout>
    )

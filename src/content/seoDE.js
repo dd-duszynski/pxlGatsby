@@ -9,8 +9,8 @@ const SEO = {
       "Messetheke",
       "Sonstige",
    ],
-   specifications: "Liste der Spezifikationen für die Gruppenprodukte: "
-
+   groupOfMaterials: ["Vinyls", "Folien", "Platten", "Dekorativ", "Textilien"],
+   specifications: "Liste der Spezifikationen für die Gruppenprodukte: ",
 }
 
 export default SEO

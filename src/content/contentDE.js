@@ -235,7 +235,9 @@ export const contentDE = {
          dtp: ["DTP", "DTP - xxx", "DE/blog/dtp/"],
          products: ["Produkte", "Produkte - xxx", "DE/blog/products/"],
          technology: [
-            "Technologien","Technologien - xxx", "DE/blog/technology/",
+            "Technologien",
+            "Technologien - xxx",
+            "DE/blog/technology/",
          ],
          all: ["Alle von ihnen", "Alle Kategorien", "DE/blog/"],
       },
@@ -245,5 +247,14 @@ export const contentDE = {
          "Fehler 404. Leider gibt es auf unserer Website keine solche Adresse.",
          "Zurück zur Startseite",
       ],
+   },
+   seo: {
+      specTitle: "PrintXL - Druckdatenvorbereitung -",
+      specDesc: "Liste der Spezifikationen für die Gruppenprodukte:",
+      prodTitle: "PrintXL - Produkte -" ,
+      prodDesc: "Liste der Produkte aus der Gruppe:" ,
+      matTitle: "PrintXL - Werbetechnik -",
+      matDesc: "Liste der Materialien aus der Gruppe:",
+      technologyTitle: "PrintXL - Druckverfahren -",
    },
 }

@@ -7,7 +7,11 @@ class Contact extends Component {
    render() {
       return (
          <Layout language="EN">
-            <SEO title="PrintXL - Contact us!" />
+            <SEO
+               title="PrintXL - Contact"
+               description="Contact page. Feel free to contact us - Write to us!"
+               lang="en"
+            />
             <ContactContainer />
          </Layout>
       )

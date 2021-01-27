@@ -186,7 +186,7 @@ export const contentPL = {
             "PL/specifications/tribunes",
             "PL/specifications/others",
          ],
-      },
+      }
    },
    materials: {
       navigation: {
@@ -260,4 +260,13 @@ export const contentPL = {
          "Wróć na stronę główną",
       ],
    },
+   seo: {
+      specTitle: "PrintXL - Specyfikacje -",
+      specDesc: "Lista specyfikacji do produktów z grupy:",
+      prodTitle: "PrintXL - Produkty -" ,
+      prodDesc: "Lista produktów z grupy:" ,
+      matTitle: "PrintXL - Materiały -",
+      matDesc: "Lista materiałów z grupy:",
+      technologyTitle: "PrintXL - Technologie -",
+   }
 }

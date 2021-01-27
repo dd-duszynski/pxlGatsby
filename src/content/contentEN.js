@@ -257,4 +257,13 @@ export const contentEN = {
          "Back to home page",
       ],
    },
+   seo: {
+      specTitle: "PrintXL - Specifications -",
+      specDesc: "List of specifications for the group's products:",
+      prodTitle: "PrintXL - Products -" ,
+      prodDesc: "List of products from the group:" ,
+      matTitle: "PrintXL - Materials -",
+      matDesc: "List of materials from the group:",
+      technologyTitle: "PrintXL - Technology -",
+   }
 }

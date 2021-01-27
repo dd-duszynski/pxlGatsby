@@ -9,6 +9,13 @@ const SEO = {
       "Trybunki",
       "Pozostałe",
    ],
+   groupOfMaterials: [
+      "Vinyle", 
+      "Folie", 
+      "Płaskie", 
+      "Dekoracyjne", 
+      "Tekstylia"
+   ],
    specifications: "Lista specyfikacji do produktów grupy: "
 }
 

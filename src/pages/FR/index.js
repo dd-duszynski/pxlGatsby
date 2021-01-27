@@ -11,7 +11,11 @@ import MainPageProducts from "../../components/Products/MainPageProducts/MainPag
 const IndexPage = ({ data }) => {
    return (
       <Layout language="FR">
-         <SEO title="PrintXL - Imprimerie numérique grand format - Pologne" />
+         <SEO
+            title="PrintXL - Imprimerie numérique grand format - Pologne"
+            description="Imprimerie numérique grand format à Poznań. Nous proposons des impressions dans les technologies suivantes: Sublimation, Latex, UV, Solvant et systèmes publicitaires prêts à l'emploi: Drapeaux, Bannières, Murs d'exposition, Stands, Comptoirs, Beachflags."
+            lang="fr"
+         />
          <HeroVideo />
          <AboutUs />
          <News />
