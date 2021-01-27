@@ -29,7 +29,7 @@ const RhombusBtn = ({ children, type, link, addClass, text }) => {
       case "link":
          renderResult = (
             <Link
-               to={link}
+               to={`/${link}`}
                className={[styles.RhombusLink, addClass].join(" ")}
             >
                {children}
@@ -51,7 +51,7 @@ const RhombusBtn = ({ children, type, link, addClass, text }) => {
       case "navLink":
          renderResult = (
             <Link
-               to={link}
+               to={`/${link}`}
                className={[styles.RhombusNavBtn, addClass].join(" ")}
                activeClassName={styles.active}
             >
@@ -60,15 +60,7 @@ const RhombusBtn = ({ children, type, link, addClass, text }) => {
          )
          break
       default:
-         renderResult = (
-            <button
-               type="submit"
-               to={link}
-               className={[styles.RhombusBtn, addClass].join(" ")}
-            >
-               {text}
-            </button>
-         )
+         renderResult = null
    }
    return renderResult
 }

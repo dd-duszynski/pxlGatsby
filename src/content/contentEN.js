@@ -149,8 +149,8 @@ export const contentEN = {
       },
    },
    productPage: {
-      breadcrumbs: ["/EN/", "Main Page"],
-      materialLink: "/EN/materials",
+      breadcrumbs: ["EN/", "Main Page"],
+      materialLink: "EN/materials",
       text: [
          "Interested? Write to us!",
          "Product advantages:",

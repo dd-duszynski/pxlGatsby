@@ -7,35 +7,31 @@
    background-color: white;
    border-radius: 8px;
    position: relative;
-   .header {
-      display: block;
-      font-size: 17px;
-      margin-bottom: 5px;
-      color: $color-main;
-      @include Roboto900;
+}
+.formHeader {
+   display: block;
+   font-size: 18px !important;
+   margin-bottom: 6px;
+   @include paragraph;
+}
+.form {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+.formControl {
+   font-size: $font-size-4;
+   line-height: $line-height-4;
+   color: $color-font;
+   width: 100%;
+   display: block;
+   border-style: none;
+   border-bottom: 1px solid $color-main;
+   &:focus {
+      outline: none;
+      border-bottom: 1px solid $color-accent;
    }
-
-   form{
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-   }
-
-   .formControl {
-      font-size: $font-size-4;
-      line-height: $line-height-4;
-      color: $color-font;
-      width: 100%;
-      display: block;
-      border-style: none;
-      border-bottom: 1px solid $color-main;
-      &:focus {
-         outline: none;
-         border-bottom: 1px solid $color-accent;
-      }
-   }
-
 }
 
 @media (max-width: 830px) {

@@ -1,9 +1,7 @@
 import React, { useContext, useState, useEffect } from "react"
-import ReactImageMagnify from "react-image-magnify"
 import { RICHTEXT_OPTIONS } from "../../UI/RichText/RichText"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import TagsContainer from "../../ProductPage/TagsContainer/TagsContainer"
-
 import styles from "./SingleMaterial.module.scss"
 import H2 from "../../UI/Headers/H2"
 import Paragraph from "../../UI/Paragraph/Paragraph"
@@ -30,28 +28,10 @@ const SingleMaterial = ({ data }) => {
 
    const imageMagnify = (
       <div className={styles.imgContainer}>
-         <ReactImageMagnify
-            enlargedImageContainerClassName={
-               styles.ImageMagnify_largeImageContainer
-            }
-            enlargedImageClassName={styles.ImageMagnify_largeImage}
-            {...{
-               smallImage: {
-                  alt: data.nazwa,
-                  src: data.zdjecia.fixed.src,
-                  width: 426,
-                  height: 284,
-                  isFluidWidth: false,
-               },
-               largeImage: {
-                  src: data.zdjecia.fixed.src,
-                  width: 1200,
-                  height: 800,
-               },
-               isHintEnabled: true,
-               shouldHideHintAfterFirstActivation: false,
-               hintTextMouse: textContent.materials.text[2],
-            }}
+         <img
+            src={data.zdjecia.fixed.src}
+            alt={data.nazwa}
+            className={styles.img}
          />
       </div>
    )

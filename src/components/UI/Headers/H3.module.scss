@@ -1,6 +1,6 @@
-@import '../../../scss/variables.scss';
+@import "../../../scss/variables.scss";
 
-.H3{
+.H3 {
    @include Roboto400;
    color: $color-main;
    font-size: $font-size-3;

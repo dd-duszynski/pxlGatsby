@@ -1,0 +1,17 @@
+.tagsContainer,
+.tagsTopContainer {
+   position: absolute;
+   display: flex;
+   z-index: 1;
+}
+.tagsContainer {
+   bottom: 0;
+   right: 0;
+}
+.tagsTopContainer {
+   top: 0;
+   left: 0;
+   :nth-child(1) {
+      border-top-left-radius: 14px;
+   }
+}

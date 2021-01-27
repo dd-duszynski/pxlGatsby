@@ -151,8 +151,8 @@ export const contentDE = {
       },
    },
    productPage: {
-      breadcrumbs: ["/DE/", "Startseite"],
-      materialLink: "/DE/materials",
+      breadcrumbs: ["DE/", "Startseite"],
+      materialLink: "DE/materials",
       text: [
          "Hast Du Interesse? Schreib an uns!",
          "Vorteile:",

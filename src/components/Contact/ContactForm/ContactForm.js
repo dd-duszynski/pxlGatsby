@@ -3,6 +3,7 @@ import styles from "./ContactForm.module.scss"
 import RhombusBtn from "../../UI/RhombusBtn/RhombusBtn"
 import Input from "../../UI/Input/Input"
 import TextArea from "../../UI/Input/TextArea"
+import Paragraph from "../../UI/Paragraph/Paragraph"
 
 const ContactForm = ({ text }) => {
    const [name, setName] = useState("")
@@ -44,7 +45,9 @@ const ContactForm = ({ text }) => {
    }
    return (
       <section className={styles.ContactForm}>
-         <header className={styles.header}>{text[8]}</header>
+         <Paragraph addClass={styles.formHeader}>
+            {text[8]}
+         </Paragraph>
          <form className={styles.form} onSubmit={handleSubmit}>
             <Input
                val={name}

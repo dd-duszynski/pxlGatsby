@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react"
+import React, { useContext } from "react"
 import { Link } from "gatsby"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { GiRolledCloth } from "react-icons/gi"
@@ -18,9 +18,11 @@ import Modal from "../Modal/Modal"
 import ContactForm from "../Contact/ContactForm/ContactForm"
 
 const ProductPage = ({ data }) => {
-   const { textContent, isModalOpen, switchModalVisibility } = useContext(
-      Context
-   )
+   const { 
+      textContent, 
+      isModalOpen, 
+      switchModalVisibility 
+   } = useContext(Context)
 
    const {
       nazwa,
@@ -35,7 +37,7 @@ const ProductPage = ({ data }) => {
       zadruk,
       opcjeProduktu,
    } = data.products
-
+   
    const [...images] = zdjecia
 
    return (
@@ -47,11 +49,7 @@ const ProductPage = ({ data }) => {
             <ContactForm text={textContent.mainPage.contact.text} />
          </Modal>
          <div className={styles.leftSection}>
-            <BreadcrumbsContainer
-               nazwa={nazwa}
-               rodzaj={rodzaj}
-               url={url}
-            />
+            <BreadcrumbsContainer nazwa={nazwa} rodzaj={rodzaj} url={url} />
             <Carousel>
                {images.map((item, index) => (
                   <div className={styles.imgContainer} key={index}>
@@ -82,7 +80,7 @@ const ProductPage = ({ data }) => {
             {documentToReactComponents(opis.json, RICHTEXT_OPTIONS)}
             <H2 addClass={styles.header}>{textContent.productPage.text[1]}</H2>
             {zalety.map(item => (
-               <div className={styles.iconContainer}>
+               <div className={styles.iconContainer} key={item}>
                   <AiOutlineCheck className={styles.icon} />
                   <Paragraph>{item}</Paragraph>
                </div>
@@ -94,10 +92,10 @@ const ProductPage = ({ data }) => {
                      {textContent.productPage.text[2]}
                   </H2>
                   {polecaneMateriay.map(item => (
-                     <div className={styles.iconContainer}>
+                     <div className={styles.iconContainer} key={item.kod}>
                         <GiRolledCloth className={styles.icon} />
                         <Link
-                           to={`${textContent.productPage.materialLink}/${item.rodzaj}/#${item.kod}`}
+                           to={`/${textContent.productPage.materialLink}/${item.rodzaj}/#${item.kod}`}
                            className={styles.link}
                         >
                            {item.nazwa}

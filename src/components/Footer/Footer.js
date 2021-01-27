@@ -35,9 +35,7 @@ const Footer = () => {
             </div>
 
             <div className={styles.box}>
-               <H3 addClass={styles.heading}>
-                  {textContent.footer.text[2]}
-               </H3>
+               <H3 addClass={styles.heading}>{textContent.footer.text[2]}</H3>
                <div className={styles.boxItem}>
                   <a className={styles.link} href="mailto:info@printxl.pl">
                      <IoMdMail className={styles.icon} />
@@ -52,9 +50,7 @@ const Footer = () => {
             </div>
 
             <div className={styles.box}>
-               <H3 addClass={styles.heading}>
-                  {textContent.footer.text[3]}
-               </H3>
+               <H3 addClass={styles.heading}>{textContent.footer.text[3]}</H3>
                <div className={styles.boxItem}>
                   <a
                      className={styles.link}
@@ -78,9 +74,7 @@ const Footer = () => {
             </div>
 
             <div className={styles.box}>
-               <H3 addClass={styles.heading}>
-                  {textContent.footer.text[4]}
-               </H3>
+               <H3 addClass={styles.heading}>{textContent.footer.text[4]}</H3>
                <div className={styles.boxItem}>
                   <a
                      className={styles.link}
@@ -104,9 +98,7 @@ const Footer = () => {
             </div>
 
             <div className={styles.box}>
-               <H3 addClass={styles.heading}>
-                  {textContent.footer.text[7]}
-               </H3>
+               <H3 addClass={styles.heading}>{textContent.footer.text[7]}</H3>
                <div className={styles.boxItem}>
                   <div className={styles.innerContainer}>
                      <BsInfoCircleFill className={styles.icon} />

@@ -152,8 +152,8 @@ export const contentFR = {
       },
    },
    productPage: {
-      breadcrumbs: ["/FR/", "Accueil"],
-      materialLink: "/FR/materials",
+      breadcrumbs: ["FR/", "Accueil"],
+      materialLink: "FR/materials",
       text: [
          "Plus d'infos? Écrivez-nous!",
          "Avantages du produit:",
