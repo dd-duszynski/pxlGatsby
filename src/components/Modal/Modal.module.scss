@@ -1,10 +1,10 @@
 @import "../../scss/variables.scss";
 
-.Modal{
+.Modal {
    position: fixed;
    top: 0;
    left: 0;
-   width: 100vw;
+   width: calc(100vw - 10px);
    height: 100vh;
    z-index: 20;
    display: flex;
@@ -14,44 +14,54 @@
    opacity: 1;
    transition: all 2s;
 }
-.backdrop{
+.backdrop {
    position: absolute;
    height: 100%;
    width: 100%;
-   background-color: rgba(50,50,50,.9);
+   background-color: rgba(50, 50, 50, 0.9);
 }
-.container{
+.container {
    position: relative;
-   padding: 60px 60px 40px;
+   padding: 60px;
    background-color: #fff;
    border-radius: 8px;
    z-index: 21;
+   width: 500px;
 }
-.closeBtn{
+.closeBtn {
    position: absolute;
    right: 10px;
    top: 8px;
    width: 40px;
    height: 40px;
-   &:hover{
+   &:hover {
       cursor: pointer;
-      .line1, .line2{
+      .line1,
+      .line2 {
          background-color: $color-main2;
       }
    }
 }
-.line1, .line2{
+.line1,
+.line2 {
    background-color: $color-main;
    height: 2px;
    width: 30px;
 }
-.line1{
-   transform: rotate(-45deg) translate(-10px, 18px);
+.line1 {
+   transform: rotate(-45deg) translate(-11px, 18px);
 }
-.line2{
+.line2 {
    transform: rotate(45deg) translate(16px, 10px);
 }
 
-.box{
-   width: 400px;
+@media (max-width: 550px) {
+   .container {
+      position: relative;
+      padding: 60px 30px 40px;
+      background-color: #fff;
+      border-radius: 8px;
+      z-index: 20;
+      width: auto;
+   }
 }

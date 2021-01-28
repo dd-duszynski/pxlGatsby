@@ -4,41 +4,61 @@
    position: absolute;
    top: 0;
    left: 0;
-   max-height: 80px;
+   display: flex;
+   align-items: center;
+   height: 60px;
+   width: 60%;
+   max-width: 600px;
+   padding-left: 10%;
+   clip-path: polygon(0 0, 95% 0, 100% 100%, 0 100%);
+   @include mainGradient;
+   box-shadow: 10px 10px grey;
 }
 
 .heading {
-   position: absolute;
-   top: 16px;
-   left: 10%;
    color: white !important;
 }
 
-@media screen and (max-width: 1150px) {
-   .heading {
-      font-size: 23px;
-      top: 12px;
-   }
-   .leftBar {
-      max-height: 70px;
-   }
-}
+// @import "../../../scss/variables.scss";
 
-@media screen and (max-width: 600px) {
-   .heading {
-      font-size: $font-size-3;
-      top: 6px;
-   }
-   .leftBar {
-      max-height: 58px;
-   }
-}
+// .leftBar {
+//    position: absolute;
+//    top: 0;
+//    left: 0;
+//    max-height: 80px;
+// }
 
-@media screen and (max-width: 450px) {
-   .heading {
-      top: 4px;
-   }
-   .leftBar {
-      max-height: 52px;
-   }
-}
+// .heading {
+//    position: absolute;
+//    top: 16px;
+//    left: 10%;
+//    color: white !important;
+// }
+
+// @media screen and (max-width: 1150px) {
+//    .heading {
+//       font-size: 23px;
+//       top: 12px;
+//    }
+//    .leftBar {
+//       max-height: 70px;
+//    }
+// }
+
+// @media screen and (max-width: 600px) {
+//    .heading {
+//       top: 6px;
+//    }
+//    .leftBar {
+//       max-height: 58px;
+//    }
+// }
+
+// @media screen and (max-width: 450px) {
+//    .heading {
+//       top: 4px;
+//    }
+//    .leftBar {
+//       max-height: 52px;
+//    }
+// }

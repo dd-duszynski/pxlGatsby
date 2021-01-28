@@ -1,20 +1,15 @@
 @import "../../../scss/variables.scss";
 
-@import '../../../scss/variables.scss';
-
-.H1{
+.H1 {
    @include Roboto900;
    color: $color-main;
    font-size: $font-size-1;
    line-height: $line-height-1;
 }
-.H1_Italic{
+
+.H1_Italic {
    @include Roboto900i;
    color: $color-main;
    font-size: $font-size-1;
    line-height: $line-height-1;
-}
-
-.H3{
-   @include Roboto400;
 }

@@ -19,7 +19,7 @@ const Post = ({ data }) => {
             <Breadcrumbs
                b1={[blog.breadcrumbs.b1[0], blog.breadcrumbs.b1[1]]}
                b2={[blog.breadcrumbs.b2[0], blog.breadcrumbs.b2[1]]}
-               b3={[`${blog.breadcrumbs.b2[0]}${tytul}/`, tytul]}
+               b3={[`${blog.breadcrumbs.b2[0]}${tytul}`, tytul]}
             />
             <div className={styles.imageBox}>
                <img src={zdjecia[0].fluid.src} alt="" />

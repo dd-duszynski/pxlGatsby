@@ -6,6 +6,7 @@ import Card from "../../UI/Card/Card"
 import Paragraph from "../../UI/Paragraph/Paragraph"
 import H2 from "../../UI/Headers/H2"
 import Subtitle from "../../UI/Subtitle/Subtitle"
+import HorizontalBar from "../../UI/Bars/HorizontalBar"
 
 const BlogCard = ({ blog }) => {
    const { tytul, zdjecia, dataPublikacji, kategorie, trescKrotka } = blog.node
@@ -17,11 +18,10 @@ const BlogCard = ({ blog }) => {
          <Card tags={kategorie} img={zdjecia[0].fluid} />
          {/* Right Side*/}
          <div className={styles.textContainer}>
-            <div className={styles.bar} />
-            <H2 addClass={styles.title}>{tytul}</H2>
-            <Subtitle addClass={styles.date}>
-               {dataPublikacji} | 5 min czytania
-            </Subtitle>
+            <HorizontalBar>
+               <H2>{tytul}</H2>
+               <Subtitle>{dataPublikacji} | 5 min czytania</Subtitle>
+            </HorizontalBar>
             <Paragraph addClass={styles.paragraph}>
                {trescKrotka.trescKrotka}
             </Paragraph>

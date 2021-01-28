@@ -13,7 +13,7 @@ const Input = ({ type, name, placeholder, val, onChange }) => {
          iconCSS = <IoMdMail className={styles.icon} />
          break
       default:
-         iconCSS = styles.userIcon
+         iconCSS = null
    }
 
    return (

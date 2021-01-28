@@ -1,6 +1,5 @@
 import React, { useState, useContext } from "react"
 import styles from "./ProductCard.module.scss"
-import Tag from "../../UI/Tag/Tag"
 import RhombusBtn from "../../UI/RhombusBtn/RhombusBtn"
 import { RiArrowLeftSLine, RiArrowRightSLine } from "react-icons/ri"
 import H2 from "../../UI/Headers/H2"

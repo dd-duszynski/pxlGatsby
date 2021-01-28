@@ -45,9 +45,7 @@ const ContactForm = ({ text }) => {
    }
    return (
       <section className={styles.ContactForm}>
-         <Paragraph addClass={styles.formHeader}>
-            {text[8]}
-         </Paragraph>
+         <Paragraph addClass={styles.formHeader}>{text[8]}</Paragraph>
          <form className={styles.form} onSubmit={handleSubmit}>
             <Input
                val={name}

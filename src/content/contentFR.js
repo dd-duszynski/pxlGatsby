@@ -140,15 +140,15 @@ export const contentFR = {
       },
       productCard: ["VOIR LE PRODUIT"],
       tag: {
-         bestseller: ["BESTSELLER", "Jeden z najpopularniejszych produktów."],
-         news: ["NOWOŚĆ", "Nowość w naszej ofercie."],
-         inOut: ["IN / OUT", "Wykorzystanie wewnątrz i poza budynkiem."],
-         indoor: ["INDOOR", "Zalecane wykorzystanie wewnątrz budynku."],
-         outdoor: ["OUTDOOR", "Możliwość wykorzystania na zewnątrz."],
-         uv: ["UV", "Technologia druku: UV"],
-         solvent: ["SOL", "Technologia druku: Solvent"],
-         latex: ["LAT", "Technologia druku: Latex"],
-         sublimation: ["SUB", "Technologia druku: Sublimacja"],
+         bestseller: ["BESTSELLER", "L'un des produits les plus populaires."],
+         news: ["NOUVEAU"," Nouveau dans notre offre."],
+         inOut: ["IN / OUT", "Utilisation intérieure et extérieure."],
+         indoor: ["INDOOR", "Utilisation intérieure recommandée."],
+         outdoor: ["OUTDOOR", "Outdoor use"],
+         uv: ["UV", "Technologie d'impression: UV"],
+         solvent: ["SOL", "Technologie d'impression: Solvent"],
+         latex: ["LAT", "Technologie d'impression: Latex"],
+         sublimation: ["SUB", "Technologie d'impression: Sublimacja"]
       },
    },
    productPage: {
@@ -186,7 +186,7 @@ export const contentFR = {
             "FR/specifications/tribunes",
             "FR/specifications/others",
          ],
-      }
+      },
    },
    materials: {
       navigation: {
@@ -229,27 +229,27 @@ export const contentFR = {
       tag: {
          printing: [
             "Druk",
-            "Druk - Jeden z najpopularniejszych produktów.",
+            "Tematem artykułu jest szeroko rozumiany druk",
             "FR/blog/printing/",
          ],
          dtp: [
             "DTP",
-            "DTP - Jeden z najpopularniejszych produktów.",
+            "Tematem jest odpowiednie przygotowanie pliku do druku.",
             "FR/blog/dtp/",
          ],
          products: [
             "Produkty",
-            "Produkty - Jeden z najpopularniejszych produktów.",
+            "Dowiedz się więcej o naszych produktach",
             "FR/blog/products/",
          ],
          technology: [
             "Technologie",
-            "Technologie Jeden z najpopularniejszych produktów.",
+            "Tematem artykułu są technologie stosowane w druku.",
             "FR/blog/technology/",
          ],
          all: [
             "Wszystkie",
-            "Wszystkie - Jeden z najpopularniejszych produktów.",
+            "",
             "FR/blog/",
          ],
       },
@@ -263,10 +263,10 @@ export const contentFR = {
    seo: {
       specTitle: "PrintXL - Spécifications -",
       specDesc: "Liste des spécifications des produits du groupe:",
-      prodTitle: "PrintXL - Produits -" ,
-      prodDesc: "Liste des produits du groupe:" ,
+      prodTitle: "PrintXL - Produits -",
+      prodDesc: "Liste des produits du groupe:",
       matTitle: "PrintXL - Matériels -",
       matDesc: "Liste des matériaux du groupe:",
       technologyTitle: "PrintXL - Spécifications -",
-   }
+   },
 }

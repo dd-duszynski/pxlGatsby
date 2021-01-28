@@ -4,24 +4,22 @@ $color-main2: #1078bf;
 $color-main3: rgb(3, 70, 153);
 $color-accent: #99cc33;
 $color-accent2: #c0ee63;
-$color-font: rgb(45, 45, 45);
+$color-font: rgb(32, 23, 23);
 $color-light-gray: #E8E8E8;
 
 // variables__font-size
 $font-size-1: 26px;
 $font-size-2: 19px;
-$font-size-3: 17px;
-$font-size-4: 14px;
+$font-size-3: 16px;
+$font-size-4: 13px;
 $font-size-5: 12px;
-$font-size-6: 10px;
 
 // variables__line-height
 $line-height-1: 39px;
-$line-height-2: 27px;
+$line-height-2: 28px;
 $line-height-3: 24px;
-$line-height-4: 19px;
-$line-height-5: 17px;
-$line-height-6: 13px;
+$line-height-4: 16px;
+$line-height-5: 15px;
 
 // variables__font-family
 @mixin Roboto400 {
@@ -49,7 +47,14 @@ $line-height-6: 13px;
    background: -webkit-linear-gradient(to right, $color-main, $color-main2);
    background: linear-gradient(to right, $color-main, $color-main2);
 }
-
+@mixin accentGradient {
+   background: -webkit-linear-gradient(to right, $color-accent, $color-accent2);
+   background: linear-gradient(to right, $color-accent, $color-accent2);
+}
+@mixin accentGradient2 {
+   background: -webkit-linear-gradient(to right,#7fac26,#9bc44b);
+   background: linear-gradient(to right,#7fac26,#9bc44b);
+}
 @mixin navContainer{
    grid-column: 2/3;
    display: flex;

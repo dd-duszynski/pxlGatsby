@@ -20,10 +20,11 @@ const Answer = ({ expanded, onToggle, question, answer }) => {
    }
 
    const arrowCSS = expanded ? styles.arrowRotate : styles.arrow
-   const listItemCSS = expanded ? styles.answerExpanded : styles.answer
+   const listItemCSS = expanded ? styles.AnswerExpanded : styles.Answer
+   
    return (
-      <li className={listItemCSS} onClick={() => toogleResults()}>
-         <H2 addClass={styles.titleContainer}>
+      <li className={listItemCSS} >
+         <H2 addClass={styles.titleContainer} onClick={() => toogleResults()}>
             {question}
             <RiArrowDownSLine className={arrowCSS} />
          </H2>

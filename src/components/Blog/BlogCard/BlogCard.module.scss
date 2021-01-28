@@ -9,25 +9,12 @@
 }
 
 .textContainer {
-   margin-left: 20px;
+   margin-left: 30px;
    position: relative;
    width: 400px; 
 }
-.bar{
-   height: 52px;
-   width: 5px;
-   background-color: $color-main;
-   position: absolute;
-}
-.title{
-   margin-left: 12px;
-}
-.date{
-   margin-left: 12px;
-}
 .paragraph{
    margin-top: 5px;
-   margin-left: 12px;
    font-size: 15px;
    text-align: left;
 }

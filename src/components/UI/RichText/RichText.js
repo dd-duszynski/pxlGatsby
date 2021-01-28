@@ -2,7 +2,6 @@
 // https://www.npmjs.com/package/@contentful/rich-text-react-renderer
 import React from "react"
 import styles from "./RichText.module.scss"
-import H1 from "../Headers/H1"
 import H2 from "../Headers/H2"
 import H3 from "../Headers/H3"
 import H4 from "../Headers/H3"
@@ -18,15 +17,12 @@ export const RICHTEXT_OPTIONS = {
          return <Paragraph addClass={styles.paragraph}>{children}</Paragraph>
       },
       [BLOCKS.HEADING_1]: (node, children) => {
-         return <H1>{children}</H1>
-      },
-      [BLOCKS.HEADING_2]: (node, children) => {
          return <H2>{children}</H2>
       },
-      [BLOCKS.HEADING_3]: (node, children) => {
+      [BLOCKS.HEADING_2]: (node, children) => {
          return <H3>{children}</H3>
       },
-      [BLOCKS.HEADING_4]: (node, children) => {
+      [BLOCKS.HEADING_3]: (node, children) => {
          return <H4>{children}</H4>
       },
    },

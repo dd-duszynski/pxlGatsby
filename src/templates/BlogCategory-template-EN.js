@@ -7,10 +7,9 @@ import SEO from "../components/SEO/SEO"
 
 const BlogCategory = ({ data: { posts } }) => {
    //kategoria do wyciągnięcia
-
-   return (
-      <Layout language="PL">
-         <SEO title="PrintXL - Blog" description="PrintXL - Blog" lang="pl" />
+   const { rodzaj } = posts.edges.node.return(
+      <Layout language="EN">
+         <SEO title="PrintXL - Blog" description="PrintXL - Blog" lang="en" />
          <BlogList data={posts.edges} />
          <BlogSearchBar />
       </Layout>
@@ -19,7 +18,7 @@ const BlogCategory = ({ data: { posts } }) => {
 
 export const query = graphql`
    query($category: String) {
-      posts: allContentfulBlogPl(filter: { kategorie: { eq: $category } }) {
+      posts: allContentfulBlogEn(filter: { kategorie: { eq: $category } }) {
          edges {
             node {
                tytul

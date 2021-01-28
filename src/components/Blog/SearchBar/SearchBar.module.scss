@@ -41,3 +41,20 @@
       margin-right: 3px;
    }
 }
+
+@media (max-width: 1150px ){
+   .SearchBar {
+      top: 92px;
+      width: auto;
+   }
+   .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      flex-direction: column;
+      div{
+         margin: 2px;
+      }
+   }
+   
+}

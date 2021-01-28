@@ -33,18 +33,3 @@
       border-bottom: 1px solid $color-accent;
    }
 }
-
-@media (max-width: 830px) {
-   .ContactForm {
-      width: 90%;
-      max-width: 340px;
-      .header {
-         display: block;
-         margin-left: auto;
-         font-size: 18px;
-         margin-bottom: 8px;
-         color: $color-main;
-         @include Roboto900;
-      }
-   }
-}

@@ -1,6 +1,6 @@
 @import "../../../scss/variables.scss";
 
-.answer {
+.Answer {
    margin-bottom: 20px;
    width: 90ch;
    max-width: 94%;
@@ -13,11 +13,10 @@
    }
    &:hover {
       background-color: $color-light-gray;
-      cursor: pointer;
    }
 }
-.answerExpanded {
-   @extend .answer;
+.AnswerExpanded {
+   @extend .Answer;
    background-color: $color-light-gray;
 }
 .arrow {
@@ -37,4 +36,7 @@
    align-items: center;
    justify-content: space-between;
    margin-bottom: 3px;
+   &:hover{
+      cursor: pointer;
+   }
 }

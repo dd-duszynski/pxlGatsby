@@ -16,6 +16,7 @@
    height: 120px;
 }
 .messageInput {
+   @include paragraph;
    display: flex;
    justify-content: center;
    align-items: center;

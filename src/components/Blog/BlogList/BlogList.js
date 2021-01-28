@@ -5,8 +5,8 @@ import styles from "./BlogList.module.scss"
 const BlogList = ({data}) => {
    return (
       <section className={styles.BlogList}>
-         {data.map((item, index) => {
-            return <BlogCard key={index} blog={item} />
+         {data.map((item) => {
+            return <BlogCard key={item.node.tytul} blog={item} />
          })}
       </section>
    )

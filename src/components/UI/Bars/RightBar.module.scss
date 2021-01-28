@@ -1,12 +1,35 @@
+@import "../../../scss/variables.scss";
+
 .rightBar {
    position: absolute;
    top: 0;
    right: 0;
-   max-height: 80px;
-   @media screen and (max-width: 1150px) {
-      max-height: 70px;
-   }
-   @media screen and (max-width: 700px) {
-      display: none;
-   }
+   height: 40px;
+   width: 300px;
+   @include accentGradient2;
+   clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%);
 }
+
+.rightBar2{
+   position: absolute;
+   top: 20px;
+   right: 0;
+   height: 40px;
+   width: 250px;
+   @include accentGradient;
+   clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%);
+}
+
+
+// .rightBar2{
+//    position: absolute;
+//    top: 0;
+//    right: 0;
+//    max-height: 80px;
+//    @media screen and (max-width: 1150px) {
+//       max-height: 70px;
+//    }
+//    @media screen and (max-width: 700px) {
+//       display: none;
+//    }
+// }

@@ -7,11 +7,11 @@ import { graphql } from "gatsby"
 
 const blog = ({ data }) => {
    return (
-      <Layout language="PL">
+      <Layout language="EN">
          <SEO
             title="PrintXL - Blog"
             description="PrintXL - Blog"
-            lang="pl"
+            lang="en"
          />
          <BlogList data={data.blog.edges} />
          <BlogSearchBar />
@@ -21,7 +21,7 @@ const blog = ({ data }) => {
 
 export const query = graphql`
    {
-      blog: allContentfulBlogPl {
+      blog: allContentfulBlogEn {
          edges {
             node {
                tytul
