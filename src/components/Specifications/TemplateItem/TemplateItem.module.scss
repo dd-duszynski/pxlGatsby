@@ -9,7 +9,7 @@
    align-items: center;
    padding: 6px 0 6px 11px;
    border-radius: 4px;
-   box-shadow: 1px 1px 2px rgb(145, 145, 145);
+   box-shadow: -1px 1px 3px rgba(50, 50, 0, 0.3);
    &:hover{
       .link, .icon{
          color: $color-main2;

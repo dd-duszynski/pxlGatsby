@@ -6,8 +6,6 @@ import BlogSearchBar from "../components/Blog/SearchBar/SearchBar"
 import SEO from "../components/SEO/SEO"
 
 const BlogCategory = ({ data: { posts } }) => {
-   //kategoria do wyciągnięcia
-
    return (
       <Layout language="PL">
          <SEO title="PrintXL - Blog" description="PrintXL - Blog" lang="pl" />

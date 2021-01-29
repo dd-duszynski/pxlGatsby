@@ -6,7 +6,6 @@ import BlogSearchBar from "../components/Blog/SearchBar/SearchBar"
 import SEO from "../components/SEO/SEO"
 
 const BlogCategory = ({ data: { posts } }) => {
-
    return (
       <Layout language="FR">
          <SEO title="PrintXL - Blog" description="PrintXL - Blog" lang="fr" />

@@ -8,11 +8,7 @@ import SEO from "../components/SEO/SEO"
 const BlogCategory = ({ data: { posts } }) => {
    return (
       <Layout language="DE">
-         <SEO 
-            title="PrintXL - Blog" 
-            description="PrintXL - Blog" 
-            lang="de" 
-         />
+         <SEO title="PrintXL - Blog" description="PrintXL - Blog" lang="de" />
          <BlogList data={posts.edges} />
          <BlogSearchBar />
       </Layout>

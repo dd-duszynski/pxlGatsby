@@ -6,8 +6,7 @@ import BlogSearchBar from "../components/Blog/SearchBar/SearchBar"
 import SEO from "../components/SEO/SEO"
 
 const BlogCategory = ({ data: { posts } }) => {
-   //kategoria do wyciągnięcia
-   const { rodzaj } = posts.edges.node.return(
+   return (
       <Layout language="EN">
          <SEO title="PrintXL - Blog" description="PrintXL - Blog" lang="en" />
          <BlogList data={posts.edges} />

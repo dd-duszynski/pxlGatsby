@@ -22,9 +22,9 @@
 	align-items: center;
 	justify-content: space-around;
    position: relative;
+   box-shadow: -1px 3px 4px rgba(50, 50, 0, 0.5);
    &:hover{
       transform: scale(1.01);
-      box-shadow: 1px 2px 2px 2px #999;
    }
 }
 .box_title {
