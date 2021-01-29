@@ -14,9 +14,7 @@ const Footer = () => {
       <footer className={styles.Footer}>
          <div className={styles.container}>
             <div className={styles.box}>
-               <H3 addClass={styles.heading}>
-                  {textContent.footer.text[0]}
-               </H3>
+               <H3 addClass={styles.heading}>{textContent.footer.text[0]}</H3>
                <div className={styles.boxItem}>
                   <a
                      href="https://goo.gl/maps/uPsmeVfGyKLyoCcy6"

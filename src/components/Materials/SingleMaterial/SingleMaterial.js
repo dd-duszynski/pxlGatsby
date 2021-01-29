@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from "react"
+import React, { useContext } from "react"
 import { RICHTEXT_OPTIONS } from "../../UI/RichText/RichText"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import TagsContainer from "../../ProductPage/TagsContainer/TagsContainer"
@@ -8,7 +8,7 @@ import Paragraph from "../../UI/Paragraph/Paragraph"
 import HorizontalBar from "../../UI/Bars/HorizontalBar"
 import Context from "../../../context/context"
 
-const SingleMaterial = ({ data }) => {
+const SingleMaterial = ({ data, onClick }) => {
    const { textContent } = useContext(Context)
 
    return (
@@ -17,6 +17,7 @@ const SingleMaterial = ({ data }) => {
             className={styles.img}
             src={data.zdjecia.fixed.src}
             alt={data.nazwa}
+            onClick={onClick}
          />
          <div className={styles.textContainer}>
             <div className={styles.barBox}>

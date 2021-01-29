@@ -1,4 +1,4 @@
-import React, { useContext } from "react"
+import React, { useState, useContext } from "react"
 import { Link } from "gatsby"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { GiRolledCloth } from "react-icons/gi"
@@ -18,11 +18,21 @@ import Modal from "../Modal/Modal"
 import ContactForm from "../Contact/ContactForm/ContactForm"
 
 const ProductPage = ({ data }) => {
-   const { 
-      textContent, 
-      isModalOpen, 
-      switchModalVisibility 
-   } = useContext(Context)
+   const { textContent } = useContext(Context)
+   const [isImgModalOpen, setImgModalOpen] = useState(false)
+   const [isContactModalOpen, setContactModalOpen] = useState(false)
+   const [currentImg, setCurrentImg] = useState(null)
+
+   const switchImgModalVisibility = e => {
+      setCurrentImg(e.target.src)
+      isImgModalOpen === false ? setImgModalOpen(true) : setImgModalOpen(false)
+   }
+
+   const switchContactModalVisibility = () => {
+      isContactModalOpen === false
+         ? setContactModalOpen(true)
+         : setContactModalOpen(false)
+   }
 
    const {
       nazwa,
@@ -37,16 +47,23 @@ const ProductPage = ({ data }) => {
       zadruk,
       opcjeProduktu,
    } = data.products
-   
+
    const [...images] = zdjecia
 
    return (
       <main className={styles.ProductPage}>
          <Modal
-            isVisible={isModalOpen}
-            switchModalVisibility={switchModalVisibility}
+            isVisible={isContactModalOpen}
+            switchModalVisibility={switchContactModalVisibility}
          >
             <ContactForm text={textContent.mainPage.contact.text} />
+         </Modal>
+         <Modal
+            type="img"
+            isVisible={isImgModalOpen}
+            switchModalVisibility={switchImgModalVisibility}
+         >
+            <img className={styles.modalImg} src={currentImg} alt={nazwa} />
          </Modal>
          <div className={styles.leftSection}>
             <BreadcrumbsContainer nazwa={nazwa} rodzaj={rodzaj} url={url} />
@@ -54,6 +71,7 @@ const ProductPage = ({ data }) => {
                {images.map((item, index) => (
                   <div className={styles.imgContainer} key={index}>
                      <img
+                        onClick={e => switchImgModalVisibility(e)}
                         className={styles.img}
                         src={item.fluid.src}
                         alt={nazwa}
@@ -64,7 +82,7 @@ const ProductPage = ({ data }) => {
 
             <div
                className={styles.btnContainer}
-               onClick={switchModalVisibility}
+               onClick={switchContactModalVisibility}
             >
                <RhombusBtn
                   type="button"
@@ -128,7 +146,7 @@ const ProductPage = ({ data }) => {
 
             <div
                className={styles.btnContainer}
-               onClick={switchModalVisibility}
+               onClick={switchContactModalVisibility}
             >
                <RhombusBtn
                   type="button"

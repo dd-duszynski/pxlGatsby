@@ -28,14 +28,28 @@
    z-index: 21;
    width: 500px;
 }
+.imgContainer {
+   position: relative;
+   padding: 50px;
+   background-color: #fff;
+   border-radius: 8px;
+   z-index: 21;
+   max-width: 95vw;
+   max-height: 95vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
 .closeBtn {
    position: absolute;
-   right: 10px;
-   top: 8px;
-   width: 40px;
-   height: 40px;
+   right: 5px;
+   top: 5px;
+   width: 50px;
+   height: 50px;
    &:hover {
       cursor: pointer;
+      background-color: rgba(80, 80, 80, 0.1);
+      border-radius: 50%;
       .line1,
       .line2 {
          background-color: $color-main2;
@@ -49,10 +63,10 @@
    width: 30px;
 }
 .line1 {
-   transform: rotate(-45deg) translate(-11px, 18px);
+   transform: rotate(-45deg) translate(-9px, 25px);
 }
 .line2 {
-   transform: rotate(45deg) translate(16px, 10px);
+   transform: rotate(45deg) translate(24px, 8px);
 }
 
 @media (max-width: 550px) {
@@ -63,5 +77,8 @@
       border-radius: 8px;
       z-index: 20;
       width: auto;
+   }
+   .imgContainer {
+      padding: 70px 15px;
    }
 }

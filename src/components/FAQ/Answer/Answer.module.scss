@@ -36,16 +36,16 @@
    align-items: flex-start;
    justify-content: space-between;
    margin-bottom: 3px;
-   &:hover{
+   &:hover {
       cursor: pointer;
    }
 }
 
-@media (max-width:500px){
-   .titleContainer{
-      font-size: 18px;
+@media (max-width: 500px) {
+   .titleContainer {
+      font-size: 17px;
    }
-   .paragraph{
+   .paragraph {
       font-size: 14px;
    }
 }

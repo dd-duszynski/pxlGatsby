@@ -10,7 +10,6 @@
    font-size: $font-size-4;
    line-height: $line-height-4;
 }
-
 .container {
    margin: auto;
    width: 90%;
@@ -18,18 +17,15 @@
    justify-content: space-evenly;
    align-items: flex-start;
 }
-
 .box {
    width: 20%;
    height: 70%;
 }
-
 .heading {
    color: white !important;
    margin-left: 41px;
    margin-bottom: 10px;
 }
-
 .boxItem {
    display: flex;
    flex-direction: column;
@@ -37,13 +33,11 @@
    justify-content: flex-start;
 }
 .innerContainer {
-   //dane firmy - wyrownanie
    display: flex;
    align-items: center;
    justify-content: center;
    margin-bottom: 18px;
 }
-
 .link {
    display: flex;
    align-items: center;
@@ -56,7 +50,6 @@
       cursor: pointer;
    }
 }
-
 .icon {
    color: #fff;
    height: 30px;
@@ -81,5 +74,15 @@
       &:last-child {
          margin-bottom: 0;
       }
+   }
+}
+
+@media screen and (max-width: 450px) {
+   .container {
+      width: 80%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: flex-start;
    }
 }

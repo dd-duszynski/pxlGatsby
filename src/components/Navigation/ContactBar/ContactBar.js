@@ -28,7 +28,6 @@ const ContactBar = () => {
 
          <a
             onClick={switchModalVisibility}
-            // href="mailto:info@printxl.pl"
             className={styles.linkContainer}
          >
             <IoMdMail className={styles.icon} />

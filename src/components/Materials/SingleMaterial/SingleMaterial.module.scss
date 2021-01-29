@@ -13,6 +13,9 @@
    width: 40%;
    object-position: 50% 50%;
    height: auto;
+   &:hover{
+      cursor: pointer;
+   }
 }
 
 .textContainer {
