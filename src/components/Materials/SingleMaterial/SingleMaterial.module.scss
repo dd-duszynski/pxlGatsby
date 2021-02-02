@@ -31,7 +31,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      margin-bottom: 30px;
+      margin-bottom: 25px;
    }
    .img {
       margin: auto;
@@ -39,13 +39,13 @@
    }
    .textContainer{
       margin: auto;
-      margin-top: 12px;
+      margin-top: 10px;
       margin-bottom: 0;
       width: 80%;
    }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
    .img {
       margin: auto;
       width: 100%;

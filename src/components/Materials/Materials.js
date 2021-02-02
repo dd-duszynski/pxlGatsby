@@ -24,14 +24,17 @@ const Materials = ({ data }) => {
             isVisible={isImgModalOpen}
             switchModalVisibility={switchImgModalVisibility}
          >
-            <img className={styles.modalImg} src={currentImg} alt="" />
+            <img 
+               className={styles.modalImg} 
+               src={currentImg} 
+               alt="" 
+            />
          </Modal>
          {data.nodes.map(item => {
             return (
                <SingleMaterial
-                  data={item}
-                  language="PL"
                   key={item.nazwa}
+                  data={item}
                   onClick={e => switchImgModalVisibility(e)}
                />
             )

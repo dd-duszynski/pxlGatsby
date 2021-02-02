@@ -13,6 +13,10 @@
    overflow-y: hidden;
    opacity: 1;
    transition: all 2s;
+   img {
+      max-width: 95vw;
+      max-height: 82vh;
+   }
 }
 .backdrop {
    position: absolute;

@@ -1,11 +1,12 @@
-import React from 'react';
-import styles from './Paragraph.module.scss';
+import React from "react"
+import styles from "./Paragraph.module.scss"
 
-const Paragraph = ({children, addClass, fontSize}) => {
+const Paragraph = ({ children, addClass, fontSize, bold, inline }) => {
+   const css = bold ? styles.ParagraphBold : styles.Paragraph
    return (
-      <p 
-         className={[addClass, styles.Paragraph ].join(' ')} 
-         style={{fontSize: fontSize}}
+      <p
+         className={[addClass, css].join(" ")}
+         style={{ fontSize: fontSize, display: inline && "inline" }}
       >
          {children}
       </p>

@@ -48,6 +48,11 @@ export const query = graphql`
                ...GatsbyContentfulFluid
             }
          }
+         specyfikacja {
+            internal {
+               content
+            }
+         }
          produkty {
             nazwa
             zadruk

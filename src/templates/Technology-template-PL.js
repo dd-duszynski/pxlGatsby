@@ -4,7 +4,7 @@ import Layout from "../components/Layout/Layout"
 import TechnologyNav from "../components/Technology/TechnologyNav/TechnologyNav"
 import Technology from "../components/Technology/Technology"
 import SEO from "../components/SEO/SEO"
-import {contentPL} from '../content/contentPL'
+import { contentPL } from "../content/contentPL"
 
 const TechnologyTemplate = ({ data }) => {
    const { nazwa } = data.Technologie
@@ -47,6 +47,11 @@ export const query = graphql`
          zdjecia {
             fluid {
                ...GatsbyContentfulFluid
+            }
+         }
+         specyfikacja {
+            internal {
+               content
             }
          }
          produkty {

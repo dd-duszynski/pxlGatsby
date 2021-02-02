@@ -30,14 +30,18 @@ const SingleMaterial = ({ data, onClick }) => {
                </HorizontalBar>
             </div>
             {documentToReactComponents(data.tekst.json, RICHTEXT_OPTIONS)}
-            <Paragraph>
-               <strong>{textContent.materials.text[0]}</strong>
-               {data.druk && data.druk.join(", ")}
-            </Paragraph>
-            <Paragraph>
-               <strong>{textContent.materials.text[1]}</strong>
-               {data.szerokosc}
-            </Paragraph>
+            <div >
+               <Paragraph bold inline>
+                  {textContent.materials.text[0]}
+               </Paragraph>
+               <Paragraph inline>{data.druk && data.druk.join(", ")}</Paragraph>
+            </div>
+            <div>
+               <Paragraph bold inline>
+                  {textContent.materials.text[1]}
+               </Paragraph>
+               <Paragraph inline>{data.szerokosc}</Paragraph>
+            </div>
          </div>
       </article>
    )
