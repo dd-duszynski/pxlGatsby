@@ -62,6 +62,7 @@ const Technology = ({ machine }) => {
                         src={item.fluid.src}
                         className={styles.img}
                         key={item.fluid.src}
+                        onClick={e => switchImgModalVisibility(e)}
                      />
                   )
                })}
@@ -114,17 +115,6 @@ const Technology = ({ machine }) => {
                      />
                   )
                })}
-               {/* <Carousel itemsToShow={1}>
-                  {machine.materialy.map(item => {
-                     return (
-                        <SingleMaterial
-                           key={item.kod}
-                           data={item}
-                           onClick={e => switchImgModalVisibility(e)}
-                        />
-                     )
-                  })}
-               </Carousel> */}
             </div>
          </article>
       </section>

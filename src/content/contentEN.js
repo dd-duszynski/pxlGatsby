@@ -9,7 +9,6 @@ export const contentEN = {
       aboutUs: {
          header: "About us",
          text: [
-            "About us",
             "We are a thriving digital printing company specializing in large format printing for clients from all over Europe. We are characterized by high quality and quick lead times, at very competitive prices.",
             "We offer printing on various substrates: among other flagship materials, banners, meshes, and foils with a wide range of finishes and systems to choose from.",
             "We invite you to contact us.",

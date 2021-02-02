@@ -140,6 +140,7 @@ const ProductPage = ({ data }) => {
                      className={styles.sizes_img}
                      src={wymiary.file.url}
                      alt="sizes"
+                     onClick={e => switchImgModalVisibility(e)}
                   />
                </>
             ) : null}
