@@ -4,15 +4,16 @@ import RhombusBtn from "../../UI/RhombusBtn/RhombusBtn"
 import Input from "../../UI/Input/Input"
 import TextArea from "../../UI/Input/TextArea"
 import Paragraph from "../../UI/Paragraph/Paragraph"
+import { FaSmile } from "react-icons/fa"
 
 const ContactForm = ({ text }) => {
+   const [isSend, setIsSend] = useState(false)
    const [name, setName] = useState("")
    const [email, setEmail] = useState("")
    const [message, setMessage] = useState("")
 
    const handleSubmit = event => {
       event.preventDefault()
-
       fetch("https://pxl-server.herokuapp.com/email", {
          method: "POST",
          headers: {
@@ -32,6 +33,11 @@ const ContactForm = ({ text }) => {
          .catch(error => {
             console.error("Error:", error)
          })
+      setIsSend(true)
+      setName("")
+      setEmail("")
+      setMessage("")
+      setTimeout(() => setIsSend(false), 4000)
    }
 
    const handleName = e => {
@@ -43,8 +49,16 @@ const ContactForm = ({ text }) => {
    const handleMessage = e => {
       setMessage(e.target.value)
    }
-   return (
-      <section className={styles.ContactForm}>
+
+   const afterMessageSend = (
+      <div className={styles.afterMessageSend}>
+         <Paragraph>{text[10]}</Paragraph>
+         <FaSmile className={styles.icon} />
+      </div>
+   )
+
+   const initialView = (
+      <>
          <Paragraph addClass={styles.formHeader}>{text[8]}</Paragraph>
          <form className={styles.form} onSubmit={handleSubmit}>
             <Input
@@ -68,8 +82,14 @@ const ContactForm = ({ text }) => {
                name="message"
                placeholder={text[3]}
             />
-            <RhombusBtn input text={text[4]} type="input" />
+            <RhombusBtn text={text[4]} type="input" />
          </form>
+      </>
+   )
+
+   return (
+      <section className={styles.ContactForm}>
+         {isSend ? afterMessageSend : initialView}
       </section>
    )
 }

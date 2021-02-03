@@ -51,7 +51,7 @@ export const getData = graphql`
                }
             }
             zdjecia {
-               fixed(height: 190) {
+               fixed(height: 220) {
                   ...GatsbyContentfulFixed
                }
             }

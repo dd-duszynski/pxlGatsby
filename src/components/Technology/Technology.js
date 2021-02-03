@@ -22,7 +22,7 @@ const Technology = ({ machine }) => {
    for (const [key, value] of Object.entries(parsedValue)) {
       specificationArray.push([key, value])
    }
-   
+
    const switchImgModalVisibility = e => {
       setCurrentImg(e.target.src)
       isImgModalOpen === false ? setImgModalOpen(true) : setImgModalOpen(false)
@@ -55,29 +55,29 @@ const Technology = ({ machine }) => {
          </Modal>
          <article className={styles.container}>
             <Carousel>
-               {images.map(item => {
-                  return (
-                     <img
-                        alt=""
-                        src={item.fluid.src}
-                        className={styles.img}
-                        key={item.fluid.src}
-                        onClick={e => switchImgModalVisibility(e)}
-                     />
-                  )
-               })}
+               {images.map(item => (
+                  <img
+                     alt=""
+                     src={item.fluid.src}
+                     className={styles.img}
+                     key={item.fluid.src}
+                     onClick={e => switchImgModalVisibility(e)}
+                  />
+               ))}
             </Carousel>
-            <div className={styles.paragraphBox}>
-               
-               <div className={styles.table}>
-                  {specificationArray.map(i => (
-                     <div className={styles.innerTable}>
+            <div className={styles.table}>
+               {specificationArray.map(i => (
+                  <div className={styles.innerTable}>
+                     <div className={styles.innerTableTop}>
                         <Paragraph bold>{i[0]}:</Paragraph>
-                        <hr />
+                     </div>
+                     <div className={styles.innerTableBottom}>
                         <Paragraph>{i[1]}</Paragraph>
                      </div>
-                  ))}
-               </div>
+                  </div>
+               ))}
+            </div>
+            <div className={styles.paragraphBox}>
                <H2 addClass={styles.header}>
                   {textContent.technology.description.text[0]}
                </H2>

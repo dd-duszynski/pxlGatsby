@@ -33,3 +33,17 @@
       border-bottom: 1px solid $color-accent;
    }
 }
+
+.afterMessageSend{
+   height: 300px;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.icon{
+   color: $color-main;
+   height: 25px;
+   width: 25px;
+   margin-left: 10px;
+}

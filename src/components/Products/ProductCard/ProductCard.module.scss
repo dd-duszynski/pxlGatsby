@@ -1,6 +1,6 @@
 @import "../../../scss/variables.scss";
 .ProductCard {
-   width: 315px;
+   width: 340px;
    height: 400px;
    padding: 0;
    position: relative;
@@ -23,9 +23,9 @@
 }
 .image {
    object-fit: cover;
-   padding-bottom: 22px;
-   max-width: 80%;
-   max-height: 80%;
+   padding-bottom: 6px;
+   max-width: 85%;
+   max-height: 90%;
 }
 .paragraphContainer {
    position: relative;
@@ -34,7 +34,6 @@
    padding: 8px 12px;
    background-color: $color-light-gray;
 }
-
 .paragraph {
    text-decoration: none;
    text-align: left;

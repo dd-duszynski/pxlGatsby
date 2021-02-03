@@ -14,10 +14,11 @@
    opacity: 1;
    transition: all 2s;
    img {
-      min-width: 20vw;
-      min-height: 33vh;
+      min-width: 50vw;
+      min-height: 50vh;
       max-width: 95vw;
       max-height: 82vh;
+      border-radius: 8px;
    }
 }
 .backdrop {

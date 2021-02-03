@@ -49,6 +49,8 @@ export const contentDE = {
             "Newsletter erhalten!",
             "Schreib uns:",
             "Kontaktseite",
+            "Danke für deine Nachricht",
+            "Danke, dass Sie bei uns sind"
          ],
       },
       faq: [
@@ -107,7 +109,7 @@ export const contentDE = {
          ["Produkte", "DE/products"],
          ["Werbetechnik", "DE/materials"],
          ["Druckverfahren", "DE/technology"],
-         ["Blog", "DE/blog"],
+         // ["Blog", "DE/blog"],
          ["Druckdatenvorbereitung", "DE/specifications"],
          ["FAQ", "DE/#FAQ"],
          ["Kontakt", "DE/contact"],

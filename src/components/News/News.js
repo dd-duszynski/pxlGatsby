@@ -31,7 +31,7 @@ const Catalog = ({ img, t1, t2, link, btn }) => {
 const News = () => {
    const { textContent } = useContext(Context)
    return (
-      <div className={styles.News}>
+      <section className={styles.News}>
          <LeftBar text={textContent.mainPage.news.header} />
          <RightBar />
          <div className={styles.container}>
@@ -43,7 +43,7 @@ const News = () => {
                btn={textContent.mainPage.news.downloadBtn}
             />
          </div>
-      </div>
+      </section>
    )
 }
 

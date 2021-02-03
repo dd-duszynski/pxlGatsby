@@ -5,9 +5,9 @@ import H1 from "../Headers/H1"
 const LeftBar = props => {
    return (
       <div className={styles.LeftBar}>
-         <div className={styles.shape}>
+         <header className={styles.shape}>
             <H1 addClass={styles.heading}>{props.text}</H1>
-         </div>
+         </header>
       </div>
    )
 }

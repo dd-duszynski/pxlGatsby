@@ -46,6 +46,8 @@ export const contentEN = {
             "Sign up",
             "Write to us:",
             "Contact Page",
+            "Thank you for your message",
+            "Thank you for being with us"
          ],
       },
       faq: [
@@ -104,7 +106,7 @@ export const contentEN = {
          ["Products", "EN/products"],
          ["Materials", "EN/materials"],
          ["Technologies", "EN/technology"],
-         ["Blog", "EN/blog"],
+         // ["Blog", "EN/blog"],
          ["Specifications", "EN/specifications"],
          ["FAQ", "EN/#FAQ"],
          ["Contact", "EN/contact"],
