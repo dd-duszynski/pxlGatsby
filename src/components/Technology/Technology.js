@@ -57,7 +57,7 @@ const Technology = ({ machine }) => {
             <Carousel>
                {images.map(item => (
                   <img
-                     alt=""
+                     alt="PrintXL - Technology"
                      src={item.fluid.src}
                      className={styles.img}
                      key={item.fluid.src}

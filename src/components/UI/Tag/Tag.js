@@ -1,9 +1,13 @@
 import React from "react"
 import styles from "./Tag.module.scss"
 import ReactTooltip from "react-tooltip"
+import sun from "../../../../static/sun.svg"
+import noSun from "../../../../static/noSun.svg"
+import noWater from "../../../../static/noWater.svg"
+import noFire from "../../../../static/noFire.svg"
 
 const Tag = ({ type, text, tooltip, noTooltip }) => {
-   let css
+   let css, icon
    switch (type) {
       case "best":
          css = styles.red
@@ -17,6 +21,23 @@ const Tag = ({ type, text, tooltip, noTooltip }) => {
       case "printing":
          css = styles.blue
          break
+      case "backlight":
+         css = styles.yellow
+         icon = <img src={sun} alt={text} />
+         break
+      case "stoplight":
+         css = styles.black
+         icon = <img src={noSun} alt={text} />
+         break
+      case "nonFlammable":
+         css = styles.red
+         icon = <img src={noFire} alt={text} />
+         break
+      case "waterproof":
+         css = styles.cyan
+         icon = <img src={noWater} alt={text} />
+         break
+      // blog ---------------
       case "blogPrinting":
          css = styles.blue
          break
@@ -38,9 +59,15 @@ const Tag = ({ type, text, tooltip, noTooltip }) => {
    const linkCSS = noTooltip ? styles.link : null
    return (
       <div className={[styles.Tag, css, linkCSS].join(" ")}>
-         <span className={styles.tagText} data-tip data-for={tooltip}>
-            {text}
-         </span>
+         {icon ? (
+            <div className={styles.icon} data-tip data-for={tooltip}>
+               {icon}
+            </div>
+         ) : (
+            <span className={styles.tagText} data-tip data-for={tooltip}>
+               {text}
+            </span>
+         )}
          {noTooltip ? null : (
             <ReactTooltip
                id={tooltip}

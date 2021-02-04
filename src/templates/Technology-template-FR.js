@@ -81,6 +81,7 @@ export const query = graphql`
                json
             }
             druk
+            opcje
             szerokosc
             kod
             zdjecia {

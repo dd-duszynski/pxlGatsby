@@ -27,7 +27,7 @@ const Materials = ({ data }) => {
             <img 
                className={styles.modalImg} 
                src={currentImg} 
-               alt="" 
+               alt="PrintXL - Material" 
             />
          </Modal>
          {data.nodes.map(item => {

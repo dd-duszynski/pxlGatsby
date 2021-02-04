@@ -110,7 +110,7 @@ export const contentPL = {
          ["Produkty", "PL/products"],
          ["Materiały", "PL/materials"],
          ["Technologie", "PL/technology"],
-         // ["Blog", "PL/blog"],
+         ["Blog", "PL/blog"],
          ["Specyfikacje", "PL/specifications"],
          ["FAQ", "PL/#FAQ"],
          ["Kontakt", "PL/contact"],
@@ -151,6 +151,11 @@ export const contentPL = {
          solvent: ["SOL", "Technologia druku: Solvent"],
          latex: ["LAT", "Technologia druku: Latex"],
          sublimation: ["SUB", "Technologia druku: Sublimacja"],
+         doubleSide: ["4+4","Zadruk dwustronny"],
+         backlight: ["Light","Materiał do podświetleń"],
+         stoplight: ["StopLight","Nieprzepuszczający światła"],
+         nonFlammable: ["nonF","Materiał nieplany"],
+         waterproof: ["nonW","Materiał wodoszczelny"]
       },
    },
    productPage: {

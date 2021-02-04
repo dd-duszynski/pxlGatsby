@@ -109,7 +109,7 @@ export const contentDE = {
          ["Produkte", "DE/products"],
          ["Werbetechnik", "DE/materials"],
          ["Druckverfahren", "DE/technology"],
-         // ["Blog", "DE/blog"],
+         ["Blog", "DE/blog"],
          ["Druckdatenvorbereitung", "DE/specifications"],
          ["FAQ", "DE/#FAQ"],
          ["Kontakt", "DE/contact"],
@@ -150,6 +150,12 @@ export const contentDE = {
          solvent: ["SOL", "Technologia druku: Solvent"],
          latex: ["LAT", "Technologia druku: Latex"],
          sublimation: ["SUB", "Technologia druku: Sublimacja"],
+
+         doubleSide: ["4+4","Beidseitiger Druck"],
+         backlight: ["Light","Material für Highlights"],
+         stoplight: ["StopLight","Licht undurchlässig"],
+         nonFlammable: ["nonF","Nicht brennbares Material"],
+         waterproof: ["nonW","Wasserdichtes Material"]
       },
    },
    productPage: {

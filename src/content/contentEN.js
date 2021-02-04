@@ -106,7 +106,7 @@ export const contentEN = {
          ["Products", "EN/products"],
          ["Materials", "EN/materials"],
          ["Technologies", "EN/technology"],
-         // ["Blog", "EN/blog"],
+         ["Blog", "EN/blog"],
          ["Specifications", "EN/specifications"],
          ["FAQ", "EN/#FAQ"],
          ["Contact", "EN/contact"],
@@ -147,6 +147,11 @@ export const contentEN = {
          solvent: ["SOL", "Printing technology: Solvent"],
          latex: ["LAT", "Printing technology: Latex"],
          sublimation: ["SUB", "Printing technology: Sublimation"],
+         doubleSide: ["4+4","Two-sided printing"],
+         backlight: ["Light","Material for highlights"],
+         stoplight: ["StopLight","Light impermeable"],
+         nonFlammable: ["nonF","Non-flammable"],
+         waterproof: ["nonW","Waterproof"]
       },
    },
    productPage: {

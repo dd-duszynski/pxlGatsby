@@ -279,87 +279,87 @@ const createPages = async ({ graphql, actions }) => {
 
    // BlogPost Page ----------------------------
    // PL
-   // data.blogPL.edges.forEach(({ node }) => {
-   //    createPage({
-   //       path: `PL/blog/${node.tytul}`,
-   //       component: path.resolve("./src/templates/BlogPost-template-PL.js"),
-   //       context: {
-   //          name: node.tytul,
-   //       },
-   //    })
-   // })
+   data.blogPL.edges.forEach(({ node }) => {
+      createPage({
+         path: `PL/blog/${node.tytul}`,
+         component: path.resolve("./src/templates/BlogPost-template-PL.js"),
+         context: {
+            name: node.tytul,
+         },
+      })
+   })
    // EN
-   // data.blogEN.edges.forEach(({ node }) => {
-   //    createPage({
-   //       path: `EN/blog/${node.tytul}`,
-   //       component: path.resolve("./src/templates/BlogPost-template-EN.js"),
-   //       context: {
-   //          name: node.tytul,
-   //       },
-   //    })
-   // })
+   data.blogEN.edges.forEach(({ node }) => {
+      createPage({
+         path: `EN/blog/${node.tytul}`,
+         component: path.resolve("./src/templates/BlogPost-template-EN.js"),
+         context: {
+            name: node.tytul,
+         },
+      })
+   })
    // DE
-   // data.blogDE.edges.forEach(({ node }) => {
-   //    createPage({
-   //       path: `DE/blog/${node.tytul}`,
-   //       component: path.resolve("./src/templates/BlogPost-template-DE.js"),
-   //       context: {
-   //          name: node.tytul,
-   //       },
-   //    })
-   // })
+   data.blogDE.edges.forEach(({ node }) => {
+      createPage({
+         path: `DE/blog/${node.tytul}`,
+         component: path.resolve("./src/templates/BlogPost-template-DE.js"),
+         context: {
+            name: node.tytul,
+         },
+      })
+   })
    // FR
-   // data.blogFR.edges.forEach(({ node }) => {
-   //    createPage({
-   //       path: `FR/blog/${node.tytul}`,
-   //       component: path.resolve("./src/templates/BlogPost-template-FR.js"),
-   //       context: {
-   //          name: node.tytul,
-   //       },
-   //    })
-   // })
+   data.blogFR.edges.forEach(({ node }) => {
+      createPage({
+         path: `FR/blog/${node.tytul}`,
+         component: path.resolve("./src/templates/BlogPost-template-FR.js"),
+         context: {
+            name: node.tytul,
+         },
+      })
+   })
 
    // Blog Kategorie  ----------------------------
    // PL
-   // data.blogCategoryPL.distinct.forEach(node => {
-   //    createPage({
-   //       path: `PL/blog/${node}`,
-   //       component: path.resolve("./src/templates/BlogCategory-template-PL.js"),
-   //       context: {
-   //          category: node,
-   //       },
-   //    })
-   // })
+   data.blogCategoryPL.distinct.forEach(node => {
+      createPage({
+         path: `PL/blog/${node}`,
+         component: path.resolve("./src/templates/BlogCategory-template-PL.js"),
+         context: {
+            category: node,
+         },
+      })
+   })
    // EN
-   // data.blogCategoryEN.distinct.forEach(node => {
-   //    createPage({
-   //       path: `EN/blog/${node}`,
-   //       component: path.resolve("./src/templates/BlogCategory-template-EN.js"),
-   //       context: {
-   //          category: node,
-   //       },
-   //    })
-   // })
+   data.blogCategoryEN.distinct.forEach(node => {
+      createPage({
+         path: `EN/blog/${node}`,
+         component: path.resolve("./src/templates/BlogCategory-template-EN.js"),
+         context: {
+            category: node,
+         },
+      })
+   })
    // DE
-   // data.blogCategoryDE.distinct.forEach(node => {
-   //    createPage({
-   //       path: `DE/blog/${node}`,
-   //       component: path.resolve("./src/templates/BlogCategory-template-DE.js"),
-   //       context: {
-   //          category: node,
-   //       },
-   //    })
-   // })
+   data.blogCategoryDE.distinct.forEach(node => {
+      createPage({
+         path: `DE/blog/${node}`,
+         component: path.resolve("./src/templates/BlogCategory-template-DE.js"),
+         context: {
+            category: node,
+         },
+      })
+   })
    // FR
-   // data.blogCategoryFR.distinct.forEach(node => {
-   //    createPage({
-   //       path: `FR/blog/${node}`,
-   //       component: path.resolve("./src/templates/BlogCategory-template-FR.js"),
-   //       context: {
-   //          category: node,
-   //       },
-   //    })
-   // })
+   data.blogCategoryFR.distinct.forEach(node => {
+      createPage({
+         path: `FR/blog/${node}`,
+         component: path.resolve("./src/templates/BlogCategory-template-FR.js"),
+         context: {
+            category: node,
+         },
+      })
+   })
 
    // Materiały  ----------------------------
    // PL

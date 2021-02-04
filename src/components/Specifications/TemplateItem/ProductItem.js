@@ -16,7 +16,7 @@ const ProductItem = ({ item }) => {
          <div className={styles.header}>
             <div className={styles.innerContainer}>
                <div className={styles.imageContainer}>
-                  <img src={image} alt="" className={styles.image} />
+                  <img src={image} alt={item.nazwa} className={styles.image} />
                </div>
                <H3 addClass={styles.title}>{item.nazwa}</H3>
             </div>

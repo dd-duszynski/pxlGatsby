@@ -79,6 +79,7 @@ export const query = graphql`
             tekst {
                json
             }
+            opcje
             druk
             szerokosc
             kod

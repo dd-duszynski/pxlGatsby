@@ -1,6 +1,9 @@
 @import "../../../scss/variables.scss";
 
 .Tag {
+   display: flex;
+   align-items: center;
+   justify-content: center;
    font-family: "Montserrat", sans-serif;
    font-weight: 500;
    font-size: 12px;
@@ -8,11 +11,26 @@
    color: white;
    border-left: 1px solid white;
    white-space: nowrap;
+
    &:nth-child(1) {
       border-left: 0;
    }
    &:hover {
       cursor: help;
+   }
+}
+.icon{
+   display: flex;
+   align-items: center;
+   width: 100%;
+   height: 100%;
+   img{
+      width: 20px;
+      height: 16px;
+   }
+   svg{
+      width: 20px;
+      height: 14px;
    }
 }
 .link:hover {
@@ -30,8 +48,17 @@
 .gray {
    background-color: #222;
 }
+.cyan {
+   background-color: darkturquoise;
+}
 .blue {
    background-color: $color-main;
+}
+.yellow {
+   background-color: yellow;
+   svg{
+      color: black;
+   }
 }
 .blueOutline {
    background-color: white;
@@ -40,4 +67,10 @@
 }
 .orange {
    background-color: orangered;
+}
+.black {
+   background-color: black;
+   img{
+      color: white;
+   }
 }

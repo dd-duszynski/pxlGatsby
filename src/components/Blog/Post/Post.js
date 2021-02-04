@@ -22,7 +22,7 @@ const Post = ({ data }) => {
                b3={[`${blog.breadcrumbs.b2[0]}${tytul}`, tytul]}
             />
             <div className={styles.imageBox}>
-               <img src={zdjecia[0].fluid.src} alt="" />
+               <img src={zdjecia[0].fluid.src} alt={tytul} />
             </div>
             <H1>{tytul}</H1>
             <Subtitle>
