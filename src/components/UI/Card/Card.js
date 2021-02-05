@@ -1,10 +1,11 @@
 import React, { useContext } from "react"
+import { Link } from 'gatsby'
 import Context from "../../../context/context"
 import Image from "gatsby-image"
 import styles from "./Card.module.scss"
 import Tag from "../../UI/Tag/Tag"
 
-const Card = ({ tags, img }) => {
+const Card = ({ tags, img, link }) => {
    const { textContent } = useContext(Context)
    let tagsForCard = []
 
@@ -37,19 +38,19 @@ const Card = ({ tags, img }) => {
    })
 
    return (
-      <div className={styles.Card}>
+      <Link className={styles.Card} to={link}>
          <Image fluid={img} className={styles.image} />
          <div className={styles.tags}>
             {tagsForCard &&
                tagsForCard.map(i => (
-                  <Tag 
-                     type={i.type} 
-                     text={i.text} 
-                     tooltip={i.tooltip} 
+                  <Tag
+                     type={i.type}
+                     text={i.text}
+                     tooltip={i.tooltip}
                   />
                ))}
          </div>
-      </div>
+      </Link>
    )
 }
 

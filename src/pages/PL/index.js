@@ -2,6 +2,7 @@ import React from "react"
 import Layout from "../../components/Layout/Layout"
 import SEO from "../../components/SEO/SEO"
 import HeroVideo from "../../components/HeroVideo/HeroVideo"
+import Hero from "../../components/Hero/Hero"
 import AboutUs from "../../components/AboutUs/AboutUs"
 import News from "../../components/News/News"
 import ContactContainer from "../../components/Contact/ContactContainer"
@@ -22,6 +23,7 @@ const IndexPage = ({ data }) => {
          <MainPageProducts data={data} />
          <ContactContainer />
          <FAQ />
+         <Hero />
       </Layout>
    )
 }

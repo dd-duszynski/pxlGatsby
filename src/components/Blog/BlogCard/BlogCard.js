@@ -15,7 +15,10 @@ const BlogCard = ({ blog }) => {
    return (
       <article className={styles.BlogCard}>
          {/* Left Side*/}
-         <Card tags={kategorie} img={zdjecia[0].fluid} />
+         <Card 
+            tags={kategorie} img={zdjecia[0].fluid} 
+            link={`${textContent.blog.breadcrumbs.b2[0]}${tytul}/`}
+         />
          {/* Right Side*/}
          <div className={styles.textContainer}>
             <HorizontalBar>

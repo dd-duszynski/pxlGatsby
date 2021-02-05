@@ -83,7 +83,7 @@ const Technology = ({ machine }) => {
                </H2>
                {documentToReactComponents(machine.tekst.json, RICHTEXT_OPTIONS)}
             </div>
-            <div className={styles.paragraphBox}>
+            <div className={[styles.paragraphBox, styles.mb].join(' ')}>
                <H2 addClass={styles.header}>
                   {textContent.technology.description.text[1]}
                </H2>
@@ -96,7 +96,6 @@ const Technology = ({ machine }) => {
                   })}
                </Carousel>
             </div>
-
             <div className={styles.paragraphBox}>
                <H2 addClass={styles.header}>
                   {textContent.technology.description.text[2]}
