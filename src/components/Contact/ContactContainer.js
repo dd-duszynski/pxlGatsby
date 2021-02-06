@@ -4,20 +4,18 @@ import styles from "./ContactContainer.module.scss"
 import ContactForm from "./ContactForm/ContactForm"
 import ContactInfo from "./ContactInfo/ContactInfo"
 import Newsletter from "./Newsletter/Newsletter"
-import H2 from "../UI/Headers/H2"
+import BoxHeader from '../UI/BoxHeader/BoxHeader'
 
 const Contact = () => {
    const { textContent } = useContext(Context)
    return (
       <section className={styles.Contact} id="contact">
          <div className={styles.container}>
-            <div className={styles.headerBox}>
-               <H2 addClass={styles.header}>
-                  {textContent.mainPage.contact.header}
-               </H2>
-            </div>
+            <BoxHeader
+               text={textContent.mainPage.contact.header}
+            />
             <ContactInfo text={textContent.mainPage.contact.text} />
-            <div className={styles.verticalLine} />
+            <div className={styles.line} />
             <ContactForm text={textContent.mainPage.contact.text} />
          </div>
          <Newsletter text={textContent.mainPage.contact.text} />

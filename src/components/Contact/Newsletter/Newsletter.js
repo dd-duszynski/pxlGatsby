@@ -63,7 +63,6 @@ const Newsletter = ({ text }) => {
                placeholder={text[2]}
             />
             <RhombusBtn
-               addClass={styles.submitInput}
                text={text[7]}
                type="input"
             />
@@ -80,9 +79,7 @@ const Newsletter = ({ text }) => {
 
    return (
       <div className={styles.Newsletter}>
-         <div className={styles.container}>
-            {isSend ? afterSigning : initialView}
-         </div>
+         {isSend ? afterSigning : initialView}
       </div>
    )
 }

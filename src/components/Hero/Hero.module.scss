@@ -6,7 +6,7 @@
    justify-content: center;
    align-items: center;
    flex-direction: column;
-   padding: 120px 0;
+   padding: 170px 0;
    background-image: url(../../assets/images/pexels-kehn-hermano-3849167.jpg);
    background-repeat: no-repeat;
    background-size: cover;
@@ -34,26 +34,15 @@
       }
    }
 }
-.headerBox {
-   background: linear-gradient(to right, $color-main, $color-main2);
-   background: -webkit-linear-gradient(to right, $color-main, $color-main2);
-   width: 260px;
-   height: 50px;
-   top: -22px;
-   left: calc(50% - 130px);
-   border-radius: 8px;
-   position: absolute;
-   text-align: center;
-   box-shadow: -1px 3px 4px rgba(50, 50, 0, 0.5);
-   z-index: 2;
-}
-.header {
-   color: white !important;
-   margin-top: 12px;
-}
 
 .imgBox {
    margin: 20px;
+   img{
+      opacity: 0.85;
+      &:hover{
+         opacity: 0.95;
+      }
+   }
 }
 .bmw {
    width: 75px;
