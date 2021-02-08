@@ -2,7 +2,7 @@ import React from "react"
 import Layout from "../../components/Layout/Layout"
 import BlogList from "../../components/Blog/BlogList/BlogList"
 import SEO from "../../components/SEO/SEO"
-import BlogSearchBar from "../../components/Blog/SearchBar/SearchBar"
+// import BlogSearchBar from "../../components/Blog/SearchBar/SearchBar"
 import { graphql } from "gatsby"
 
 const blog = ({ data }) => {
@@ -14,7 +14,7 @@ const blog = ({ data }) => {
             lang="en"
          />
          <BlogList data={data.blog.edges} />
-         <BlogSearchBar />
+         {/* <BlogSearchBar /> */}
       </Layout>
    )
 }

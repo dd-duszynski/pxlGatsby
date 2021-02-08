@@ -6,7 +6,7 @@ import Card from "../../UI/Card/Card"
 import Paragraph from "../../UI/Paragraph/Paragraph"
 import H2 from "../../UI/Headers/H2"
 import Subtitle from "../../UI/Subtitle/Subtitle"
-import HorizontalBar from "../../UI/Bars/HorizontalBar"
+import VerticalBar from "../../UI/Bars/VerticalBar"
 
 const BlogCard = ({ blog }) => {
    const { tytul, zdjecia, dataPublikacji, kategorie, trescKrotka } = blog.node
@@ -15,22 +15,24 @@ const BlogCard = ({ blog }) => {
    return (
       <article className={styles.BlogCard}>
          {/* Left Side*/}
-         <Card 
-            tags={kategorie} img={zdjecia[0].fluid} 
-            link={`${textContent.blog.breadcrumbs.b2[0]}${tytul}/`}
+         <Card
+            tags={kategorie} img={zdjecia[0].fluid}
+            link={`${textContent.blog.breadcrumbs.b2[0]}/${tytul}/`}
          />
          {/* Right Side*/}
          <div className={styles.textContainer}>
-            <HorizontalBar>
+            <VerticalBar>
                <H2>{tytul}</H2>
-               <Subtitle>{dataPublikacji} | 5 min czytania</Subtitle>
-            </HorizontalBar>
+               <Subtitle>
+                  {dataPublikacji} | 5 min czytania
+               </Subtitle>
+            </VerticalBar>
             <Paragraph addClass={styles.paragraph}>
                {trescKrotka.trescKrotka}
             </Paragraph>
             <RhombusBtn
                type="link"
-               link={`${textContent.blog.breadcrumbs.b2[0]}${tytul}/`}
+               link={`${textContent.blog.breadcrumbs.b2[0]}/${tytul}/`}
             >
                {textContent.blog.text[0]}
             </RhombusBtn>

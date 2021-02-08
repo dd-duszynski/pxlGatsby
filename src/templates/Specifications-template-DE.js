@@ -47,6 +47,7 @@ export const getData = graphql`
                }
             }
             specyfikacje {
+               title
                file {
                   fileName
                   url

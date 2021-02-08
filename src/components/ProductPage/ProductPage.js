@@ -16,7 +16,7 @@ import { RICHTEXT_OPTIONS } from "../UI/RichText/RichText"
 import TagsContainer from "./TagsContainer/TagsContainer"
 import Modal from "../Modal/Modal"
 import ContactForm from "../Contact/ContactForm/ContactForm"
-import HorizontalBar from '../UI/Bars/HorizontalBar'
+import VerticalBar from '../UI/Bars/VerticalBar'
 
 const ProductPage = ({ data }) => {
    const { textContent } = useContext(Context)
@@ -94,11 +94,11 @@ const ProductPage = ({ data }) => {
          </div>
 
          <div className={styles.rightSection}>
-            <HorizontalBar addClass={styles.bar}>
+            <VerticalBar addClass={styles.bar}>
                <H1 addClass={styles.header}>{nazwa}</H1>
                <TagsContainer zadruk={zadruk} opcjeProduktu={opcjeProduktu} />
 
-            </HorizontalBar>
+            </VerticalBar>
             {documentToReactComponents(opis.json, RICHTEXT_OPTIONS)}
             <H2 addClass={styles.header}>{textContent.productPage.text[1]}</H2>
             {zalety.map(item => (

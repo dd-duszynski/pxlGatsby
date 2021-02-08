@@ -104,7 +104,7 @@ export const contentDE = {
       ],
    },
    navigation: {
-      mainPageLink: "DE/",
+      mainPageLink: "DE",
       navItem: [
          ["Produkte", "DE/products"],
          ["Werbetechnik", "DE/materials"],
@@ -129,14 +129,14 @@ export const contentDE = {
             "Sonstige",
          ],
          links: [
-            "DE/products/covid/",
-            "DE/products/banners/",
-            "DE/products/flags/",
-            "DE/products/rollups/",
-            "DE/products/walls/",
-            "DE/products/stands/",
-            "DE/products/tribunes/",
-            "DE/products/others/",
+            "DE/products/covid",
+            "DE/products/banners",
+            "DE/products/flags",
+            "DE/products/rollups",
+            "DE/products/walls",
+            "DE/products/stands",
+            "DE/products/tribunes",
+            "DE/products/others",
          ],
       },
       productCard: ["SEHEN SIE DAS PRODUKT"],
@@ -151,11 +151,11 @@ export const contentDE = {
          latex: ["LAT", "Drucktechnologie: Latex"],
          sublimation: ["SUB", "Drucktechnologie: Sublimacja"],
 
-         doubleSide: ["4+4","Beidseitiger Druck"],
-         backlight: ["Light","Material für Highlights"],
-         stoplight: ["StopLight","Licht undurchlässig"],
-         nonFlammable: ["nonF","Nicht brennbares Material"],
-         waterproof: ["nonW","Wasserdichtes Material"]
+         doubleSide: ["4+4", "Beidseitiger Druck"],
+         backlight: ["Light", "Material für Highlights"],
+         stoplight: ["StopLight", "Licht undurchlässig"],
+         nonFlammable: ["nonF", "Nicht brennbares Material"],
+         waterproof: ["nonW", "Wasserdichtes Material"]
       },
    },
    productPage: {
@@ -239,15 +239,15 @@ export const contentDE = {
       },
       text: ["Weiter lesen", "Minuten lesen"],
       tag: {
-         printing: ["Drucken", "Drucken - xxx", "DE/blog/printing/"],
-         dtp: ["DTP", "DTP - xxx", "DE/blog/dtp/"],
-         products: ["Produkte", "Produkte - xxx", "DE/blog/products/"],
+         printing: ["Drucken", "Drucken - xxx", "DE/blog/printing"],
+         dtp: ["DTP", "DTP - xxx", "DE/blog/dtp"],
+         products: ["Produkte", "Produkte - xxx", "DE/blog/products"],
          technology: [
             "Technologien",
             "Technologien - xxx",
-            "DE/blog/technology/",
+            "DE/blog/technology",
          ],
-         all: ["Alle von ihnen", "Alle Kategorien", "DE/blog/"],
+         all: ["Alle von ihnen", "Alle Kategorien", "DE/blog"],
       },
    },
    page404: {
@@ -259,8 +259,8 @@ export const contentDE = {
    seo: {
       specTitle: "PrintXL - Druckdatenvorbereitung -",
       specDesc: "Liste der Spezifikationen für die Gruppenprodukte:",
-      prodTitle: "PrintXL - Produkte -" ,
-      prodDesc: "Liste der Produkte aus der Gruppe:" ,
+      prodTitle: "PrintXL - Produkte -",
+      prodDesc: "Liste der Produkte aus der Gruppe:",
       matTitle: "PrintXL - Werbetechnik -",
       matDesc: "Liste der Materialien aus der Gruppe:",
       technologyTitle: "PrintXL - Druckverfahren -",

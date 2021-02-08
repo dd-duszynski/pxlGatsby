@@ -22,7 +22,6 @@ const Technology = ({ machine }) => {
    for (const [key, value] of Object.entries(parsedValue)) {
       specificationArray.push([key, value])
    }
-
    const switchImgModalVisibility = e => {
       setCurrentImg(e.target.src)
       isImgModalOpen === false ? setImgModalOpen(true) : setImgModalOpen(false)
@@ -67,7 +66,7 @@ const Technology = ({ machine }) => {
             </Carousel>
             <div className={styles.table}>
                {specificationArray.map(i => (
-                  <div className={styles.innerTable}>
+                  <div className={styles.innerTable} key={`${i[0]}`}>
                      <div className={styles.innerTableTop}>
                         <Paragraph bold>{i[0]}:</Paragraph>
                      </div>

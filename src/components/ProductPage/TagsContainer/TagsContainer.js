@@ -3,8 +3,7 @@ import Context from "../../../context/context"
 import styles from "./TagsContainer.module.scss"
 import Tag from "../../UI/Tag/Tag"
 
-const TagsContainer = ({ zadruk, opcjeProduktu }) => {
-   console.log(opcjeProduktu)
+const TagsContainer = ({ zadruk, opcjeProduktu, addClass }) => {
    const { textContent } = useContext(Context)
 
    let uv, solvent, sublimation, latex
@@ -38,7 +37,7 @@ const TagsContainer = ({ zadruk, opcjeProduktu }) => {
    }
 
    return (
-      <div className={styles.tagsContainer}>
+      <div className={[styles.tagsContainer, addClass].join(' ')}>
          {bestseller >= 0 && (
             <Tag
                type="best"

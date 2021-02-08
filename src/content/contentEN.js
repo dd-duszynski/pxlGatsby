@@ -101,7 +101,7 @@ export const contentEN = {
       ],
    },
    navigation: {
-      mainPageLink: "EN/",
+      mainPageLink: "EN",
       navItem: [
          ["Products", "EN/products"],
          ["Materials", "EN/materials"],
@@ -126,14 +126,14 @@ export const contentEN = {
             "Others",
          ],
          links: [
-            "EN/products/covid/",
-            "EN/products/banners/",
-            "EN/products/flags/",
-            "EN/products/rollups/",
-            "EN/products/walls/",
-            "EN/products/stands/",
-            "EN/products/tribunes/",
-            "EN/products/others/",
+            "EN/products/covid",
+            "EN/products/banners",
+            "EN/products/flags",
+            "EN/products/rollups",
+            "EN/products/walls",
+            "EN/products/stands",
+            "EN/products/tribunes",
+            "EN/products/others",
          ],
       },
       productCard: ["SEE THE PRODUCT"],
@@ -155,7 +155,7 @@ export const contentEN = {
       },
    },
    productPage: {
-      breadcrumbs: ["EN/", "Main Page"],
+      breadcrumbs: ["EN", "Main Page"],
       materialLink: "EN/materials",
       text: [
          "Interested? Write to us!",
@@ -225,35 +225,35 @@ export const contentEN = {
    blog: {
       navigationHeader: "Categories",
       breadcrumbs: {
-         b1: ["EN/", "Main Page"],
-         b2: ["EN/blog/", "Blog"],
+         b1: ["EN", "Main Page"],
+         b2: ["EN/blog", "Blog"],
       },
       text: ["READ MORE", "minutes reading"],
       tag: {
          printing: [
             "Druk",
             "Druk - Jeden z najpopularniejszych produktów.",
-            "EN/blog/printing/",
+            "EN/blog/printing",
          ],
          dtp: [
             "DTP",
             "DTP - Jeden z najpopularniejszych produktów.",
-            "EN/blog/dtp/",
+            "EN/blog/dtp",
          ],
          products: [
             "Produkty",
             "Produkty - Jeden z najpopularniejszych produktów.",
-            "EN/blog/products/",
+            "EN/blog/products",
          ],
          technology: [
             "Technologie",
             "Technologie Jeden z najpopularniejszych produktów.",
-            "EN/blog/technology/",
+            "EN/blog/technology",
          ],
          all: [
             "Wszystkie",
             "Wszystkie - Jeden z najpopularniejszych produktów.",
-            "EN/blog/",
+            "EN/blog",
          ],
       },
    },

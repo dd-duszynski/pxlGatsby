@@ -17,7 +17,7 @@ const TagsContainer = ({ data, text, top, bottom }) => {
       solvent = data.zadruk.findIndex(el => el === "Solvent")
       sublimation = data.zadruk.findIndex(el => el === "Sublimacja")
       latex = data.zadruk.findIndex(el => el === "Latex")
-   }
+   } 
 
    const containerOnTop = (
       <div className={styles.tagsTopContainer}>

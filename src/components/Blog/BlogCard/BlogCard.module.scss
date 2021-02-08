@@ -7,7 +7,6 @@
    justify-content: center;
    margin: 25px 0;
 }
-
 .textContainer {
    margin-left: 30px;
    position: relative;
@@ -17,4 +16,21 @@
    margin-top: 5px;
    font-size: 15px;
    text-align: left;
+}
+
+@media(max-width: 1000px){
+   .BlogCard{
+      flex-direction: column;
+      width: auto;
+      height: auto;
+   }
+   .textContainer {
+      margin-left: 30px;
+      margin-top: 10px;
+      position: relative;
+      width: 100%;
+      max-width: 350px; 
+      min-height: 150px;
+
+   }
 }

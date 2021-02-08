@@ -14,7 +14,7 @@ const TemplateItem = ({ product }) => {
          >
             <li className={styles.link}>
                <AiFillFilePdf className={styles.icon} />
-               {item.file.fileName}
+               {item.title}
             </li>
          </a>
       ))

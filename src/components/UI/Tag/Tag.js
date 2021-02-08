@@ -2,7 +2,6 @@ import React from "react"
 import styles from "./Tag.module.scss"
 import ReactTooltip from "react-tooltip"
 import sun from "../../../../static/sun.svg"
-import sun2 from "../../../../static/sun2.svg"
 import noSun from "../../../../static/noSun.svg"
 import noWater from "../../../../static/noWater.svg"
 import noFire from "../../../../static/noFire.svg"
@@ -65,10 +64,10 @@ const Tag = ({ type, text, tooltip, noTooltip }) => {
                {icon}
             </div>
          ) : (
-            <span className={styles.tagText} data-tip data-for={tooltip}>
-               {text}
-            </span>
-         )}
+               <span className={styles.tagText} data-tip data-for={tooltip}>
+                  {text}
+               </span>
+            )}
          {noTooltip ? null : (
             <ReactTooltip
                id={tooltip}

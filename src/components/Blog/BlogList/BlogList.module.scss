@@ -1,8 +1,17 @@
-.BlogList{
+.BlogList {
    grid-column: 2/3;
    display: flex;
-   justify-content: center;
-   align-items: flex-start;
-   flex-wrap: wrap;
+   flex-direction: column;
+   justify-content: flex-start;
+   align-items: center;
    min-height: calc(100vh - 333px);
+}
+
+@media (max-width: 1000px) {
+   .BlogList {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+   }
 }
