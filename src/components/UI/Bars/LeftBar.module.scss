@@ -14,11 +14,11 @@
    height: 100%;
    display: flex;
    align-items: center;
-   padding-left: 10%;
    clip-path: polygon(0 0, 94% 0, 100% 100%, 0 100%);
    @include mainGradient;
 }
 .heading {
+   padding-left: 10vw;
    color: white !important;
 }
 
@@ -29,5 +29,10 @@
    }
    .heading {
       font-size: 23px;
+   }
+}
+@media (max-width: 600px) {
+   .heading {
+      padding-left: 3vw;
    }
 }

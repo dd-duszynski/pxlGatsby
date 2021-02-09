@@ -19,14 +19,16 @@ const Navigation = () => {
       setHamburgerOpen(false)
    }
    const cssHeader = isBurgerOpen ? styles.NavigationOpened : styles.Navigation
-   
+
    return (
       <header className={cssHeader}>
          <ContactBar />
          <div className={styles.container}>
             <Logo link={`/${textContent.navigation.mainPageLink}`} />
             <Burger isActive={isBurgerOpen} toggleNavSlide={toggleNavSlide} />
-            <nav className={isBurgerOpen ? styles.navActive : styles.navInactive}>
+            <nav
+               className={isBurgerOpen ? styles.navActive : styles.navInactive}
+            >
                <ul className={styles.listOfNavItems}>
                   {textContent.navigation.navItem.map(item => (
                      <li className={styles.navItem} key={item[0]}>

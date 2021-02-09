@@ -29,7 +29,7 @@
 .link {
    list-style: none;
    color: white;
-   margin-right: 24px;
+   margin-right: 18px;
    font-size: $font-size-2;
    text-decoration: none;
    list-style: none;
@@ -42,11 +42,12 @@
    color: $color-accent;
 }
 
-.navItem:nth-child(7) .link {
+// kiedy dodasz blog do navi to tu zmień na (7) 
+.navItem:nth-child(6) .link {
    margin-right: 0px;
 }
 
-@media screen and (max-width: 1150px) {
+@media screen and (max-width: 1200px) {
    .navInactive {
       display: none;
    }

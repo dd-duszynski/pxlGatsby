@@ -106,7 +106,7 @@ export const contentEN = {
          ["Products", "EN/products"],
          ["Materials", "EN/materials"],
          ["Technologies", "EN/technology"],
-         ["Blog", "EN/blog"],
+         // ["Blog", "EN/blog"],
          ["Specifications", "EN/specifications"],
          ["FAQ", "EN/#FAQ"],
          ["Contact", "EN/contact"],

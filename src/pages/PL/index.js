@@ -29,10 +29,7 @@ const IndexPage = ({ data }) => {
 }
 export const query = graphql`
    query {
-      Produkty: allContentfulProduktyPl(
-         filter: { opcjeProduktu: { eq: "Strona Główna" } }
-         limit: 12
-      ) {
+      Produkty: allContentfulProduktyPl {
          nodes {
             nazwa
             zadruk
@@ -56,5 +53,34 @@ export const query = graphql`
       }
    }
 `
+// export const query = graphql`
+//    query {
+//       Produkty: allContentfulProduktyPl(
+//          filter: { opcjeProduktu: { eq: "Strona Główna" } }
+//          limit: 6
+//       ) {
+//          nodes {
+//             nazwa
+//             zadruk
+//             opcjeProduktu
+//             opis {
+//                content {
+//                   content {
+//                      value
+//                   }
+//                }
+//             }
+//             opisKrotki
+//             rodzaj
+//             zdjecia {
+//                fixed(height: 200) {
+//                   ...GatsbyContentfulFixed
+//                }
+//             }
+//             url
+//          }
+//       }
+//    }
+// `
 
 export default IndexPage

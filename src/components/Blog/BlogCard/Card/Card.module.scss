@@ -1,7 +1,8 @@
-@import "../../../scss/variables.scss";
+@import "../../../../scss/variables.scss";
 
 .Card {
-   width: 400px;
+   width: 100%;
+   max-width: 400px;
    height: 255px;
    position: relative;
 }
@@ -22,4 +23,9 @@
    bottom: 1px;
    right: 1px;
    display: flex;
+}
+@media(max-width: 600px){
+   .Card {
+      height: 220px;
+   }
 }

@@ -2,11 +2,12 @@ import React, { useContext } from "react"
 import Context from "../../../context/context"
 import styles from "./BlogCard.module.scss"
 import RhombusBtn from "../../UI/RhombusBtn/RhombusBtn"
-import Card from "../../UI/Card/Card"
+import Card from "./Card/Card"
 import Paragraph from "../../UI/Paragraph/Paragraph"
 import H2 from "../../UI/Headers/H2"
 import Subtitle from "../../UI/Subtitle/Subtitle"
 import VerticalBar from "../../UI/Bars/VerticalBar"
+
 
 const BlogCard = ({ blog }) => {
    const { tytul, zdjecia, dataPublikacji, kategorie, trescKrotka } = blog.node

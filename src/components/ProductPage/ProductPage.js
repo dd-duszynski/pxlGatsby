@@ -16,7 +16,7 @@ import { RICHTEXT_OPTIONS } from "../UI/RichText/RichText"
 import TagsContainer from "./TagsContainer/TagsContainer"
 import Modal from "../Modal/Modal"
 import ContactForm from "../Contact/ContactForm/ContactForm"
-import VerticalBar from '../UI/Bars/VerticalBar'
+import VerticalBar from "../UI/Bars/VerticalBar"
 
 const ProductPage = ({ data }) => {
    const { textContent } = useContext(Context)
@@ -97,7 +97,6 @@ const ProductPage = ({ data }) => {
             <VerticalBar addClass={styles.bar}>
                <H1 addClass={styles.header}>{nazwa}</H1>
                <TagsContainer zadruk={zadruk} opcjeProduktu={opcjeProduktu} />
-
             </VerticalBar>
             {documentToReactComponents(opis.json, RICHTEXT_OPTIONS)}
             <H2 addClass={styles.header}>{textContent.productPage.text[1]}</H2>
@@ -144,7 +143,6 @@ const ProductPage = ({ data }) => {
                      className={styles.sizes_img}
                      src={wymiary.file.url}
                      alt={`${nazwa} sizes`}
-                     onClick={e => switchImgModalVisibility(e)}
                   />
                </>
             ) : null}

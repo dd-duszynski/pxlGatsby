@@ -110,7 +110,7 @@ export const contentPL = {
          ["Produkty", "PL/products"],
          ["Materiały", "PL/materials"],
          ["Technologie", "PL/technology"],
-         ["Blog", "PL/blog"],
+         // ["Blog", "PL/blog"],
          ["Specyfikacje", "PL/specifications"],
          ["FAQ", "PL/#FAQ"],
          ["Kontakt", "PL/contact"],

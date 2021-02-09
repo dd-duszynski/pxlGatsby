@@ -109,7 +109,7 @@ export const contentDE = {
          ["Produkte", "DE/products"],
          ["Werbetechnik", "DE/materials"],
          ["Druckverfahren", "DE/technology"],
-         ["Blog", "DE/blog"],
+         // ["Blog", "DE/blog"],
          ["Druckdatenvorbereitung", "DE/specifications"],
          ["FAQ", "DE/#FAQ"],
          ["Kontakt", "DE/contact"],

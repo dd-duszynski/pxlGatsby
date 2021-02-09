@@ -16,7 +16,7 @@ const Technology = ({ machine }) => {
    const [currentImg, setCurrentImg] = useState(null)
    const { textContent } = useContext(Context)
    const [...images] = machine.zdjecia
-
+   console.log(machine);
    let specificationArray = []
    const parsedValue = JSON.parse(machine.specyfikacja.internal.content)
    for (const [key, value] of Object.entries(parsedValue)) {
@@ -78,11 +78,11 @@ const Technology = ({ machine }) => {
             </div>
             <div className={styles.paragraphBox}>
                <H2 addClass={styles.header}>
-                  {textContent.technology.description.text[0]}
+                  {machine.nazwa} - {textContent.technology.description.text[0]}
                </H2>
                {documentToReactComponents(machine.tekst.json, RICHTEXT_OPTIONS)}
             </div>
-            <div className={[styles.paragraphBox, styles.mb].join(' ')}>
+            <div className={[styles.paragraphBox, styles.mb].join(" ")}>
                <H2 addClass={styles.header}>
                   {textContent.technology.description.text[1]}
                </H2>
