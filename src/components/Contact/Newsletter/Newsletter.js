@@ -12,28 +12,27 @@ const Newsletter = ({ text }) => {
 
    const handleSubmit = event => {
       event.preventDefault()
-      // fetch("https://pxl-server.herokuapp.com/email", {
-      //    method: "POST",
-      //    headers: {
-      //       "Content-Type": "application/json",
-      //    },
-      //    body: JSON.stringify({
-      //       name: name,
-      //       email: email,
-      //       subject: window.location.href,
-      //    }),
-      // })
-      //    .then(response => response.json())
-      //    .then(data => {
-      //       console.log("Success:", data)
-      //    })
-      //    .catch(error => {
-      //       console.error("Error:", error)
-      //    })
-      setIsSend(true)
-      setName("")
-      setEmail("")
-      setTimeout(() => setIsSend(false), 4000)
+      const client = {
+         firstName: name,
+         email: email,
+         language: "PL",
+      }
+      fetch("https://printxl-newsletter.firebaseio.com/list.json", {
+         method: "POST",
+         headers: {
+            "Content-Type": "application/json",
+         },
+         body: JSON.stringify({
+            firstName: name,
+            email: email,
+            language: "PL",
+         }),
+      }).then(resizeTo => {
+         setIsSend(true)
+         setName("")
+         setEmail("")
+         setTimeout(() => setIsSend(false), 4000)
+      })
    }
 
    const handleName = e => {
@@ -62,10 +61,7 @@ const Newsletter = ({ text }) => {
                name="email"
                placeholder={text[2]}
             />
-            <RhombusBtn
-               text={text[7]}
-               type="input"
-            />
+            <RhombusBtn text={text[7]} type="input" />
          </form>
       </>
    )

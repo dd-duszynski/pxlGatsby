@@ -146,7 +146,7 @@ export const contentPL = {
          news: ["NOWOŚĆ", "Nowość w naszej ofercie."],
          inOut: ["IN / OUT", "Wykorzystanie wewnątrz i poza budynkiem."],
          indoor: ["INDOOR", "Zalecane wykorzystanie wewnątrz budynku."],
-         outdoor: ["OUTDOOR", "Możliwość wykorzystania na zewnątrz."],
+         outdoor: ["OUTDOOR", "Możliwość wykorzystania poza budynkiem."],
          uv: ["UV", "Technologia druku: UV"],
          solvent: ["SOL", "Technologia druku: Solvent"],
          latex: ["LAT", "Technologia druku: Latex"],
