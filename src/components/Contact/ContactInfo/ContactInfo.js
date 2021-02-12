@@ -19,16 +19,16 @@ const ContactInfo = ({ text }) => {
             <br />
             ul. Czochralskiego 6,
             <br />
-            61-248 Poznań, {text[0]}
+            61-248 Poznań, {text.text[0]}
          </a>
 
-         <a className={styles.linkItem} href="mailto:info@printxl.pl">
+         <p className={styles.linkItem} >
             <IoMdMail className={styles.icon} />
             info@printxl.pl
-         </a>
+         </p>
 
-         <a className={styles.linkItem} href="tel:+48 695-859-808">
-            <AiFillPhone className={styles.icon} /> +48 695-859-808
+         <a className={styles.linkItem} href={`tel:${text.phone}`}>
+            <AiFillPhone className={styles.icon} /> {text.phone}
          </a>
 
          <a

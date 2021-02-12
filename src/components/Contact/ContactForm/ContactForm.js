@@ -14,6 +14,10 @@ const ContactForm = ({ text }) => {
 
    const handleSubmit = event => {
       event.preventDefault()
+      // heroku - production
+      // https://pxl-server.herokuapp.com/email
+      // localhost - development
+      // http://localhost:5000/email
       fetch("https://pxl-server.herokuapp.com/email", {
          method: "POST",
          headers: {

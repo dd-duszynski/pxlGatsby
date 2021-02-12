@@ -42,7 +42,7 @@ const Footer = () => {
 
                   <a className={styles.link} href="tel:+48 695-859-808">
                      <AiFillPhone className={styles.icon} />
-                     +48 695-859-808
+                     {textContent.mainPage.contact.phone}
                   </a>
                </div>
             </div>

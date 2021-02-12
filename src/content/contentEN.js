@@ -35,6 +35,7 @@ export const contentEN = {
       },
       contact: {
          header: "Contact",
+         phone: "+48 501 487 669",
          text: [
             "Poland",
             "Name",
@@ -232,27 +233,27 @@ export const contentEN = {
       tag: {
          printing: [
             "Druk",
-            "Druk - Jeden z najpopularniejszych produktów.",
+            "Posts about the topic - Print",
             "EN/blog/printing",
          ],
          dtp: [
             "DTP",
-            "DTP - Jeden z najpopularniejszych produktów.",
+            "DTP - preparing files for printing",
             "EN/blog/dtp",
          ],
          products: [
             "Produkty",
-            "Produkty - Jeden z najpopularniejszych produktów.",
+            "Topic Posts - Products",
             "EN/blog/products",
          ],
          technology: [
             "Technologie",
-            "Technologie Jeden z najpopularniejszych produktów.",
+            "Posts about the topic - Technologies.",
             "EN/blog/technology",
          ],
          all: [
-            "Wszystkie",
-            "Wszystkie - Jeden z najpopularniejszych produktów.",
+            "All",
+            "All - All topics.",
             "EN/blog",
          ],
       },

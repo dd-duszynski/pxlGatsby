@@ -9,8 +9,6 @@ const getData = graphql`
             configTitle
             configDescription
             configAuthor
-            configData
-            configTwitterUserName
             configImg
             configSiteUrl
          }

@@ -14,7 +14,7 @@ const Contact = () => {
             <BoxHeader
                text={textContent.mainPage.contact.header}
             />
-            <ContactInfo text={textContent.mainPage.contact.text} />
+            <ContactInfo text={textContent.mainPage.contact} />
             <div className={styles.line} />
             <ContactForm text={textContent.mainPage.contact.text} />
          </div>

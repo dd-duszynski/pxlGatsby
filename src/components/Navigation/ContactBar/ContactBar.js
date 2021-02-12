@@ -21,9 +21,9 @@ const ContactBar = () => {
          >
             <ContactForm text={textContent.mainPage.contact.text} />
          </Modal>
-         <a href="tel:+48 695-859-808" className={styles.linkContainer}>
+         <a href={`tel:${textContent.mainPage.contact.phone}`} className={styles.linkContainer}>
             <AiFillPhone className={styles.icon} />
-            48 695-859-808
+            {textContent.mainPage.contact.phone}
          </a>
 
          <a

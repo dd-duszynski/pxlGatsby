@@ -1,17 +1,19 @@
-import React from "react"
+import React, { useContext } from "react"
 import { Link } from "gatsby"
+import Context from "../../../context/context"
 import styles from "./ContactBarMobile.module.scss"
 import { AiFillPhone } from "react-icons/ai"
 import { IoMdMail } from "react-icons/io"
 import { MdLocationOn } from "react-icons/md"
 
 const ContactBarMobile = () => {
+   const { textContent } = useContext(Context)
    return (
       <>
          <li className={styles.ContactBarMobile}>
             <div className={styles.line} />
             <div className={styles.iconsContainer}>
-               <a href="tel:+48 695-859-808">
+               <a href={`tel:${textContent.mainPage.contact.phone}`}>
                   <AiFillPhone className={styles.icon} />
                </a>
                <a href="mailto:info@printxl.pl">

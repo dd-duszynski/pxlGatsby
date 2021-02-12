@@ -38,6 +38,7 @@ export const contentDE = {
       },
       contact: {
          header: "Kontakt",
+         phone: "+48 605 555 380",
          text: [
             "Polen",
             "Vorname",
@@ -47,10 +48,10 @@ export const contentDE = {
             "Bleiben Sie auf dem neuesten Stand!",
             "Melden Sie jetzt zum Newsletter an!",
             "Newsletter erhalten!",
-            "Schreib uns:",
+            "Schreiben Sie uns:",
             "Kontaktseite",
             "Danke für deine Nachricht",
-            "Danke, dass Sie bei uns sind"
+            "Danke, dass Sie bei uns sind",
          ],
       },
       faq: [
@@ -145,17 +146,17 @@ export const contentDE = {
          news: ["NEUHEIT", "Neu in unserem Angebot."],
          inOut: ["IN / OUT", "Innen- und Außenbereich."],
          indoor: ["INDOOR", "Empfohlene Verwendung im Gebäude."],
-         outdoor: ["OUTDOOR", "Außeneinsatz möglich."],
+         outdoor: ["OUTDOOR", "Mögliche Verwendung außerhalb des Gebäudes."],
          uv: ["UV", "Drucktechnologie: UV"],
          solvent: ["SOL", "Drucktechnologie: Solvent"],
          latex: ["LAT", "Drucktechnologie: Latex"],
-         sublimation: ["SUB", "Drucktechnologie: Sublimacja"],
+         sublimation: ["SUB", "Drucktechnologie: Sublimation"],
 
          doubleSide: ["4+4", "Beidseitiger Druck"],
-         backlight: ["Light", "Material für Highlights"],
-         stoplight: ["StopLight", "Licht undurchlässig"],
+         backlight: ["Light", "Material für Hinterleuchtung"],
+         stoplight: ["StopLight", "Lichtdichtes Material"],
          nonFlammable: ["nonF", "Nicht brennbares Material"],
-         waterproof: ["nonW", "Wasserdichtes Material"]
+         waterproof: ["nonW", "Wasserdichtes Material"],
       },
    },
    productPage: {
@@ -239,12 +240,20 @@ export const contentDE = {
       },
       text: ["Weiter lesen", "Minuten lesen"],
       tag: {
-         printing: ["Drucken", "Drucken - xxx", "DE/blog/printing"],
-         dtp: ["DTP", "DTP - xxx", "DE/blog/dtp"],
-         products: ["Produkte", "Produkte - xxx", "DE/blog/products"],
+         printing: ["Drucken", "Beiträge zum Thema - Druk", "DE/blog/printing"],
+         dtp: [
+            "DTP",
+            "DTP – Vorbereitung der Dateien zum Drucken",
+            "DE/blog/dtp",
+         ],
+         products: [
+            "Produkte",
+            "Beiträge zum Thema - Produkte",
+            "DE/blog/products",
+         ],
          technology: [
             "Technologien",
-            "Technologien - xxx",
+            "Beiträge zum Thema - Technologien",
             "DE/blog/technology",
          ],
          all: ["Alle von ihnen", "Alle Kategorien", "DE/blog"],
@@ -258,7 +267,7 @@ export const contentDE = {
    },
    seo: {
       specTitle: "PrintXL - Druckdatenvorbereitung -",
-      specDesc: "Liste der Spezifikationen für die Gruppenprodukte:",
+      specDesc: "Liste der Spezifikationen für Produkte aus der Gruppe:",
       prodTitle: "PrintXL - Produkte -",
       prodDesc: "Liste der Produkte aus der Gruppe:",
       matTitle: "PrintXL - Werbetechnik -",

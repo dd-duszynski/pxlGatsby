@@ -39,6 +39,7 @@ export const contentPL = {
       },
       contact: {
          header: "Kontakt",
+         phone:"+48 695 859 808",
          text: [
             "Polska",
             "Imię",

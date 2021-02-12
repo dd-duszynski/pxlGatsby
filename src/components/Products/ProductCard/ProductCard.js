@@ -1,4 +1,5 @@
 import React, { useState, useContext } from "react"
+import { Link } from "gatsby"
 import styles from "./ProductCard.module.scss"
 import RhombusBtn from "../../UI/RhombusBtn/RhombusBtn"
 import { RiArrowLeftSLine, RiArrowRightSLine } from "react-icons/ri"
@@ -41,11 +42,16 @@ const ProductCard = ({ data }) => {
                   <RiArrowLeftSLine />
                </div>
             ) : null}
-            <img
-               src={data.zdjecia[imgIndex].fixed.src}
-               className={styles.image}
-               alt={data.nazwa}
-            />
+            <Link 
+               to={`/${data.url}`}
+               className={styles.imgLink}
+            >
+               <img
+                  src={data.zdjecia[imgIndex].fixed.src}
+                  className={styles.image}
+                  alt={data.nazwa}
+               />
+            </Link>
             {isMoreThanOneImg ? (
                <div className={styles.arrowRight} onClick={imgNext}>
                   <RiArrowRightSLine />

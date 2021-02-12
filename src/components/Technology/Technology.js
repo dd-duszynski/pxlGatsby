@@ -16,7 +16,6 @@ const Technology = ({ machine }) => {
    const [currentImg, setCurrentImg] = useState(null)
    const { textContent } = useContext(Context)
    const [...images] = machine.zdjecia
-   console.log(machine)
    let specificationArray = []
    const parsedValue = JSON.parse(machine.specyfikacja.internal.content)
    for (const [key, value] of Object.entries(parsedValue)) {

@@ -39,6 +39,7 @@ export const contentFR = {
       },
       contact: {
          header: "Contact",
+         phone:"+48 663 200 370",
          text: [
             "Pologne",
             "Nom",
@@ -100,8 +101,8 @@ export const contentFR = {
          "SIRET",
       ],
       links: [
-         "http://printxl.FR/Instructions/termsOfCooperation_FR.pdf",
-         "http://printxl.FR/Instructions/Instructions_FR.pdf",
+         "http://printxl.pl/Instructions/termsOfCooperation_FR.pdf",
+         "http://printxl.pl/Instructions/Instructions_FR.pdf",
       ],
    },
    navigation: {
@@ -146,16 +147,16 @@ export const contentFR = {
          news: ["NOUVEAU"," Nouveau dans notre offre."],
          inOut: ["IN / OUT", "Utilisation intérieure et extérieure."],
          indoor: ["INDOOR", "Utilisation intérieure recommandée."],
-         outdoor: ["OUTDOOR", "Outdoor use"],
+         outdoor: ["OUTDOOR", "Utilisation possible à l'extérieur du bâtiment"],
          uv: ["UV", "Technologie d'impression: UV"],
          solvent: ["SOL", "Technologie d'impression: Solvent"],
          latex: ["LAT", "Technologie d'impression: Latex"],
          sublimation: ["SUB", "Technologie d'impression: Sublimacja"],
          doubleSide: ["4+4","Impression recto verso"],
-         backlight: ["Light","Matériel pour les faits saillants"],
-         stoplight: ["StopLight","Imperméable à la lumière"],
-         nonFlammable: ["nonF","Matériau ininflammable"],
-         waterproof: ["nonW","Matériau étanche"]
+         backlight: ["Matériel diffusant","Matériel diffusant"],
+         stoplight: ["Matériel opaque","Matériel opaque"],
+         nonFlammable: ["Matériau ininflammable","Matériau ininflammable"],
+         waterproof: ["Matériau étanche","Matériau étanche"]
       },
    },
    productPage: {
@@ -222,7 +223,7 @@ export const contentFR = {
          text: [
             "Description de la technologie",
             "Produits connexes",
-            "Matières premières connexes",
+            "matériaux connexes",
          ],
       },
    },
@@ -236,26 +237,26 @@ export const contentFR = {
       tag: {
          printing: [
             "Druk",
-            "Tematem artykułu jest szeroko rozumiany druk",
+            "Articles sur le sujet - impression",
             "FR/blog/printing",
          ],
          dtp: [
             "DTP",
-            "Tematem jest odpowiednie przygotowanie pliku do druku.",
+            "DTP - préparation des fichiers pour l'impression",
             "FR/blog/dtp",
          ],
          products: [
             "Produkty",
-            "Dowiedz się więcej o naszych produktach",
+            "Articles de sujet - Produits",
             "FR/blog/products",
          ],
          technology: [
             "Technologie",
-            "Tematem artykułu są technologie stosowane w druku.",
+            "Articles sur le sujet - Technologies",
             "FR/blog/technology",
          ],
          all: [
-            "Wszystkie",
+            "Tous",
             "",
             "FR/blog",
          ],
