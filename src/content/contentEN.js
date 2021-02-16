@@ -21,12 +21,12 @@ export const contentEN = {
          christmasCatalog: [
             "The catalog with Christmas products is now available!",
             "We encourage you to familiarize yourself with the systems in which you can easily change the graphics after the holiday season.",
-            "http://printxl.EN/pdf/christmas_PL.pdf",
+            "http://printxl.pl/pdf/christmas_PL.pdf",
          ],
          CovidCatalog: [
             "We encourage you to download our new catalog.",
             "In it you will find the current offer for protective products and useful accessories.",
-            "http://printxl.EN/pdf/COVID_PL_m.pdf",
+            "http://printxl.pl/pdf/COVID_PL_m.pdf",
          ],
       },
       productSection: {
@@ -35,7 +35,7 @@ export const contentEN = {
       },
       contact: {
          header: "Contact",
-         phone: "+48 501 487 669",
+         phone: "+48 605 646 600",
          text: [
             "Poland",
             "Name",

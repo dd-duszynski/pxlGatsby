@@ -1,4 +1,4 @@
-import React, { useContext } from "react"
+import React, { useEffect, useState, useContext } from "react"
 import { Link } from "gatsby"
 import Context from "../../../context/context"
 import styles from "./ContactBarMobile.module.scss"
@@ -7,7 +7,13 @@ import { IoMdMail } from "react-icons/io"
 import { MdLocationOn } from "react-icons/md"
 
 const ContactBarMobile = () => {
+   const [pathname, setPathname] = useState("")
    const { textContent } = useContext(Context)
+   useEffect(() => {
+      if (window.location.pathname) {
+         setPathname(window.location.pathname.substring(3))
+      }
+   }, [])
    return (
       <>
          <li className={styles.ContactBarMobile}>
@@ -31,22 +37,22 @@ const ContactBarMobile = () => {
          <li className={styles.ContactBarMobile}>
             <div className={styles.languagesContainer}>
                <Link
-                  to={`/EN`}
+                  to={`/EN${pathname}`}
                   className={[styles.flagEN, styles.flag].join(" ")}
                   activeClassName={styles.flagActive}
                />
                <Link
-                  to={`/PL`}
+                  to={`/PL${pathname}`}
                   className={[styles.flagPL, styles.flag].join(" ")}
                   activeClassName={styles.flagActive}
                />
                <Link
-                  to={`/DE`}
+                  to={`/DE${pathname}`}
                   className={[styles.flagDE, styles.flag].join(" ")}
                   activeClassName={styles.flagActive}
                />
                <Link
-                  to={`/FR`}
+                  to={`/FR${pathname}`}
                   className={[styles.flagFR, styles.flag].join(" ")}
                   activeClassName={styles.flagActive}
                />

@@ -24,12 +24,12 @@ export const contentDE = {
          christmasCatalog: [
             "Katalog mit Weihnachtsprodukten jetzt erhältlich!",
             "Wir empfehlen Ihnen, sich mit Systemen vertraut zu machen, bei denen Sie nach der Weihnachtszeit problemlos Grafiken austauschen können.",
-            "http://printxl.DE/pdf/christmas_EN.pdf",
+            "http://printxl.pl/pdf/christmas_EN.pdf",
          ],
          CovidCatalog: [
             "Hier können Sie unseren Katalog herunterladen.",
             "Darin finden Sie das aktuelle Angebot für Schutzprodukte und nützliches Zubehör.",
-            "http://printxl.DE/pdf/COVID_DE_m.pdf",
+            "http://printxl.pl/pdf/COVID_DE_m.pdf",
          ],
       },
       productSection: {

@@ -4,8 +4,7 @@ import Spinner from "../UI/Spinner/Spinner"
 
 const App = () => {
    useEffect(() => {
-      const language =
-         window.navigator.userLanguage || window.navigator.language
+      const language = window.navigator.userLanguage || window.navigator.language
       const languageSubstring = language.substring(0, 2)
       const languageToUpperCase = languageSubstring.toUpperCase()
       switch (languageToUpperCase) {

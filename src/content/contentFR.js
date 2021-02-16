@@ -25,12 +25,12 @@ export const contentFR = {
          christmasCatalog: [
             "Le catalogue des produits Noël est déjà disponible!",
             "Nous vous invitons à découvrir des systèmes dans lesquels il est facile de remplacer les graphiques après les fêtes de fin d'année.",
-            "http://printxl.FR/pdf/christmas_EN.pdf",
+            "http://printxl.pl/pdf/christmas_EN.pdf",
          ],
          CovidCatalog: [
             "Nous vous encourageons à télécharger notre nouveau catalogue.",
             "Vous y trouverez l'offre actuelle de produits de protection et d'accessoires utiles.",
-            "http://printxl.FR/pdf/COVID_FR_m.pdf",
+            "http://printxl.pl/pdf/COVID_FR_m.pdf",
          ],
       },
       productSection: {

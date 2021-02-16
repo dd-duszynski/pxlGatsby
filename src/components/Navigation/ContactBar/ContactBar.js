@@ -1,4 +1,4 @@
-import React, { useContext } from "react"
+import React, { useEffect, useState, useContext } from "react"
 import { Link } from "gatsby"
 import styles from "./ContactBar.module.scss"
 import { AiFillPhone } from "react-icons/ai"
@@ -9,9 +9,17 @@ import ContactForm from "../../Contact/ContactForm/ContactForm"
 import Context from "../../../context/context"
 
 const ContactBar = () => {
+   const [pathname, setPathname] = useState("")
+
    const { textContent, isModalOpen, switchModalVisibility } = useContext(
       Context
    )
+
+   useEffect(() => {
+      if (window.location.pathname) {
+         setPathname(window.location.pathname.substring(3))
+      }
+   }, [])
 
    return (
       <div className={styles.ContactBar}>
@@ -21,15 +29,15 @@ const ContactBar = () => {
          >
             <ContactForm text={textContent.mainPage.contact.text} />
          </Modal>
-         <a href={`tel:${textContent.mainPage.contact.phone}`} className={styles.linkContainer}>
+         <a
+            href={`tel:${textContent.mainPage.contact.phone}`}
+            className={styles.linkContainer}
+         >
             <AiFillPhone className={styles.icon} />
             {textContent.mainPage.contact.phone}
          </a>
 
-         <a
-            onClick={switchModalVisibility}
-            className={styles.linkContainer}
-         >
+         <a onClick={switchModalVisibility} className={styles.linkContainer}>
             <IoMdMail className={styles.icon} />
             info@printxl.pl
          </a>
@@ -46,25 +54,25 @@ const ContactBar = () => {
 
          <div className={styles.languagesContainer}>
             <Link
-               to={`/EN`}
+               to={`/EN${pathname}`}
                className={[styles.flagEN, styles.flag].join(" ")}
                partiallyActive
                activeClassName={styles.flag_Active}
             />
             <Link
-               to={`/PL`}
+               to={`/PL${pathname}`}
                className={[styles.flagPL, styles.flag].join(" ")}
                partiallyActive
                activeClassName={styles.flag_Active}
             />
             <Link
-               to={`/DE`}
+               to={`/DE${pathname}`}
                className={[styles.flagDE, styles.flag].join(" ")}
                partiallyActive
                activeClassName={styles.flag_Active}
             />
             <Link
-               to={`/FR`}
+               to={`/FR${pathname}`}
                className={[styles.flagFR, styles.flag].join(" ")}
                partiallyActive
                activeClassName={styles.flag_Active}

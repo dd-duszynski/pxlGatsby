@@ -30,7 +30,7 @@ export const query = graphql`
    query {
       Produkty: allContentfulProduktyFr(
          filter: { opcjeProduktu: { eq: "Strona Główna" } }
-         limit: 6
+         limit: 12
       ) {
          nodes {
             nazwa
