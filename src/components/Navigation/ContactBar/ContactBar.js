@@ -4,16 +4,12 @@ import styles from "./ContactBar.module.scss"
 import { AiFillPhone } from "react-icons/ai"
 import { IoMdMail } from "react-icons/io"
 import { MdLocationOn } from "react-icons/md"
-import Modal from "../../Modal/Modal"
-import ContactForm from "../../Contact/ContactForm/ContactForm"
 import Context from "../../../context/context"
 
 const ContactBar = () => {
    const [pathname, setPathname] = useState("")
 
-   const { textContent, isModalOpen, switchModalVisibility } = useContext(
-      Context
-   )
+   const { textContent } = useContext(Context)
 
    useEffect(() => {
       if (window.location.pathname) {
@@ -23,12 +19,6 @@ const ContactBar = () => {
 
    return (
       <div className={styles.ContactBar}>
-         <Modal
-            isVisible={isModalOpen}
-            switchModalVisibility={switchModalVisibility}
-         >
-            <ContactForm text={textContent.mainPage.contact.text} />
-         </Modal>
          <a
             href={`tel:${textContent.mainPage.contact.phone}`}
             className={styles.linkContainer}
@@ -37,7 +27,7 @@ const ContactBar = () => {
             {textContent.mainPage.contact.phone}
          </a>
 
-         <a onClick={switchModalVisibility} className={styles.linkContainer}>
+         <a className={styles.linkContainer} href="mailto:info@printxl.pl">
             <IoMdMail className={styles.icon} />
             info@printxl.pl
          </a>

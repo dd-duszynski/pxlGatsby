@@ -71,7 +71,7 @@ const Footer = () => {
                </div>
             </div>
 
-            <div className={styles.box}>
+            {/* <div className={styles.box}>
                <H3 addClass={styles.heading}>{textContent.footer.text[4]}</H3>
                <div className={styles.boxItem}>
                   <a
@@ -93,7 +93,7 @@ const Footer = () => {
                      {textContent.footer.text[6]}
                   </a>
                </div>
-            </div>
+            </div> */}
 
             <div className={styles.box}>
                <H3 addClass={styles.heading}>{textContent.footer.text[7]}</H3>
