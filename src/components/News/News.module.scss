@@ -43,9 +43,9 @@
    align-items: center;
 }
 .CTAlink {
-   min-width: 250px;
-   position: relative;
-   margin-top: 55px;
+   min-width: 250px !important;
+   position: relative !important;
+   margin-top: 55px !important;
 }
 
 @media (max-width: 900px) {

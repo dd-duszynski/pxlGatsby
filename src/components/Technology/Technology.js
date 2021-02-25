@@ -41,7 +41,7 @@ const Technology = ({ machine }) => {
          window.removeEventListener("resize", updateDimensions)
       }
    }, [])
-
+   const singleImage = images.length === 1 ? true : false
    return (
       <section className={styles.Technology}>
          <Modal
@@ -52,17 +52,27 @@ const Technology = ({ machine }) => {
             <img className={styles.modalImg} src={currentImg} alt="" />
          </Modal>
          <article className={styles.container}>
-            <Carousel>
-               {images.map(item => (
-                  <img
-                     alt="PrintXL - Technology"
-                     src={item.fluid.src}
-                     className={styles.img}
-                     key={item.fluid.src}
-                     onClick={e => switchImgModalVisibility(e)}
-                  />
-               ))}
-            </Carousel>
+            {singleImage ? (
+               <img
+                  alt="PrintXL - Technology"
+                  src={images[0].fluid.src}
+                  className={styles.singleImg}
+                  key={images[0].fluid.src}
+                  onClick={e => switchImgModalVisibility(e)}
+               />
+            ) : (
+               <Carousel noPagination={singleImage}>
+                  {images.map(item => (
+                     <img
+                        alt="PrintXL - Technology"
+                        src={item.fluid.src}
+                        className={styles.img}
+                        key={item.fluid.src}
+                        onClick={e => switchImgModalVisibility(e)}
+                     />
+                  ))}
+               </Carousel>
+            )}
             <div className={styles.table}>
                {specificationArray.map(i => (
                   <div className={styles.innerTable} key={`${i[0]}`}>

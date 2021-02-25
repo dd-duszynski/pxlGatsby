@@ -31,8 +31,23 @@
    display: block;
    margin-top: 5px;
 }
+.singleImg{
+   height: auto;
+   width: 100ch;
+   max-width: 100%;
+   &:hover {
+      cursor: pointer;
+   }
+   &:focus {
+      outline: none;
+   }
+}
+
 .img {
    height: 500px;
+   // max-height: 600px;
+   max-width: 100%;
+   object-fit: cover;
    &:hover {
       cursor: pointer;
    }
