@@ -25,6 +25,7 @@
     "gatsby-plugin-google-analytics": "^2.11.0",
     "gatsby-plugin-playground": "^1.0.6",
     "gatsby-plugin-react-helmet": "^3.2.1",
+    "gatsby-plugin-recaptcha": "^1.0.5",
     "gatsby-plugin-robots-txt": "^1.5.5",
     "gatsby-plugin-sass": "^2.2.1",
     "gatsby-plugin-sharp": "^2.14.1",
@@ -41,6 +42,7 @@
     "react-elastic-carousel": "^0.9.4",
     "react-helmet": "^5.2.1",
     "react-icons": "^3.11.0",
+    "react-recaptcha": "^2.3.10",
     "react-tooltip": "^4.2.11",
     "react-visibility-sensor": "^5.1.1",
     "styled-components": "^5.2.1"

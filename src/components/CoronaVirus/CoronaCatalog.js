@@ -10,7 +10,7 @@ import RhombusBtn from "../UI/RhombusBtn/RhombusBtn"
 const CoronaCatalog = () => {
    const [isSmallDevice, setIsSmallDevice] = useState(false)
    const { textContent } = useContext(Context)
-
+   
    const updateDimensions = () => {
       if (window.innerWidth <= 1000) {
          setIsSmallDevice(true)
@@ -26,7 +26,7 @@ const CoronaCatalog = () => {
          window.removeEventListener("resize", updateDimensions)
       }
    }, [])
-   
+
    const linkToCatalog = isSmallDevice
       ? textContent.mainPage.news[5]
       : textContent.mainPage.news[4]
@@ -53,7 +53,7 @@ const CoronaCatalog = () => {
                </Paragraph>
                <RhombusBtn
                   addClass={styles.CTAlink}
-                  type='extLink'
+                  type="extLink"
                   link={linkToCatalog}
                >
                   {textContent.mainPage.news[3]}

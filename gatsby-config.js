@@ -1,7 +1,6 @@
 require("dotenv").config({
    path: `.env.${process.env.NODE_ENV}`,
 })
-
 module.exports = {
    siteMetadata: {
       configTitle: "PrintXL - Drukarnia Wielkoformatowa - Poznań",
@@ -13,6 +12,14 @@ module.exports = {
       siteUrl: "http://printxl.pl",
    },
    plugins: [
+      {
+         resolve: `gatsby-plugin-recaptcha`,
+         options: {
+            async: false,
+            defer: false,
+            args: `?onload=onloadCallback&render=explicit`,
+         },
+      },
       {
          resolve: `gatsby-plugin-google-analytics`,
          options: {

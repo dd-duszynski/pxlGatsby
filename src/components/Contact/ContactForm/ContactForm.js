@@ -5,19 +5,29 @@ import Input from "../../UI/Input/Input"
 import TextArea from "../../UI/Input/TextArea"
 import Paragraph from "../../UI/Paragraph/Paragraph"
 import { FaSmile } from "react-icons/fa"
+var Recaptcha = require("react-recaptcha")
 
 const ContactForm = ({ text }) => {
    const [isSend, setIsSend] = useState(false)
    const [name, setName] = useState("")
    const [email, setEmail] = useState("")
    const [message, setMessage] = useState("")
+   const [isRecaptcha, setRecaptcha] = useState(false)
 
-   const handleSubmit = event => {
+   const showRecaptcha = event => {
       event.preventDefault()
+      setRecaptcha(true)
+   }
+
+   const handleSubmit = res => {
+      // event.preventDefault()
+
       // heroku - production
       // https://pxl-server.herokuapp.com/email
+
       // localhost - development
       // http://localhost:5000/email
+
       fetch("https://pxl-server.herokuapp.com/email", {
          method: "POST",
          headers: {
@@ -28,6 +38,7 @@ const ContactForm = ({ text }) => {
             email: email,
             message: message,
             subject: window.location.href,
+            captcha: res,
          }),
       })
          .then(response => response.json())
@@ -37,11 +48,12 @@ const ContactForm = ({ text }) => {
          .catch(error => {
             console.error("Error:", error)
          })
+      setRecaptcha(false)
       setIsSend(true)
       setName("")
       setEmail("")
       setMessage("")
-      setTimeout(() => setIsSend(false), 4000)
+      setTimeout(() => setIsSend(false), 5000)
    }
 
    const handleName = e => {
@@ -54,6 +66,17 @@ const ContactForm = ({ text }) => {
       setMessage(e.target.value)
    }
 
+   const RecaptchaComponent = (
+      <Recaptcha
+         sitekey="6Lfj2mUaAAAAAIzoOrEeSBYJLMxXAzrTjULFGRoH"
+         render="explicit"
+         onloadCallback={() => {
+            console.log("onloadCallback")
+         }}
+         verifyCallback={handleSubmit}
+      />
+   )
+
    const afterMessageSend = (
       <div className={styles.afterMessageSend}>
          <Paragraph>{text[10]}</Paragraph>
@@ -64,7 +87,7 @@ const ContactForm = ({ text }) => {
    const initialView = (
       <>
          <Paragraph addClass={styles.formHeader}>{text[8]}</Paragraph>
-         <form className={styles.form} onSubmit={handleSubmit}>
+         <form className={styles.form} onSubmit={showRecaptcha}>
             <Input
                val={name}
                onChange={handleName}
@@ -93,7 +116,11 @@ const ContactForm = ({ text }) => {
 
    return (
       <section className={styles.ContactForm}>
-         {isSend ? afterMessageSend : initialView}
+         {isRecaptcha
+            ? RecaptchaComponent
+            : isSend
+            ? afterMessageSend
+            : initialView}
       </section>
    )
 }
