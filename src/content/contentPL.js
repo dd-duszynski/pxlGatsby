@@ -101,8 +101,8 @@ export const contentPL = {
          "REGON",
       ],
       links: [
-         "http://printxl.pl/Instructions/termsOfCooperation_PL.pdf",
-         "http://printxl.pl/Instructions/Instructions_PL.pdf",
+         "http://printxl.pl/pdf/termsOfCooperation_PL.pdf",
+         "http://printxl.pl/pdf/Instructions_PL.pdf",
       ],
    },
    navigation: {

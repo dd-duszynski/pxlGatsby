@@ -100,8 +100,8 @@ export const contentDE = {
          "USt-IdNr",
       ],
       links: [
-         "http://printxl.pl/Instructions/termsOfCooperation_DE.pdf",
-         "http://printxl.pl/Instructions/Instructions_DE.pdf",
+         "http://printxl.pl/pdf/termsOfCooperation_DE.pdf",
+         "http://printxl.pl/pdf/Instructions_DE.pdf",
       ],
    },
    navigation: {

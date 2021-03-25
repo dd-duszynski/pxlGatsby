@@ -1,25 +1,25 @@
 import React, { useState } from "react"
+import { FaSmile } from "react-icons/fa"
 import styles from "./ContactForm.module.scss"
 import RhombusBtn from "../../UI/RhombusBtn/RhombusBtn"
 import Input from "../../UI/Input/Input"
 import TextArea from "../../UI/Input/TextArea"
 import Paragraph from "../../UI/Paragraph/Paragraph"
-import { FaSmile } from "react-icons/fa"
-var Recaptcha = require("react-recaptcha")
+import Recaptcha from "./Recaptcha"
 
 const ContactForm = ({ text }) => {
    const [isSend, setIsSend] = useState(false)
    const [name, setName] = useState("")
    const [email, setEmail] = useState("")
    const [message, setMessage] = useState("")
-   const [isRecaptcha, setRecaptcha] = useState(false)
+   const [isRecaptchaVisible, setRecaptchaVisible] = useState(false)
 
    const showRecaptcha = event => {
       event.preventDefault()
-      setRecaptcha(true)
+      setRecaptchaVisible(true)
    }
 
-   const handleSubmit = res => {
+   const handleSubmit = token => {
       // event.preventDefault()
 
       // heroku - production
@@ -38,7 +38,7 @@ const ContactForm = ({ text }) => {
             email: email,
             message: message,
             subject: window.location.href,
-            captcha: res,
+            captcha: token,
          }),
       })
          .then(response => response.json())
@@ -48,7 +48,7 @@ const ContactForm = ({ text }) => {
          .catch(error => {
             console.error("Error:", error)
          })
-      setRecaptcha(false)
+      setRecaptchaVisible(false)
       setIsSend(true)
       setName("")
       setEmail("")
@@ -65,17 +65,6 @@ const ContactForm = ({ text }) => {
    const handleMessage = e => {
       setMessage(e.target.value)
    }
-
-   const RecaptchaComponent = (
-      <Recaptcha
-         sitekey="6Lfj2mUaAAAAAIzoOrEeSBYJLMxXAzrTjULFGRoH"
-         render="explicit"
-         onloadCallback={() => {
-            console.log("onloadCallback")
-         }}
-         verifyCallback={handleSubmit}
-      />
-   )
 
    const afterMessageSend = (
       <div className={styles.afterMessageSend}>
@@ -116,11 +105,13 @@ const ContactForm = ({ text }) => {
 
    return (
       <section className={styles.ContactForm}>
-         {isRecaptcha
-            ? RecaptchaComponent
-            : isSend
-            ? afterMessageSend
-            : initialView}
+         {isRecaptchaVisible ? (
+            <Recaptcha verifyCallback={handleSubmit} />
+         ) : isSend ? (
+            afterMessageSend
+         ) : (
+            initialView
+         )}
       </section>
    )
 }

@@ -101,8 +101,8 @@ export const contentFR = {
          "SIRET",
       ],
       links: [
-         "http://printxl.pl/Instructions/termsOfCooperation_FR.pdf",
-         "http://printxl.pl/Instructions/Instructions_FR.pdf",
+         "http://printxl.pl/pdf/termsOfCooperation_FR.pdf",
+         "http://printxl.pl/pdf/Instructions_FR.pdf",
       ],
    },
    navigation: {

@@ -40,7 +40,7 @@ const Counter = () => {
                      <CountUp
                         className={styles.countup}
                         start={0}
-                        end={didViewCountUp ? 133000 : 0}
+                        end={didViewCountUp ? 160000 : 0}
                         duration={3}
                         separator={" "}
                      />
@@ -89,9 +89,8 @@ const Counter = () => {
                      <CountUp
                         className={style.countup}
                         start={0}
-                        end={didViewCountUp ? 4600000 : 0}
+                        end={didViewCountUp ? 5800000 : 0}
                         duration={3}
-                        suffix={" m2"}
                         separator={" "}
                      />
                   </VisibilitySensor>
