@@ -1,9 +1,8 @@
 import React from "react"
-import { graphql } from 'gatsby'
+import { graphql } from "gatsby"
 import Layout from "../../components/Layout/Layout"
 import SEO from "../../components/SEO/SEO"
 import HeroVideo from "../../components/HeroVideo/HeroVideo"
-// import Hero from "../../components/Hero/Hero"
 import AboutUs from "../../components/AboutUs/AboutUs"
 import News from "../../components/News/News"
 import ContactContainer from "../../components/Contact/ContactContainer"
@@ -14,8 +13,8 @@ const IndexPage = ({ data }) => {
    return (
       <Layout language="PL">
          <SEO
-            title="PrintXL - Cyfrowa Drukarnia Wielkoformatowa - Poznań"
-            description="Cyfrowa drukarnia wielkoformatowa w Poznaniu. Oferujemy druk w technologiach: Sublimacja, Latex, UV, Solwent oraz gotowe systemy reklamowe: Flagi, Banery, Ścianki wystawiennicze, Standy, Trybunki, Beachflagi."
+            title="Druk Wielkoformatowy - Flagi i Banery Reklamowe - Poznań | PrintXL"
+            description="Oferujemy druk flag i banerów reklamowych oraz gotowe systemy, takie jak: ŚCIANKI, ROLLUPY, NAMIOTY, STANDY, TRYBUNKI, BEACHFLAGI. Wydruki w niskich cenach i najwyższej jakości."
             lang="pl"
          />
          <HeroVideo />
@@ -24,10 +23,10 @@ const IndexPage = ({ data }) => {
          <MainPageProducts data={data} />
          <ContactContainer />
          <FAQ />
-         {/* <Hero /> */}
       </Layout>
    )
 }
+
 export const query = graphql`
    query {
       Produkty: allContentfulProduktyPl(

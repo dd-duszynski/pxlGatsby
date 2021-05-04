@@ -13,8 +13,8 @@ const IndexPage = ({ data }) => {
    return (
       <Layout language="DE">
          <SEO
-            title="PrintXL - Digitale Großformatdruckerei - Polen"
-            description="Digitale Großformatdruckerei in Posen. Wir bieten Druck in folgenden Technologien an: Sublimation, Latex, UV, Lösungsmittel und fertige Werbesysteme: Flaggen, Banner, Ausstellungswände, Stände, Theken, Strandflaggen."
+            title="Großformatdruck - Werbeflaggen und Banner - Posen | PrintXL"
+            description="Wir bieten den Druck von Flaggen und Werbebannern sowie von vorgefertigten Systemen an, wie z. B.: WÄNDE, ROLLUPEN, ZELTE, STÄNDE, STÄNDE, STRANDFLAGGEN. Druckt zu niedrigen Preisen und höchster Qualität."
             lang="de"
          />
          <HeroVideo />

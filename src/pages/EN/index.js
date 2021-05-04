@@ -13,8 +13,8 @@ const IndexPage = ({ data }) => {
    return (
       <Layout language="EN">
          <SEO
-            title="PrintXL - Digital Printing House - Poland"
-            description="Digital large-format printing house in Poznań. We offer printing in the following technologies: Sublimation, Latex, UV, Solvent and ready-made advertising systems: Flags, Banners, Exhibition walls, Stands, Counters, Beachflags."
+            title="Large Format Printing - Advertising Flags and Banners - Poznań | PrintX"
+            description="We offer printing of flags and advertising banners as well as ready-made systems, such as: WALLS, ROLLUPES, TENTS, STANDS, STANDS, BEACHFLAGS. Prints at low prices and the highest quality."
             lang="en"
          />
          <HeroVideo />

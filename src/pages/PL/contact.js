@@ -8,8 +8,8 @@ class Contact extends Component {
       return (
          <Layout language="PL">
             <SEO
-               title="PrintXL - Kontakt"
-               description="Strona kontaktowa. Zapraszamy do kontaktu - Napisz do Nas!"
+               title="Kontakt | Druk Wielkoformatowy - Poznań | PrintXL"
+               description="Strona kontaktowa firmy PrintXL. Zapraszamy do kontaktu telefonicznego bądź przez napisanie maila bezpośrednio ze strony."
                lang="pl"
             />
             <ContactContainer />

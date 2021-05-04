@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql } from 'gatsby'
+import { graphql } from "gatsby"
 import Layout from "../../components/Layout/Layout"
 import SEO from "../../components/SEO/SEO"
 import HeroVideo from "../../components/HeroVideo/HeroVideo"
@@ -13,8 +13,8 @@ const IndexPage = ({ data }) => {
    return (
       <Layout language="FR">
          <SEO
-            title="PrintXL - Imprimerie numérique grand format - Pologne"
-            description="Imprimerie numérique grand format à Poznań. Nous proposons des impressions dans les technologies suivantes: Sublimation, Latex, UV, Solvant et systèmes publicitaires prêts à l'emploi: Drapeaux, Bannières, Murs d'exposition, Stands, Comptoirs, Beachflags."
+            title="Impression grand format - Drapeaux et bannières publicitaires - Poznań | PrintXL"
+            description="Nous proposons l'impression de drapeaux et de bannières publicitaires ainsi que des systèmes prêts à l'emploi, tels que: MURS, ROLLUPES, TENTES, STANDS, STANDS, BEACHFLAGS. Impressions à bas prix et de la plus haute qualité."
             lang="fr"
          />
          <HeroVideo />

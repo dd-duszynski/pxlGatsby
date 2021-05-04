@@ -9,8 +9,8 @@ export const contentPL = {
       aboutUs: {
          header: "O Nas",
          text: [
-            "Jesteśmy prężnie działającą drukarnią cyfrową, specjalizującą się w druku wielkoformatowym dla klientów z całej Europy. Cechuje nas wysoka jakość i szybkie terminy realizacji, w bardzo konkurencyjnych cenach.",
-            "Oferujemy druk na różnego rodzaju podłożach: m.in. materiałach flagowych, banerach, siatkach i foliach z szeroką gamą wykończeń i systemów do wyboru.",
+            "Jesteśmy prężnie działającą drukarnią cyfrową, obsługującą zlecenia dla klientów z całej Europy. Specjalizujemy się w druku wielkoformatowym. Cechuje nas wysoka jakość wydruków oraz szybkie terminy realizacji zleceń.",
+            "Oferujemy wydruki wielkoformatowe na różnego rodzaju podłożach: m.in. na flagach, banerach, siatkach i foliach z szeroką gamą wykończeń i systemów reklamowych.",
             "Serdecznie zapraszamy do kontaktu.",
          ],
          counter: [
@@ -269,12 +269,12 @@ export const contentPL = {
       ],
    },
    seo: {
-      specTitle: "PrintXL - Specyfikacje -",
-      specDesc: "Lista specyfikacji do produktów z grupy:",
-      prodTitle: "PrintXL - Produkty -" ,
-      prodDesc: "Lista produktów z grupy:" ,
-      matTitle: "PrintXL - Materiały -",
-      matDesc: "Lista materiałów z grupy:",
-      technologyTitle: "PrintXL - Technologie -",
+      specTitle: "Specyfikacje DTP -",
+      specDesc: "Znajdziesz tu informacje jak przygotować pliki dodruku. Specyfikacje i instrukcje DTP do produktów firmy PrintXL z grupy:",
+      prodTitle: "Produkty Reklamowe -" ,
+      prodDesc: "Oferujemy druk flag i banerów reklamowych oraz gotowe systemy, takie jak: ŚCIANKI, ROLLUPY, NAMIOTY, STANDY, TRYBUNKI, BEACHFLAGI. Wydruki w niskich cenach i najwyższej jakości." ,
+      matTitle: "Materiały do druku wielkoformatowego -",
+      matDesc: "W naszej ofercie znajdują się materiały wielu rodzajów: TEKSTYLIA / VINYLE / FOLIE / PŁYTY. Na tej stronie znajdziesz listę materiałów do druku wielkoformatowego z grupy:",
+      technologyTitle: "Technologie druku wielkoformatowego -",
    }
 }

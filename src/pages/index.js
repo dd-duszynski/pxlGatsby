@@ -27,8 +27,8 @@ const IndexPage = () => {
    return (
       <div>
          <SEO
-            title="PrintXL - Cyfrowa Drukarnia Wielkoformatowa - Poznań"
-            description="Cyfrowa drukarnia wielkoformatowa w Poznaniu. Oferujemy druk w technologiach: Sublimacja, Latex, UV, Solwent oraz gotowe systemy reklamowe: Flagi, Banery, Ścianki wystawiennicze, Standy, Trybunki, Beachflagi."
+            title="Druk Wielkoformatowy - Flagi i Banery Reklamowe - Poznań | PrintXL"
+            description="Oferujemy druk flag i banerów reklamowych oraz gotowe systemy, takie jak: ŚCIANKI, ROLLUPY, NAMIOTY, STANDY, TRYBUNKI, BEACHFLAGI. Wydruki w niskich cenach i najwyższej jakości."
             lang="pl"
          />
          <Spinner />

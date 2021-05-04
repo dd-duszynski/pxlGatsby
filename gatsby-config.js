@@ -3,13 +3,14 @@ require("dotenv").config({
 })
 module.exports = {
    siteMetadata: {
-      configTitle: "PrintXL - Drukarnia Wielkoformatowa - Poznań",
+      configTitle:
+         "Druk Wielkoformatowy - Flagi i Banery Reklamowe - Poznań | PrintXL",
       configDescription:
-         "Drukarnia wielkoformatowa w Poznaniu. Oferujemy druk w technologiach: Sublimacja, Latex, UV, Solwent oraz gotowe systemy reklamowe: Flagi, Banery, Ścianki wystawiennicze, Standy, Trybunki, Beachflagi.",
+         "Oferujemy druk flag i banerów reklamowych oraz gotowe systemy, takie jak: ŚCIANKI, ROLLUPY, NAMIOTY, STANDY, TRYBUNKI, BEACHFLAGI. Wydruki w niskich cenach i najwyższej jakości.",
       configAuthor: "info@printxl.pl",
       configImg: "/favicon.png",
-      configSiteUrl: "http://printxl.pl",
-      siteUrl: "http://printxl.pl",
+      configSiteUrl: "https://printxl.pl",
+      siteUrl: "https://printxl.pl",
    },
    plugins: [
       {
@@ -46,9 +47,15 @@ module.exports = {
       {
          resolve: "gatsby-plugin-robots-txt",
          options: {
-            host: "http://localhost:8000/",
-            sitemap: "http://localhost:8000/sitemap.xml",
+            host: "https://printxl.pl/",
+            sitemap: "https://printxl.pl/sitemap.xml",
             policy: [{ userAgent: "*", allow: "/" }],
+         },
+      },
+      {
+         resolve: `gatsby-plugin-canonical-urls`,
+         options: {
+            siteUrl: `https://printxl.pl/`,
          },
       },
       `gatsby-plugin-sitemap`,

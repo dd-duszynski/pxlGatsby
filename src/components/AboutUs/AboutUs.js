@@ -11,7 +11,7 @@ const AboutUs = () => {
    const { textContent } = useContext(Context)
    return (
       <section className={styles.AboutUs}>
-         <LeftBar text= {textContent.mainPage.aboutUs.header} />
+         <LeftBar text={textContent.mainPage.aboutUs.header} />
          <RightBar />
          <article className={styles.container}>
             <div className={styles.magnifier}>

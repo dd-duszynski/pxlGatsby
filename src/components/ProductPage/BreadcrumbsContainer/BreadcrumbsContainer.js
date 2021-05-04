@@ -2,7 +2,7 @@ import React, { useContext } from "react"
 import Context from "../../../context/context"
 import Breadcrumbs from "../../UI/Breadcrumbs/Breadcrumbs"
 
-const BreadcrumbsContainer = ({ text, rodzaj, nazwa, url }) => {
+const BreadcrumbsContainer = ({ rodzaj, nazwa, url }) => {
    const { textContent } = useContext(Context)
    let breadcrumb2, link2
    switch (rodzaj) {

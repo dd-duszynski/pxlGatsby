@@ -14,7 +14,7 @@ const MaterialsTemplate = ({ data: { Materials } }) => {
    return (
       <Layout language="PL">
          <SEO
-            title={`${contentPL.seo.matTitle} ${groupOfProducts}`}
+            title={`${contentPL.seo.matTitle} ${groupOfProducts} | PrintXL`}
             description={`${contentPL.seo.matDesc} ${groupOfProducts}`}
             lang="pl"
          />
@@ -50,4 +50,5 @@ export const getData = graphql`
       }
    }
 `
+
 export default MaterialsTemplate

@@ -7,14 +7,13 @@ import SEO from "../components/SEO/SEO"
 import { contentPL } from "../content/contentPL"
 
 const TechnologyTemplate = ({ data }) => {
-   const { nazwa } = data.Technologie
-   const { tekst } = data.Technologie
+   const { nazwa, tekst } = data.Technologie
 
    return (
       <Layout language="PL">
          <SEO
-            title={`${contentPL.seo.technologyTitle} ${nazwa}`}
-            description={`${nazwa} - ${tekst.content[0].content[0].value}`}
+            title={`${contentPL.seo.technologyTitle} ${nazwa} | PrintXL`}
+            description={`${nazwa} - ${tekst.content[0].content[0].value} `}
             lang="pl"
          />
          <TechnologyNav />

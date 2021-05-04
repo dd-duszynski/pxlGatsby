@@ -75,6 +75,7 @@ const Tag = ({ type, text, tooltip, noTooltip }) => {
                type="dark"
                effect="solid"
                offset={{ top: -2 }}
+               className={styles.tooltip}
             >
                <span>{tooltip}</span>
             </ReactTooltip>
