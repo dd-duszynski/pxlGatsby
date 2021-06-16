@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import Helmet from "react-helmet"
 import "../../scss/main.scss"
 import styles from "./Layout.module.scss"
@@ -6,6 +6,7 @@ import Context from "../../context/context"
 import Footer from "../Footer/Footer"
 import Navigation from "../Navigation/Navigation"
 import ReturnToTopArrow from "./ReturnToTopArrow/ReturnToTopArrow"
+import Sidebar from "../Sidebar/Sidebar"
 import favicon from "../../../static/favicon.png"
 import { contentPL } from "../../content/contentPL"
 import { contentEN } from "../../content/contentEN"
@@ -16,7 +17,7 @@ const Layout = ({ children, language }) => {
    const [isModalOpen, setModalOpen] = useState(false)
 
    const switchModalVisibility = () => {
-      isModalOpen === false ? setModalOpen(true) : setModalOpen(false)
+      setModalOpen(!isModalOpen)
    }
 
    let textContent
@@ -48,6 +49,7 @@ const Layout = ({ children, language }) => {
                <link rel="icon" href={favicon} />
             </Helmet>
             <Navigation />
+            {/* <Sidebar /> */}
             {children}
             <Footer />
             <ReturnToTopArrow />

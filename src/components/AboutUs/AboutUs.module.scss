@@ -15,7 +15,7 @@
 }
 .container {
    display: flex;
-   margin: 0 3%;
+   margin: 0 10%;
    justify-content: flex-end;
    align-items: center;
    align-content: center;
@@ -94,7 +94,7 @@
       max-height: 100%;
       opacity: 0.2;
    }
-
+   
    .container {
       padding: 10px 0;
    }
@@ -110,12 +110,16 @@
    }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 600px) {
    .hero {
       font-size: $font-size-4;
       line-height: $line-height-4;
    }
    .descriptionContainer {
       margin-top: 70px;
+   }
+   .container {
+      display: flex;
+      margin: 0 3%;
    }
 }

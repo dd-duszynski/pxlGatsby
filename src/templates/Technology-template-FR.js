@@ -13,7 +13,7 @@ const TechnologyTemplate = ({ data }) => {
    return (
       <Layout language="FR">
          <SEO
-            title={`${contentFR.seo.technologyTitle} ${nazwa}`}
+            title={`${contentFR.seo.technologyTitle} ${nazwa} | PrintXL`}
             description={`${nazwa} - ${tekst.content[0].content[0].value}`}
             lang="fr"
          />

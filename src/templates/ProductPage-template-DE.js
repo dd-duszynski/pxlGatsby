@@ -10,7 +10,7 @@ const ProductPageTemplate = ({ data }) => {
    return (
       <Layout language="DE">
          <SEO
-            title={`PrintXL - ${nazwa}`}
+            title={`${nazwa} | Großformatdruck - Posen | PrintXL`}
             description={`${nazwa} - ${opisKrotki}`}
             lang="de"
          />

@@ -1,17 +1,22 @@
 import React, { useContext } from "react"
+import { useStaticQuery, graphql } from "gatsby"
 import Context from "../../context/context"
 import styles from "./News.module.scss"
 import LeftBar from "../UI/Bars/LeftBar"
 import RightBar from "../UI/Bars/RightBar"
 import Paragraph from "../UI/Paragraph/Paragraph"
 import RhombusBtn from "../UI/RhombusBtn/RhombusBtn"
-import covidImg from "../../assets/images/catalog_PL.jpg"
 
-const Catalog = ({ img, t1, t2, link, btn }) => {
+const Catalog = ({ t1, t2, link, btn }) => {
+   const { contentfulAsset } = useStaticQuery(query)
    return (
       <div className={styles.Catalog}>
          <div className={styles.imgBox}>
-            <img src={img} className={styles.img} alt="" />
+            <img
+               src={contentfulAsset.fluid.src}
+               className={styles.img}
+               alt="corona virus catalog cover"
+            />
          </div>
          <div className={styles.descriptionBox}>
             <Paragraph fontSize="16px">
@@ -36,7 +41,6 @@ const News = () => {
          <RightBar />
          <div className={styles.container}>
             <Catalog
-               img={covidImg}
                t1={textContent.mainPage.news.CovidCatalog[0]}
                t2={textContent.mainPage.news.CovidCatalog[1]}
                link={textContent.mainPage.news.CovidCatalog[2]}
@@ -46,5 +50,16 @@ const News = () => {
       </section>
    )
 }
+
+const query = graphql`
+   {
+      
+      contentfulAsset(title: {eq: "covid_catalog "}) {
+         fluid {
+            ...GatsbyContentfulFluid
+         }
+      }
+   }
+`
 
 export default News

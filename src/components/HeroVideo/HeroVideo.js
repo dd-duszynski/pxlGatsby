@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import styles from "./HeroVideo.module.scss"
-import movie from "../../assets/videos/XL.mp4"
+import movie from "../../assets/videos/XL_compressed.mp4"
 import Context from "../../context/context"
 
 class HeroVideo extends Component {
@@ -48,7 +48,7 @@ class HeroVideo extends Component {
                type='video/mp4'
             />
          </video>
-      ) : null
+      ) : <div className={styles.fallback}/>
 
       return (
          <section className={styles.heroVideo}>

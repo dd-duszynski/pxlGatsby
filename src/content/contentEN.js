@@ -265,12 +265,12 @@ export const contentEN = {
       ],
    },
    seo: {
-      specTitle: "PrintXL - Specifications -",
-      specDesc: "List of specifications for the group's products:",
-      prodTitle: "PrintXL - Products -" ,
-      prodDesc: "List of products from the group:" ,
-      matTitle: "PrintXL - Materials -",
-      matDesc: "List of materials from the group:",
-      technologyTitle: "PrintXL - Technology -",
+      specTitle: "DTP Specifications -",
+      specDesc: "You will find information on how to prepare files for printing. Specifications and DTP instructions for PrintXL products from the group:",
+      prodTitle: "Advertising Products -" ,
+      prodDesc: "We offer printing of flags and advertising banners as well as ready-made systems, such as: WALLS, ROLLUPES, TENTS, STANDS, STANDS, BEACHFLAGS. Prints at low prices and the highest quality." ,
+      matTitle: "Materials for large format printing -",
+      matDesc: "Our offer includes many types of materials: TEXTILES / VINYLE / FOILS / PLATES. On this page you will find a list of materials for large format printing from the group:",
+      technologyTitle: "Large Format Printing Technologies -",
    }
 }

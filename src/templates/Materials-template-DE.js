@@ -14,7 +14,7 @@ const MaterialsTemplate = ({ data: { Materials } }) => {
    return (
       <Layout language="DE">
          <SEO
-            title={`${contentDE.seo.matTitle} ${groupOfProducts}`}
+            title={`${contentDE.seo.matTitle} ${groupOfProducts} | PrintXL`}
             description={`${contentDE.seo.matDesc} ${groupOfProducts}`}
             lang="de"
          />

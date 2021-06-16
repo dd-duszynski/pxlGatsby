@@ -65,6 +65,6 @@ module.exports = {
       `gatsby-plugin-transition-link`,
       `gatsby-plugin-playground`,
       `gatsby-plugin-react-helmet`,
-      `gatsby-plugin-client-side-redirect`,
+      `gatsby-plugin-client-side-redirect`
    ],
 }

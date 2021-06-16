@@ -270,7 +270,7 @@ export const contentPL = {
    },
    seo: {
       specTitle: "Specyfikacje DTP -",
-      specDesc: "Znajdziesz tu informacje jak przygotować pliki dodruku. Specyfikacje i instrukcje DTP do produktów firmy PrintXL z grupy:",
+      specDesc: "Znajdziesz tu informacje jak przygotować pliki do druku. Specyfikacje i instrukcje DTP do produktów firmy PrintXL z grupy:",
       prodTitle: "Produkty Reklamowe -" ,
       prodDesc: "Oferujemy druk flag i banerów reklamowych oraz gotowe systemy, takie jak: ŚCIANKI, ROLLUPY, NAMIOTY, STANDY, TRYBUNKI, BEACHFLAGI. Wydruki w niskich cenach i najwyższej jakości." ,
       matTitle: "Materiały do druku wielkoformatowego -",

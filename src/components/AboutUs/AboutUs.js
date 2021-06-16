@@ -1,7 +1,7 @@
 import React, { useContext } from "react"
+import { useStaticQuery, graphql } from "gatsby"
 import Context from "../../context/context"
 import styles from "./AboutUs.module.scss"
-import img_loopka from "../../assets/images/hero_img.jpg"
 import Counter from "./Counter/Counter"
 import LeftBar from "../UI/Bars/LeftBar"
 import RightBar from "../UI/Bars/RightBar"
@@ -9,6 +9,8 @@ import Paragraph from "../UI/Paragraph/Paragraph"
 
 const AboutUs = () => {
    const { textContent } = useContext(Context)
+   const { contentfulAsset } = useStaticQuery(query)
+
    return (
       <section className={styles.AboutUs}>
          <LeftBar text={textContent.mainPage.aboutUs.header} />
@@ -17,8 +19,8 @@ const AboutUs = () => {
             <div className={styles.magnifier}>
                <img
                   className={styles.magnifierImage}
-                  src={img_loopka}
                   alt="Magnifier"
+                  src={contentfulAsset.fluid.src}
                />
             </div>
 
@@ -40,5 +42,15 @@ const AboutUs = () => {
       </section>
    )
 }
+
+const query = graphql`
+   {
+      contentfulAsset(title: {eq: "hero img"}) {
+         fluid {
+            ...GatsbyContentfulFluid
+         }
+      }
+   }
+`
 
 export default AboutUs

@@ -42,10 +42,8 @@ const ProductCard = ({ data }) => {
                   <RiArrowLeftSLine />
                </div>
             ) : null}
-            <Link 
-               to={`/${data.url}`}
-               className={styles.imgLink}
-            >
+            <Link to={`/${data.url}`} className={styles.imgLink}>
+
                <img
                   src={data.zdjecia[imgIndex].fixed.src}
                   className={styles.image}

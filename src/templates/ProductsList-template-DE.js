@@ -14,7 +14,7 @@ const ProductsListTemplate = ({ data: { Products } }) => {
    return (
       <Layout language="DE">
          <SEO
-            title={`${contentDE.seo.prodTitle} ${groupOfProducts}`}
+            title={`${contentDE.seo.prodTitle} ${groupOfProducts} | Großformatdruck - Posen | PrintXL`}
             description={`${contentDE.seo.prodDesc} ${groupOfProducts}`}
             lang="de"
          />

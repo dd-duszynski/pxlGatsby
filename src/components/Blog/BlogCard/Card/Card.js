@@ -1,7 +1,7 @@
 import React, { useContext } from "react"
 import { Link } from "gatsby"
 import Context from "../../../../context/context"
-import Image from "gatsby-image"
+// import Image from "gatsby-image"
 import styles from "./Card.module.scss"
 import Tag from "../../../UI/Tag/Tag"
 
@@ -39,7 +39,7 @@ const Card = ({ tags, img, link }) => {
 
    return (
       <Link className={styles.Card} to={`/${link}`}>
-         <Image fluid={img} className={styles.image} />
+         {/* <Image fluid={img} className={styles.image} /> */}
          <div className={styles.tags}>
             {tagsForCard &&
                tagsForCard.map(i => (

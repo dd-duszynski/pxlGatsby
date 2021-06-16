@@ -15,7 +15,7 @@ const SpecificationsTemplate = ({ data: { Products } }) => {
    return (
       <Layout language="DE">
          <SEO
-            title={`${contentDE.seo.specTitle} ${groupOfProducts}`}
+            title={`${contentDE.seo.specTitle} ${groupOfProducts} | PrintXL`}
             description={`${contentDE.seo.specDesc} ${groupOfProducts}`}
             lang="de"
          />
